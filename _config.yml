@@ -18,7 +18,7 @@ facebook_username: cyril.portet
 #instagram_username: chillwildlife
 linkedin_username: cportet
 # pinterest_username: jekyll
-youtube_username: globalmtb
+#youtube_username: globalmtb
 # googleplus_username: +jekyll
 
 # About Section
@@ -46,7 +46,7 @@ more_content: | # this will include new lines to allow paragraphs
    - Politics
 
 # Footer
-footer_show_references: true
+footer_show_references: false
 
 # Build settings
 remote_theme: sproogen/resume-theme
