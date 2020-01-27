@@ -2,8 +2,8 @@
   name: AFORP Oise
   dates: 1998 - 2000
   qualification: BTS Informatique de Gestion
-  quote: >
-    Work-study center (apprenticeship contract)
+  #quote: >
+  #Work-study center (apprenticeship contract)
   description: | # this will include new lines to allow paragraphs
     
     I carried out my studies under an apprenticeship contract with the company <mark>Clariant</mark>.
