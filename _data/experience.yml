@@ -1,9 +1,13 @@
 - layout: left
-  company: The Boring Company
-  link: boringcompany.com
-  job_title: Senior Network System Administrator
-  dates: November 2017 - Present
+  company: DG Trésor - Directorate General of the (French) Treasury
+  link: www.tresor.economie.gouv.fr
+  job_title: Development team Manager
+  dates: April 2014 - Present
   quote: >
-   Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
+   Working for the Brussels IT Department (Pôle Informatique de Bruxelles)
   description: | # this will include new lines to allow paragraphs
-    Every company needs its networks properly administered and The Boring Compay is no exception. Digging holes is hard and I play my part making sure the whole company stays connected. I lead a team of 5 people and enjoy driving the company to try new technologies.
+    The Brussels IT Department is the engineering center for the DG Trésor.
+    I manage a team of 7 development engineer in .NET (ASP.NET MVC and .NET Core) and a tester (functional and automatized tests) working in 2 differents places :
+    Brussels and Paris (France).
+    Development projects are managed using Agile methodologies, mainly using Scrum.
+
