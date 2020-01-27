@@ -39,7 +39,7 @@ experience_title: Experience
 education_title: Education
 
 # More Section
-# more_title: A Little More About Me
+more_title: A Little More About Me
 more_content: | # this will include new lines to allow paragraphs
   Alongside my interests in software engineering, some of my other interests and hobbies are:
    - Gaming
