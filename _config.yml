@@ -1,5 +1,5 @@
 # Site
-repository: sproogen/resume-theme
+repository: cportet/cportet.github.io
 favicon: images/favicon.ico
 darkmode: true
 
@@ -11,7 +11,7 @@ website: www.portet.org
 
 # Social links
 twitter_username: cportet
-github_username:  cportet
+#github_username:  cportet
 # dribbble_username: jekyll
 facebook_username: cyril.portet
 # flickr_username: jekyll
@@ -41,7 +41,7 @@ about_content: | # this will include new lines to allow paragraphs
 # More Section
 # more_title: A Little More About Me
 more_content: | # this will include new lines to allow paragraphs
-  Alongside my interests in networks and software engineering some of my other interests and hobbies are:
+  Alongside my interests in software engineering, some of my other interests and hobbies are:
    - Gaming
    - Politics
 
