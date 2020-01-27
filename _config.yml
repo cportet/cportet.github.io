@@ -25,18 +25,18 @@ linkedin_username: cportet
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Cyril and this space is under construction.
+  Hi, my name is Cyril and this space is under construction.
   
-  I am most skilled in: <mark>Agile</mark> and <mark>Management</mark>
+  I am most skilled in: <mark>Agile</mark> and <mark>Management</mark>, especially in web and .NET environment.
 
 # Projects Section
-# projects_title: Projects
+projects_title: Projects
 
 # Experience Section
-# experience_title: Experience
+experience_title: Experience
 
 # Education Section
-# educaton_title: Education
+education_title: Education
 
 # More Section
 # more_title: A Little More About Me
