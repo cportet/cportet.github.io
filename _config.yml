@@ -1,0 +1,59 @@
+# Site
+repository: sproogen/resume-theme
+favicon: images/favicon.ico
+darkmode: true
+
+# Personal info
+name: Cyril Portet
+title: Project Manager
+email: cyril@portet.org
+website: www.portet.org
+
+# Social links
+twitter_username: cportet
+github_username:  cportet
+# dribbble_username: jekyll
+facebook_username: cyril.portet
+# flickr_username: jekyll
+#instagram_username: chillwildlife
+linkedin_username: cportet
+# pinterest_username: jekyll
+youtube_username: globalmtb
+# googleplus_username: +jekyll
+
+# About Section
+# about_title: About Me
+about_profile_image: images/profile.jpg
+about_content: | # this will include new lines to allow paragraphs
+  Hi, my name's Cyril and this space is under construction.
+  
+  I am most skilled in: <mark>Agile</mark> and <mark>Management</mark>
+
+# Projects Section
+# projects_title: Projects
+
+# Experience Section
+# experience_title: Experience
+
+# Education Section
+# educaton_title: Education
+
+# More Section
+# more_title: A Little More About Me
+more_content: | # this will include new lines to allow paragraphs
+  Alongside my interests in networks and software engineering some of my other interests and hobbies are:
+   - Gaming
+   - Politics
+
+# Footer
+footer_show_references: true
+
+# Build settings
+remote_theme: sproogen/resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+ - jekyll-seo-tag
