@@ -1,19 +1,24 @@
 - layout: left
-  company: Direction Générale du Trésor - Ministère de l'économie et des finances
+  company: Direction Générale du Trésor
   link: www.tresor.economie.gouv.fr
   job_title: Manager de l'équipe de développement
   dates: Avril 2014 - Aujourd'hui
   quote: >
    En poste au sein du Pôle Informatique des Bruxelles, pour le département des systèmes d'informations
   description: | # this will include new lines to allow paragraphs
+    La Direction générale du Trésor est une direction du Ministère de l'économie et des finances (France).
+
     Le Pôle informatique de Bruxelles est le centre d'ingénierie du DSI de la DG Trésor.
+
     Au sein de la cellule de développement, je gère une équipe de 7 ingénieurs en développement et 1 testeur (fonctionnel et tests automatisés) sur 2 sites distants : 
     Bruxelles (Belgique) et Paris (Bercy, Ministère de l'économie et des finances).
 
-    Nous sommes spécialisés dans les technologies Web et Microsoft (ASP.NET MVC ; .NET Core ; SQL Server) et offrons des services à l'ensemble des agents de la DG Trésor,
-    aussi bien sur Paris qu'au sein du réseau international de la DG Trésor.
+    Nous sommes spécialisés dans les technologies Web et Microsoft (<mark>ASP.NET MVC</mark> ; <mark>.NET Core</mark> ; <mark>SQL Server</mark>) 
+    et offrons des services à l'ensemble des agents de la DG Trésor, aussi bien sur Paris qu'au sein du réseau international de la DG Trésor.
 
-    Les projets sont réalisés en suivant principalement une approche Agile avec l'aide du framework Scrum.
-
-    Nous avons implementé une pipeline complète d'intégration continue et déploiement automatisé, avec l'objectif de migrer en organisation DevOps.
+    Les projets sont réalisés en suivant principalement une approche Agile avec l'aide du framework <mark>Scrum</mark>. 
+    A ce titre, j'ai pu prendre le rôle de Scrum Master et/ou de Coach Agile (intégration/accompagnement de l'équipe et du Product Owner) sur certains projets.
+    
+    Nous avons implementé une 'pipeline' complète d'intégration continue et déploiement automatisé, avec l'objectif de migrer en organisation DevOps.
+    Pour ce faire, nous utilisons la suite logicielle <mark>Team Foundation Server (TFS)</mark>.
 

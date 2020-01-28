@@ -41,7 +41,7 @@ about_content: | # this will include new lines to allow paragraphs
   Actuellement en Belgique, je travaille pour le compte de l'administration française.
 
 
-  Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://cv.portet.org) ou télécharger mon [CV au format PDF](ressources/CV-PORTET-C.pdf).
+  Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://cv.portet.org) ou télécharger mon [CV au format PDF](ressources/CV-PORTET-CYRIL.pdf).
 
 # Projects Section
 projects_title: Projets
@@ -80,6 +80,5 @@ plugins:
 exclude : [
   "Gemfile",
   "Gemfile.lock",
-  "ressources/",
   "docs/"
  ]
