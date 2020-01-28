@@ -3,15 +3,25 @@
   link: www.test.com
   github: test.com
   quote: >
-     test quotde
+     test quote
   description: | # this will include new lines to allow paragraphs
     test test test description
    
 - layout: top-middle
   name: test 2
-  link: www.test.com
-  github: test.com
+  #link: www.test.com
+  #github: test.com
   quote: >
-     test quotde
+     test quote
   description: | # this will include new lines to allow paragraphs
     test test test description
+
+
+- layout: top-middle
+  name: test 3
+  #link: www.test.com
+  #github: test.com
+  quote: >
+     
+  description: | # this will include new lines to allow paragraphs
+    test without quote

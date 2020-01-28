@@ -25,7 +25,7 @@ linkedin_username: cportet
 # Additionnal icon links
 additional_links:
  - title: Mon CV
-   icon: fa-user-tag
+   icon: fa-readme
    url: https://www.portet.org/ressources/CV-PORTET-CYRIL.pdf
 
 # About Section
@@ -46,7 +46,6 @@ about_content: | # this will include new lines to allow paragraphs
   Je suis de nationalité Française, originaire de Picardie (Oise), j'ai vécu ou travaillé en Picardie, Ile de France et Belgique.
   
   Actuellement en Belgique, je travaille pour le compte de l'administration française.
-
 
   Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://cv.portet.org) ou télécharger mon <a href="ressources/CV-PORTET-CYRIL.pdf" target="_blank">CV au format PDF</a>.
 
