@@ -26,7 +26,7 @@ linkedin_username: cportet
 additional_links:
  - title: Mon CV
    icon: fa-user-tag
-   url:https://www.portet.org/ressources/CV-PORTET-CYRIL.pdf
+   url: https://www.portet.org/ressources/CV-PORTET-CYRIL.pdf
 
 # About Section
 about_title: A mon sujet
