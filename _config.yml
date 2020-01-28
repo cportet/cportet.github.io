@@ -22,7 +22,7 @@ linkedin_username: cportet
 # googleplus_username: +jekyll
 
 # About Section
-# about_title: About Me
+about_title: A mon sujet
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   Bonjour,
@@ -39,6 +39,9 @@ about_content: | # this will include new lines to allow paragraphs
   Je suis de nationalité Française, originaire de Picardie (Oise), j'ai vécu ou travaillé en Picardie, Ile de France et Belgique.
   
   Actuellement en Belgique, je travaille pour le compte de l'administration française.
+
+
+  Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://cv.portet.org) ou télécharger mon [CV au format PDF](CV-PORTET-C.pdf).
 
 # Projects Section
 projects_title: Projets
@@ -58,7 +61,7 @@ more_content: | # this will include new lines to allow paragraphs
    - La politique et l'économie
   
   Vous pouvez aussi me retrouver ailleurs sur Internet : 
-    - [Profil LinkedIn](https://cv.portet.org)
+    - [Mur Twitter](https://twitter.portet.org)
     - [Profil Facebook](https://facebook.portet.org)
 
 # Footer
