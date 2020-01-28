@@ -1,30 +1,22 @@
 - layout: left
   name: Compétences techniques
   description:
-   <mark>TFS</mark> Administration, Sécurité, Gestion des Pipelines de Build et Release, Gestion de projet (avec personnalisation des WIT), Code (Git).
-
+   <mark>TFS (Team Foundation Server)</mark>
    <mark>ASP.NET WebForms</mark>
-
    <mark>ASP.NET MVC</mark>
-
    <mark>.NET Winforms</mark>
 
 - layout: left
-  name: Languages de programmation
+  name: Langages de programmation
   description:
    <mark>VB.NET</mark>
-
    <mark>SQL</mark>
-
    <mark>C#</mark>
-
    <mark>Visual Basic</mark>
 
 - layout: left
   name: Compétences fonctionnelles
   description:
    <mark>Agile Scrum</mark>
-
    <mark>Gestion de Projet</mark>
-
    <mark>Management d'équipe</mark>
