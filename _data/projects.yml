@@ -1,40 +1,30 @@
 - layout: left
-  name: <mark>TFS</mark> Administration, Sécurité, Gestion des Pipelines de Build et Release, Gestion de projet (avec personnalisation des WIT), Code (Git)
+  name: Compétences techniques
+  description:
+   <mark>TFS</mark> Administration, Sécurité, Gestion des Pipelines de Build et Release, Gestion de projet (avec personnalisation des WIT), Code (Git).
 
-- layout: top-middle
-  name: test
-  link: www.test.com
-  github: test.com
-  quote: >
-     test quote
-  description: | # this will include new lines to allow paragraphs
-    test test test description
-   
-- layout: top-middle
-  name: test 2
-  #link: www.test.com
-  #github: test.com
-  quote: >
-     test quote
-  description: | # this will include new lines to allow paragraphs
-    test test test description
+   <mark>ASP.NET WebForms</mark>
 
+   <mark>ASP.NET MVC</mark>
 
-- layout: top-middle
-  name: test 3
-  #link: www.test.com
-  #github: test.com
-  quote: >
-     
-  description: | # this will include new lines to allow paragraphs
-    test without quote
+   <mark>.NET Winforms</mark>
 
+- layout: left
+  name: Languages de programmation
+  description:
+   <mark>VB.NET</mark>
 
-- layout: top-middle
-  name: test without desc
-  #link: www.test.com
-  #github: test.com
-  quote: >
-     but with quote
-  #description: | # this will include new lines to allow paragraphs
-    
+   <mark>SQL</mark>
+
+   <mark>C#</mark>
+
+   <mark>Visual Basic</mark>
+
+- layout: left
+  name: Compétences fonctionnelles
+  description:
+   <mark>Agile Scrum</mark>
+
+   <mark>Gestion de Projet</mark>
+
+   <mark>Management d'équipe</mark>
