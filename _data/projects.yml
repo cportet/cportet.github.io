@@ -25,3 +25,13 @@
      
   description: | # this will include new lines to allow paragraphs
     test without quote
+
+
+- layout: top-middle
+  name: test without desc
+  #link: www.test.com
+  #github: test.com
+  quote: >
+     but with quote
+  #description: | # this will include new lines to allow paragraphs
+    
