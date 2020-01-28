@@ -1,13 +1,14 @@
 # Site
 repository: cportet/cportet.github.io
 favicon: images/favicon.ico
-darkmode: true
 
 # Personal info
 name: Cyril Portet
 title: Chef de projet / Manager
 email: cyril@portet.org
 #website: www.portet.org
+
+darkmode: true
 
 # Social links
 twitter_username: cportet
@@ -20,6 +21,12 @@ linkedin_username: cportet
 # pinterest_username: jekyll
 #youtube_username: globalmtb
 # googleplus_username: +jekyll
+
+# Additionnal icon links
+additional_links:
+ - title: Mon CV
+   icon: fa-user-tag
+   url:https://www.portet.org/ressources/CV-PORTET-CYRIL.pdf
 
 # About Section
 about_title: A mon sujet
@@ -41,10 +48,10 @@ about_content: | # this will include new lines to allow paragraphs
   Actuellement en Belgique, je travaille pour le compte de l'administration française.
 
 
-  Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://cv.portet.org) ou télécharger mon [CV au format PDF](ressources/CV-PORTET-CYRIL.pdf).
+  Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://cv.portet.org) ou télécharger mon <a href="ressources/CV-PORTET-CYRIL.pdf" target="_blank">CV au format PDF</a>.
 
 # Projects Section
-projects_title: Projets
+projects_title: Compétences
 
 # Experience Section
 experience_title: Expérience

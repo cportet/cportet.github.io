@@ -1,8 +1,17 @@
 - layout: top-middle
-  name:
-  link:
-  github:
+  name: test
+  link: www.test.com
+  github: test.com
   quote: >
-   
+     test quotde
   description: | # this will include new lines to allow paragraphs
+    test test test description
    
+- layout: top-middle
+  name: test 2
+  link: www.test.com
+  github: test.com
+  quote: >
+     test quotde
+  description: | # this will include new lines to allow paragraphs
+    test test test description
