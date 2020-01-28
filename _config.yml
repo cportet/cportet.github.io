@@ -7,7 +7,7 @@ darkmode: true
 name: Cyril Portet
 title: Chef de projet / Manager
 email: cyril@portet.org
-website: www.portet.org
+#website: www.portet.org
 
 # Social links
 twitter_username: cportet
@@ -79,5 +79,7 @@ plugins:
 
 exclude : [
   "Gemfile",
-  "Gemfile.lock"
+  "Gemfile.lock",
+  "ressources/",
+  "docs/"
  ]

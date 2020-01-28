@@ -1,13 +1,19 @@
 - layout: left
-  company: DG Trésor - Directorate General of the (French) Treasury
+  company: Direction Générale du Trésor - Ministère de l'économie et des finances
   link: www.tresor.economie.gouv.fr
-  job_title: Development team Manager
-  dates: April 2014 - Present
+  job_title: Manager de l'équipe de développement
+  dates: Avril 2014 - Aujourd'hui
   quote: >
-   Working for the Brussels IT Department (Pôle Informatique de Bruxelles)
+   En poste au sein du Pôle Informatique des Bruxelles, pour le département des systèmes d'informations
   description: | # this will include new lines to allow paragraphs
-    The Brussels IT Department is the engineering center for the DG Trésor.
-    I manage a team of 7 development engineer in .NET (ASP.NET MVC and .NET Core) and a tester (functional and automatized tests) working in 2 differents places :
-    Brussels and Paris (France).
-    Development projects are managed using Agile methodologies, mainly using Scrum.
+    Le Pôle informatique de Bruxelles est le centre d'ingénierie du DSI de la DG Trésor.
+    Au sein de la cellule de développement, je gère une équipe de 7 ingénieurs en développement et 1 testeur (fonctionnel et tests automatisés) sur 2 sites distants : 
+    Bruxelles (Belgique) et Paris (Bercy, Ministère de l'économie et des finances).
+
+    Nous sommes spécialisés dans les technologies Web et Microsoft (ASP.NET MVC ; .NET Core ; SQL Server) et offrons des services à l'ensemble des agents de la DG Trésor,
+    aussi bien sur Paris qu'au sein du réseau international de la DG Trésor.
+
+    Les projets sont réalisés en suivant principalement une approche Agile avec l'aide du framework Scrum.
+
+    Nous avons implementé une pipeline complète d'intégration continue et déploiement automatisé, avec l'objectif de migrer en organisation DevOps.
 
