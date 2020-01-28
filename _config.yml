@@ -5,7 +5,7 @@ darkmode: true
 
 # Personal info
 name: Cyril Portet
-title: Project Manager
+title: Chef de projet / Manager
 email: cyril@portet.org
 website: www.portet.org
 
@@ -25,28 +25,42 @@ linkedin_username: cportet
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name is Cyril and this space is under construction.
+  Bonjour,
+
+  Je me présente : Cyril Portet - 40 ans ; plus de 20 ans d'expérience dans le développement infomatique et la gestion de projet.
   
-  I am most skilled in: <mark>Agile</mark> and <mark>Management</mark>, especially in web and .NET environment.
+  Aussi bien à l'aise en environnement Agile que sur des approches Waterfall, j'associe mon expertise technique acquise en tant que développeur, particulièrement
+  en environnement Microsoft (.NET) avec mes capacités relationnelles et de gestion de projet avec comme double objectif, la satisfaction utilisateur et la qualité logicielle.
+
+  Mon expertise se porte particulièrement sur la gestion de projet <mark>Agile</mark> et le <mark>Management</mark>.
+
+  Techniquement, je suis très à l'aise avec le Web et particulièrement avec <mark>.NET</mark>.
+
+  Je suis de nationalité Française, originaire de Picardie (Oise), j'ai vécu ou travaillé en Picardie, Ile de France et Belgique.
+  
+  Actuellement en Belgique, je travaille pour le compte de l'administration française.
 
 # Projects Section
-projects_title: Projects
+projects_title: Projets
 
 # Experience Section
-experience_title: Experience
+experience_title: Expérience
 
 # Education Section
-education_title: Education
+education_title: Formation
 
 # More Section
-more_title: A Little More About Me
+more_title: En savoir plus sur moi
 more_content: | # this will include new lines to allow paragraphs
-  Alongside my interests in software engineering, some of my other interests and hobbies are:
-   - Gaming
-   - Politics
+  En sus de mes intérêts dans le développement informatique, l'agilité et la gestion de projets, mes autres intérêts portent sur :
+   - Mes 3 enfants et les activités en leur compagnie (jeux de société, jeux vidéos)
+   - Les jeux vidéos
+   - La politique et l'économie
+  
+  Vous pouvez aussi me retrouver ailleurs sur Internet : 
+    - [Profil LinkedIn](https://cv.portet.org)
+    - [Profil Facebook](https://facebook.portet.org)
 
-  See also:
-    [LinkedIn Profile](https://cv.portet.org)
 # Footer
 footer_show_references: false
 
