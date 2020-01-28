@@ -41,7 +41,7 @@ about_content: | # this will include new lines to allow paragraphs
   Actuellement en Belgique, je travaille pour le compte de l'administration française.
 
 
-  Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://cv.portet.org) ou télécharger mon [CV au format PDF](CV-PORTET-C.pdf).
+  Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://cv.portet.org) ou télécharger mon [CV au format PDF](ressources/CV-PORTET-C.pdf).
 
 # Projects Section
 projects_title: Projets
@@ -61,13 +61,14 @@ more_content: | # this will include new lines to allow paragraphs
    - La politique et l'économie
   
   Vous pouvez aussi me retrouver ailleurs sur Internet : 
-    - [Mur Twitter](https://twitter.portet.org)
-    - [Profil Facebook](https://facebook.portet.org)
+    - [sur Twitter](https://twitter.portet.org)
+    - [sur Facebook](https://facebook.portet.org)
 
 # Footer
 footer_show_references: false
 
 # Build settings
+#theme: themes/modern-resume-theme
 remote_theme: sproogen/resume-theme
 
 sass:
@@ -76,3 +77,10 @@ sass:
 
 plugins:
  - jekyll-seo-tag
+
+exclude : [
+  "Gemfile",
+  "Gemfile.lock",
+  "docs",
+  "ressources"
+ ]
