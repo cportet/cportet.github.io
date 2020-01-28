@@ -26,7 +26,7 @@ linkedin_username: cportet
 additional_links:
  - title: Mon CV
    icon: fa-readme
-   url: https://www.portet.org/ressources/CV-PORTET-CYRIL.pdf
+   url: https://resume.portet.org
 
 # About Section
 about_title: A mon sujet
@@ -47,7 +47,7 @@ about_content: | # this will include new lines to allow paragraphs
   
   Actuellement en Belgique, je travaille pour le compte de l'administration française.
 
-  Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://cv.portet.org) ou télécharger mon <a href="ressources/CV-PORTET-CYRIL.pdf" target="_blank">CV au format PDF</a>.
+  Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://cv.portet.org) ou télécharger mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
 
 # Projects Section
 projects_title: Compétences
@@ -61,6 +61,10 @@ education_title: Formation
 # More Section
 more_title: En savoir plus sur moi
 more_content: | # this will include new lines to allow paragraphs
+  Dans le cadre de mon activité au sein de la DG Trésor, je suis habilité <mark>CD</mark> (Confidentiel Défense).
+
+  Je dispose du Permis de conduire (France) et je suis véhiculé.
+
   En sus de mes intérêts dans le développement informatique, l'agilité et la gestion de projets, mes autres intérêts portent sur :
    - Mes 3 enfants et les activités en leur compagnie (jeux de société, jeux vidéos)
    - Les jeux vidéos
