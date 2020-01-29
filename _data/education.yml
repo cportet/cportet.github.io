@@ -2,7 +2,8 @@
   name: AFORP Oise
   dates: 1998 - 2000
   qualification: BTS Informatique de Gestion
-  quote: >
-   BTS IG - Option Développeur d'applications
+  ##quote: >
   description: | # this will include new lines to allow paragraphs
-    Formation réalisée dans le cadre d'un contrat d'apprentissage (alternance) avec la société <mark>Clariant</mark>.
+  BTS IG - **Option Développeur d'applications**.
+
+  Formation réalisée dans le cadre d'un contrat d'apprentissage (alternance) avec la société **Clariant**.
