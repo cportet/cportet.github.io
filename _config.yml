@@ -34,10 +34,6 @@ additional_links:
    icon: fa-twitter
    url: https://twitter.portet.org
 
- - title: Skype
-   icon: fa-skype
-   url: skype:cyril.portet@outlook.com?chat
-
  - title: Mon CV
    icon: fa-readme
    url: https://resume.portet.org
@@ -88,6 +84,9 @@ more_content: | # this will include new lines to allow paragraphs
   Vous pouvez aussi me retrouver ailleurs sur Internet : 
     - [sur Twitter](https://twitter.portet.org)
     - [sur Facebook](https://facebook.portet.org)
+
+  N'hésitez pas à me contacter directement via Skype :
+    - <a href="skype:cyril.portet@outlook.com?chat">Message Skype</a>
 
 # Footer
 footer_show_references: false
