@@ -13,14 +13,14 @@
     Au sein de la cellule de développement, je gère une équipe de 7 ingénieurs en développement et 1 testeur (fonctionnel et tests automatisés) sur 2 sites distants : 
     Bruxelles (Belgique) et Paris (Bercy, Ministère de l'économie et des finances).
 
-    Nous sommes spécialisés dans les technologies Web et Microsoft (<mark>ASP.NET MVC</mark> ; <mark>.NET Core</mark> ; <mark>SQL Server</mark>) 
+    Nous sommes spécialisés dans les technologies Web et Microsoft (**ASP.NET MVC** ; **.NET Core** ; **SQL Server**) 
     et offrons des services à l'ensemble des agents de la DG Trésor, aussi bien sur Paris qu'au sein du réseau international de la DG Trésor.
 
-    Les projets sont réalisés en suivant principalement une approche Agile avec l'aide du framework <mark>Scrum</mark>. 
+    Les projets sont réalisés en suivant principalement une approche **Agile** avec l'aide du framework **Scrum**. 
     A ce titre, j'ai pu prendre le rôle de Scrum Master et/ou de Coach Agile (intégration/accompagnement de l'équipe et du Product Owner) sur certains projets.
     
     Nous avons implementé une 'pipeline' complète d'intégration continue et déploiement automatisé, avec l'objectif de migrer en organisation DevOps.
-    Pour ce faire, nous utilisons la suite logicielle <mark>Team Foundation Server (TFS)</mark>.
+    Pour ce faire, nous utilisons la suite logicielle **Team Foundation Server (TFS)**.
 
 - layout: left
   company: Everial CRM
