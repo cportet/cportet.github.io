@@ -85,8 +85,7 @@ more_content: | # this will include new lines to allow paragraphs
     - [sur Twitter](https://twitter.portet.org)
     - [sur Facebook](https://facebook.portet.org)
 
-  N'hésitez pas à me contacter directement via Skype :
-    - <a href="skype:cyril-portet?chat">Message Skype</a>
+  N'hésitez pas à me contacter directement via Skype : <a href="skype:cyril-portet?chat">Message Skype</a>.
 
 # Footer
 footer_show_references: false
