@@ -34,6 +34,10 @@ additional_links:
    icon: fa-twitter
    url: https://twitter.portet.org
 
+ - title: Skype
+   icon: fa-skype
+   url: skype:cyril.portet@outlook.com?chat
+
  - title: Mon CV
    icon: fa-readme
    url: https://resume.portet.org
