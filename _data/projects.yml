@@ -16,7 +16,7 @@
    <mark>T-SQL</mark>
    <mark>Visual Basic</mark>
    <mark>Powershell</mark>
-   <mark>HTML & CSS</mark>
+   <mark>HTML et CSS</mark>
 
 - layout: left
   name: Compétences fonctionnelles
@@ -24,5 +24,16 @@
    <mark>Agile Scrum</mark>
    <mark>Gestion de Projet</mark>
    <mark>Management d'équipe</mark>
+   <mark>Communication</mark>
    <mark>Architecture</mark>
    <mark>Capacités rédactionnelles</mark>
+
+- layout: left
+  name: Formations et Certifications
+  description:
+   - Certifié Prince2 Foundation et Practioner (2017)
+   - Direction des projets SI de l’état (2016)
+   - Administration de solutions Dynamics CRM 2016 (2016)
+   - Scrum Master (2015)
+   - UX Design (2015)
+
