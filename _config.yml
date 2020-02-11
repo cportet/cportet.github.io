@@ -1,28 +1,45 @@
 # Site
 repository: cportet/cportet.github.io
 favicon: images/favicon.ico
-darkmode: true
 
 # Personal info
 name: Cyril Portet
 title: Chef de projet / Manager
 email: cyril@portet.org
-website: www.portet.org
+#website: www.portet.org
+
+darkmode: true
 
 # Social links
-twitter_username: cportet
+#twitter_username: cportet
 #github_username:  cportet
 # dribbble_username: jekyll
-facebook_username: cyril.portet
+#facebook_username: cyril.portet
 # flickr_username: jekyll
 #instagram_username: chillwildlife
-linkedin_username: cportet
+#linkedin_username: cportet
 # pinterest_username: jekyll
 #youtube_username: globalmtb
 # googleplus_username: +jekyll
 
+# Additionnal icon links
+additional_links:
+
+
+ - title: LinkedIn
+   icon: fa-linkedin-in
+   url: https://cv.portet.org
+
+ - title: Twitter
+   icon: fa-twitter
+   url: https://twitter.portet.org
+
+ - title: Mon CV
+   icon: fa-readme
+   url: https://resume.portet.org
+
 # About Section
-# about_title: About Me
+about_title: A mon sujet
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   Bonjour,
@@ -32,34 +49,43 @@ about_content: | # this will include new lines to allow paragraphs
   Aussi bien à l'aise en environnement Agile que sur des approches Waterfall, j'associe mon expertise technique acquise en tant que développeur, particulièrement
   en environnement Microsoft (.NET) avec mes capacités relationnelles et de gestion de projet avec comme double objectif, la satisfaction utilisateur et la qualité logicielle.
 
-  Mon expertise se porte particulièrement sur la gestion de projet <mark>Agile</mark> et le <mark>Management</mark>.
+  Mon expertise se porte particulièrement sur la gestion de projet **Agile** (**Scrum**) et le **Management**.
 
-  Techniquement, je suis très à l'aise avec le Web et particulièrement avec <mark>.NET</mark>.
+  Techniquement, je suis très à l'aise avec le Web et particulièrement avec **.NET**.
 
-  Je suis de nationalité Française, originaire de Picardie (Oise), j'ai vécu ou travaillé en Picardie, Ile de France et Belgique.
+  Je suis de nationalité Française, originaire de Picardie (Oise).
   
+  J'ai vécu ou travaillé en Picardie, Ile de France et Belgique.
   Actuellement en Belgique, je travaille pour le compte de l'administration française.
 
+  Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://cv.portet.org) ou télécharger mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
+
 # Projects Section
-projects_title: Projets
+projects_title: Compétences
 
 # Experience Section
-experience_title: Expérience
+experience_title: Dernières expériences
 
 # Education Section
-education_title: Formation
+education_title: Cursus
 
 # More Section
 more_title: En savoir plus sur moi
 more_content: | # this will include new lines to allow paragraphs
+  Dans le cadre de mon activité au sein de la DG Trésor, je suis habilité CD (Confidentiel Défense) depuis 2014.
+
+  Je dispose du Permis de conduire (France) et je suis véhiculé.
+
   En sus de mes intérêts dans le développement informatique, l'agilité et la gestion de projets, mes autres intérêts portent sur :
-   - Mes 3 enfants et les activités en leur compagnie (jeux de société, jeux vidéos)
-   - Les jeux vidéos
+   - Mes 3 enfants et les activités en leur compagnie
+   - Les jeux vidéos (principalement RPG)
    - La politique et l'économie
   
   Vous pouvez aussi me retrouver ailleurs sur Internet : 
-    - [Profil LinkedIn](https://cv.portet.org)
-    - [Profil Facebook](https://facebook.portet.org)
+    - [sur Twitter](https://twitter.portet.org)
+    - [sur Facebook](https://facebook.portet.org)
+
+  N'hésitez pas à me contacter directement via Skype : <a href="skype:cyril-portet?chat">Message Skype</a>.
 
 # Footer
 footer_show_references: false
@@ -73,3 +99,9 @@ sass:
 
 plugins:
  - jekyll-seo-tag
+
+exclude : [
+  "Gemfile",
+  "Gemfile.lock",
+  "docs/"
+ ]

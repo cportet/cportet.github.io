@@ -2,8 +2,8 @@
   name: AFORP Oise
   dates: 1998 - 2000
   qualification: BTS Informatique de Gestion
-  #quote: >
-  #Work-study center (apprenticeship contract)
+  ##quote: >
   description: | # this will include new lines to allow paragraphs
+    BTS IG - **Option Développeur d'applications**.
     
-    I carried out my studies under an apprenticeship contract with the company <mark>Clariant</mark>.
+    Formation réalisée dans le cadre d'un contrat d'apprentissage (alternance) avec la société **Clariant** (Désormais [Weylchem](https://www.weylchem.com/weylchem-lamotte-sas.html)).

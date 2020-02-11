@@ -1,8 +1,40 @@
-- layout: top-middle
-  name:
-  link:
-  github:
-  quote: >
+- layout: left
+  name: Compétences techniques
+  description:
+   <mark>TFS (Team Foundation Server)</mark>
+   <mark>ASP.NET WebForms</mark>
+   <mark>ASP.NET MVC</mark>
+   <mark>.NET Winforms</mark>
+   <mark>SQL Server</mark>
    
-  description: | # this will include new lines to allow paragraphs
-   
+- layout: left
+  name: Langages de programmation
+  description:
+   <mark>C#</mark>
+   <mark>VB.NET</mark>
+   <mark>SQL</mark>
+   <mark>T-SQL</mark>
+   <mark>Visual Basic</mark>
+   <mark>Powershell</mark>
+   <mark>HTML et CSS</mark>
+
+- layout: left
+  name: Compétences fonctionnelles
+  description:
+   <mark>Agile Scrum</mark>
+   <mark>Gestion de Projet</mark>
+   <mark>Management d'équipe</mark>
+   <mark>Communication</mark>
+   <mark>Architecture</mark>
+   <mark>Capacités rédactionnelles</mark>
+
+- layout: left
+  name: Formations et Certifications
+  description: >
+    Dernières formation et certifications :
+      - Certifié Prince2 Foundation et Practioner (2017)
+      - Direction des projets SI de l’état (2016)
+      - Administration de solutions Dynamics CRM (2016)
+      - Scrum Master (2015)
+      - UX Design (2015)
+
