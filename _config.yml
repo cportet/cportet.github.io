@@ -39,7 +39,7 @@ about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
  
   Vous cherchez à consulter mon CV ? 
-  Consultez directement mon [profil LinkedIn](https://linkedin.portet.org)
+  Rendez-vous directement mon [profil LinkedIn](https://linkedin.portet.org) ou téléchargez mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
 
   Vous pouvez me retrouver sur les réseaux sociaux : 
     - [Twitter](https://twitter.portet.org)
