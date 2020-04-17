@@ -30,11 +30,11 @@ additional_links:
    icon: fa-linkedin-in
    url: https://linkedin.portet.org
 
- - title: Twitter
-   icon: fa-twitter
-   url: https://twitter.portet.org
+ - title: Home
+   icon: fa-font-awesome-flag
+   url: https://www.portet.org
 
- - title: Mon CV
+ - title: Mon CV (PDF)
    icon: fa-readme
    url: https://resume.portet.org
 
@@ -74,18 +74,14 @@ more_title: En savoir plus sur moi
 more_content: | # this will include new lines to allow paragraphs
   Dans le cadre de mon activité au sein de la DG Trésor, je suis habilité CD (Confidentiel Défense) depuis 2014.
 
-  Je dispose du Permis de conduire (France) et je suis véhiculé.
+  Je dispose du Permis de conduire (France) et d'un véhicule personnel.
 
   En sus de mes intérêts dans le développement informatique, l'agilité et la gestion de projets, mes autres intérêts portent sur :
    - Mes 3 enfants et les activités en leur compagnie
-   - Les jeux vidéos (principalement RPG)
+   - Les jeux vidéos
    - La politique et l'économie
   
-  Vous pouvez aussi me retrouver ailleurs sur Internet : 
-    - [sur Twitter](https://twitter.portet.org)
-    - [sur Facebook](https://facebook.portet.org)
-
-  N'hésitez pas à me contacter directement via Skype : <a href="skype:cyril-portet?chat">Message Skype</a>.
+  En savoir plus sur moi : [Home](https://www.portet.org)
 
 # Footer
 footer_show_references: false

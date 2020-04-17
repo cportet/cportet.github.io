@@ -4,7 +4,7 @@ favicon: images/favicon.ico
 
 # Personal info
 name: Cyril Portet
-title: Chef de projet / Manager
+title: 
 email: cyril@portet.org
 #website: www.portet.org
 
@@ -34,8 +34,15 @@ about_title: Welcome
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
  
-  Bienvenue.
+  Vous cherchez à consulter mon CV ? 
+  Retrouvez-le [ici](https://www.portet.org/cv) ou consultez directement mon [profil LinkedIn](https://linkedin.portet.org)
 
+  Vous pouvez me retrouver sur les réseaux sociaux : 
+    - [Twitter](https://twitter.portet.org)
+    - [Facebook](https://facebook.portet.org)
+
+  N'hésitez pas à contacter par courriel (que vous retrouverez en bas de page).
+  
 # Projects Section
 #projects_title: Compétences
 
