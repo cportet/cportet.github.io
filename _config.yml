@@ -41,9 +41,7 @@ about_content: | # this will include new lines to allow paragraphs
   Vous cherchez à consulter mon CV ? 
   Rendez-vous directement mon [profil LinkedIn](https://linkedin.portet.org) ou téléchargez mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
 
-  Vous pouvez me retrouver sur les réseaux sociaux : 
-    - [Twitter](https://twitter.portet.org)
-    - [Facebook](https://facebook.portet.org)
+
 
 # Projects Section
 #projects_title: Compétences
@@ -55,9 +53,11 @@ about_content: | # this will include new lines to allow paragraphs
 #education_title: Cursus
 
 # More Section
-#more_title: En savoir plus sur moi
-#more_content: | # this will include new lines to allow paragraphs
-
+more_title: En savoir plus sur moi
+more_content: | # this will include new lines to allow paragraphs
+  Vous pouvez me retrouver sur les réseaux sociaux : 
+    - [Twitter](https://twitter.portet.org)
+    - [Facebook](https://facebook.portet.org)
 # Footer
 footer_show_references: false
 
