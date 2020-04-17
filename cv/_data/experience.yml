@@ -1,0 +1,47 @@
+- layout: left
+  company: Direction Générale du Trésor
+  link: www.tresor.economie.gouv.fr
+  job_title: Manager de l'équipe de développement
+  dates: Avril 2014 - Aujourd'hui
+  quote: >
+   En poste au sein du Pôle Informatique de Bruxelles, pour le département des systèmes d'informations
+  description: | # this will include new lines to allow paragraphs
+    La Direction générale du Trésor est une direction du Ministère de l'économie et des finances (France).
+
+    Le Pôle informatique de Bruxelles est le centre d'ingénierie du DSI de la DG Trésor.
+
+    Au sein de la cellule de développement, je gère une équipe de 7 ingénieurs en développement et 1 testeur (fonctionnel et tests automatisés) sur 2 sites distants : 
+    Bruxelles (Belgique) et Paris (Bercy, Ministère de l'économie et des finances).
+
+    Nous sommes spécialisés dans les technologies Web et Microsoft (**ASP.NET MVC** ; **.NET Core** ; **SQL Server**) 
+    et offrons des services à l'ensemble des agents de la DG Trésor, aussi bien sur Paris qu'au sein du réseau international de la DG Trésor.
+
+    Les projets sont réalisés en suivant principalement une approche **Agile** avec l'aide du framework **Scrum**. 
+    A ce titre, j'ai pu prendre le rôle de Scrum Master et/ou de Coach Agile (intégration/accompagnement de l'équipe et du Product Owner) sur certains projets.
+    
+    Nous avons implementé une 'pipeline' complète d'intégration continue et déploiement automatisé, avec l'objectif de migrer en organisation DevOps.
+    Pour ce faire, nous utilisons la suite logicielle **Team Foundation Server (TFS)**.
+
+- layout: left
+  company: Everial CRM
+  link: http://www.ediis.fr/
+  job_title: Chef de projet transversal
+  dates: Juin 2013 - Avril 2014
+  quote: >
+   
+  description: | # this will include new lines to allow paragraphs
+    Principalement sur le progiciel Magellan (EDIIS CRM).
+    
+    En charge de la coordination, la planification et l'animation des projets en relation avec les équipes métier (et maitrise d'ouvrage), développement, infrastructure
+    et production - ainsi que les clients de la société (avant-vente).
+
+    En charge du suivi de la mise en place des prélèvements bancaires à la norme européenne (SEPA), en partenariat avec la maitrise d'ouvrage.
+    A ce titre, j'ai procédé, notamment, à la mise en place d'outils de contrôles par la réalisation d'un outil de validation des fichiers de prélèvements.
+
+    Participation à la rédaction des spécifications techniques ou fonctionnelles.
+
+    *La société Everial CRM a été reprise en 2016 par la société EDIIS*.
+
+- layout: top-middle
+  company: Autres expériences (Voir mon CV)
+  link: https://resume.portet.org

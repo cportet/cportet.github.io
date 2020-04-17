@@ -1,0 +1,9 @@
+- layout: left
+  name: AFORP Oise
+  dates: 1998 - 2000
+  qualification: BTS Informatique de Gestion
+  ##quote: >
+  description: | # this will include new lines to allow paragraphs
+    BTS IG - **Option Développeur d'applications**.
+    
+    Formation réalisée dans le cadre d'un contrat d'apprentissage (alternance) avec la société **Clariant** (Désormais [Weylchem](https://www.weylchem.com/weylchem-lamotte-sas.html)).
