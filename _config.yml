@@ -33,7 +33,7 @@ additional_links:
    icon: fab fa-linkedin-in
    url: https://linkedin.portet.org
 
- -title: Mon CV au Format PDF
+ - title: Mon CV au Format PDF
    icon: far fa-file-pdf
    url: https://resume.portet.org
 
@@ -49,7 +49,7 @@ additional_links_simple:
    icon: fab fa-linkedin-in
    url: https://linkedin.portet.org
 
-- title: Instagram
+ - title: Instagram
    icon: fab fa-instagram
    url: https://instagram.portet.org
 
