@@ -5,6 +5,22 @@
 # To change the home page layout, edit the _layouts/home.html file.
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
-layout: default
+layout: simple
 ---
+
+#### Mon CV
+
+Vous cherchez à consulter mon **CV** ?
+Rendez-vous [sur cette page](https://www.portet/org/cv) 
+ 
+Rendez-vous directement mon [profil LinkedIn](https://linkedin.portet.org) ou téléchargez mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
+
+#### Me contacter
+
+Vous pouvez me retrouver sur les réseaux sociaux : 
+  - [Twitter](https://twitter.portet.org)
+  - [Facebook](https://facebook.portet.org)
+
+Pour me contacter, vous pouvez m'adresser <a href="mailto:cyril@portet.org?subject=Contact depuis www.portet.org">un courriel</a> ou me contacter par téléphone :
+![Téléphone Cyril Portet](/images/phone.png)
 
