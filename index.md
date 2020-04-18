@@ -15,6 +15,7 @@ Rendez-vous [sur cette page](https://www.portet.org/resume)
  
 Vous pouvez aussi me contacter via mon [profil LinkedIn](https://linkedin.portet.org) ou téléchargez mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
 
+<p>&nbsp;<p/>
 ### Me contacter
 
 Vous pouvez me retrouver sur les réseaux sociaux : 

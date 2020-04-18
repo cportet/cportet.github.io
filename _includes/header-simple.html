@@ -5,6 +5,13 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
       <ul class="icons no-print">
+        {%- if site.skype_id -%}
+        <li>
+          <a target="_blank" href="skype:{{ site.skype_id | escape }}?chat" class="button button--sacnite button--round-l">
+            <i class="fab fa-skype" title="Skype Message"></i>
+          </a>
+        </li>
+      {%- endif -%}
         {% for link in site.additional_links_simple %}
           <li>
             {% include a.html href=link.url class="button button--sacnite button--round-l" %}
@@ -12,13 +19,6 @@
             </a>
           </li>
         {% endfor %}
-        {%- if site.skype_id -%}
-          <li>
-            <a target="_blank" href="skype:{{ site.skype_id | escape }}?chat" class="button button--sacnite button--round-l">
-              <i class="fab fa-skype" title="Skype Message"></i>
-            </a>
-          </li>
-        {%- endif -%}
       </ul>
     </div>
   </div>
