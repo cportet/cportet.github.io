@@ -15,6 +15,7 @@ Rendez-vous [sur cette page](https://www.portet.org/resume)
  
 Vous pouvez aussi me retrouver sur [LinkedIn](https://linkedin.portet.org) ou bien télécharger mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
 
+<div class="container">
 ### Me contacter
 
 Vous pouvez me retrouver sur les réseaux sociaux : 
@@ -22,4 +23,5 @@ Vous pouvez me retrouver sur les réseaux sociaux :
   - [Facebook](https://facebook.portet.org)
 
 Pour m'écrire, rien de plus simple, suivez-ce <a href="mailto:cyril@portet.org?subject=Contact depuis www.portet.org">lien pour m'envoyer un courriel</a>.
+</div>
 
