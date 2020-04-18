@@ -13,14 +13,15 @@ layout: simple
 Vous cherchez à consulter mon **CV** ?
 Rendez-vous [sur cette page](https://www.portet.org/resume) 
  
-Vous pouvez aussi me contacter via mon [profil LinkedIn](https://linkedin.portet.org) ou téléchargez mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
+Vous pouvez aussi me retrouver sur [LinkedIn](https://linkedin.portet.org) ou bien télécharger mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
 
-<p>&nbsp;<p/>
+<p>&nbsp;</p>
+
 ### Me contacter
 
 Vous pouvez me retrouver sur les réseaux sociaux : 
   - [Twitter](https://twitter.portet.org)
   - [Facebook](https://facebook.portet.org)
 
-Pour me contacter, vous pouvez m'adresser <a href="mailto:cyril@portet.org?subject=Contact depuis www.portet.org">un courriel</a>.
+Pour m'écrire, rien de plus simple, suivez-ce <a href="mailto:cyril@portet.org?subject=Contact depuis www.portet.org">lien pour m'envoyer un courriel</a>.
 
