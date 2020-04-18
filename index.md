@@ -19,9 +19,9 @@ Vous pouvez aussi me retrouver sur [LinkedIn](https://linkedin.portet.org) ou bi
 
 ### Me contacter
 
-Vous pouvez me retrouver sur les réseaux sociaux : 
-  - [Twitter](https://twitter.portet.org)
-  - [Facebook](https://facebook.portet.org)
+Vous pouvez me retrouver sur les réseaux sociaux en suivant les liens dans le menu.
 
 Pour m'écrire, rien de plus simple, suivez-ce <a href="mailto:cyril@portet.org?subject=Contact depuis www.portet.org">lien pour m'envoyer un courriel</a>.
+
+Vous pouvez aussi me contacter via <a href="skype:cyril-portet?chat">Skype</a>.
 
