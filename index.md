@@ -24,3 +24,9 @@ Vous pouvez me retrouver sur les réseaux sociaux en suivant les liens dans le m
 Pour m'écrire, suivez-ce <a href="mailto:cyril@portet.org?subject=Contact depuis www.portet.org">lien pour m'envoyer un courriel</a>. 
 Vous pouvez aussi me contacter via <a href="skype:cyril-portet?chat">Skype</a>.
 
+
+<a href="skype:live:cyril-portet?chat">Skype</a>
+
+<a href="skype:live:cyril.portet@outlook.com?chat">Skype</a>
+
+<a href="skype:cyril.portet@outlook.com?chat">Skype</a>
