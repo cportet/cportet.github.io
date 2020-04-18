@@ -59,8 +59,7 @@ additional_links_simple:
    url: https://www.portet.org/resume
 
 # About Section
-about_title: Welcome
-about_title_simple: Welcome
+about_title: A propos
 about_profile_image: images/profile.jpg
 #about_profile_image_simple: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
@@ -103,8 +102,6 @@ more_content: | # this will include new lines to allow paragraphs
    - Les jeux vidéos
    - La politique et l'économie
   
-  En savoir plus sur moi : [Home](https://www.portet.org)
-
 # Footer
 footer_show_references: false
 
