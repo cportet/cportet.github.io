@@ -13,6 +13,13 @@
             </a>
           </li>
         {% endfor %}
+        {%- if site.skype_id -%}
+          <li>
+            <a target="_blank" href="{{ site.skype_id | escape }}" class="button button--sacnite button--round-l">
+              <i class="fab fa-skype" title="Skype Message"></i>
+            </a>
+          </li>
+        {%- endif -%}
       </ul>
     </div>
   </div>

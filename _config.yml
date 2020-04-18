@@ -4,7 +4,7 @@ favicon: images/favicon.ico
 
 # Personal info
 name: Cyril Portet
-title: 
+title: Project Manager
 email: cyril@portet.org
 #website: www.portet.org
 
@@ -25,20 +25,41 @@ darkmode: true
 # Additionnal icon links
 additional_links:
 
- - title: LinkedIn
-   icon: fa-linkedin-in
+ - title: Home
+   icon: fas fa-home
+   url: https://www.portet.org
+   
+   - title: LinkedIn
+   icon: fab fa-linkedin-in
    url: https://linkedin.portet.org
+
+   title: Mon CV au Format PDF
+   icon: far fa-file-pdf
+   url: https://resume.portet.org
+
 
 # Additionnal icon links
 additional_links_simple:
 
- - title: LinkedIn
+ - title: Twitter
+   icon: fab fa-twitter
+   url: https://twitter.portet.org
+
+- title: Facebook
    icon: fab fa-linkedin-in
    url: https://linkedin.portet.org
 
- - title: Home
-   icon: fas fa-home
-   url: https://www.portet.org
+- title: Instagram
+   icon: fab fa-instagram
+   url: https://instagram.portet.org
+
+- title: LinkedIn
+   icon: fab fa-linkedin-in
+   url: https://linkedin.portet.org
+
+ - title: Mon CV en ligne
+   icon: far fa-address-card
+   url: https://www.portet.org/resume
 
 # About Section
 about_title: Welcome
@@ -62,7 +83,7 @@ about_content: | # this will include new lines to allow paragraphs
   J'ai vécu ou travaillé en Picardie, Ile de France et Belgique.
   Actuellement en Belgique, je travaille pour le compte de l'administration française.
 
-  Pour en savoir plus sur moi, vous pouvez  consulter mon [profil LinkedIn](https://linkedin.portet.org) ou télécharger mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
+  Pour en savoir plus sur mon parcours professionnel, vous pouvez  consulter mon [profil LinkedIn](https://linkedin.portet.org) ou télécharger mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
 
 # Projects Section
 projects_title: Compétences
