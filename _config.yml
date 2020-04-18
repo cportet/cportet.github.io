@@ -54,10 +54,6 @@ additional_links_simple:
    icon: fab fa-instagram
    url: https://instagram.portet.org
 
- - title: LinkedIn
-   icon: fab fa-linkedin-in
-   url: https://linkedin.portet.org
-
  - title: Mon CV en ligne
    icon: far fa-address-card
    url: https://www.portet.org/resume
