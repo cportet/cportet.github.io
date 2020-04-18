@@ -11,6 +11,7 @@ email: cyril@portet.org
 darkmode: true
 
 # Social links
+skype_id: cyril-portet
 #twitter_username: cportet
 #github_username:  cportet
 # dribbble_username: jekyll
@@ -46,7 +47,7 @@ additional_links_simple:
    url: https://twitter.portet.org
 
  - title: Facebook
-   icon: fab fa-linkedin-in
+   icon: fab fa-facebook
    url: https://linkedin.portet.org
 
  - title: Instagram
