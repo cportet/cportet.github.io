@@ -8,21 +8,21 @@
 layout: simple
 ---
 
-## Niveau 2
+### Bienvenue
 
-### Niveau 3
+#### Mon CV
 
-#### Niveau 4
-
-Vous cherchez à **consulter** mon CV ? 
-  
+Vous cherchez à consulter mon **CV** ?
+Rendez-vous [sur cette page](https://www.portet/org/cv) 
+ 
 Rendez-vous directement mon [profil LinkedIn](https://linkedin.portet.org) ou téléchargez mon <a href="https://resume.portet.org" target="_blank">CV au format PDF</a>.
 
-Etc.
+#### Me contacter
 
-`Code sample`
+Vous pouvez me retrouver sur les réseaux sociaux : 
+  - [Twitter](https://twitter.portet.org)
+  - [Facebook](https://facebook.portet.org)
 
-Table | Value
------ | -----
-Value | 1
+Pour me contacter, vous pouvez m'adresser <a href="mailto:cyril@portet.org?subject=Contact depuis www.portet.org">un courriel</a> ou me contacter par téléphone :
+![Téléphone Cyril Portet](/images/phone.png)
 
