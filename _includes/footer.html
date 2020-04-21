@@ -1,7 +1,7 @@
 <div class="container footer-container">
   <p>
     {{ site.name | escape }} -
-    <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>
+    <a href="mailto:{{ site.email }}?subject=contact%20depuis%mon%CV" target="_blank">{{ site.email | escape }}</a>
     {%- if site.footer_show_references -%}
       &nbsp;- References on request
     {%- endif -%}
