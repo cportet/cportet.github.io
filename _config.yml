@@ -28,6 +28,7 @@ additional_links:
 
  - title: Home
    icon: fas fa-home
+   samesite: true
    url: https://www.portet.org
    
  - title: LinkedIn
@@ -56,6 +57,7 @@ additional_links_simple:
 
  - title: Mon CV en ligne
    icon: far fa-address-card
+   samesite: true
    url: https://www.portet.org/resume
 
 # About Section
