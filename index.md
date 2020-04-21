@@ -10,12 +10,16 @@ layout: simple
 
 ### Me contacter
 
-Vous pouvez me retrouver sur les **réseaux sociaux** en suivant les **liens dans le menu**.
-Pour m'écrire, cliquez sur mon **adresse e-mail** dans le **pied de page du site**. 
+Vous pouvez me retrouver sur les **réseaux sociaux** :
+ - [LinkedIn](https://linkedin.portet.org)
+ - [Twitter](https://twitter.portet.org)
+ - [Facebook](https://facebook.portet.org)
+ - [Instagram](https://instagram.portet.org)
 
-Vous pouvez aussi me contacter via <a href="skype:cyril-portet?chat">Skype</a>.
+N'hésitez-pas, aussi, à me contacter via <a href="skype:cyril-portet?chat">Skype</a>.
 
 <br/>
+
 ### Mon CV
 
 Vous cherchez à consulter mon **CV** ?
