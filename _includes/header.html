@@ -99,7 +99,11 @@
         {%- endif -%}
         {% for link in site.additional_links %}
           <li>
-            {% include a.html href=link.url class="button button--sacnite button--round-l" %}
+           {% if link.samesite==true %}
+              {% include a-samesite.html href=link.url class="button button--sacnite button--round-l" %}
+            {% else %}
+              {% include a.html href=link.url class="button button--sacnite button--round-l" %}            
+            {% endif %}
               <i class="{{ link.icon }}" title="{{ link.title | escape }}"></i>
             </a>
           </li>
