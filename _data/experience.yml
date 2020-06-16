@@ -1,8 +1,22 @@
 - layout: left
+  company: FIDUCIAL Informatique
+  link: www.fiducial.fr
+  job_title: Responsable de l'activité Transfert
+  dates: Juin 2020 - Aujourd'hui
+  quote: >
+  
+  description: | # this will include new lines to allow paragraphs
+    FIDUCIAL Informatique, société du groupe FIDUCIAL est un éditeur de logiciels spécialisés, présents sur plusieurs marchés : 
+    Notariat, Huissiers, Auto/Moto et logiciels de caisses (Hôtel/Restauration, Coiffure, TPE).
+    
+    Au sein de la R&D, je suis responsable de l'activité Transfert et encadre une équipe de 14 personnes 
+    qui ont pour rôle, la réalisation des transferts de données vers nos solutions informatiques pour le compte de nos clients.
+
+- layout: left
   company: Direction Générale du Trésor
   link: www.tresor.economie.gouv.fr
   job_title: Manager de l'équipe de développement
-  dates: Avril 2014 - Aujourd'hui
+  dates: Avril 2014 - Avril 2020
   quote: >
    En poste au sein du Pôle Informatique de Bruxelles, pour le département des systèmes d'informations
   description: | # this will include new lines to allow paragraphs
