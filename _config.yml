@@ -67,7 +67,7 @@ about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   Bonjour,
 
-  Je me présente : Cyril Portet - 40 ans ; plus de 20 ans d'expérience dans le développement infomatique et la gestion de projet.
+  Je me présente : Cyril Portet - 41 ans ; plus de 20 ans d'expérience dans le développement infomatique et la gestion de projet.
   
   Aussi bien à l'aise en environnement Agile que sur des approches Waterfall, j'associe mon expertise technique acquise en tant que développeur, particulièrement
   en environnement Microsoft (.NET) avec mes capacités relationnelles et de gestion de projet avec comme double objectif, la satisfaction utilisateur et la qualité logicielle.
@@ -82,6 +82,8 @@ about_content: | # this will include new lines to allow paragraphs
   Actuellement dans la région lyonnaise, je travaille pour le compte d'un éditeur Logiciel, FIDUCIAL Informatique, société du groupe FIDUCIAL.
 
   Pour en savoir plus sur mon parcours professionnel, vous pouvez  consulter mon [profil LinkedIn](https://linkedin.portet.org) ou télécharger mon <a href="https://cv.portet.org" target="_blank">CV au format PDF</a>.
+  
+  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
 # Projects Section
 projects_title: Compétences
