@@ -1,8 +1,22 @@
 - layout: left
+  company: Simpleter
+  link: -
+  job_title: Responsable technique / CTO
+  dates: Mai 2021 - Aujourd'hui
+  quote: >
+
+  description: | # this will include new lines to allow paragraphs
+    Directeur technique pour la société Simpleter, éditeur de solutions logicielles pour la gestion d'entreprise.
+    
+    Réalisation de l'architecture technique de la solution, développement et management de l'environnement applicatif.
+    
+    Technologies mises en oeuvres : **ASP.NET Core (.NET 5 et .NET 6)**, **Blazor**, **AzureAD**, **SQL Server**.
+    
+- layout: left
   company: FIDUCIAL Informatique
   link: www.fiducial.fr
   job_title: Responsable de l'activité Transfert
-  dates: Juin 2020 - Aujourd'hui
+  dates: Juin 2020 - Avril 2021
   quote: >
   
   description: | # this will include new lines to allow paragraphs
