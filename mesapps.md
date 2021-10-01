@@ -14,7 +14,7 @@ layout: simple
 
 &nbsp;
 
-**Mes Applications** est un lanceur d'applications et de liens favoris pour Windows disponible sur le Windows Store (<a href="https://www.microsoft.com/store/apps/9P2V5R46N6XQ">lien vers le store</a>) développée avec la technologie **WinUI* (**.NET 6**) sur la base du projet **Reunion** de **Microsoft**.
+**Mes Applications** est un lanceur d'applications et de liens favoris pour Windows disponible sur le Windows Store (<a href="https://www.microsoft.com/store/apps/9P2V5R46N6XQ">lien vers le store</a>) développée avec la technologie **WinUI* (.NET 6) sur la base du projet **Reunion** de **Microsoft**.
 
 Le fonctionnement est simple : glisser/déposer vos fichiers vers l'applications et ils seront automatiquement enregistrés comme lien rapide dans la liste des liens.
 
