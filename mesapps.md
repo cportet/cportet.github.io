@@ -14,16 +14,16 @@ layout: simple
 
 &nbsp;
 
-**Mes Applications** est un lanceur d'applications et de liens favoris pour Windows disponible sur le Windows Store (<a href="https://www.microsoft.com/store/apps/9P2V5R46N6XQ">lien vers le store</a>) développée avec la technologie **WinUI* (.NET 6) sur la base du projet **Reunion** de **Microsoft**.
+**Mes Applications** est un lanceur d'applications et de liens favoris pour Windows disponible sur le Windows Store (<a href="https://www.microsoft.com/store/apps/9P2V5R46N6XQ">lien vers le store</a>) développée avec la technologie **WinUI** (**.NET 6**) sur la base du <a href="https://docs.microsoft.com/en-US/windows/apps/winui/winui3/release-notes/release-notes-08-preview">projet Reunion</a> de *Microsoft*.
 
-Le fonctionnement est simple : glisser/déposer vos fichiers vers l'applications et ils seront automatiquement enregistrés comme lien rapide dans la liste des liens.
+Le fonctionnement est simple : glisser/déposer vos fichiers vers l'applications et ils seront automatiquement enregistrés comme liens rapides.
 
 Lors de l'ouverture de l'application, vous retrouvez vos liens utiles et gagnez ainsi en productivité.
 
 **Encore un autre lanceur d'application me direz-vous ?**
 
 Certes. Mais cette application m'a paru être une idée pertinente notamment couplée aux faits suivants : 
-- Disparition du menu démarrer de Windows 10 avec l'arrivée de Windows 11 ;
+- Disparition du menu démarrer sous forme de grille de Windows 10 avec l'arrivée de Windows 11 ;
 - Ergonomie avec complexité importante des lanceurs disponibles actuellement ;
 - Lenteur/temps de chargements importants des lanceurs disponibles actuellement ;
 
