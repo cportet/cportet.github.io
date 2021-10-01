@@ -22,6 +22,8 @@ Le fonctionnement est simple : glisser/déposer vos fichiers vers l'applications
 
 Lors de l'ouverture de l'application, vous retrouvez vos liens utiles et gagnez ainsi en productivité.
 
+&nbsp; 
+
 **Encore un autre lanceur d'application me direz-vous ?**
 
 Certes. Mais cette application m'a paru être une idée pertinente notamment couplée aux faits suivants : 
@@ -56,9 +58,9 @@ Aucune autre donnée n'est conservée par l'application. Lorsque vous désinstal
 
 &nbsp;
 
-Bien qu'aucune roadmap ne soit pour l'instant déterminée, un certain nombre de fonctionnalités apparaitront dans l'application au fur et à mesure des mises à jour.
+Bien qu'aucune roadmap ne soit pour l'instant déterminée, un certain nombre de fonctionnalités apparaitront dans l'application au fur et à mesure.
 
-Ces évolutions envisagées, ne sont pas contractuelles et la priorité d'implémentation de celles-ci pourront être revues en fonction de la complexité de l'implémentation de celles-ci et de la possibilité technique de le réaliser (autorisations liées à l'écosystème Windows) :
+Ces évolutions envisagées, ne sont pas contractuelles et la priorité d'implémentation de celles-ci pourront être revues en fonction de la complexité de l'implémentation et de la possibilité technique de le réaliser (autorisations liées à l'écosystème Windows) :
 
 - Renommer les liens ;
 - Personnalisation de l'interface (taille des icônes, thème, informations affichées) ;
