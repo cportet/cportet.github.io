@@ -65,6 +65,8 @@ about_title: A propos
 about_profile_image: images/profile.jpg
 #about_profile_image_simple: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
+  **Important** : Je ne suis pas en recherche de nouvelles opportunités professionnelles actuellement.
+  
   Bonjour,
 
   Je me présente : Cyril Portet - 41 ans ; plus de 20 ans d'expérience dans le développement infomatique et la gestion de projet.
@@ -97,7 +99,7 @@ education_title: Cursus
 # More Section
 more_title: En savoir plus sur moi
 more_content: | # this will include new lines to allow paragraphs
-  Dans le cadre de mon activité au sein de la DG Trésor, je suis habilité **CD** (Confidentiel Défense) depuis 2014.
+  Dans le cadre de mon activité au sein de la DG Trésor, j'ai été habilité **CD** (Confidentiel Défense) en 2014.
 
   Je dispose du Permis de conduire (France) et d'un véhicule personnel.
 
