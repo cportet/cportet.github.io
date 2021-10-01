@@ -18,9 +18,14 @@ Vous pouvez me retrouver sur les **réseaux sociaux** :
 
 N'hésitez-pas, aussi, à me contacter via <a href="skype:cyril-portet?chat">Skype</a>.
 
-<br/>
+&nbsp;
 
 ### Mon CV
 
-Vous cherchez à consulter mon **CV** ?
+Vous cherchez à consulter mon **curriculum vitae** ?
 Rendez-vous [sur cette page](https://www.portet.org/resume). 
+
+**Attention** : Veuillez bien noter que je ne suis **pas** en recherche de nouvelles opportunités actuellement !
+
+<hr/>
+*Dernière mise à jour : 01/10/2021*
