@@ -29,6 +29,8 @@ Certes. Mais cette application m'a paru être une idée pertinente notamment cou
 
 Il s'agit d'une **version préliminaire** qui est vouée à évoluer dans le futur pour devenir un lanceur d'application simple et intuitif.
 
+&nbsp;
+
 #### Politique de confidentialité et utilisation de vos données
 
 &nbsp;
@@ -45,6 +47,8 @@ sur action de l'utilisateur, d'ouvrir l'application ou le fichier concerné de m
 Les données sont stockés dans une base de données locale qui n'est pas synchronisée sur internet et qui contient uniquement les données utiles à l'application, c'est à dire : Chemin du fichier, Icône du fichier, Type de fichier, Nom du fichier.
 
 Aucune autre donnée n'est conservée par l'application. Lorsque vous désinstallez l'application, l'ensemble des données sont effacées.
+
+&nbsp;
 
 #### Evolutions futures
 
@@ -65,6 +69,8 @@ Ces évolutions envisagées, ne sont pas contractuelles et la priorité d'implé
 - Réorganisation des liens par glisser/déposer ;
 - Lancement de l'application par raccourci clavier ;
 - Sauvegarde de la configuration (import/export) ;
+
+&nbsp;
 
 #### Contact 
 
