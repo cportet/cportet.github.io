@@ -67,9 +67,11 @@ about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   **Important** : Je ne suis pas en recherche de nouvelles opportunités professionnelles actuellement.
   
+  &nbsp;
+  
   Bonjour,
 
-  Je me présente : Cyril Portet - 41 ans ; plus de 20 ans d'expérience dans le développement infomatique et la gestion de projet.
+  Je dispose de plus de 20 ans d'expérience dans le développement infomatique, la gestion de projet et le management d'équipe (ou d'environnement) IT.
   
   Aussi bien à l'aise en environnement Agile que sur des approches Waterfall, j'associe mon expertise technique acquise en tant que développeur, particulièrement
   en environnement Microsoft (.NET) avec mes capacités relationnelles et de gestion de projet avec comme double objectif, la satisfaction utilisateur et la qualité logicielle.
@@ -82,6 +84,8 @@ about_content: | # this will include new lines to allow paragraphs
   
   J'ai vécu ou travaillé en Picardie, Ile de France et Belgique et je suis désormais installé en région lyonnaise ou je travaille chez un éditeur logiciel.
 
+  &nbsp;
+  
   Pour en savoir plus sur mon parcours professionnel, vous pouvez télécharger mon <a href="https://cv.portet.org" target="_blank">CV au format PDF</a> ou consulter mon [profil LinkedIn](https://linkedin.portet.org).
 # Projects Section
 projects_title: Compétences
