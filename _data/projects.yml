@@ -1,14 +1,18 @@
 - layout: left
   name: Compétences techniques
   description:
-   <mark>TFS (Team Foundation Server)</mark>
-   <mark>Blazor (Server)</mark>
+   <mark>AzureDevOps</mark>
+   <mark>Blazor WASM</mark>
    <mark>ASP.NET Core</mark>
+   <mark>Entity Framework (Core)</mark>
    <mark>ASP.NET WebForms</mark>
-   <mark>XAML (UWP/WPF)</mark><mark>WinUI Desktop (Project Reunion)</mark>
+   <mark>XAML (UWP/WPF)</mark>
+   <mark>WinUI Desktop (Project Reunion)</mark>
    <mark>ASP.NET MVC</mark>
    <mark>.NET Winforms</mark>
    <mark>SQL Server</mark>
+   <mark>Blazor Server</mark>
+   <mark>TFS</mark>
    
 - layout: left
   name: Langages de programmation
@@ -25,6 +29,7 @@
   name: Compétences fonctionnelles
   description:
    <mark>Agile Scrum</mark>
+   <mark>Kanban</mark>
    <mark>Gestion de Projet</mark>
    <mark>Management d'équipe</mark>
    <mark>Communication</mark>
