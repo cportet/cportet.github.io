@@ -10,11 +10,7 @@ layout: simple
 
 ### Me contacter
 
-Vous pouvez me retrouver sur les **réseaux sociaux** :
- - [LinkedIn](https://linkedin.portet.org){:target="_blank"}
- - [Twitter](https://twitter.portet.org){:target="_blank"}
- - [Facebook](https://facebook.portet.org){:target="_blank"}
- - [Instagram](https://instagram.portet.org){:target="_blank"}
+Vous pouvez me retrouver sur **Linked In** : [LinkedIn](https://linkedin.portet.org){:target="_blank"}
 
 N'hésitez-pas, aussi, à me contacter via <a href="skype:cyril-portet?chat">Skype</a>.
 
