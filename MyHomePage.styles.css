@@ -1,5 +1,38 @@
 @import '_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.dibzmir27r.bundle.scp.css';
 
+/* /Components/MyHeaderTitle.razor.rz.scp.css */
+.my-title[b-3yhbq8z951] {
+    display:inline-block;
+}
+/* /Components/MyIcon.razor.rz.scp.css */
+.my-icon[b-uy6zbefzhg] {
+    fill: var(--neutral-fill-rest);
+}
+
+    .my-icon a[b-uy6zbefzhg] {
+        color: var(--neutral-fill-rest);
+        fill: var(--neutral-fill-rest);
+    }
+
+        .my-icon a:visited[b-uy6zbefzhg] {
+            color: var(--neutral-fill-rest);
+            fill: var(--neutral-fill-rest);
+        }
+
+        .my-icon a:link[b-uy6zbefzhg] {
+            color: var(--neutral-fill-rest);
+            fill: var(--neutral-fill-rest);
+        }
+
+        .my-icon a:active[b-uy6zbefzhg] {
+            color: var(--neutral-fill-rest);
+            fill: var(--neutral-fill-rest);
+        }
+
+[b-uy6zbefzhg] .my-icon svg {
+    margin: 0;
+    padding: 0;
+}
 /* /Components/MyPageTitle.razor.rz.scp.css */
 .my-subtitle[b-ktpfcw6kxm] {
     top: -15px;
@@ -9,11 +42,11 @@
     font-size: 14px;
     font-weight: 400;
 }
-/* /Layout/MainLayout.razor.rz.scp.css */
-.my-title[b-ovz5ikw0s4]{
-    padding-left:10px;
+/* /Components/MySpacer.razor.rz.scp.css */
+.my-spacer[b-f6i816mlxx]{
+    display:inline-block;
 }
-
+/* /Layout/MainLayout.razor.rz.scp.css */
 .my-navmenu[b-ovz5ikw0s4] {
     padding: 10px;
 }
@@ -22,6 +55,12 @@
     padding: 10px;
     max-width: 1200px;
     margin: auto;
+}
+
+.my-page[b-ovz5ikw0s4] {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1800px;
 }
 /* /Layout/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-q4iamuyrz1] {
