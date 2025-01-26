@@ -1,0 +1,29 @@
+name: Deploy Blazor WASM to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]  # Écoute les pushes sur la branche master
+
+jobs:
+  deploy-to-github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET 9
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Publish Blazor Project
+        run: dotnet publish MyHomePage/MyHomePage.csproj -c Release -o release --nologo
+
+      - name: Add .nojekyll file
+        run: touch release/wwwroot/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages  # Déploie sur la branche gh-pages
+          folder: release/wwwroot

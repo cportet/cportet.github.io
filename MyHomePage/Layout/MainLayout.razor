@@ -1,0 +1,44 @@
+﻿@using Microsoft.FluentUI.AspNetCore.Components.Icons.Regular;
+@inherits LayoutComponentBase
+
+<FluentDesignTheme @bind-Mode="@Mode"
+                   @bind-OfficeColor="@SelectedOfficeColor"
+                   StorageName="theme" />
+
+<FluentLayout>
+    <FluentHeader>
+        <FluentIcon Value=@MenuIcon
+                    Title=@ToggleMenuTitle
+                    OnClick=@ToggleMenu
+                    Color=@Color.Fill />
+        <span class="my-title">Cyril Portet</span>
+        <FluentSpacer />
+        <FluentIcon Value=@ThemeIcon
+                    Title=@ToggleThemeTitle
+                    OnClick=@ToggleTheme
+                    Color=@Color.Fill />
+    </FluentHeader>
+
+    <FluentStack Orientation="Orientation.Horizontal"
+                 Width="100%">
+        @if (_menuVisible)
+        {
+            <FluentNavMenu Width="250">
+                <div class="my-navmenu">
+                    <NavMenu />
+                </div>
+            </FluentNavMenu>
+        }
+        <FluentBodyContent>
+            <div class="my-body">
+                @Body
+            </div>
+        </FluentBodyContent>
+    </FluentStack>
+</FluentLayout>
+
+<FluentToastProvider />
+<FluentDialogProvider />
+<FluentTooltipProvider />
+<FluentMessageBarProvider />
+<FluentMenuProvider />
