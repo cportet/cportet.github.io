@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyril Portet</title>
+    <base href="/" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="MyHomePage.styles.css" rel="stylesheet" />
+    <link href="manifest.webmanifest" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="app-content">
+            <div class="app-title">
+                Cyril PORTET
+            </div>
+            <div class="app-loading">
+                <svg class="loading-progress">
+                    <circle r="40%" cx="50%" cy="50%" />
+                    <circle r="40%" cx="50%" cy="50%" />
+                </svg>
+                <div class="loading-progress-text"></div>
+            </div>
+            <div class="app-subtitle">
+                &copy; 2025 - cyril@portet.org
+            </div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        Une erreur non gérée est survenue. Vous pouvez tenter de recharger l'application
+        <a href="." class="reload" title="Cliquez sur ce lien pour recharger l'application">Recharger</a>
+        <span class="dismiss" title="Fermer cette alerte">🗙</span>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+</body>
+
+</html>
