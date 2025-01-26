@@ -1,11 +1,14 @@
-using Microsoft.FluentUI.AspNetCore.Components;
-using Microsoft.FluentUI.AspNetCore.Components.Icons.Regular;
+using Microsoft.AspNetCore.Components;
 
 namespace MyHomePage.Layout;
 
 public partial class NavMenu
 {
-    private Icon HomeIcon => new Size24.Home();
-    private Icon CounterIcon => new Size24.ArrowCounterclockwise();
-    private Icon WeatherIcon => new Size24.WeatherCloudy();
+    [Parameter]
+    public EventCallback OnItemClick { get; set; }
+
+    private async Task ItemClickHandler()
+    {
+        await OnItemClick.InvokeAsync();
+    }
 }

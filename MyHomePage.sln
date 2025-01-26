@@ -5,6 +5,13 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHomePage", "MyHomePage\MyHomePage.csproj", "{D5B93A6B-6B71-462D-AD9C-D5EC25581790}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OtherFiles", "OtherFiles", "{2DD2BF35-7ED6-444F-9B78-1FE427639FBC}"
+	ProjectSection(SolutionItems) = preProject
+		CNAME = CNAME
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

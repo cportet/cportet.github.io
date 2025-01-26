@@ -1,0 +1,20 @@
+﻿@inject IJSRuntime JSRuntime
+@implements IAsyncDisposable
+
+@if (_hasFile)
+{
+
+
+    <div id="pdfViewer">
+        <object id="@_pdfContainerId" data="@_file" type="@_fileType" width="100%">
+            <p>
+                Votre navigateur ne peut pas afficher le PDF.
+                <a href="_file" target="_blank">Télécharger le PDF</a>.
+            </p>
+        </object>
+    </div>
+}
+else
+{
+    <p>Aucun fichier n'a été fourni</p>
+}

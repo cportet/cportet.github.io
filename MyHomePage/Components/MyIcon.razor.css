@@ -1,0 +1,28 @@
+﻿.my-icon {
+    fill: var(--neutral-fill-rest);
+}
+
+    .my-icon a {
+        color: var(--neutral-fill-rest);
+        fill: var(--neutral-fill-rest);
+    }
+
+        .my-icon a:visited {
+            color: var(--neutral-fill-rest);
+            fill: var(--neutral-fill-rest);
+        }
+
+        .my-icon a:link {
+            color: var(--neutral-fill-rest);
+            fill: var(--neutral-fill-rest);
+        }
+
+        .my-icon a:active {
+            color: var(--neutral-fill-rest);
+            fill: var(--neutral-fill-rest);
+        }
+
+::deep .my-icon svg {
+    margin: 0;
+    padding: 0;
+}

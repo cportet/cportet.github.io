@@ -1,0 +1,11 @@
+﻿<MyPageTitle Title=@_title
+             SubTitle=@_subTitle />
+
+@if (_fileReference is not null)
+{
+    <a href=@_fileReference.FilePath
+       download=@_fileReference.DownloadFileName>@_fileReference.DownloadTitle</a>
+
+    <MyFullPageViewer File=@_fileReference.FilePath
+                      FileType=@_fileReference.FileType />
+}

@@ -1,0 +1,19 @@
+﻿<div class="my-icon"
+     style=@IconStyle
+     title=@Title
+     @onclick=@DivOnClickHandler>
+
+    @if (HasHref)
+    {
+        <a href=@Href
+           target=@Target
+           title=@Title>
+            @CustomIconContent
+        </a>
+    }
+    else
+    {
+        @CustomIconContent
+    }
+
+</div>

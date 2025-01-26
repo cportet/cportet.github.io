@@ -5,19 +5,15 @@ namespace MyHomePage.Layout;
 
 public partial class MainLayout
 {
-    private DesignThemeModes Mode { get; set; } = DesignThemeModes.Dark;
-    private OfficeColor? SelectedOfficeColor { get; set; } = OfficeColor.OneDrive;
-
-    private Icon MenuIcon => new Size24.Navigation();
-    private Icon ThemeIcon => new Size24.DarkTheme();
-
-    private bool _menuVisible = true;
+    private DesignThemeModes _mode = DesignThemeModes.Dark;
+    private OfficeColor? _selectedOfficeColor  = OfficeColor.OneDrive;
+    private bool _menuVisible = false;
 
     private string ToggleMenuTitle => _menuVisible
         ? "Masquer le menu"
         : "Afficher le menu";
 
-    private string ToggleThemeTitle => Mode == DesignThemeModes.Light
+    private string ToggleThemeTitle => _mode == DesignThemeModes.Light
         ? "Thème sombre"
         : "Thème clair";
 
@@ -28,8 +24,13 @@ public partial class MainLayout
 
     private void ToggleTheme()
     {
-        Mode = Mode == DesignThemeModes.Light
+        _mode = _mode == DesignThemeModes.Light
         ? DesignThemeModes.Dark
         : DesignThemeModes.Light;
+    }
+
+    private void NavMenuOnItemClick()
+    {
+        _menuVisible = false;
     }
 }
