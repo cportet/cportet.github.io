@@ -65,11 +65,11 @@
 /* /Components/MyPill.razor.rz.scp.css */
 .pill[b-oknx65olgs] {
     display: inline-block;
-    padding: 4px 8px;
-    margin: 2px;
+    padding: 1px 5px;
+    margin: 1px;
     background-color: #0078D4;
     color: white;
-    border-radius: 12px;
+    border-radius: 8px;
     font-size: 12px;
 }
 /* /Components/MySection.razor.rz.scp.css */
@@ -80,7 +80,17 @@
     .my-content:hover[b-v16et6jew9], .my-content:active[b-v16et6jew9], .my-content:focus[b-v16et6jew9] {
         border-left: 1px solid #189bff;
         padding-left: 10px;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
     }
+
+body[data-theme="dark"] .my-content:hover[b-v16et6jew9] {
+    background-color: rgba(220, 220, 220,0.03);
+}
+
+body[data-theme="light"] .my-content:hover[b-v16et6jew9] {
+    background-color: rgba(145, 145, 145,0.03);
+}
 /* /Components/MySpacer.razor.rz.scp.css */
 .my-spacer[b-f6i816mlxx] {
     display: inline-block;
