@@ -1,0 +1,8 @@
+.my-content {
+    padding-left: 11px;
+}
+
+    .my-content:hover, .my-content:active, .my-content:focus {
+        border-left: 1px solid #189bff;
+        padding-left: 10px;
+    }

@@ -7,7 +7,7 @@ public partial class NavMenu
     [Parameter]
     public EventCallback OnItemClick { get; set; }
 
-    private async Task ItemClickHandler()
+    private async Task ItemClickedHandler()
     {
         await OnItemClick.InvokeAsync();
     }

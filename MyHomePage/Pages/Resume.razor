@@ -1,12 +1,67 @@
 ﻿<MyPageTitle Title="Mon CV"
              SubTitle="Consulter mon expérience détaillée et téléchargez mon CV" />
 
-<p>Retrouvez mon profil complet sur les réseaux sociaux :</p>
-<ul>
-    <li><a href="https://linkedin.portet.org" target="_blank" rel="noopener">LinkedIn</a></li>
-</ul>
+<MySection Id="links" Title="Liens utiles">
+    <p>
+        Retrouvez mon profil sur LinkedIn : <a href="https://linkedin.portet.org" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+    <p>
+        Consulter mon CV (au format PDF) : <a href="/file/cv">Mon CV</a>
+    </p>
+</MySection>
 
-<p>Vous pouvez aussi consulter mon CV (au format PDF) : </p>
-<ul>
-    <li><a href="/file/cv">Mon CV</a></li>
-</ul>
+<MySection Id="introduction" Title="Qui suis-je ?">
+    <h3>En Bref</h3>
+    <p>
+        Moi c'est <strong>Cyril</strong>, @(Code.DisplayHelper.AgeCyril) ans, domicilié dans le Rhône.<br />
+        Je suis un homme marié et père de 3 enfants.
+    </p>
+    <p>
+        Je travaille dans le secteur de l'informatique, et plus particulièrement du dévelopopement logiciel, depuis plus de 20 ans.
+    </p>
+
+    <h3>Mon profil professionnel</h3>
+
+    <p>
+        Artisan logiciel, développeur et manager d'expérience dans le développement logiciel.
+    </p>
+
+    <p>
+        Aussi bien à l’aise en environnement <strong>Agile</strong> que sur des approches Waterfall,
+        la satisfaction utilisateur et la qualité logicielle.
+    </p>
+    <p>
+        Mon expertise se porte particulièrement sur la gestion de projet Agile (Kanban, Scrum) et le Management.<br />
+        Techniquement, je suis très à l’aise avec le Web et particulièrement avec <strong>ASP.NET</strong> (<strong>MVC</strong> ou <strong>Blazor WebAssembly</strong>).
+    </p>
+
+    <p>J’ai vécu et travaillé en Picardie, Ile de France et Belgique et je suis aujourd'hui installé en région lyonnaise ou je travaille chez un éditeur logiciel.</p>
+
+    <p>
+        Mon parcours m'a fait travailler sur une variété de technologies et d'architectures, du développement client/serveur au
+        développement full-stack web, avec des frameworks modernes comme .Net Core et Blazor WASM.
+    </p>
+    <p>
+        Je possède aussi une solide expérience en gestion de projets et d'équipes, en architecture logicielle,
+        et une bonne compréhension des enjeux métiers et des processus de travail.
+    </p>
+
+    <p>
+        J'ai travaillé dans divers secteurs, notamment l'industrie, le service, l'administration publique, et l'édition de logiciels.
+    </p>
+</MySection>
+<MySection Id="competences" Title="Mes compétences">
+    <FluentDataGrid Items="@_competences"
+                    AutoFit="true">
+        <PropertyColumn Title="Domaine"
+                        Property="@(p => p.Title)"
+                        Sortable="true" />
+        <TemplateColumn Title="Compétences"
+                        Sortable="false">
+            @foreach (var competence in context.Items)
+            {
+                <MyPill Text="@competence" />
+            }
+        </TemplateColumn>
+    </FluentDataGrid>
+</MySection>

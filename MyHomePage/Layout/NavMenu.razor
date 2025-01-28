@@ -1,38 +1,46 @@
 ﻿@using Microsoft.FluentUI.AspNetCore.Components.Icons.Regular;
 @using MyHomePage.Code;
 
-<FluentNavMenu Width="250">
-    <FluentNavLink Icon=@References.Icons.Home
-                   OnClick=@ItemClickHandler
-                   Href="/">
-        Home
-    </FluentNavLink>
-
-    <FluentNavLink Icon=@References.Icons.CV
-                   OnClick=@ItemClickHandler
-                   Href="/resume">
-        Mon CV
-    </FluentNavLink>
-
-    <FluentNavLink Icon=@References.Icons.Personnel
-                   OnClick=@ItemClickHandler
-                   Href="/perso">
-        Personnel
-    </FluentNavLink>
-
-    <FluentNavGroup Icon=@References.Icons.Famille
-                    Title="Famille">
-        <FluentNavLink Icon=@References.Icons.Lien
-                       OnClick=@ItemClickHandler
-                       Target="_blank"
-                       Href="https://remy.portet.org">
-            Rémy
+<FluentNavMenu Width=200>
+    <div class="my-closemenu">
+        <FluentIcon Value=@References.Icons.Close
+                    Title="Fermer le menu"
+                    OnClick=@ItemClickedHandler />
+    </div>
+    <div class="my-items" @onclick=@ItemClickedHandler>
+        <FluentNavLink Icon=@References.Icons.Home
+                       Match=NavLinkMatch.All
+                       Href="/">
+            Home
         </FluentNavLink>
-        <FluentNavLink Icon=@References.Icons.Lien
-                       OnClick=@ItemClickHandler
-                       Target="_blank"
-                       Href="https://trystan.portet.org">
-            Trystan
+
+        <FluentNavLink Icon=@References.Icons.CV
+                       Href="/resume">
+            Mon CV
         </FluentNavLink>
-    </FluentNavGroup>
+
+        <FluentNavLink Icon=@References.Icons.Personnel
+                       Href="/perso">
+            Personnel
+        </FluentNavLink>
+
+        <FluentNavLink Icon=@References.Icons.Info
+                       Href="/apropos">
+            A propos
+        </FluentNavLink>
+
+        <FluentNavGroup Icon=@References.Icons.Famille
+                        Title="Famille">
+            <FluentNavLink Icon=@References.Icons.Lien
+                           Target="_blank"
+                           Href="https://remy.portet.org">
+                Rémy
+            </FluentNavLink>
+            <FluentNavLink Icon=@References.Icons.Lien
+                           Target="_blank"
+                           Href="https://trystan.portet.org">
+                Trystan
+            </FluentNavLink>
+        </FluentNavGroup>
+    </div>
 </FluentNavMenu>

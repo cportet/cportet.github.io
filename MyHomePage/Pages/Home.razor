@@ -1,9 +1,8 @@
 ﻿<MyPageTitle Title="Home"
-             SubTitle="Bienvenue sur mon espace" />
+             SubTitle="Page d'accueil" />
 
 <main>
-    <section class="my-article" id="introduction">
-        <h2>Qui suis-je ?</h2>
+    <MySection id="introduction" Title="Bienvenue">
         <p>Bienvenue sur l'espace personnel de <strong>Cyril Portet</strong>.</p>
 
         <MyImageDisplay ImageUrl="/img/me.jpg" AltText="Cyril Portet" />
@@ -15,14 +14,13 @@
 
         <h3>Mon profil professionnel</h3>
 
-        <p>Artisan logiciel, développeur et manager, avec plus de 20 ans d'expérience dans le développement logiciel, occupant de nombreux rôles : céveloppeur,  chef de projet ou responsable technique.</p>
+        <p>Artisan logiciel, développeur et manager, avec plus de 20 ans d'expérience dans le développement logiciel, j'ai occupé de nombreux rôles : développeur,  chef de projet ou responsable technique.</p>
         <p>Mon parcours traverse une variété de technologies et d'architecture, du développement client/serveur au full-stack web avec des frameworks modernes comme .Net Core et Blazor WASM.</p>
         <p>Je possède une solide expérience en gestion de projets et d'équipes, en architecture logicielle, et une bonne compréhension des enjeux métiers et des processus de travail. J'ai travaillé dans divers secteurs, notamment l'industrie, le service, l'administration publique, et l'édition de logiciels.</p>
         <p>Je suis ouvert à de nouvelles opportunités et collaborations. Merci de votre visite !</p>
-    </section>
+    </MySection>
 
-    <section class="my-article" id="mon-cv">
-        <h2>Mon CV</h2>
+    <MySection id="mon-cv" Title="Mon CV">
         <p>Vous cherchez mon <strong>curriculum vitae</strong> ? Vous le trouverez sur <a href="cv">cette page</a>.</p>
-    </section>
+    </MySection>
 </main>
