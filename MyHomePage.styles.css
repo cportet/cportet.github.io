@@ -1,8 +1,18 @@
 @import '_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.dibzmir27r.bundle.scp.css';
 
+/* /Components/MyFullPageViewer.razor.rz.scp.css */
+.my-container[b-ghu2luuij7] {
+    width: 100%;
+}
 /* /Components/MyHeaderTitle.razor.rz.scp.css */
 .my-title[b-3yhbq8z951] {
-    display:inline-block;
+    display: inline-block;
+}
+
+.my-sep[b-3yhbq8z951] {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 /* /Components/MyIcon.razor.rz.scp.css */
 .my-icon[b-uy6zbefzhg] {
@@ -33,6 +43,16 @@
     margin: 0;
     padding: 0;
 }
+/* /Components/MyImageDisplay.razor.rz.scp.css */
+.my-rounded[b-jmmo5va285] {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.my-image[b-jmmo5va285] {
+    width: 100%;
+    height: 100%;
+}
 /* /Components/MyPageTitle.razor.rz.scp.css */
 .my-subtitle[b-ktpfcw6kxm] {
     top: -15px;
@@ -43,8 +63,16 @@
     font-weight: 400;
 }
 /* /Components/MySpacer.razor.rz.scp.css */
-.my-spacer[b-f6i816mlxx]{
-    display:inline-block;
+.my-spacer[b-f6i816mlxx] {
+    display: inline-block;
+}
+
+.my-v-spacer[b-f6i816mlxx] {
+    display: inline-block;
+}
+
+.my-h-spacer[b-f6i816mlxx] {
+    display: block;
 }
 /* /Layout/MainLayout.razor.rz.scp.css */
 .my-navmenu[b-ovz5ikw0s4] {

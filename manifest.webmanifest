@@ -1,12 +1,13 @@
 {
-  "name": "MyHomePage",
-  "short_name": "MyHomePage",
+  "name": "Cyril Portet Home",
+  "short_name": "Cyril Portet",
   "id": "./",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#03173d",
+  "theme_color": "#000000",
   "prefer_related_applications": false,
+  "description": "Bienvenue sur l'espace personnel de Cyril Portet, artisan logiciel, développeur et manager.",
   "icons": [
     {
       "src": "icon-512.png",

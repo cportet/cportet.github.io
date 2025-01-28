@@ -14,8 +14,16 @@ body {
     background: var(--neutral-fill-layer-rest);
 }
 
-.app-content{
-    margin-top:20vh;
+a, a:visited {
+    color: var(--accent-fill-rest);
+}
+
+    a:hover {
+        color: var(--accent-foreground-hover);
+    }
+
+.app-content {
+    margin-top: 20vh;
 }
 
 .app-title {
@@ -28,16 +36,12 @@ body {
 .app-subtitle {
     margin-top: 60px;
     text-align: center;
-    font-weight:400;
+    font-weight: 400;
     font-size: 1.1rem;
 }
 
 h1:focus {
     outline: none;
-}
-
-a, .btn-link {
-    color: #0071c1;
 }
 
 .content {
@@ -72,7 +76,7 @@ a, .btn-link {
 }
 
     .blazor-error-boundary::after {
-        content: "An error has occurred."
+        content: "Une erreur est survenue."
     }
 
 .loading-progress {
@@ -104,7 +108,7 @@ a, .btn-link {
 }
 
     .loading-progress-text:after {
-        content: var(--blazor-load-percentage-text, "Loading");
+        content: var(--blazor-load-percentage-text, "Chargement");
     }
 
 code {
@@ -119,3 +123,43 @@ code {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+
+.app-footer {
+    margin-top: 80px;
+    background-color: #e5e5e5;
+    padding: 5px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.app-tooltip {
+    position: relative;
+    display: inline-block;
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+    .app-tooltip:hover::after {
+        content: attr(data-tooltip);
+        visibility: visible;
+        width: 250px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    .app-tooltip::after {
+        content: "";
+        visibility: hidden;
+        opacity: 0;
+    }
