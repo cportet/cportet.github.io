@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Components;
+ï»¿using Microsoft.AspNetCore.Components;
 
 namespace MyHomePage.Pages;
 
@@ -9,12 +9,14 @@ public partial class Resume
 {
     private IQueryable<Competences> _competences = new[]
     {
-        new Competences("Compétences techniques",["AzureDevOps", "Blazor (WASM)", "Blazor (Server)", "ASP.NET", "ASP.NET MVC", "Entity Framework Core"]),
-        new ("Langages de développement",["C#","T-SQL", "SQL ISO", "Visual Basic", "Powershell", "HTML","CSS", "Typescript","Javascript"]),
-        new ("Solutions de développement",["Visual Studio", "Visual Studio Code", "SQL Server Management Studio", "SQL Profiler","Azure Data Studio", "Postman", "Fiddler", "Git", "TFS"]),
-        new ("Compétences fonctionnelles",["Agile","Scrum","Kanban","Gestion de projet", "Qualité", "Architecture", "Documentation",  "Relation client", "Rédaction", "Communication"]),
-        new ("Compétences métier",["Administration publique","Edition de logiciels","Gestion d'entreprise","Contenu marketing","Service"])
+        new Competences("CompÃ©tences techniques",["AzureDevOps", "Blazor (WASM)", "Blazor (Server)", "ASP.NET", "ASP.NET MVC", "Entity Framework Core"]),
+        new ("Langages de dÃ©veloppement",["C#","T-SQL", "SQL ISO", "Visual Basic", "Powershell", "HTML","CSS", "Typescript","Javascript"]),
+        new ("Solutions de dÃ©veloppement",["Visual Studio", "Visual Studio Code", "SQL Server Management Studio", "SQL Profiler","Azure Data Studio", "Postman", "Fiddler", "Git", "TFS"]),
+        new ("CompÃ©tences fonctionnelles",["Agile","Scrum","Kanban","Gestion de projet", "QualitÃ©", "Architecture", "Documentation",  "Relation client", "RÃ©daction", "Communication"]),
+        new ("CompÃ©tences mÃ©tier",["Administration publique","Edition de logiciels","Gestion d'entreprise","Contenu marketing","Service"])
     }.AsQueryable();
+
+    private static string StringList(string[] items) => string.Join(", ", items);
 }
 
 public sealed record Competences(string Title, string[] Items);

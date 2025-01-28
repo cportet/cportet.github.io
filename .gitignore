@@ -6,4 +6,4 @@ Gemfile.lock
 *.code-workspace
 /.vs
 /MyHomePage/obj
-/MyHomePage/bin/Debug/net9.0
+/MyHomePage/bin

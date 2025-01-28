@@ -1,9 +1,9 @@
-.pill {
+﻿.pill {
     display: inline-block;
-    padding: 4px 8px;
-    margin: 2px;
+    padding: 1px 5px;
+    margin: 1px;
     background-color: #0078D4;
     color: white;
-    border-radius: 12px;
+    border-radius: 8px;
     font-size: 12px;
 }

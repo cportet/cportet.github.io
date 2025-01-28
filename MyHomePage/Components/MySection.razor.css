@@ -1,8 +1,18 @@
-.my-content {
+﻿.my-content {
     padding-left: 11px;
 }
 
     .my-content:hover, .my-content:active, .my-content:focus {
         border-left: 1px solid #189bff;
         padding-left: 10px;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
     }
+
+body[data-theme="dark"] .my-content:hover {
+    background-color: rgba(220, 220, 220,0.03);
+}
+
+body[data-theme="light"] .my-content:hover {
+    background-color: rgba(145, 145, 145,0.03);
+}
