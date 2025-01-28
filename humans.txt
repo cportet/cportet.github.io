@@ -1,0 +1,7 @@
+﻿/* DEVELOPMENT */
+	Developer: Cyril PORTET (cyril@portet.org)
+
+/* APPLICATION */
+	Language: French
+    Technology: WebAssembly (Blazor with .NET9)
+	Standards: HTML5, CSS3, javascript
