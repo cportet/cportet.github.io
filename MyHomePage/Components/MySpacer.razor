@@ -1,1 +1,8 @@
-﻿<div class="my-spacer" style="width:10px;"></div>
+﻿@if (Orientation == Orientation.Vertical)
+{
+    <div class="my-v-spacer" style=@StyleString></div>
+}
+else if (Orientation == Orientation.Horizontal)
+{
+    <div class="my-h-spacer" style=@StyleString></div>
+}

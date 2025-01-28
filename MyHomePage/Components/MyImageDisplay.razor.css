@@ -1,0 +1,9 @@
+.my-rounded {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.my-image {
+    width: 100%;
+    height: 100%;
+}

@@ -1,13 +1,14 @@
+using Microsoft.AspNetCore.Components;
 using Microsoft.FluentUI.AspNetCore.Components;
-using Microsoft.FluentUI.AspNetCore.Components.Icons.Regular;
 
 namespace MyHomePage.Layout;
 
-public partial class MainLayout
+public partial class MainLayout : LayoutComponentBase
 {
     private DesignThemeModes _mode = DesignThemeModes.Dark;
-    private OfficeColor? _selectedOfficeColor  = OfficeColor.OneDrive;
+    private OfficeColor? _selectedOfficeColor = OfficeColor.OneDrive;
     private bool _menuVisible = false;
+    private string? _pageTitle;
 
     private string ToggleMenuTitle => _menuVisible
         ? "Masquer le menu"
@@ -32,5 +33,19 @@ public partial class MainLayout
     private void NavMenuOnItemClick()
     {
         _menuVisible = false;
+    }
+
+    private void BodyClick()
+    {
+        _menuVisible = false;
+    }
+
+    public void SetPageTitle(string? pageTitle)
+    {
+        if (pageTitle != _pageTitle)
+        {
+            _pageTitle = pageTitle;
+            StateHasChanged();
+        }
     }
 }

@@ -3,13 +3,14 @@
 
 @if (_hasFile)
 {
-
-
     <div id="pdfViewer">
-        <object id="@_pdfContainerId" data="@_file" type="@_fileType" width="100%">
+        <object class="my-container"
+                id="@_pdfContainerId"
+                data="@_file"
+                type="@_fileType">
             <p>
-                Votre navigateur ne peut pas afficher le PDF.
-                <a href="_file" target="_blank">Télécharger le PDF</a>.
+                Votre navigateur ne peut pas afficher le fichier demandé.
+                <a href=@_file target="_blank">Télécharger le fichier</a>.
             </p>
         </object>
     </div>

@@ -1,0 +1,8 @@
+﻿@using Microsoft.AspNetCore.Components
+
+@if (ImageUrl is not null)
+{
+    <div class="my-rounded" style="width:@Width;height:@Height;">
+        <img class="my-image" src="@ImageUrl" alt=@AltText />
+    </div>
+}

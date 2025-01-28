@@ -2,7 +2,12 @@
     @Title
 </div>
 
-@code {
-    [Parameter]
-    public string? Title{ get; set; }
+@if (!string.IsNullOrWhiteSpace(PageTitle))
+{
+    <div class="my-sep">
+        /
+    </div>
+    <div class="my-title">
+        @PageTitle
+    </div>
 }

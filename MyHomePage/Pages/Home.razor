@@ -1,32 +1,28 @@
 ﻿<MyPageTitle Title="Home"
              SubTitle="Bienvenue sur mon espace" />
 
-<div class="my-article">
+<main>
+    <section class="my-article" id="introduction">
+        <h2>Qui suis-je ?</h2>
+        <p>Bienvenue sur l'espace personnel de <strong>Cyril Portet</strong>.</p>
 
-    <h2 id="introduction">Introduction</h2>
+        <MyImageDisplay ImageUrl="/img/me.jpg" AltText="Cyril Portet" />
 
-    <p>Bienvenue sur l'espace personnel de <strong>Cyril Portet</strong>, artisan logiciel, développeur et manager, 45 ans.</p>
+        <p>
+            @(Code.DisplayHelper.AgeCyril) ans, originaire de Picardie (Noyon, Oise), je vis dans le Rhône (Montrottier).<br />
+            Marié, et père de 3 enfants (Rémy, Trystan, Eloy).
+        </p>
 
-    <h2 id="me-contacter">Me contacter</h2>
+        <h3>Mon profil professionnel</h3>
 
-    <p>Vous pouvez me retrouver sur les <strong>réseaux sociaux</strong> :</p>
+        <p>Artisan logiciel, développeur et manager, avec plus de 20 ans d'expérience dans le développement logiciel, occupant de nombreux rôles : céveloppeur,  chef de projet ou responsable technique.</p>
+        <p>Mon parcours traverse une variété de technologies et d'architecture, du développement client/serveur au full-stack web avec des frameworks modernes comme .Net Core et Blazor WASM.</p>
+        <p>Je possède une solide expérience en gestion de projets et d'équipes, en architecture logicielle, et une bonne compréhension des enjeux métiers et des processus de travail. J'ai travaillé dans divers secteurs, notamment l'industrie, le service, l'administration publique, et l'édition de logiciels.</p>
+        <p>Je suis ouvert à de nouvelles opportunités et collaborations. Merci de votre visite !</p>
+    </section>
 
-    <p>A titre professionnel :</p>
-
-    <ul>
-        <li><a href="https://linkedin.portet.org" target="_blank" rel="noopener">LinkedIn</a></li>
-    </ul>
-
-    <p>Mais aussi à titre personnel :</p>
-
-    <ul>
-        <li><a href="https://twitter.portet.org" target="_blank" rel="noopener">Twitter</a></li>
-        <li><a href="https://instagram.portet.org" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://facebook.portet.org" target="_blank" rel="noopener">Facebook</a></li>
-    </ul>
-
-    <h2 id="mon-cv">Mon CV</h2>
-
-    <p>Vous cherchez mon <strong><a href="file/cv">curriculum vitae</a></strong> ? Vous le trouverez sur <a href="file/cv">cette page</a>.</p>
-
-</div>
+    <section class="my-article" id="mon-cv">
+        <h2>Mon CV</h2>
+        <p>Vous cherchez mon <strong>curriculum vitae</strong> ? Vous le trouverez sur <a href="cv">cette page</a>.</p>
+    </section>
+</main>

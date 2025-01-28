@@ -1,3 +1,11 @@
-﻿.my-spacer{
-    display:inline-block;
+﻿.my-spacer {
+    display: inline-block;
+}
+
+.my-v-spacer {
+    display: inline-block;
+}
+
+.my-h-spacer {
+    display: block;
 }

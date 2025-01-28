@@ -5,6 +5,7 @@ namespace MyHomePage.Code;
 
 public static class References
 {
+    // See: https://www.fluentui-blazor.net/Icon#explorer
     public static class Icons
     {
         public static Icon Home => new Size24.Home();
@@ -13,5 +14,6 @@ public static class References
         public static Icon Famille => new Size24.PeopleCommunity();
         public static Icon Menu => new Size24.Navigation();
         public static Icon Theme => new Size24.DarkTheme();
+        public static Icon Personnel => new Size24.InprivateAccount();
     }
 }
