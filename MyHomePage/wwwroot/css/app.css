@@ -14,6 +14,11 @@ body {
     background: var(--neutral-fill-layer-rest);
 }
 
+    body .pwa-updater[b-pwa-updater] {
+        --pwa-updater-bar-z-index: 1000;
+        --pwa-updater-bar-height: 50px;
+    }
+
 a, a:visited {
     color: var(--accent-fill-rest);
 }

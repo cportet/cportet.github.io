@@ -1,7 +1,9 @@
-﻿@using Microsoft.FluentUI.AspNetCore.Components.Icons.Regular;
-@using MyHomePage.Code;
+﻿@using MyHomePage.Code;
 
 @inherits LayoutComponentBase
+
+<PWAUpdater Text="Une nouvelle version de cette application est disponible"
+            ButtonCaption="Mettre à jour" />
 
 <FluentDesignTheme @bind-Mode="@_mode"
                    @bind-OfficeColor="@_selectedOfficeColor"

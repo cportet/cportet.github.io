@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 
 namespace MyHomePage.Components;
 
@@ -16,4 +16,9 @@ public partial class MyImageDisplay
 
     [Parameter]
     public string Height { get; set; } = "200px";
+
+    private static void ImageClickHandler()
+    {
+        Console.WriteLine("Image clicked");
+    }
 }

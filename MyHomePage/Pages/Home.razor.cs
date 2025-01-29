@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using Microsoft.FluentUI.AspNetCore.Components.Icons.Regular;
 
 namespace MyHomePage.Pages;
@@ -8,6 +8,4 @@ namespace MyHomePage.Pages;
 [Route("home")]
 public partial class Home
 {
-    private string PersonImage =>
-        new Size48.Person().ToDataUri(size: "25px", color: "white");
 }
