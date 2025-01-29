@@ -1,4 +1,4 @@
-html, body {
+﻿html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -21,6 +21,11 @@ a, a:visited {
     a:hover {
         color: var(--accent-foreground-hover);
     }
+
+ul {
+    padding-left: 20px;
+    text-indent: -3px;
+}
 
 .app-content {
     margin-top: 20vh;

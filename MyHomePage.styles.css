@@ -91,6 +91,19 @@ body[data-theme="dark"] .my-content:hover[b-v16et6jew9] {
 body[data-theme="light"] .my-content:hover[b-v16et6jew9] {
     background-color: rgba(145, 145, 145,0.03);
 }
+
+.my-sub-content[b-v16et6jew9] {
+    padding-left: 4px;
+}
+
+h2 .subtitle[b-v16et6jew9], h3 .subtitle[b-v16et6jew9] {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+    h2 .subtitle[b-v16et6jew9]::before, h3 .subtitle[b-v16et6jew9]::before {
+        content: " - ";
+    }
 /* /Components/MySpacer.razor.rz.scp.css */
 .my-spacer[b-f6i816mlxx] {
     display: inline-block;
