@@ -7,7 +7,7 @@ namespace MyHomePage.Pages;
 [Route("curriculumvitae")]
 public partial class Resume
 {
-    private IQueryable<Competences> _competences = new[]
+    private readonly IQueryable<Competences> _competences = new[]
     {
         new Competences("Compétences techniques",["AzureDevOps", "Blazor (WASM)", "Blazor (Server)", "ASP.NET", "ASP.NET MVC", "Entity Framework Core"]),
         new ("Langages de développement",["C#","T-SQL", "SQL ISO", "Visual Basic", "Powershell", "HTML","CSS", "Typescript","Javascript"]),
@@ -15,8 +15,6 @@ public partial class Resume
         new ("Compétences fonctionnelles",["Agile","Scrum","Kanban","Gestion de projet", "Qualité", "Architecture", "Documentation",  "Relation client", "Rédaction", "Communication"]),
         new ("Compétences métier",["Administration publique","Edition de logiciels","Gestion d'entreprise","Contenu marketing","Service"])
     }.AsQueryable();
-
-    private static string StringList(string[] items) => string.Join(", ", items);
 }
 
 public sealed record Competences(string Title, string[] Items);

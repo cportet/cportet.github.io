@@ -5,7 +5,13 @@ namespace MyHomePage.Code;
 
 public static class References
 {
+
     // See: https://www.fluentui-blazor.net/Icon#explorer
+    public static class SmallIcons
+    {
+        public static Icon Lien => new Size16.Link();
+    }
+
     public static class Icons
     {
         public static Icon Info => new Size24.Info();

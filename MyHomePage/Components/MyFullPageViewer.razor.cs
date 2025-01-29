@@ -1,10 +1,15 @@
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
 namespace MyHomePage.Components
 {
-    public partial class MyFullPageViewer
+    public partial class MyFullPageViewer(IJSRuntime jsRuntime) : IAsyncDisposable
     {
+        private string? _pdfContainerId;
+        private string? _file;
+        private string? _fileType;
+        private bool _hasFile;
+        private bool _wasSet;
 
         [Parameter]
         [EditorRequired]
@@ -17,11 +22,8 @@ namespace MyHomePage.Components
         [Parameter]
         public string Id { get; set; } = "pdfContainer";
 
-        private string? _pdfContainerId;
-        private string? _file;
-        private string? _fileType;
-        private bool _hasFile;
-        private bool _wasSet;
+        [Parameter]
+        public bool ShowDownloadLinkIfNotSupported { get; set; } = false;
 
         protected override void OnParametersSet()
         {
@@ -41,7 +43,7 @@ namespace MyHomePage.Components
             if (!_wasSet && _hasFile)
             {
                 _wasSet = true;
-                await JSRuntime.InvokeVoidAsync("addResizeListener", _pdfContainerId);
+                await jsRuntime.InvokeVoidAsync("addResizeListener", _pdfContainerId);
             }
         }
 
@@ -50,8 +52,10 @@ namespace MyHomePage.Components
             if (_wasSet)
             {
                 _wasSet = false;
-                await JSRuntime.InvokeVoidAsync("removeResizeListener", _pdfContainerId);
+                await jsRuntime.InvokeVoidAsync("removeResizeListener", _pdfContainerId);
             }
+
+            GC.SuppressFinalize(this);
         }
     }
 }

@@ -1,6 +1,41 @@
 ﻿<section id="@Id">
-    <h2>@Title</h2>
-    <div class="my-content">
-        @ChildContent
-    </div>
+    @switch (Type)
+    {
+        case SectionKind.Primary:
+            <h2>
+                @TitleAndSubTitleContent
+            </h2>
+            <div class="my-content">
+                @ChildContent
+            </div>
+            break;
+
+        case SectionKind.Secondary:
+            <h3>
+                @TitleAndSubTitleContent
+            </h3>
+            <div class="my-sub-content">
+                @ChildContent
+            </div>
+            break;
+
+        default:
+            <div>
+                Type de section non gérée
+            </div>
+            break;
+    }
 </section>
+@code
+{
+    private RenderFragment TitleAndSubTitleContent => __builder =>
+    {
+        <span>@Title</span>
+        @if (!string.IsNullOrEmpty(SubTitle))
+        {
+            <span class="subtitle">
+                @SubTitle
+            </span>
+        }
+    };
+}

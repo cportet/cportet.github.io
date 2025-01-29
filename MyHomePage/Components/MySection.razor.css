@@ -16,3 +16,16 @@ body[data-theme="dark"] .my-content:hover {
 body[data-theme="light"] .my-content:hover {
     background-color: rgba(145, 145, 145,0.03);
 }
+
+.my-sub-content {
+    padding-left: 4px;
+}
+
+h2 .subtitle, h3 .subtitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+    h2 .subtitle::before, h3 .subtitle::before {
+        content: " - ";
+    }
