@@ -1,8 +1,8 @@
-name: Deploy Blazor WASM to GitHub Pages
+ï»¿name: Deploy Blazor WASM to GitHub Pages
 
 on:
   push:
-    branches: [ master ]  # Écoute les pushes sur la branche master
+    branches: [ master ]  # Ã‰coute les pushes sur la branche master
 
 jobs:
   deploy-to-github-pages:
@@ -14,6 +14,11 @@ jobs:
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: 9.0.x
+
+      - name: Update buildtimestamp in appconfig.json
+        run: |
+          timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          jq --arg ts "$timestamp" '.buildtimestamp = $ts' MyHomePage/wwwroot/appconfig.json > temp.json && mv temp.json MyHomePage/wwwroot/appconfig.json
 
       - name: Update service-worker.published.js with current timestamp
         run: |
@@ -29,5 +34,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages  # Déploie sur la branche gh-pages
+          branch: gh-pages  # DÃ©ploie sur la branche gh-pages
           folder: release/wwwroot

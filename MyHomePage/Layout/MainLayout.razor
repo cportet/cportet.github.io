@@ -5,9 +5,8 @@
 <PWAUpdater Text="Une nouvelle version de cette application est disponible"
             ButtonCaption="Mettre à jour" />
 
-<FluentDesignTheme @bind-Mode="@_mode"
-                   @bind-OfficeColor="@_selectedOfficeColor"
-                   StorageName="theme" />
+<FluentDesignTheme Mode="@_mode"
+                   OfficeColor="@_selectedOfficeColor" />
 
 <CascadingValue IsFixed="true" Value=@this>
     <div class="my-page">
@@ -20,7 +19,7 @@
 
                 <MySpacer />
 
-                <MyHeaderTitle Title="Cyril Portet"
+                <MyHeaderTitle Title=@config.Title
                                PageTitle=@_pageTitle />
 
                 <FluentSpacer />

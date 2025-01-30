@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OtherFiles", "OtherFiles", "{2DD2BF35-7ED6-444F-9B78-1FE427639FBC}"
 	ProjectSection(SolutionItems) = preProject
 		CNAME = CNAME
+		.github\workflows\deploy.yml = .github\workflows\deploy.yml
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection

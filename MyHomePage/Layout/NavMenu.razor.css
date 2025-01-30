@@ -1,4 +1,10 @@
-.my-closemenu {
+﻿.my-closemenu {
     display: flex;
     flex-direction: row-reverse;
+}
+
+.my-info {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    text-align: center;
 }

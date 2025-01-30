@@ -1,13 +1,14 @@
-using Microsoft.AspNetCore.Components;
+ï»¿using Microsoft.AspNetCore.Components;
 using Microsoft.FluentUI.AspNetCore.Components;
+using MyHomePage.Code;
 
 namespace MyHomePage.Layout;
 
-public partial class MainLayout : LayoutComponentBase
+public partial class MainLayout(AppConfig config) : LayoutComponentBase
 {
-    private DesignThemeModes _mode = DesignThemeModes.Dark;
-    private OfficeColor? _selectedOfficeColor = OfficeColor.OneDrive;
-    private bool _menuVisible = false;
+    private DesignThemeModes _mode = config.Theme;
+    private readonly OfficeColor? _selectedOfficeColor = config.OfficeColor;
+    private bool _menuVisible;
     private string? _pageTitle;
 
     private string ToggleMenuTitle => _menuVisible
@@ -15,8 +16,8 @@ public partial class MainLayout : LayoutComponentBase
         : "Afficher le menu";
 
     private string ToggleThemeTitle => _mode == DesignThemeModes.Light
-        ? "Thème sombre"
-        : "Thème clair";
+        ? "ThÃ¨me sombre"
+        : "ThÃ¨me clair";
 
     private void ToggleMenu()
     {
