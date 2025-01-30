@@ -1,13 +1,19 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.FluentUI.AspNetCore.Components;
 using MyHomePage.Code;
+using MyHomePage.Services;
 
 namespace MyHomePage.Layout;
 
-public partial class MainLayout(AppConfig config) : LayoutComponentBase
+public partial class MainLayout(
+    AppConfig appConfig,
+    UserOptionsService userOptionsService) : LayoutComponentBase
 {
-    private DesignThemeModes _mode = config.Theme;
-    private readonly OfficeColor? _selectedOfficeColor = config.OfficeColor;
+    private DesignThemeModes _mode;
+    private OfficeColor _selectedOfficeColor;
+    private UserOptions _options = null!;
+
+    private bool _userOptionsInitialized;
     private bool _menuVisible;
     private string? _pageTitle;
 
@@ -24,11 +30,14 @@ public partial class MainLayout(AppConfig config) : LayoutComponentBase
         _menuVisible = !_menuVisible;
     }
 
-    private void ToggleTheme()
+    private async Task ToggleTheme()
     {
         _mode = _mode == DesignThemeModes.Light
         ? DesignThemeModes.Dark
         : DesignThemeModes.Light;
+
+        await userOptionsService.SetUserThemeAsync(_mode.ToString().ToLower());
+        await ApplyTheme();
     }
 
     private void NavMenuOnItemClick()
@@ -50,8 +59,26 @@ public partial class MainLayout(AppConfig config) : LayoutComponentBase
         }
     }
 
-    public void UpdateState()
+    public async Task UpdateState()
     {
+        await ApplyTheme();
         StateHasChanged();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ApplyTheme();
+        await base.OnInitializedAsync();
+    }
+
+    private async Task ApplyTheme()
+    {
+        _options = await userOptionsService
+            .GetUserOptionsAsync();
+
+        _selectedOfficeColor = _options.ColorSet.ToEnum(appConfig.OfficeColor);
+        _mode = _options.Theme.ToEnum(appConfig.Theme);
+
+        _userOptionsInitialized = true;
     }
 }

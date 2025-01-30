@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Components.Web;
+﻿using System.Globalization;
+using System.Resources;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.FluentUI.AspNetCore.Components;
 using MyHomePage;

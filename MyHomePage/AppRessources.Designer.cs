@@ -160,15 +160,6 @@ namespace MyHomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Langue :.
-        /// </summary>
-        public static string MyCultureSelector_Language {
-            get {
-                return ResourceManager.GetString("MyCultureSelector_Language", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Aucun fichier n&apos;a été fourni.
         /// </summary>
         public static string MyFullPageViewer_MissingFile {
@@ -192,6 +183,15 @@ namespace MyHomePage {
         public static string MyFullPageViewer_NotSupported_Text {
             get {
                 return ResourceManager.GetString("MyFullPageViewer_NotSupported_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sélectionnez une valeur....
+        /// </summary>
+        public static string MySelect_NullValue {
+            get {
+                return ResourceManager.GetString("MySelect_NullValue", resourceCulture);
             }
         }
         
@@ -349,11 +349,56 @@ namespace MyHomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Appliquer.
+        /// </summary>
+        public static string Page_Options_Button_Apply {
+            get {
+                return ResourceManager.GetString("Page_Options_Button_Apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Réinitialiser.
+        /// </summary>
+        public static string Page_Options_Button_Reset {
+            get {
+                return ResourceManager.GetString("Page_Options_Button_Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Configuration.
         /// </summary>
         public static string Page_Options_Section_Options_Title {
             get {
                 return ResourceManager.GetString("Page_Options_Section_Options_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jeu de couleur :.
+        /// </summary>
+        public static string Page_Options_Select_ColorSet {
+            get {
+                return ResourceManager.GetString("Page_Options_Select_ColorSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Langue :.
+        /// </summary>
+        public static string Page_Options_Select_Language {
+            get {
+                return ResourceManager.GetString("Page_Options_Select_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thème :.
+        /// </summary>
+        public static string Page_Options_Select_Theme {
+            get {
+                return ResourceManager.GetString("Page_Options_Select_Theme", resourceCulture);
             }
         }
         

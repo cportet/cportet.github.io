@@ -183,9 +183,6 @@
   <data name="Page_Resume_Title" xml:space="preserve">
     <value>My resume</value>
   </data>
-  <data name="MyCultureSelector_Language" xml:space="preserve">
-    <value>Language:</value>
-  </data>
   <data name="MyFullPageViewer_MissingFile" xml:space="preserve">
     <value>No file was provided</value>
   </data>
@@ -233,5 +230,23 @@
   </data>
   <data name="Page_Perso_SubTile" xml:space="preserve">
     <value>Learn more about me</value>
+  </data>
+  <data name="Page_Options_Button_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Page_Options_Button_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="MySelect_NullValue" xml:space="preserve">
+    <value>Select a value...</value>
+  </data>
+  <data name="Page_Options_Select_Language" xml:space="preserve">
+    <value>Language:</value>
+  </data>
+  <data name="Page_Options_Select_Theme" xml:space="preserve">
+    <value>Theme:</value>
+  </data>
+  <data name="Page_Options_Select_ColorSet" xml:space="preserve">
+    <value>Color set:</value>
   </data>
 </root>

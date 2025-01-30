@@ -186,7 +186,7 @@
   <data name="File_FileKind_CV_Title" xml:space="preserve">
     <value>Mon CV</value>
   </data>
-  <data name="MyCultureSelector_Language" xml:space="preserve">
+  <data name="Page_Options_Select_Language" xml:space="preserve">
     <value>Langue :</value>
   </data>
   <data name="MyFullPageViewer_MissingFile" xml:space="preserve">
@@ -233,5 +233,20 @@
   </data>
   <data name="Page_Perso_Title" xml:space="preserve">
     <value>Personnel</value>
+  </data>
+  <data name="Page_Options_Button_Apply" xml:space="preserve">
+    <value>Appliquer</value>
+  </data>
+  <data name="Page_Options_Button_Reset" xml:space="preserve">
+    <value>Réinitialiser</value>
+  </data>
+  <data name="MySelect_NullValue" xml:space="preserve">
+    <value>Sélectionnez une valeur...</value>
+  </data>
+  <data name="Page_Options_Select_Theme" xml:space="preserve">
+    <value>Thème :</value>
+  </data>
+  <data name="Page_Options_Select_ColorSet" xml:space="preserve">
+    <value>Jeu de couleur :</value>
   </data>
 </root>
