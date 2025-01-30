@@ -1,0 +1,17 @@
+﻿<div>
+    <label for="culture">
+        @AppRessources.MyCultureSelector_Language
+    </label>
+    <select name="culture"
+            id="culture"
+            class="my-select"
+            @bind=@Value
+            @bind:after=@UpdateCulture>
+        @foreach (var item in _options)
+        {
+            <option value=@item.Code>
+                @item.Name (@item.Code)
+            </option>
+        }
+    </select>
+</div>

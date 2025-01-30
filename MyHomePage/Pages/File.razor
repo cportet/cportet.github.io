@@ -4,7 +4,9 @@
 @if (_fileReference is not null)
 {
     <a href=@_fileReference.FilePath
-       download=@_fileReference.DownloadFileName>@_fileReference.DownloadTitle</a>
+       download=@_fileReference.DownloadFileName>
+        @_fileReference.DownloadTitle
+    </a>
 
     <MySpacer Orientation=Orientation.Horizontal />
 

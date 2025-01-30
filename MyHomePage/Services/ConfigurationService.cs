@@ -1,6 +1,7 @@
 ﻿using System.Net.Http.Json;
+using MyHomePage.Code;
 
-namespace MyHomePage.Code;
+namespace MyHomePage.Services;
 
 public class ConfigurationService(HttpClient httpClient)
 {

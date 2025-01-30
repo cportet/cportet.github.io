@@ -1,0 +1,12 @@
+﻿<MyPageTitle Title=@AppRessources.Page_Options_Title
+             SubTitle=@AppRessources.Page_Options_SubTitle />
+
+@if (_options is not null)
+{
+    <MySection Id="options" Title=@AppRessources.Page_Options_Section_Options_Title>
+        <p>
+            <MyCultureSelector Value=@_options.Language
+                               ValueChanged=@CultureUpdate />
+        </p>
+    </MySection>
+}

@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Components;
+ï»¿using Microsoft.AspNetCore.Components;
 using MyHomePage.Code;
 
 namespace MyHomePage.Pages;
@@ -24,8 +24,8 @@ public partial class File
 
         _previousKind = formattedKind;
         _fileReference = FileReference.FromString(Kind);
-        _title = _fileReference?.Title ?? "Document inconnu";
-        _subTitle = _fileReference?.SubTitle ?? "Le document demandé n'existe pas";
+        _title = _fileReference?.Title ?? AppRessources.Page_File_DocumentInconnu_Title;
+        _subTitle = _fileReference?.SubTitle ?? AppRessources.Page_File_DocumentInconnu_SubTitle;
     }
 
     protected override void OnParametersSet()

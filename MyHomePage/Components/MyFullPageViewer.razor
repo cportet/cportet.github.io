@@ -6,10 +6,10 @@
                 data="@_file"
                 type="@_fileType">
             <p>
-                Votre navigateur ne peut pas afficher le fichier demandé.
+                @AppRessources.MyFullPageViewer_NotSupported_Text
                 @if (ShowDownloadLinkIfNotSupported)
                 {
-                    <a href=@_file target="_blank">Télécharger le fichier</a>
+                    <a href=@_file target="_blank">@AppRessources.MyFullPageViewer_NotSupported_Download</a>
                 }
             </p>
         </object>
@@ -17,5 +17,5 @@
 }
 else
 {
-    <p>Aucun fichier n'a été fourni</p>
+    <p>@AppRessources.MyFullPageViewer_MissingFile</p>
 }

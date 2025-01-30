@@ -1,10 +1,9 @@
-﻿using System.Net.Http;
-using System.Net.Http.Json;
-using Microsoft.AspNetCore.Components.Web;
+﻿using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.FluentUI.AspNetCore.Components;
 using MyHomePage;
 using MyHomePage.Code;
+using MyHomePage.Services;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -17,14 +16,21 @@ builder.Services.AddScoped(sp => new HttpClient
 });
 
 builder.Services.AddScoped<ConfigurationService>();
+builder.Services.AddScoped<LocalStorageService>();
+builder.Services.AddScoped<UserOptionsService>();
 
 builder.Services.AddFluentUIComponents();
 builder.Services.AddPWAUpdater();
+builder.Services.AddLocalization();
 
-var httpClient = new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) };
-var appConfig = await httpClient.GetFromJsonAsync<AppConfig>("appconfig.json");
+var appConfig = await builder.LoadConfig();
 
-// Enregistrer AppConfig comme singleton
 builder.Services.AddSingleton(appConfig);
 
-await builder.Build().RunAsync();
+var host = builder.Build();
+
+var userOptionsService = host.Services.GetRequiredService<UserOptionsService>();
+var options = await userOptionsService.GetUserOptionsAsync();
+Cultures.ApplyCulture(options.Language);
+
+await host.RunAsync();

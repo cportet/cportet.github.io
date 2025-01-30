@@ -4,10 +4,10 @@ public sealed record FileReference(
     FileKind Kind,
     string Title,
     string SubTitle,
+    string DownloadTitle,
     string FilePath,
     string FileType,
-    string DownloadFileName,
-    string DownloadTitle)
+    string DownloadFileName)
 {
     public static FileReference? FromFileKind(FileKind? kind)
     {
@@ -15,12 +15,12 @@ public sealed record FileReference(
         {
             FileKind.CV => new FileReference(
                 FileKind.CV,
-                "Mon CV",
-                "Curriculum vitae de Cyril Portet",
+                 AppRessources.File_FileKind_CV_Title,
+                 AppRessources.File_FileKind_CV_SubTitle,
+                 AppRessources.File_FileKind_CV_DownloadTitle,
                 "doc/cv-cyril-portet.pdf",
                 "application/pdf",
-                "cv-cyril-portet.pdf",
-                "Télécharger le CV (Format PDF)"),
+                "cv-cyril-portet.pdf"),
             _ => null
         };
     }

@@ -1,4 +1,5 @@
-﻿using Microsoft.FluentUI.AspNetCore.Components;
+﻿using System.Globalization;
+using Microsoft.FluentUI.AspNetCore.Components;
 
 namespace MyHomePage.Code;
 
@@ -6,8 +7,10 @@ public sealed record AppConfig(
     string Title,
     string DefaultTheme,
     string DefaultOfficeColor,
-    DateTime BuildTimestamp)
+    DateTime BuildTimestamp,
+    string DefaultLanguage = "fr")
 {
+
     public DesignThemeModes Theme =>
         DefaultTheme.ToEnum(DesignThemeModes.Dark);
 

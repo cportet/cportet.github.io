@@ -12,12 +12,12 @@ public partial class MainLayout(AppConfig config) : LayoutComponentBase
     private string? _pageTitle;
 
     private string ToggleMenuTitle => _menuVisible
-        ? "Masquer le menu"
-        : "Afficher le menu";
+        ? AppRessources.MainLayout_ToggleMenuTitle_Masquer
+        : AppRessources.MainLayout_ToggleMenuTitle_Afficher;
 
     private string ToggleThemeTitle => _mode == DesignThemeModes.Light
-        ? "Thème sombre"
-        : "Thème clair";
+        ? AppRessources.MainLayout_Theme_Sombre
+        : AppRessources.MainLayout_Theme_Clair;
 
     private void ToggleMenu()
     {
@@ -48,5 +48,10 @@ public partial class MainLayout(AppConfig config) : LayoutComponentBase
             _pageTitle = pageTitle;
             StateHasChanged();
         }
+    }
+
+    public void UpdateState()
+    {
+        StateHasChanged();
     }
 }

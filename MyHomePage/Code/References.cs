@@ -14,6 +14,7 @@ public static class References
 
     public static class Icons
     {
+        public static Icon Options => new Size24.Settings();
         public static Icon Info => new Size24.Info();
         public static Icon Close => new Size24.ShareScreenStop();
         public static Icon Back => new Size24.ArrowCircleLeft();

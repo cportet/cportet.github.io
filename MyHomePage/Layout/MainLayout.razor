@@ -1,12 +1,11 @@
-﻿@using MyHomePage.Code;
+﻿@inherits LayoutComponentBase
 
-@inherits LayoutComponentBase
+<PWAUpdater Text=@AppRessources.MainLayout_Updater_Text
+            ButtonCaption=@AppRessources.MainLayout_Updater_Button />
 
-<PWAUpdater Text="Une nouvelle version de cette application est disponible"
-            ButtonCaption="Mettre à jour" />
-
-<FluentDesignTheme Mode="@_mode"
-                   OfficeColor="@_selectedOfficeColor" />
+<FluentDesignTheme @bind-Mode="@_mode"
+                   OfficeColor="@_selectedOfficeColor"
+                   StorageName="theme" />
 
 <CascadingValue IsFixed="true" Value=@this>
     <div class="my-page">

@@ -4,33 +4,38 @@
 <FluentNavMenu Width=200>
     <div class="my-closemenu">
         <FluentIcon Value=@References.Icons.Close
-                    Title="Fermer le menu"
+                    Title=@AppRessources.NavMenu_CloseMenu_Title
                     OnClick=@ItemClickedHandler />
     </div>
     <div class="my-items" @onclick=@ItemClickedHandler>
         <FluentNavLink Icon=@References.Icons.Home
                        Match=NavLinkMatch.All
                        Href="/">
-            Home
+            @AppRessources.NavMenu_Page_Home
         </FluentNavLink>
 
         <FluentNavLink Icon=@References.Icons.CV
                        Href="/resume">
-            Mon CV
+            @AppRessources.NavMenu_Page_MonCV
         </FluentNavLink>
 
         <FluentNavLink Icon=@References.Icons.Personnel
                        Href="/perso">
-            Personnel
+            @AppRessources.NavMenu_Page_Personnel
         </FluentNavLink>
 
         <FluentNavLink Icon=@References.Icons.Info
                        Href="/apropos">
-            A propos
+            @AppRessources.NavMenu_Page_Apropos
+        </FluentNavLink>
+
+        <FluentNavLink Icon=@References.Icons.Options
+                       Href="/options">
+            @AppRessources.NavMenu_Page_Options
         </FluentNavLink>
 
         <FluentNavGroup Icon=@References.Icons.Famille
-                        Title="Famille">
+                        Title=@AppRessources.NavMenu_Page_Famille>
             <FluentNavLink Icon=@References.Icons.Lien
                            Target="_blank"
                            Href="https://remy.portet.org">
