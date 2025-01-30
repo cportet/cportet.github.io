@@ -1,12 +1,12 @@
 self.assetsManifest = {
-  "version": "FQdW4MVe",
+  "version": "rmXwxeMs",
   "assets": [
     {
       "hash": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
       "url": ".nojekyll"
     },
     {
-      "hash": "sha256-528TjqCi6Pm40hizFrQphWUXSN8Ee2I2EX9SdzFNaaM=",
+      "hash": "sha256-rtgxEuo4Of8l2JRvChUtFXwd6O1b21NyXzrepibjcUs=",
       "url": "MyHomePage.styles.css"
     },
     {
@@ -214,8 +214,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.FluentUI.AspNetCore.Components.4ni909kbx6.wasm"
     },
     {
-      "hash": "sha256-WYEeuwoJvKUDberY4zix62t1+x4B4KAX/MsWZwLIhoo=",
-      "url": "_framework/Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.l5ha03qa1k.wasm"
+      "hash": "sha256-LMgSFIhq6kVAPjNefAoX/6jDEzUMc//9pSLCJyPp+80=",
+      "url": "_framework/Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.c49wep0ckv.wasm"
     },
     {
       "hash": "sha256-sGms9Oai1ztzgfMsqBvmeKwa5ZyGWr/AEXr6thw0lso=",
@@ -226,8 +226,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.qn4bv3rejh.wasm"
     },
     {
-      "hash": "sha256-hWNC+vqSQQUKM1nYz6IJFvl8FQP+3lKufHiT5Rnf2bg=",
-      "url": "_framework/MyHomePage.p7r3nknckh.wasm"
+      "hash": "sha256-LwbiyJtBXqw6c+uxjiIipEIz72DqjEoxgEZ7S3cwVSo=",
+      "url": "_framework/MyHomePage.3jkhwpi59q.wasm"
     },
     {
       "hash": "sha256-vGboMmGsgfByDMSA6/OJkHpCaeNz8SCtoYRiIjPgotE=",
@@ -298,8 +298,12 @@ self.assetsManifest = {
       "url": "_framework/System.Memory.00zfd6eyoh.wasm"
     },
     {
-      "hash": "sha256-ZaM/Yx4CiHRHDEJ0B10tyXBmgMRi1Lq7iLUMSHAsYrM=",
-      "url": "_framework/System.Net.Http.dihj48icwb.wasm"
+      "hash": "sha256-+UYnoln0qDJD3pk1bV6a29MDMIxDLwKkciwAcuU0zKY=",
+      "url": "_framework/System.Net.Http.Json.d77yizflkj.wasm"
+    },
+    {
+      "hash": "sha256-qYx7XD+zL8795vNJL0MoEdd9Fh2UorlnKJb05DV42+8=",
+      "url": "_framework/System.Net.Http.vi7x7y229j.wasm"
     },
     {
       "hash": "sha256-Odfzeo2ZqpoH2fzuH9DliylT36xtGYEfH8egaXTOFuQ=",
@@ -310,8 +314,8 @@ self.assetsManifest = {
       "url": "_framework/System.ObjectModel.ra98xx1pm3.wasm"
     },
     {
-      "hash": "sha256-msntOTAisM6qxK8HC3xfvsD5tdSLMBejeMlnH1pfNTQ=",
-      "url": "_framework/System.Private.CoreLib.q3mm91d4oz.wasm"
+      "hash": "sha256-uZXT+e8QG0qBSS3zaoKDgitrH7vmTOcb4yB1Mnimbko=",
+      "url": "_framework/System.Private.CoreLib.fma6nm641z.wasm"
     },
     {
       "hash": "sha256-G82/v1SkjSntiyrLMfDfJfno19+fpzoduMjuvuNTklw=",
@@ -322,16 +326,16 @@ self.assetsManifest = {
       "url": "_framework/System.Runtime.InteropServices.JavaScript.mwa725m7o8.wasm"
     },
     {
-      "hash": "sha256-oV9RslWNiJ5VcLJOG4uNYfSf2SK3GTB8PWyCvSEilmo=",
-      "url": "_framework/System.Runtime.paelcqzz4l.wasm"
+      "hash": "sha256-0zW2XzqF+uVtoCM2PYYAiz8aPC5pHbcPjRuAl2hYoDs=",
+      "url": "_framework/System.Runtime.fl5eayl3r0.wasm"
     },
     {
       "hash": "sha256-5wDVy6v7J/km28awj5SoGUUqj0+8D4fygioJErU/1DI=",
       "url": "_framework/System.Text.Encodings.Web.fuuvru2gdb.wasm"
     },
     {
-      "hash": "sha256-TVBn6Grobl1YPliC9HBx7EHsc24YaJHqzvbwZtDDSOM=",
-      "url": "_framework/System.Text.Json.5mzshfmw4q.wasm"
+      "hash": "sha256-I5rW/oLzH7rYENumFLJJdjb0vu6OsXwrdx07ehbPDJE=",
+      "url": "_framework/System.Text.Json.twovu6674c.wasm"
     },
     {
       "hash": "sha256-PJKtyTv3s1zT5AwxsiYM/hQq+4ks0Jg2mZl/fJRcSbg=",
@@ -354,7 +358,7 @@ self.assetsManifest = {
       "url": "_framework/Toolbelt.Blazor.PWA.Updater.zh5jq5plq0.wasm"
     },
     {
-      "hash": "sha256-1L690+iMg8NsVJRIlc+Lv3GzBB/j6u/kgFkeSmaAHD8=",
+      "hash": "sha256-AZbBsGn6sFq/Covon5MexUtcJKtZMWS8KPp3eCXBj7Q=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -388,6 +392,10 @@ self.assetsManifest = {
     {
       "hash": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs=",
       "url": "_framework/icudt_no_CJK.lfu7j35m59.dat"
+    },
+    {
+      "hash": "sha256-rLlEVqSLihUtZK2AZvhFABPvLWMes17UHW9vL+TMZNA=",
+      "url": "appconfig.json"
     },
     {
       "hash": "sha256-n4FcxrSV9xCKj6hTMB77B1ibI6SFmuuaz6hLW4/WNb0=",

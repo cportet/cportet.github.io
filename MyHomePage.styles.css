@@ -139,3 +139,9 @@ h2 .subtitle[b-v16et6jew9], h3 .subtitle[b-v16et6jew9] {
     display: flex;
     flex-direction: row-reverse;
 }
+
+.my-info[b-q4iamuyrz1] {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    text-align: center;
+}
