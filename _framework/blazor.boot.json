@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MyHomePage",
   "resources": {
-    "hash": "sha256-itMYUBADMWYFfQkudNbElAXTmX03R/2YHBsL4GUKDvM=",
+    "hash": "sha256-EE0QFcM1S2QXl1Ki9/dvhg5rkO2bMu0MWj7RGWwzF5Q=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.Forms.sw6kwy7tdz.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
       "Microsoft.AspNetCore.Components.88hx2bovhz.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -18,11 +18,11 @@
       "Microsoft.Extensions.Logging.fugc9tzrx1.wasm": "Microsoft.Extensions.Logging.wasm",
       "Microsoft.Extensions.Options.1cu2gj5cau.wasm": "Microsoft.Extensions.Options.wasm",
       "Microsoft.Extensions.Primitives.mytv1lpnrg.wasm": "Microsoft.Extensions.Primitives.wasm",
-      "Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.2v9ln9l9we.wasm": "Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.wasm",
+      "Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.vvmn84d9rt.wasm": "Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.wasm",
       "Microsoft.FluentUI.AspNetCore.Components.4ni909kbx6.wasm": "Microsoft.FluentUI.AspNetCore.Components.wasm",
       "Microsoft.JSInterop.qn4bv3rejh.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.8eb000j8w7.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
-      "MyHomePage.9lxa0v5f50.wasm": "MyHomePage.wasm",
+      "MyHomePage.c7dkqewjki.wasm": "MyHomePage.wasm",
       "System.Collections.Concurrent.tftxgob928.wasm": "System.Collections.Concurrent.wasm",
       "System.Collections.Immutable.2bqzu50dk7.wasm": "System.Collections.Immutable.wasm",
       "System.Collections.Specialized.3f6mpp020l.wasm": "System.Collections.Specialized.wasm",
@@ -55,7 +55,7 @@
       "System.Web.HttpUtility.wyxyc7zd3o.wasm": "System.Web.HttpUtility.wasm",
       "Toolbelt.Blazor.PWA.Updater.Service.dx2b8fmyxy.wasm": "Toolbelt.Blazor.PWA.Updater.Service.wasm",
       "Toolbelt.Blazor.PWA.Updater.zh5jq5plq0.wasm": "Toolbelt.Blazor.PWA.Updater.wasm",
-      "MyHomePage.resources.1d12gw4flx.wasm": "MyHomePage.resources.wasm",
+      "MyHomePage.resources.622edh7i45.wasm": "MyHomePage.resources.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.8o8n7iomrf.js": "dotnet.native.js",
       "dotnet.native.aep4lch3d1.wasm": "dotnet.native.wasm",
@@ -94,11 +94,11 @@
       "Microsoft.Extensions.Logging.fugc9tzrx1.wasm": "sha256-Rw3p7P7cbetsRUa1O+Q7ltdFAmR7kf26guR3xO9aq3s=",
       "Microsoft.Extensions.Options.1cu2gj5cau.wasm": "sha256-720xjccNSC/ixI8d5toBVmd5GGEzQAIN2LMqBmflaJw=",
       "Microsoft.Extensions.Primitives.mytv1lpnrg.wasm": "sha256-kvH0PWaEihTjfJSm4b+K3UHAQau8H9u9OsWrrZj/Chw=",
-      "Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.2v9ln9l9we.wasm": "sha256-0g9vIq5QxguTJfdACF2+U3pKs8Ymp2yCkJRY2kTTDcY=",
+      "Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.vvmn84d9rt.wasm": "sha256-m3vb/tYzVAs/xSXMfk990GD2fqO7q4rvyo3/wUEAkK4=",
       "Microsoft.FluentUI.AspNetCore.Components.4ni909kbx6.wasm": "sha256-oIp5oRG4Z9txORx4W4wZp2lP+JoeEwTvUddykMmtSIA=",
       "Microsoft.JSInterop.qn4bv3rejh.wasm": "sha256-VocXMx4EuetU6AS/DCC5yLWVCaJ9UhIpEsmmBX4JP1s=",
       "Microsoft.JSInterop.WebAssembly.8eb000j8w7.wasm": "sha256-sGms9Oai1ztzgfMsqBvmeKwa5ZyGWr/AEXr6thw0lso=",
-      "MyHomePage.9lxa0v5f50.wasm": "sha256-c0s4mFVmlkHdqpHrkCF2t6RjuSng27FYpDwHxLYBr0k=",
+      "MyHomePage.c7dkqewjki.wasm": "sha256-2JE627u7n/ofy04KSiS+dDl9NlDkT+1/AgC3iL/oB2c=",
       "System.Collections.Concurrent.tftxgob928.wasm": "sha256-t4zGS5dFjYLHEJByMdlpKZwJ7om2st+eCaMvZdDK4B0=",
       "System.Collections.Immutable.2bqzu50dk7.wasm": "sha256-Ej53JpWvKcPYkYogwFfGKh5xKDuir7RFI0DDqKofSQk=",
       "System.Collections.Specialized.3f6mpp020l.wasm": "sha256-/waLYCER0KICIWgn114aRKEZJOXJ6cV85SZL1p/NxWI=",
@@ -132,7 +132,7 @@
     },
     "satelliteResources": {
       "en": {
-        "MyHomePage.resources.1d12gw4flx.wasm": "sha256-ZQOr/54GS68+wer1C0xzGTy0V7BrBmq0RSB8JzhaNec="
+        "MyHomePage.resources.622edh7i45.wasm": "sha256-7gLOQbNocd8TkfV/T5o35yZAMrGXuPnXq+sM9z27HJY="
       }
     },
     "libraryInitializers": {

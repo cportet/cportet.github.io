@@ -1,12 +1,12 @@
 self.assetsManifest = {
-  "version": "DjkjuOhL",
+  "version": "MZT5bwKK",
   "assets": [
     {
       "hash": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
       "url": ".nojekyll"
     },
     {
-      "hash": "sha256-rtgxEuo4Of8l2JRvChUtFXwd6O1b21NyXzrepibjcUs=",
+      "hash": "sha256-DxKuTl3aBNpZTaQeB4ZMpavCNMpdudc1fjskynq3KVE=",
       "url": "MyHomePage.styles.css"
     },
     {
@@ -222,8 +222,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.FluentUI.AspNetCore.Components.4ni909kbx6.wasm"
     },
     {
-      "hash": "sha256-0g9vIq5QxguTJfdACF2+U3pKs8Ymp2yCkJRY2kTTDcY=",
-      "url": "_framework/Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.2v9ln9l9we.wasm"
+      "hash": "sha256-m3vb/tYzVAs/xSXMfk990GD2fqO7q4rvyo3/wUEAkK4=",
+      "url": "_framework/Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.vvmn84d9rt.wasm"
     },
     {
       "hash": "sha256-sGms9Oai1ztzgfMsqBvmeKwa5ZyGWr/AEXr6thw0lso=",
@@ -234,8 +234,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.qn4bv3rejh.wasm"
     },
     {
-      "hash": "sha256-c0s4mFVmlkHdqpHrkCF2t6RjuSng27FYpDwHxLYBr0k=",
-      "url": "_framework/MyHomePage.9lxa0v5f50.wasm"
+      "hash": "sha256-2JE627u7n/ofy04KSiS+dDl9NlDkT+1/AgC3iL/oB2c=",
+      "url": "_framework/MyHomePage.c7dkqewjki.wasm"
     },
     {
       "hash": "sha256-t4zGS5dFjYLHEJByMdlpKZwJ7om2st+eCaMvZdDK4B0=",
@@ -366,7 +366,7 @@ self.assetsManifest = {
       "url": "_framework/Toolbelt.Blazor.PWA.Updater.zh5jq5plq0.wasm"
     },
     {
-      "hash": "sha256-ZIJp0yUtQWoB5nmTGi1GG/k0kBE/wCvgIVqAwltGjhI=",
+      "hash": "sha256-0mITNpa/2aKCLS6qmwph+xUnpi+b6/14qvfkL/AaKuI=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -390,15 +390,15 @@ self.assetsManifest = {
       "url": "_framework/dotnet.runtime.rubq0v1yiy.js"
     },
     {
-      "hash": "sha256-ZQOr/54GS68+wer1C0xzGTy0V7BrBmq0RSB8JzhaNec=",
-      "url": "_framework/en/MyHomePage.resources.1d12gw4flx.wasm"
+      "hash": "sha256-7gLOQbNocd8TkfV/T5o35yZAMrGXuPnXq+sM9z27HJY=",
+      "url": "_framework/en/MyHomePage.resources.622edh7i45.wasm"
     },
     {
       "hash": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",
       "url": "_framework/icudt.oh1zvcfom8.dat"
     },
     {
-      "hash": "sha256-UHEFUuPE7xXVwVndugmiR/Sfnd7ouefmnzx+2cWdNIA=",
+      "hash": "sha256-tPZRRht1ory8Pv0L92d2Yw+FkYlvbyUKX7GzpE5Cev8=",
       "url": "appconfig.json"
     },
     {
