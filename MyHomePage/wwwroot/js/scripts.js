@@ -1,5 +1,17 @@
 ﻿let resizeHandlers = {};
 
+function applyInitialTheme() {
+    var theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+        document.body.classList.add('initial-dark');
+    }
+}
+
+function removeInitialDarkClass() {
+    document.body.classList.remove('initial-dark');
+}
+
+
 function adjustPdfHeight(id) {
     var pdfContainer = document.getElementById(id);
     if (pdfContainer) {

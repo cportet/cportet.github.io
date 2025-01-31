@@ -14,6 +14,11 @@ body {
     background: var(--neutral-fill-layer-rest);
 }
 
+    body.initial-dark {
+        background-color: #333333;
+        color: white;
+    }
+
     body .pwa-updater[b-pwa-updater] {
         --pwa-updater-bar-z-index: 1000;
         --pwa-updater-bar-height: 50px;
@@ -26,6 +31,10 @@ a, a:visited {
     a:hover {
         color: var(--accent-foreground-hover);
     }
+
+body.initial-dark a, body.initial-dark a:visited {
+    color: #7ed3fd;
+}
 
 ul {
     padding-left: 20px;
@@ -105,11 +114,15 @@ h1:focus {
         transform: rotate(-90deg);
     }
 
-        .loading-progress circle:last-child {
-            stroke: #1b6ec2;
-            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
-            transition: stroke-dasharray 0.05s ease-in-out;
-        }
+body.initial-dark .loading-progress circle {
+    stroke: #999999;
+}
+
+.loading-progress circle:last-child {
+    stroke: #1b6ec2;
+    stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+    transition: stroke-dasharray 0.05s ease-in-out;
+}
 
 .loading-progress-text {
     text-align: center;
@@ -134,13 +147,16 @@ code {
     text-align: start;
 }
 
-
 .app-footer {
     margin-top: 80px;
     background-color: #e5e5e5;
     padding: 5px;
     font-size: 0.8rem;
     text-align: center;
+}
+
+body.initial-dark .app-footer {
+    background-color: #444444;
 }
 
 .app-tooltip {
@@ -173,3 +189,25 @@ code {
         visibility: hidden;
         opacity: 0;
     }
+
+.my-image:hover,
+.my-image:focus,
+.my-image:active {
+    animation: flash 0.5s ease-in-out;
+}
+
+@keyframes flash {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.10);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+}

@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
+using Microsoft.JSInterop;
 
 namespace MyHomePage;
 
-public partial class App(NavigationManager navigationManager) : IDisposable
+public partial class App(NavigationManager navigationManager,
+    IJSRuntime jsRuntime) : IDisposable
 {
     protected override void OnInitialized()
     {
@@ -19,5 +21,13 @@ public partial class App(NavigationManager navigationManager) : IDisposable
     {
         navigationManager.LocationChanged -= OnLocationChanged;
         GC.SuppressFinalize(this);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            await jsRuntime.InvokeVoidAsync("removeInitialDarkClass");
+
+        await base.OnAfterRenderAsync(firstRender);
     }
 }
