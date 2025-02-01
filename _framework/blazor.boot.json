@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MyHomePage",
   "resources": {
-    "hash": "sha256-yjH7XV3N452mHp1LKjvLL6WoIH62i/ZBUTfKWQ5QCj4=",
+    "hash": "sha256-1pfLQzA8XiTE8M/ibrw7GfOfeRgAvZ6iHZP6fcIiXLc=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.Forms.sw6kwy7tdz.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
       "Microsoft.AspNetCore.Components.88hx2bovhz.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -22,7 +22,7 @@
       "Microsoft.FluentUI.AspNetCore.Components.4ni909kbx6.wasm": "Microsoft.FluentUI.AspNetCore.Components.wasm",
       "Microsoft.JSInterop.qn4bv3rejh.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.8eb000j8w7.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
-      "MyHomePage.zj2vk4hm7c.wasm": "MyHomePage.wasm",
+      "MyHomePage.qh9d3z0x70.wasm": "MyHomePage.wasm",
       "System.Collections.Concurrent.tftxgob928.wasm": "System.Collections.Concurrent.wasm",
       "System.Collections.Immutable.2bqzu50dk7.wasm": "System.Collections.Immutable.wasm",
       "System.Collections.Specialized.3f6mpp020l.wasm": "System.Collections.Specialized.wasm",
@@ -55,7 +55,7 @@
       "System.Web.HttpUtility.wyxyc7zd3o.wasm": "System.Web.HttpUtility.wasm",
       "Toolbelt.Blazor.PWA.Updater.Service.dx2b8fmyxy.wasm": "Toolbelt.Blazor.PWA.Updater.Service.wasm",
       "Toolbelt.Blazor.PWA.Updater.zh5jq5plq0.wasm": "Toolbelt.Blazor.PWA.Updater.wasm",
-      "MyHomePage.resources.os7sc9tt44.wasm": "MyHomePage.resources.wasm",
+      "MyHomePage.resources.lpb47ryh6b.wasm": "MyHomePage.resources.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.8o8n7iomrf.js": "dotnet.native.js",
       "dotnet.native.aep4lch3d1.wasm": "dotnet.native.wasm",
@@ -98,7 +98,7 @@
       "Microsoft.FluentUI.AspNetCore.Components.4ni909kbx6.wasm": "sha256-oIp5oRG4Z9txORx4W4wZp2lP+JoeEwTvUddykMmtSIA=",
       "Microsoft.JSInterop.qn4bv3rejh.wasm": "sha256-VocXMx4EuetU6AS/DCC5yLWVCaJ9UhIpEsmmBX4JP1s=",
       "Microsoft.JSInterop.WebAssembly.8eb000j8w7.wasm": "sha256-sGms9Oai1ztzgfMsqBvmeKwa5ZyGWr/AEXr6thw0lso=",
-      "MyHomePage.zj2vk4hm7c.wasm": "sha256-r9KRMs8vcxdQVXrK8zy49qnWeuUr8//6oS2Ho7DVJYg=",
+      "MyHomePage.qh9d3z0x70.wasm": "sha256-sv+nFBcWe9XtK2lLsjbKB4M3muWE65wxFV3fAf4S03E=",
       "System.Collections.Concurrent.tftxgob928.wasm": "sha256-t4zGS5dFjYLHEJByMdlpKZwJ7om2st+eCaMvZdDK4B0=",
       "System.Collections.Immutable.2bqzu50dk7.wasm": "sha256-Ej53JpWvKcPYkYogwFfGKh5xKDuir7RFI0DDqKofSQk=",
       "System.Collections.Specialized.3f6mpp020l.wasm": "sha256-/waLYCER0KICIWgn114aRKEZJOXJ6cV85SZL1p/NxWI=",
@@ -132,7 +132,7 @@
     },
     "satelliteResources": {
       "en": {
-        "MyHomePage.resources.os7sc9tt44.wasm": "sha256-eHYNwymd3sR+3K6FmLbwTh4726U3r18MAkjJOjA0czA="
+        "MyHomePage.resources.lpb47ryh6b.wasm": "sha256-SSfq/oqW+f5VAUjXzGPPFVbiJLHZpfSJsqqG3ODe+Ko="
       }
     },
     "libraryInitializers": {
