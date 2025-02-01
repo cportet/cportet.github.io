@@ -1,5 +1,7 @@
 ﻿.my-icon {
     fill: var(--neutral-fill-rest);
+    overflow: hidden;
+    display: inline-block;
 }
 
     .my-icon a {

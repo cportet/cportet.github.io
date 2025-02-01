@@ -3,7 +3,7 @@
 }
 
     .my-content:hover, .my-content:active, .my-content:focus {
-        border-left: 1px solid #189bff;
+        border-left: 1px solid var(--accent-fill-rest);
         padding-left: 10px;
         border-bottom-right-radius: 8px;
         border-top-right-radius: 8px;
