@@ -18,6 +18,8 @@
 /* /Components/MyIcon.razor.rz.scp.css */
 .my-icon[b-uy6zbefzhg] {
     fill: var(--neutral-fill-rest);
+    overflow: hidden;
+    display: inline-block;
 }
 
     .my-icon a[b-uy6zbefzhg] {
@@ -68,8 +70,8 @@
     display: inline-block;
     padding: 1px 5px;
     margin: 1px;
-    background-color: #0078D4;
-    color: white;
+    background-color: var(--accent-fill-rest);
+    color: var(--neutral-fill-layer-rest);
     border-radius: 8px;
     font-size: 12px;
 }
@@ -79,7 +81,7 @@
 }
 
     .my-content:hover[b-v16et6jew9], .my-content:active[b-v16et6jew9], .my-content:focus[b-v16et6jew9] {
-        border-left: 1px solid #189bff;
+        border-left: 1px solid var(--accent-fill-rest);
         padding-left: 10px;
         border-bottom-right-radius: 8px;
         border-top-right-radius: 8px;
