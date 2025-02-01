@@ -35,6 +35,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Update="wwwroot\BingSiteAuth.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Update="AppRessources.en.resx">
       <LastGenOutput>AppRessources.en.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
