@@ -1,44 +1,45 @@
-﻿<MyPageTitle Title=@AppRessources.Page_Options_Title
-             SubTitle=@AppRessources.Page_Options_SubTitle />
+﻿<MyPageContainer Title=@AppRessources.Page_Options_Title
+                 SubTitle=@AppRessources.Page_Options_SubTitle>
 
-@if (_options is not null)
-{
-    <MySection Id="options" Title=@AppRessources.Page_Options_Section_Options_Title>
-        <div class="my-option-block">
+    @if (_options is not null)
+    {
+        <MySection Id="options" Title=@AppRessources.Page_Options_Section_Options_Title>
+            <div class="my-option-block">
 
-            <MySelect Id="select-langue"
-                      TItem=CultureItem
-                      Items=@_availableLanguages
-                      Label=@AppRessources.Page_Options_Select_Language
-                      Value=@_options.Language
-                      ValueChanged=@CultureUpdate />
+                <MySelect Id="select-langue"
+                          TItem=CultureItem
+                          Items=@_availableLanguages
+                          Label=@AppRessources.Page_Options_Select_Language
+                          Value=@_options.Language
+                          ValueChanged=@CultureUpdate />
 
-            <MySelect Id="select-theme"
-                      TItem=ThemeItem
-                      Items=@_availableThemes
-                      Label=@AppRessources.Page_Options_Select_Theme
-                      DisplayKeyInText=false
-                      Value=@_options.Theme
-                      ValueChanged=@ThemeUpdate />
+                <MySelect Id="select-theme"
+                          TItem=ThemeItem
+                          Items=@_availableThemes
+                          Label=@AppRessources.Page_Options_Select_Theme
+                          DisplayKeyInText=false
+                          Value=@_options.Theme
+                          ValueChanged=@ThemeUpdate />
 
-            <MySelect Id="select-colorset"
-                      TItem=ColorSetItem
-                      Items=@_availableColorSets
-                      Label=@AppRessources.Page_Options_Select_ColorSet
-                      DisplayKeyInText=false
-                      Value=@_options.ColorSet
-                      ValueChanged=@ColorSetUpdate />
+                <MySelect Id="select-colorset"
+                          TItem=ColorSetItem
+                          Items=@_availableColorSets
+                          Label=@AppRessources.Page_Options_Select_ColorSet
+                          DisplayKeyInText=false
+                          Value=@_options.ColorSet
+                          ValueChanged=@ColorSetUpdate />
 
-        </div>
-        <div class="my-option-block">
-            <FluentButton IconStart=@References.Icons.Refresh
-                          OnClick=@ReloadHandler>
-                @AppRessources.Page_Options_Button_Apply
-            </FluentButton>
-            <FluentButton IconStart=@References.Icons.Reset
-                          OnClick=@ResetHandler>
-                @AppRessources.Page_Options_Button_Reset
-            </FluentButton>
-        </div>
-    </MySection>
-}
+            </div>
+            <div class="my-option-block">
+                <FluentButton IconStart=@References.Icons.Refresh
+                              OnClick=@ReloadHandler>
+                    @AppRessources.Page_Options_Button_Apply
+                </FluentButton>
+                <FluentButton IconStart=@References.Icons.Reset
+                              OnClick=@ResetHandler>
+                    @AppRessources.Page_Options_Button_Reset
+                </FluentButton>
+            </div>
+        </MySection>
+    }
+</MyPageContainer>

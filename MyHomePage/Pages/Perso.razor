@@ -1,78 +1,74 @@
-﻿<MyPageTitle Title=@AppRessources.Page_Perso_Title
-             SubTitle=@AppRessources.Page_Perso_SubTile />
+﻿<MyPageContainer Title=@AppRessources.Page_Perso_Title
+                 SubTitle=@AppRessources.Page_Perso_SubTile>
 
-<MySection Id="whoami" Title="Qui-suis je ?">
-    <p>
-        Bonjour !
+    <MySection Id="whoami" Title=@AppRessources.Page_Perso_Section_QuiSuisJe>
+        <p>
+            Bonjour !
 
-        Je me présente, <strong>Cyril</strong>, @(Code.DisplayHelper.AgeCyril) ans.<br />
-        Je suis originaire de Picardie (Noyon, Oise), désormais installé dans le Rhône (<MyExternalLink Title="Montrottier" Href="https://maps.app.goo.gl/DHPLyQ9bWSX1sNf39" />).<br />
-        Je suis marié, et père de 3 enfants (
-        <MyExternalLink Title="Rémy" Href="https://remy.portet.org" />,
-        <MyExternalLink Title="Trystan" Href="https://trystan.portet.org" /> et <strong>Eloy</strong>).
-    </p>
-    <p>
-        Si vous vous intéressez à ma vie professionnelle, vous trouverez toutes les informations utiles sur <a href="/resume" alt="CV de Cyril Portet">la page de mon CV</a>.
-    </p>
-    <p>
-        ... Et si vous souhaitez en apprendre plus sur moi, vous ne trouverez pas forcément plus d'informations utiles ici, pour l'instant 😆
-    </p>
+            Je me présente, <strong>Cyril</strong>, @(Code.DisplayHelper.AgeCyril) ans.<br />
+            Je suis originaire de Picardie (Noyon, Oise), désormais installé dans le Rhône (<MyExternalLink Title="Montrottier" Href="https://maps.app.goo.gl/DHPLyQ9bWSX1sNf39" />).<br />
+            Je suis marié, et père de 3 enfants (
+            <MyExternalLink Title="Rémy" Href="https://remy.portet.org" />,
+            <MyExternalLink Title="Trystan" Href="https://trystan.portet.org" /> et <strong>Eloy</strong>).
+        </p>
+        <p>
+            Si vous vous intéressez à ma vie professionnelle, vous trouverez toutes les informations utiles sur <a href="/resume" alt="CV de Cyril Portet">la page de mon CV</a>.
+        </p>
+        <p>
+            ... Et si vous souhaitez en apprendre plus sur moi, vous ne trouverez pas forcément plus d'informations utiles ici, pour l'instant 😆
+        </p>
 
-    <MyImageDisplay ImageUrl="/img/famille.jpg" Height="250px" Width="250px" AltText="Famille Portet (Décembre 2024)" />
-</MySection>
+        <MyImageDisplay ImageUrl="/img/famille.jpg" Height="250px" Width="250px" AltText="Famille Portet (Décembre 2024)" />
+    </MySection>
 
-<MySection id="findme" Title="Me retrouver">
-    <p>Vous pouvez me retrouver sur les <strong>réseaux sociaux</strong> :</p>
-    <ul class="links">
-        <li>
-            <span class="link">
-                <i class="fa-brands fa-x-twitter"></i>
-                <a href="https://x.com/cportet"
-                   alt="Lien vers le profil X (Twitter) de Cyril Portet"
-                   target="_blank" rel="noopener">Twitter/X</a>
-            </span>
-        </li>
-        <li>
-            <span class="link">
-                <i class="fa-brands fa-github"></i>
-                <a href="https://github.com/cportet"
-                   alt="Lien vers le profil GitHub de Cyril Portet"
-                   target="_blank" rel="noopener">Github</a>
-            </span>
-        </li>
-        <li>
-            <span class="link">
-                <i class="fa-brands fa-instagram"></i>
-                <a href="https://instagram.portet.org"
-                   alt="Lien vers le profil Instagram de Cyril Portet"
-                   target="_blank" rel="noopener">Instagram</a>
-            </span>
-        </li>
-        <li>
-            <span class="link">
-                <i class="fa-brands fa-facebook"></i>
-                <a href="https://facebook.portet.org"
-                   alt="Lien vers le profil Facebook de Cyril Portet"
-                   target="_blank" rel="noopener">Facebook</a>
-            </span>
-        </li>
-        <li>
-            <span class="link">
-                <i class="fa-brands fa-youtube"></i>
-                <a href="https://youtube.com/cportet"
-                   alt="Lien vers le profil Youtube de Cyril Portet"
-                   target="_blank" rel="noopener">Youtube</a>
-            </span>
-        </li>
-    </ul>
-</MySection>
+    <MySection id="findme" Title=@AppRessources.Page_Perso_Section_MeRetrouver>
+        <p>Vous pouvez me retrouver sur les <strong>réseaux sociaux</strong> :</p>
+        <ul class="links">
+            <li>
+                <span class="link">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <a href="https://x.com/cportet"
+                       alt="Lien vers le profil X (Twitter) de Cyril Portet"
+                       target="_blank" rel="noopener">Twitter/X</a>
+                </span>
+            </li>
+            <li>
+                <span class="link">
+                    <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/cportet"
+                       alt="Lien vers le profil GitHub de Cyril Portet"
+                       target="_blank" rel="noopener">Github</a>
+                </span>
+            </li>
+            <li>
+                <span class="link">
+                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://instagram.portet.org"
+                       alt="Lien vers le profil Instagram de Cyril Portet"
+                       target="_blank" rel="noopener">Instagram</a>
+                </span>
+            </li>
+            <li>
+                <span class="link">
+                    <i class="fa-brands fa-facebook"></i>
+                    <a href="https://facebook.portet.org"
+                       alt="Lien vers le profil Facebook de Cyril Portet"
+                       target="_blank" rel="noopener">Facebook</a>
+                </span>
+            </li>
+            <li>
+                <span class="link">
+                    <i class="fa-brands fa-youtube"></i>
+                    <a href="https://youtube.com/cportet"
+                       alt="Lien vers le profil Youtube de Cyril Portet"
+                       target="_blank" rel="noopener">Youtube</a>
+                </span>
+            </li>
+        </ul>
+    </MySection>
 
-<MySection id="me-contacter" Title="Me contacter">
-    <p>
-        Si vous souhaitez entrer en contact avec moi, le meilleur moyen est de <a href="mailto:cyril@portet.org">m'écrire un courriel</a>
-        ou me rejoindre sur les réseaux sociaux.
-    </p>
-    <p>
-        <strong>Au plaisir !</strong>
-    </p>
-</MySection>
+    <MySection id="me-contacter" Title=@AppRessources.Page_Perso_Section_MeContacter>
+        <MyMarkdownLoader RessourcePath="perso/contact" />
+    </MySection>
+
+</MyPageContainer>

@@ -258,4 +258,19 @@
   <data name="NotFound_PageTitle" xml:space="preserve">
     <value>Error 404</value>
   </data>
+  <data name="Page_Home_Section_Bienvenue" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="Page_Home_Section_CV" xml:space="preserve">
+    <value>My resume</value>
+  </data>
+  <data name="Page_Perso_Section_QuiSuisJe" xml:space="preserve">
+    <value>Who am i?</value>
+  </data>
+  <data name="Page_Perso_Section_MeContacter" xml:space="preserve">
+    <value>Contact me</value>
+  </data>
+  <data name="Page_Perso_Section_MeRetrouver" xml:space="preserve">
+    <value>Find me</value>
+  </data>
 </root>

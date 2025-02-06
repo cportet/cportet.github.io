@@ -358,6 +358,24 @@ namespace MyHomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bienvenue.
+        /// </summary>
+        public static string Page_Home_Section_Bienvenue {
+            get {
+                return ResourceManager.GetString("Page_Home_Section_Bienvenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mon CV.
+        /// </summary>
+        public static string Page_Home_Section_CV {
+            get {
+                return ResourceManager.GetString("Page_Home_Section_CV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bienvenue chez moi.
         /// </summary>
         public static string Page_Home_SubTitle {
@@ -444,6 +462,33 @@ namespace MyHomePage {
         public static string Page_Options_Title {
             get {
                 return ResourceManager.GetString("Page_Options_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Me contacter.
+        /// </summary>
+        public static string Page_Perso_Section_MeContacter {
+            get {
+                return ResourceManager.GetString("Page_Perso_Section_MeContacter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Me retrouver.
+        /// </summary>
+        public static string Page_Perso_Section_MeRetrouver {
+            get {
+                return ResourceManager.GetString("Page_Perso_Section_MeRetrouver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Qui suis-je ?.
+        /// </summary>
+        public static string Page_Perso_Section_QuiSuisJe {
+            get {
+                return ResourceManager.GetString("Page_Perso_Section_QuiSuisJe", resourceCulture);
             }
         }
         

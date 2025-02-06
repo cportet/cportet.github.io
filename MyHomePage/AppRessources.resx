@@ -258,4 +258,19 @@
   <data name="MainLayout_GoBack_Title" xml:space="preserve">
     <value>Retour à la page précédente</value>
   </data>
+  <data name="Page_Home_Section_Bienvenue" xml:space="preserve">
+    <value>Bienvenue</value>
+  </data>
+  <data name="Page_Home_Section_CV" xml:space="preserve">
+    <value>Mon CV</value>
+  </data>
+  <data name="Page_Perso_Section_QuiSuisJe" xml:space="preserve">
+    <value>Qui suis-je ?</value>
+  </data>
+  <data name="Page_Perso_Section_MeRetrouver" xml:space="preserve">
+    <value>Me retrouver</value>
+  </data>
+  <data name="Page_Perso_Section_MeContacter" xml:space="preserve">
+    <value>Me contacter</value>
+  </data>
 </root>

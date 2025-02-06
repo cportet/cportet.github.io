@@ -1,15 +1,15 @@
-﻿<MyPageTitle Title=@_title
-             SubTitle=@_subTitle />
+﻿<MyPageContainer Title=@_title
+                 SubTitle=@_subTitle>
+    @if (_fileReference is not null)
+    {
+        <a href=@_fileReference.FilePath
+           download=@_fileReference.DownloadFileName>
+            @_fileReference.DownloadTitle
+        </a>
 
-@if (_fileReference is not null)
-{
-    <a href=@_fileReference.FilePath
-       download=@_fileReference.DownloadFileName>
-        @_fileReference.DownloadTitle
-    </a>
+        <MySpacer Orientation=Orientation.Horizontal />
 
-    <MySpacer Orientation=Orientation.Horizontal />
-
-    <MyFullPageViewer File=@_fileReference.FilePath
-                      FileType=@_fileReference.FileType />
-}
+        <MyFullPageViewer File=@_fileReference.FilePath
+                          FileType=@_fileReference.FileType />
+    }
+</MyPageContainer>

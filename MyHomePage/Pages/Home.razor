@@ -1,15 +1,10 @@
-﻿<MyPageTitle Title=@AppRessources.Page_Home_Title
-             SubTitle=@AppRessources.Page_Home_SubTitle />
-
-<main>
-    <MySection id="introduction" Title="Bienvenue">
-        <p>Bienvenue sur l'espace personnel de <strong>Cyril Portet</strong>.</p>
-
-        <MyImageDisplay ImageUrl="/img/me.jpg" AltText="Cyril Portet" />
-
+﻿<MyPageContainer Title=@AppRessources.Page_Home_Title
+                 SubTitle=@AppRessources.Page_Home_SubTitle>
+    <MySection id="introduction" Title=@AppRessources.Page_Home_Section_Bienvenue>
+        <MyMarkdownLoader RessourcePath="home/introduction" />
     </MySection>
 
-    <MySection id="mon-cv" Title="Mon CV">
-        <p>Vous cherchez mon <strong>curriculum vitae</strong> ? Vous le trouverez sur <a href="cv">cette page</a>.</p>
+    <MySection id="mon-cv" Title=@AppRessources.Page_Home_Section_CV>
+        <MyMarkdownLoader RessourcePath="home/mon-cv" />
     </MySection>
-</main>
+</MyPageContainer>

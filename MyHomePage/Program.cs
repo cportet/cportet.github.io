@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-using System.Resources;
-using Microsoft.AspNetCore.Components.Web;
+﻿using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.FluentUI.AspNetCore.Components;
 using MyHomePage;
@@ -17,7 +15,6 @@ builder.Services.AddScoped(sp => new HttpClient
     BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
 });
 
-builder.Services.AddScoped<ConfigurationService>();
 builder.Services.AddScoped<LocalStorageService>();
 builder.Services.AddScoped<UserOptionsService>();
 builder.Services.AddSingleton<HistoryService>();

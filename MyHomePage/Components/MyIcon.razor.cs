@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using Microsoft.FluentUI.AspNetCore.Components;
 
 namespace MyHomePage.Components
@@ -36,17 +36,17 @@ namespace MyHomePage.Components
                 if (!string.IsNullOrEmpty(IconName))
                 {
                     var iconName = IconName.Trim().ToLower();
-                    var Src = $"/img/{iconName}.svg";
+                    var src = $"/img/{iconName}.svg";
 
-                    _svgContent = await http.GetStringAsync(Src);
+                    _svgContent = await http.GetStringAsync(src);
                 }
             }
         }
 
         private bool HasHref => !string.IsNullOrEmpty(Href);
 
-        private string Cursor => !HasHref && !OnClick.HasDelegate 
-            ? "default" 
+        private string Cursor => !HasHref && !OnClick.HasDelegate
+            ? "default"
             : "pointer";
 
         private string IconStyle => $"width: {(int)Size}px; height: {(int)Size}px; cursor: {Cursor};";
@@ -59,7 +59,7 @@ namespace MyHomePage.Components
 
         private async Task DivOnClickHandler()
         {
-            if(OnClick.HasDelegate)
+            if (OnClick.HasDelegate)
                 await OnClick.InvokeAsync();
         }
     }

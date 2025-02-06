@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using Microsoft.FluentUI.AspNetCore.Components;
+﻿using Microsoft.FluentUI.AspNetCore.Components;
 
 namespace MyHomePage.Code;
 
@@ -18,5 +17,7 @@ public sealed record AppConfig(
         DefaultOfficeColor.ToEnum(OfficeColor.OneDrive);
 
     public string VersionString => $"Version {BuildTimestamp:yyyy.MM.dd.HHmmss}";
+
+    public string VersionUrlString => $"{BuildTimestamp:yyyyMMddHHmmss}";
 }
 
