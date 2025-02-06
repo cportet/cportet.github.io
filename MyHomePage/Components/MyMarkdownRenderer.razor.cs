@@ -10,23 +10,45 @@ public partial class MyMarkdownRenderer
     [Parameter]
     public string? MarkdownContent { get; set; }
 
+    [Parameter]
+    public Dictionary<string, string>? Variables { get; set; }
+
     private RenderFragment? _renderedContent;
     private int? _previousMarkdownContentHash;
+    private int? _previousVariablesHash;
 
     protected override void OnParametersSet()
     {
-        var newHash = MarkdownContent?.GetHashCode();
+        var newMarkdownHash = MarkdownContent?.GetHashCode();
+        var newVariablesHash = Variables?.GetHashCode();
 
-        if (newHash == _previousMarkdownContentHash)
+        if (newMarkdownHash == _previousMarkdownContentHash && newVariablesHash == _previousVariablesHash)
             return;
 
-        _previousMarkdownContentHash = newHash;
+        _previousMarkdownContentHash = newMarkdownHash;
+        _previousVariablesHash = newVariablesHash;
 
         if (!string.IsNullOrEmpty(MarkdownContent))
         {
-            var htmlContent = Markdown.ToHtml(MarkdownContent);
+            var contentWithVariablesReplaced = ReplaceVariables(MarkdownContent, Variables);
+            var htmlContent = Markdown.ToHtml(contentWithVariablesReplaced);
             _renderedContent = RenderContent(htmlContent);
         }
+    }
+
+    private static string ReplaceVariables(string content, Dictionary<string, string>? variables)
+    {
+        if (variables == null || variables.Count == 0)
+            return content;
+
+        var regexPattern = string.Join("|", variables.Keys.Select(Regex.Escape));
+        var regex = new Regex($"<v-({regexPattern})>", RegexOptions.Compiled);
+
+        return regex.Replace(content, match =>
+        {
+            var key = match.Groups[1].Value;
+            return variables.TryGetValue(key, out var value) ? value : match.Value;
+        });
     }
 
     private static RenderFragment RenderContent(string htmlContent) => builder =>

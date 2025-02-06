@@ -61,6 +61,24 @@ namespace MyHomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Compétences.
+        /// </summary>
+        public static string Competences_Competences_Title {
+            get {
+                return ResourceManager.GetString("Competences_Competences_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Domaine.
+        /// </summary>
+        public static string Competences_Domaine_Title {
+            get {
+                return ResourceManager.GetString("Competences_Domaine_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Télécharger le CV (Format PDF).
         /// </summary>
         public static string File_FileKind_CV_DownloadTitle {
@@ -507,6 +525,33 @@ namespace MyHomePage {
         public static string Page_Perso_Title {
             get {
                 return ResourceManager.GetString("Page_Perso_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to En bref.
+        /// </summary>
+        public static string Page_Resume_EnBref_Title {
+            get {
+                return ResourceManager.GetString("Page_Resume_EnBref_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mes compétences.
+        /// </summary>
+        public static string Page_Resume_MesCompetences_Title {
+            get {
+                return ResourceManager.GetString("Page_Resume_MesCompetences_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Qui suis-je ?.
+        /// </summary>
+        public static string Page_Resume_QuiSuisJe_Title {
+            get {
+                return ResourceManager.GetString("Page_Resume_QuiSuisJe_Title", resourceCulture);
             }
         }
         

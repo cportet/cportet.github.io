@@ -273,4 +273,19 @@
   <data name="Page_Perso_Section_MeContacter" xml:space="preserve">
     <value>Me contacter</value>
   </data>
+  <data name="Competences_Competences_Title" xml:space="preserve">
+    <value>Compétences</value>
+  </data>
+  <data name="Competences_Domaine_Title" xml:space="preserve">
+    <value>Domaine</value>
+  </data>
+  <data name="Page_Resume_MesCompetences_Title" xml:space="preserve">
+    <value>Mes compétences</value>
+  </data>
+  <data name="Page_Resume_EnBref_Title" xml:space="preserve">
+    <value>En bref</value>
+  </data>
+  <data name="Page_Resume_QuiSuisJe_Title" xml:space="preserve">
+    <value>Qui suis-je ?</value>
+  </data>
 </root>

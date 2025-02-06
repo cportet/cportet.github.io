@@ -144,6 +144,12 @@
   <data name="HeaderMenu_LinkedIn_Title" xml:space="preserve">
     <value>Browse my LinkedIn profile</value>
   </data>
+  <data name="NotFound_PageTitle" xml:space="preserve">
+    <value>Error 404</value>
+  </data>
+  <data name="NotFound_PageSubTitle" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
   <data name="NotFound_Title" xml:space="preserve">
     <value>Page not found</value>
   </data>
@@ -177,11 +183,17 @@
   <data name="Page_Options_Title" xml:space="preserve">
     <value>Options</value>
   </data>
-  <data name="Page_Resume_SubTitle" xml:space="preserve">
-    <value>View my detailed experience and download my CV</value>
+  <data name="File_FileKind_CV_DownloadTitle" xml:space="preserve">
+    <value>Download the resume (PDF)</value>
   </data>
-  <data name="Page_Resume_Title" xml:space="preserve">
+  <data name="File_FileKind_CV_SubTitle" xml:space="preserve">
+    <value>Cyril Portet's resume</value>
+  </data>
+  <data name="File_FileKind_CV_Title" xml:space="preserve">
     <value>My resume</value>
+  </data>
+  <data name="Page_Options_Select_Language" xml:space="preserve">
+    <value>Language:</value>
   </data>
   <data name="MyFullPageViewer_MissingFile" xml:space="preserve">
     <value>No file was provided</value>
@@ -216,20 +228,17 @@
   <data name="Page_Home_Title" xml:space="preserve">
     <value>Home</value>
   </data>
-  <data name="File_FileKind_CV_DownloadTitle" xml:space="preserve">
-    <value>Download the resume (PDF)</value>
+  <data name="Page_Resume_SubTitle" xml:space="preserve">
+    <value>View my detailed experience and download my CV</value>
   </data>
-  <data name="File_FileKind_CV_SubTitle" xml:space="preserve">
-    <value>Cyril Portet's resume</value>
-  </data>
-  <data name="File_FileKind_CV_Title" xml:space="preserve">
+  <data name="Page_Resume_Title" xml:space="preserve">
     <value>My resume</value>
-  </data>
-  <data name="Page_Perso_Title" xml:space="preserve">
-    <value>Private</value>
   </data>
   <data name="Page_Perso_SubTile" xml:space="preserve">
     <value>Learn more about me</value>
+  </data>
+  <data name="Page_Perso_Title" xml:space="preserve">
+    <value>Private</value>
   </data>
   <data name="Page_Options_Button_Apply" xml:space="preserve">
     <value>Apply</value>
@@ -240,9 +249,6 @@
   <data name="MySelect_NullValue" xml:space="preserve">
     <value>Select a value...</value>
   </data>
-  <data name="Page_Options_Select_Language" xml:space="preserve">
-    <value>Language:</value>
-  </data>
   <data name="Page_Options_Select_Theme" xml:space="preserve">
     <value>Theme:</value>
   </data>
@@ -251,12 +257,6 @@
   </data>
   <data name="MainLayout_GoBack_Title" xml:space="preserve">
     <value>History go back</value>
-  </data>
-  <data name="NotFound_PageSubTitle" xml:space="preserve">
-    <value>Page not found</value>
-  </data>
-  <data name="NotFound_PageTitle" xml:space="preserve">
-    <value>Error 404</value>
   </data>
   <data name="Page_Home_Section_Bienvenue" xml:space="preserve">
     <value>Welcome</value>
@@ -267,10 +267,25 @@
   <data name="Page_Perso_Section_QuiSuisJe" xml:space="preserve">
     <value>Who am i?</value>
   </data>
+  <data name="Page_Perso_Section_MeRetrouver" xml:space="preserve">
+    <value>Find me</value>
+  </data>
   <data name="Page_Perso_Section_MeContacter" xml:space="preserve">
     <value>Contact me</value>
   </data>
-  <data name="Page_Perso_Section_MeRetrouver" xml:space="preserve">
-    <value>Find me</value>
+  <data name="Competences_Competences_Title" xml:space="preserve">
+    <value>Skills</value>
+  </data>
+  <data name="Competences_Domaine_Title" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="Page_Resume_MesCompetences_Title" xml:space="preserve">
+    <value>My Skills</value>
+  </data>
+  <data name="Page_Resume_EnBref_Title" xml:space="preserve">
+    <value>In brief</value>
+  </data>
+  <data name="Page_Resume_QuiSuisJe_Title" xml:space="preserve">
+    <value>Who am i?</value>
   </data>
 </root>

@@ -13,31 +13,16 @@
         </ul>
     </MySection>
 
-    <MySection Id="introduction" Title="Qui suis-je ?">
+    <MySection Id="introduction" Title=@AppRessources.Page_Resume_QuiSuisJe_Title>
 
         <MyImageDisplay ImageUrl="/img/me2.jpg" AltText="Cyril Portet" />
 
-        <MySubSection Title="En Bref">
-            <p>
-                Âgé de @(Code.DisplayHelper.AgeCyril) ans, originaire de Picardie, je vis dans le Rhône.<br />
-                Je suis marié et père de 3 enfants.
-            </p>
-            <p>
-                Artisan logiciel, avec plus de @(Code.DisplayHelper.AnciennetePro) ans d'expérience,
-                j'ai occupé de nombreux rôles : Responsable technique, chef de projet ou développeur.
-            </p>
-            <p>
-                J'ai travaillé sur de nombreux types de solutions, allant du développement client/serveur aux applications web,
-                principalement sur les technologies Microsoft, en utilisant des frameworks modernes comme .Net Core et Blazor WASM.
-            </p>
-            <p>
-                Fort d'une solide expérience en gestion de projets et d'équipes, en architecture logicielle et d'une bonne compréhension
-                des enjeux métiers et des processus de travail, j'ai exercé dans plusieurs secteurs, tels que l'industrie, le service,
-                l'administration publique, et l'édition de logiciels.
-            </p>
-            <p>
-                Je suis ouvert à de nouvelles opportunités et collaborations.
-            </p>
+        <MySubSection Title=@AppRessources.Page_Resume_EnBref_Title>
+            <MyMarkdownLoader RessourcePath="/resume/en-bref"
+                              Variables=@(new Dictionary<string, string> {
+                              {"age",DisplayHelper.AgeCyril.ToString()},
+                              {"anciennete",DisplayHelper.AnciennetePro.ToString()},
+                              }) />
         </MySubSection>
 
         <MySubSection Title="Mon profil professionnel">
@@ -62,20 +47,8 @@
     </MySection>
 
 
-    <MySection Id="competences" Title="Mes compétences">
-        <FluentDataGrid Items="@_competences"
-                        AutoFit="true">
-            <PropertyColumn Title="Domaine"
-                            Property="@(p => p.Title)"
-                            Sortable="true" />
-            <TemplateColumn Title="Compétences"
-                            Sortable="false">
-                @foreach (var competence in context.Items)
-                {
-                    <MyPill Text="@competence" />
-                }
-            </TemplateColumn>
-        </FluentDataGrid>
+    <MySection Id="competences" Title=@AppRessources.Page_Resume_MesCompetences_Title>
+        <MyCompetences />
     </MySection>
 
     <MySection Id="formations" Title="Formations et certifications">

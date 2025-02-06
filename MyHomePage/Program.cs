@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.FluentUI.AspNetCore.Components;
 using MyHomePage;
 using MyHomePage.Code;
+using MyHomePage.Helpers;
 using MyHomePage.Services;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
 
@@ -17,6 +18,8 @@ builder.Services.AddScoped(sp => new HttpClient
 
 builder.Services.AddScoped<LocalStorageService>();
 builder.Services.AddScoped<UserOptionsService>();
+builder.Services.AddScoped<CompetencesService>();
+
 builder.Services.AddSingleton<HistoryService>();
 
 builder.Services.AddFluentUIComponents();

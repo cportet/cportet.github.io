@@ -1,4 +1,6 @@
-﻿namespace MyHomePage.Code;
+﻿using MyHomePage.Code;
+
+namespace MyHomePage.Helpers;
 
 public static class DisplayHelper
 {

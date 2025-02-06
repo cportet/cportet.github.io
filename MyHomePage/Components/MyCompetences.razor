@@ -1,0 +1,16 @@
+﻿@if (_competences is not null)
+{
+    <FluentDataGrid Items="@_competences"
+                    AutoFit="true">
+        <PropertyColumn Title=@AppRessources.Competences_Domaine_Title
+                        Property="@(p => p.Label)"
+                        Sortable="true" />
+        <TemplateColumn Title=@AppRessources.Competences_Competences_Title
+                        Sortable="false">
+            @foreach (var competence in context.Values)
+            {
+                <MyPill Text="@competence" />
+            }
+        </TemplateColumn>
+    </FluentDataGrid>
+}
