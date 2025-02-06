@@ -5,6 +5,8 @@
 
 .my-navmenu {
     padding: 10px;
+    position: sticky;
+    top: 50px;
 }
 
 .my-body {
