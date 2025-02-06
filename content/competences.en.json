@@ -1,0 +1,22 @@
+﻿[
+  {
+    "label": "Technical expertise",
+    "values": [ "AzureDevOps", "Azure", "Blazor (WebAssembly)", "Blazor (Server)", "ASP.NET", "ASP.NET MVC", "Entity Framework Core", "SQL Databases" ]
+  },
+  {
+    "label": "Programming languages",
+    "values": [ "C#", "T-SQL", "SQL ISO", "Visual Basic", "Powershell", "HTML", "CSS", "Typescript", "Javascript" ]
+  },
+  {
+    "label": "Development tools",
+    "values": [ "Visual Studio", "Visual Studio Code", "SQL Server Management Studio", "SQL Profiler", "Azure Data Studio", "Postman", "Fiddler", "Git", "TFS", "GitHub Copilot", "ReSharper" ]
+  },
+  {
+    "label": "Functional skills",
+    "values": [ "Agile", "Scrum", "Kanban", "Project management", "Quality", "Architecture", "Documentation", "Client relations", "Writing", "Communication" ]
+  },
+  {
+    "label": "Business skills",
+    "values": [ "Public administration", "Software publishing", "Business management", "Marketing content", "Service" ]
+  }
+]

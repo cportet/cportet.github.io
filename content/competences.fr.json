@@ -1,0 +1,22 @@
+﻿[
+  {
+    "label": "Compétences techniques",
+    "values": [ "AzureDevOps", "Azure", "Blazor (WebAssembly)", "Blazor (Server)", "ASP.NET", "ASP.NET MVC", "Entity Framework Core", "Bases de données SQL" ]
+  },
+  {
+    "label": "Langages de programmation",
+    "values": [ "C#", "T-SQL", "SQL ISO", "Visual Basic", "Powershell", "HTML", "CSS", "Typescript", "Javascript" ]
+  },
+  {
+    "label": "Solutions de développement",
+    "values": [ "Visual Studio", "Visual Studio Code", "SQL Server Management Studio", "SQL Profiler", "Azure Data Studio", "Postman", "Fiddler", "Git", "TFS", "GitHub Copilot", "ReSharper" ]
+  },
+  {
+    "label": "Compétences fonctionnelles",
+    "values": [ "Agile", "Scrum", "Kanban", "Gestion de projet", "Qualité", "Architecture", "Documentation", "Relation client", "Rédaction", "Communication" ]
+  },
+  {
+    "label": "Compétences métier",
+    "values": [ "Administration publique", "Edition de logiciels", "Gestion d'entreprise", "Contenu marketing", "Service" ]
+  }
+]
