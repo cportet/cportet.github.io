@@ -6,7 +6,7 @@
     width: 100%;
 }
 /* /Components/MyHeaderTitle.razor.rz.scp.css */
-.my-title[b-3yhbq8z951] {
+.my-title[b-3yhbq8z951], .main-title[b-3yhbq8z951] {
     display: inline-block;
 }
 
@@ -14,6 +14,24 @@
     display: inline-block;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.page-title[b-3yhbq8z951] {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 5px;
+}
+
+@media screen and (max-width: 400px ) {
+    .my-sep[b-3yhbq8z951] {
+        display: none;
+    }
+
+    .main-title[b-3yhbq8z951] {
+        display: none;
+    }
 }
 /* /Components/MyIcon.razor.rz.scp.css */
 .my-icon[b-uy6zbefzhg] {
@@ -128,6 +146,11 @@ h2 .subtitle[b-v16et6jew9], h3 .subtitle[b-v16et6jew9] {
     display: block;
 }
 /* /Layout/MainLayout.razor.rz.scp.css */
+[b-ovz5ikw0s4] .sticky-header {
+    position: sticky;
+    top: 0;
+}
+
 .my-navmenu[b-ovz5ikw0s4] {
     padding: 10px;
 }
@@ -160,3 +183,18 @@ h2 .subtitle[b-v16et6jew9], h3 .subtitle[b-v16et6jew9] {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+/* /Pages/Perso.razor.rz.scp.css */
+ul.links li[b-n04puwd0ra] {
+    padding: 3px;
+}
+
+span.link[b-n04puwd0ra] {
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+
+    span.link i[b-n04puwd0ra] {
+        font-size: 20px;
+        min-width: 30px;
+    }
