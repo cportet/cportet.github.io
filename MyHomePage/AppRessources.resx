@@ -144,8 +144,14 @@
   <data name="HeaderMenu_LinkedIn_Title" xml:space="preserve">
     <value>Consulter mon profil LinkedIn</value>
   </data>
+  <data name="NotFound_PageTitle" xml:space="preserve">
+    <value>Erreur 404</value>
+  </data>
+  <data name="NotFound_PageSubTitle" xml:space="preserve">
+    <value>La page n'existe pas</value>
+  </data>
   <data name="NotFound_Title" xml:space="preserve">
-    <value>Erreur 404 : Page non disponible</value>
+    <value>Page non disponible</value>
   </data>
   <data name="NotFound_Text" xml:space="preserve">
     <value>Désolé, la page demandée n'existe pas.</value>
@@ -248,5 +254,8 @@
   </data>
   <data name="Page_Options_Select_ColorSet" xml:space="preserve">
     <value>Jeu de couleur :</value>
+  </data>
+  <data name="MainLayout_GoBack_Title" xml:space="preserve">
+    <value>Retour à la page précédente</value>
   </data>
 </root>

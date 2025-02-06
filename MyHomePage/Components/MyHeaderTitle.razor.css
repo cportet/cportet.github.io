@@ -1,4 +1,4 @@
-﻿.my-title {
+﻿.my-title, .main-title {
     display: inline-block;
 }
 
@@ -6,4 +6,22 @@
     display: inline-block;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.page-title {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 5px;
+}
+
+@media screen and (max-width: 400px ) {
+    .my-sep {
+        display: none;
+    }
+
+    .main-title {
+        display: none;
+    }
 }

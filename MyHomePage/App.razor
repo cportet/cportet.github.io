@@ -4,19 +4,8 @@
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
-        <PageTitle>Not found</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
-            <div role="alert">
-                <h2>
-                    @AppRessources.NotFound_Title
-                </h2>
-                <p>
-                    @AppRessources.NotFound_Text
-                </p>
-            </div>
-            <div>
-                <a href="javascript:window.history.back()">@AppRessources.NotFound_Retour_Link</a>  - <a href="/">@AppRessources.NotFound_Home_Link</a>
-            </div>
+            <MyError404 />
         </LayoutView>
     </NotFound>
 </Router>

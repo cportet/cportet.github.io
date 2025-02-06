@@ -145,7 +145,7 @@
     <value>Browse my LinkedIn profile</value>
   </data>
   <data name="NotFound_Title" xml:space="preserve">
-    <value>404 Error : Page not found</value>
+    <value>Page not found</value>
   </data>
   <data name="NotFound_Text" xml:space="preserve">
     <value>Sorry, there's nothing at this address.</value>
@@ -248,5 +248,14 @@
   </data>
   <data name="Page_Options_Select_ColorSet" xml:space="preserve">
     <value>Color set:</value>
+  </data>
+  <data name="MainLayout_GoBack_Title" xml:space="preserve">
+    <value>History go back</value>
+  </data>
+  <data name="NotFound_PageSubTitle" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
+  <data name="NotFound_PageTitle" xml:space="preserve">
+    <value>Error 404</value>
   </data>
 </root>

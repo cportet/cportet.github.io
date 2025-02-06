@@ -1,13 +1,15 @@
-﻿<div class="my-title">
-    @Title
-</div>
+﻿<div class="page-title">
+    <div class="main-title">
+        @Title
+    </div>
 
-@if (!string.IsNullOrWhiteSpace(PageTitle))
-{
-    <div class="my-sep">
-        /
-    </div>
-    <div class="my-title">
-        @PageTitle
-    </div>
-}
+    @if (!string.IsNullOrWhiteSpace(PageTitle))
+    {
+        <div class="my-sep">
+            /
+        </div>
+        <div class="my-title">
+            @PageTitle
+        </div>
+    }
+</div>

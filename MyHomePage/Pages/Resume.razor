@@ -15,46 +15,52 @@
 
 <MySection Id="introduction" Title="Qui suis-je ?">
 
+    <MyImageDisplay ImageUrl="/img/me2.jpg" AltText="Cyril Portet" />
+
     <MySubSection Title="En Bref">
         <p>
-            Enchanté, je suis <strong>Cyril</strong>, @(Code.DisplayHelper.AgeCyril) ans, domicilié dans le Rhône.<br />
-            Je suis un homme marié et père de 3 enfants.
+            Âgé de @(Code.DisplayHelper.AgeCyril) ans, originaire de Picardie, je vis dans le Rhône.<br />
+            Je suis marié et père de 3 enfants.
         </p>
         <p>
-            Je travaille dans le secteur de l'informatique, et plus particulièrement du développement logiciel, depuis plus de @(Code.DisplayHelper.AnciennetePro) ans.
+            Artisan logiciel, avec plus de @(Code.DisplayHelper.AnciennetePro) ans d'expérience,
+            j'ai occupé de nombreux rôles : Responsable technique, chef de projet ou développeur.
+        </p>
+        <p>
+            J'ai travaillé sur de nombreux types de solutions, allant du développement client/serveur aux applications web,
+            principalement sur les technologies Microsoft, en utilisant des frameworks modernes comme .Net Core et Blazor WASM.
+        </p>
+        <p>
+            Fort d'une solide expérience en gestion de projets et d'équipes, en architecture logicielle et d'une bonne compréhension
+            des enjeux métiers et des processus de travail, j'ai exercé dans plusieurs secteurs, tels que l'industrie, le service,
+            l'administration publique, et l'édition de logiciels.
+        </p>
+        <p>
+            Je suis ouvert à de nouvelles opportunités et collaborations.
         </p>
     </MySubSection>
 
     <MySubSection Title="Mon profil professionnel">
         <p>
-            Artisan logiciel, développeur et manager d'expérience dans le développement logiciel.
-        </p>
-
-        <p>
             Aussi bien à l’aise en environnement <strong>Agile</strong> que sur des approches Waterfall,
-            la satisfaction utilisateur et la qualité logicielle.
+            je vise la satisfaction utilisateur et la qualité logicielle.
         </p>
         <p>
             Mon expertise se porte particulièrement sur la gestion de projet Agile (Kanban, Scrum) et le Management.<br />
-            Techniquement, je suis très à l’aise avec le Web et particulièrement avec <strong>ASP.NET</strong> (<strong>MVC</strong> ou <strong>Blazor WebAssembly</strong>).
-        </p>
-
-        <p>J’ai vécu et travaillé en Picardie, Ile de France et Belgique et je suis aujourd'hui installé en région lyonnaise ou je travaille chez un éditeur logiciel.</p>
-
-        <p>
-            Mon parcours m'a fait travailler sur une variété de technologies et d'architectures, du développement client/serveur au
-            développement full-stack web, avec des frameworks modernes comme .Net Core et Blazor WASM.
+            Techniquement, je maîtrise le développement web, notamment avec <strong>ASP.NET</strong> (<strong>MVC</strong> ou <strong>Blazor WebAssembly</strong>).
         </p>
         <p>
-            Je possède aussi une solide expérience en gestion de projets et d'équipes, en architecture logicielle,
-            et une bonne compréhension des enjeux métiers et des processus de travail.
+            Je possède également une solide expérience en gestion de projets et d'équipes, en architecture logicielle, et une bonne compréhension des enjeux métiers et des processus de travail.
         </p>
-
+        <p>
+            J’ai vécu et travaillé en Picardie, en Île-de-France, et en Belgique, et je suis aujourd'hui installé en région lyonnaise où je travaille chez un éditeur de logiciels.
+        </p>
         <p>
             J'ai travaillé dans divers secteurs, notamment l'industrie, le service, l'administration publique, et l'édition de logiciels.
         </p>
     </MySubSection>
 </MySection>
+
 
 <MySection Id="competences" Title="Mes compétences">
     <FluentDataGrid Items="@_competences"

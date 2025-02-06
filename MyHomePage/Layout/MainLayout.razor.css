@@ -1,3 +1,8 @@
+﻿::deep .sticky-header {
+    position: sticky;
+    top: 0;
+}
+
 .my-navmenu {
     padding: 10px;
 }

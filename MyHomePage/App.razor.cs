@@ -1,20 +1,30 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.JSInterop;
+using MyHomePage.Services;
 
 namespace MyHomePage;
 
 public partial class App(NavigationManager navigationManager,
-    IJSRuntime jsRuntime) : IDisposable
+    IJSRuntime jsRuntime,
+    HistoryService historyService
+    ) : IDisposable
 {
+    private bool _isInitialized;
     protected override void OnInitialized()
     {
-        navigationManager.LocationChanged += OnLocationChanged;
+        if (!_isInitialized)
+        {
+            _isInitialized = true;
+            navigationManager.LocationChanged += OnLocationChanged;
+            historyService.Add(navigationManager.Uri);
+        }
     }
 
-    private static void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
     {
         Console.WriteLine($"Location changed to {e.Location}");
+        historyService.Add(e.Location);
     }
 
     public void Dispose()

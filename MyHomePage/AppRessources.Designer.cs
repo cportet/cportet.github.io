@@ -106,6 +106,15 @@ namespace MyHomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Retour à la page précédente.
+        /// </summary>
+        public static string MainLayout_GoBack_Title {
+            get {
+                return ResourceManager.GetString("MainLayout_GoBack_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Thème clair.
         /// </summary>
         public static string MainLayout_Theme_Clair {
@@ -268,6 +277,24 @@ namespace MyHomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to La page n&apos;existe pas.
+        /// </summary>
+        public static string NotFound_PageSubTitle {
+            get {
+                return ResourceManager.GetString("NotFound_PageSubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Erreur 404.
+        /// </summary>
+        public static string NotFound_PageTitle {
+            get {
+                return ResourceManager.GetString("NotFound_PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Retour.
         /// </summary>
         public static string NotFound_Retour_Link {
@@ -286,7 +313,7 @@ namespace MyHomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Erreur 404 : Page non disponible.
+        ///   Looks up a localized string similar to Page non disponible.
         /// </summary>
         public static string NotFound_Title {
             get {

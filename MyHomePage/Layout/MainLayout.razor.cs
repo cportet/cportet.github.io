@@ -7,7 +7,8 @@ namespace MyHomePage.Layout;
 
 public partial class MainLayout(
     AppConfig appConfig,
-    UserOptionsService userOptionsService) : LayoutComponentBase
+    UserOptionsService userOptionsService,
+    HistoryService historyService) : LayoutComponentBase
 {
     private DesignThemeModes _mode;
     private OfficeColor _selectedOfficeColor;
@@ -24,6 +25,15 @@ public partial class MainLayout(
     private string ToggleThemeTitle => _mode == DesignThemeModes.Light
         ? AppRessources.MainLayout_Theme_Sombre
         : AppRessources.MainLayout_Theme_Clair;
+
+    private string GoBackMenuTitle => historyService.CanGoBack()
+    ? AppRessources.MainLayout_GoBack_Title
+    : string.Empty;
+
+    private void GoBack()
+    {
+        historyService.GoBack();
+    }
 
     private void ToggleMenu()
     {

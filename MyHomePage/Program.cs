@@ -20,6 +20,7 @@ builder.Services.AddScoped(sp => new HttpClient
 builder.Services.AddScoped<ConfigurationService>();
 builder.Services.AddScoped<LocalStorageService>();
 builder.Services.AddScoped<UserOptionsService>();
+builder.Services.AddSingleton<HistoryService>();
 
 builder.Services.AddFluentUIComponents();
 builder.Services.AddPWAUpdater();

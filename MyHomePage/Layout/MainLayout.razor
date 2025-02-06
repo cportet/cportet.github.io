@@ -11,7 +11,22 @@
     <CascadingValue IsFixed="true" Value=@this>
         <div class="my-page">
             <FluentLayout>
-                <FluentHeader>
+                <FluentHeader Class="sticky-header">
+                    @if (historyService.CanGoBack())
+                    {
+                        <FluentIcon Value=@References.Icons.Back
+                                    Title=@GoBackMenuTitle
+                                    OnClick=@GoBack
+                                    Color=Color.Fill />
+                    }
+                    else
+                    {
+                        <FluentIcon Value=@References.Icons.Back
+                                    Title=@GoBackMenuTitle
+                                    Color=Color.Disabled />
+                    }
+                    <MySpacer />
+
                     <FluentIcon Value=@References.Icons.Menu
                                 Title=@ToggleMenuTitle
                                 OnClick=@ToggleMenu
