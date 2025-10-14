@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using MyHomePage.Helpers;
 
 namespace MyHomePage.Pages;
 
@@ -7,5 +8,9 @@ namespace MyHomePage.Pages;
 [Route("curriculumvitae")]
 public partial class Resume
 {
-
+    private readonly Dictionary<string, string> _enBrefVariables = new()
+        {
+            {"age",DisplayHelper.AgeCyril.ToString()},
+            {"anciennete",DisplayHelper.AnciennetePro.ToString()}
+        };
 }

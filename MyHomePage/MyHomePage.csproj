@@ -21,9 +21,6 @@
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\doc\" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Update="AppRessources.en.Designer.cs">
       <DependentUpon>AppRessources.en.resx</DependentUpon>
       <DesignTime>True</DesignTime>

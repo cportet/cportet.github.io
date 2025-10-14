@@ -285,6 +285,9 @@
   <data name="Page_Resume_EnBref_Title" xml:space="preserve">
     <value>En bref</value>
   </data>
+  <data name="Page_Resume_MonProfil_Title" xml:space="preserve">
+    <value>Mon profil professionnel</value>
+  </data>
   <data name="Page_Resume_QuiSuisJe_Title" xml:space="preserve">
     <value>Qui suis-je ?</value>
   </data>

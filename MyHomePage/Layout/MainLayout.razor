@@ -1,73 +1,72 @@
 ﻿@inherits LayoutComponentBase
 
 <PWAUpdater Text=@AppRessources.MainLayout_Updater_Text
-            ButtonCaption=@AppRessources.MainLayout_Updater_Button />
+			ButtonCaption=@AppRessources.MainLayout_Updater_Button />
 
 @if (_userOptionsInitialized)
 {
-    <FluentDesignTheme Mode=@_mode
-                       OfficeColor=@_selectedOfficeColor />
+	<FluentDesignTheme Mode=@_mode
+					   OfficeColor=@_selectedOfficeColor />
 
-    <CascadingValue IsFixed="true" Value=@this>
-        <div class="my-page">
-            <FluentLayout>
-                <FluentHeader Class="sticky-header">
-                    @if (historyService.CanGoBack())
-                    {
-                        <FluentIcon Value=@References.Icons.Back
-                                    Title=@GoBackMenuTitle
-                                    OnClick=@GoBack
-                                    Color=Color.Fill />
-                    }
-                    else
-                    {
-                        <FluentIcon Value=@References.Icons.Back
-                                    Title=@GoBackMenuTitle
-                                    Color=Color.Disabled />
-                    }
-                    <MySpacer />
+	<CascadingValue IsFixed="true" Value=@this>
+			<FluentLayout>
+				<div>
+					<FluentHeader Class="sticky-header">
+						@if (historyService.CanGoBack())
+						{
+							<FluentIcon Value=@References.Icons.Back
+										Title=@GoBackMenuTitle
+										OnClick=@GoBack
+										Color=Color.Fill />
+						}
+						else
+						{
+							<FluentIcon Value=@References.Icons.Back
+										Title=@GoBackMenuTitle
+										Color=Color.Disabled />
+						}
+						<MySpacer />
 
-                    <FluentIcon Value=@References.Icons.Menu
-                                Title=@ToggleMenuTitle
-                                OnClick=@ToggleMenu
-                                Color=@Color.Fill />
+						<FluentIcon Value=@References.Icons.Menu
+									Title=@ToggleMenuTitle
+									OnClick=@ToggleMenu
+									Color=@Color.Fill />
 
-                    <MySpacer />
+						<MySpacer />
 
-                    <MyHeaderTitle Title=@appConfig.Title
-                                   PageTitle=@_pageTitle />
+						<MyHeaderTitle Title=@appConfig.Title
+									   PageTitle=@_pageTitle />
 
-                    <FluentSpacer />
+						<FluentSpacer />
 
-                    <HeaderMenu />
+						<HeaderMenu />
 
-                    <FluentIcon Value=@References.Icons.Theme
-                                Title=@ToggleThemeTitle
-                                OnClick=@ToggleTheme
-                                Color=@Color.Fill />
-                </FluentHeader>
+						<FluentIcon Value=@References.Icons.Theme
+									Title=@ToggleThemeTitle
+									OnClick=@ToggleTheme
+									Color=@Color.Fill />
+					</FluentHeader>
+				</div>
+				<FluentStack Orientation="Orientation.Horizontal"
+							 Width="100%">
+					@if (_menuVisible)
+					{
+						<div class="my-navmenu">
+							<NavMenu OnItemClick=@NavMenuOnItemClick />
+						</div>
+					}
+					<FluentBodyContent>
+						<div class="my-body" @onclick=@BodyClick>
+							@Body
+						</div>
+					</FluentBodyContent>
+				</FluentStack>
+			</FluentLayout>
+	</CascadingValue>
 
-                <FluentStack Orientation="Orientation.Horizontal"
-                             Width="100%">
-                    @if (_menuVisible)
-                    {
-                        <div class="my-navmenu">
-                            <NavMenu OnItemClick=@NavMenuOnItemClick />
-                        </div>
-                    }
-                    <FluentBodyContent>
-                        <div class="my-body" @onclick=@BodyClick>
-                            @Body
-                        </div>
-                    </FluentBodyContent>
-                </FluentStack>
-            </FluentLayout>
-        </div>
-    </CascadingValue>
-
-    <FluentToastProvider />
-    <FluentDialogProvider />
-    <FluentTooltipProvider />
-    <FluentMessageBarProvider />
-    <FluentMenuProvider />
+	<FluentToastProvider />
+	<FluentDialogProvider />
+	<FluentTooltipProvider />
+	<FluentMessageBarProvider />
+	<FluentMenuProvider />
 }
