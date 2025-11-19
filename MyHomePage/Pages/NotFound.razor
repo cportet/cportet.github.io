@@ -1,0 +1,18 @@
+﻿@layout MainLayout
+
+<MyPageContainer Title=@AppRessources.NotFound_PageTitle
+                 SubTitle=@AppRessources.NotFound_PageSubTitle>
+    <MySection Id="introduction" Title=@AppRessources.NotFound_Title
+               SubTitle=@AppRessources.NotFound_Text>
+        <div class="my-spaced">
+            <MyImageDisplay ImageUrl="/img/404.png" AltText="404"
+                            Height="300px" Width="300px" Rounded=false />
+        </div>
+        <div class="my-spaced">
+            <a href="javascript:window.history.back()">@AppRessources.NotFound_Retour_Link</a>
+            <span> - </span>
+            <a href="/">@AppRessources.NotFound_Home_Link</a>
+        </div>
+    </MySection>
+
+</MyPageContainer>

@@ -1,5 +1,9 @@
-.my-rounded {
+﻿.my-rounded {
     border-radius: 50%;
+    overflow: hidden;
+}
+
+.my-normal {
     overflow: hidden;
 }
 

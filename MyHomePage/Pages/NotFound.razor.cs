@@ -2,9 +2,7 @@
 
 namespace MyHomePage.Pages;
 
-[Route("/")]
-[Route("index")]
-[Route("home")]
-public partial class Home
+[Route("/404")]
+public partial class NotFound
 {
 }

@@ -1,237 +1,241 @@
-﻿<MyPageContainer Title=@AppRessources.Page_Resume_Title
-				 SubTitle=@AppRessources.Page_Resume_SubTitle>
+﻿<HeadContent>
+    <link rel="alternate" type="application/pdf" href="https://www.portet.org/doc/cv-cyril-portet.pdf" />
+</HeadContent>
 
-	<MySection Id="links" Title="Liens utiles">
-		<ul>
-			<li>
-				Retrouvez mon profil sur LinkedIn : <a href="https://linkedin.portet.org" target="_blank" rel="noopener">LinkedIn</a>
-			</li>
+<MyPageContainer Title=@AppRessources.Page_Resume_Title
+                 SubTitle=@AppRessources.Page_Resume_SubTitle>
 
-			<li>
-				Consulter mon CV (au format PDF) : <a href="/file/cv">Mon CV</a>
-			</li>
-		</ul>
-	</MySection>
+    <MySection Id="links" Title="Liens utiles">
+        <ul>
+            <li>
+                Retrouvez mon profil sur LinkedIn : <a href="https://linkedin.portet.org" target="_blank" rel="noopener">LinkedIn</a>
+            </li>
 
-	<MySection Id="introduction" Title=@AppRessources.Page_Resume_QuiSuisJe_Title>
+            <li>
+                Consulter mon CV (au format PDF) : <a href="/file/cv">Mon CV</a>
+            </li>
+        </ul>
+    </MySection>
 
-		<MyImageDisplay ImageUrl="/img/me2.jpg" AltText="Cyril Portet" />
+    <MySection Id="introduction" Title=@AppRessources.Page_Resume_QuiSuisJe_Title>
 
-		<MySubSection Title=@AppRessources.Page_Resume_EnBref_Title>
-			<MyMarkdownLoader RessourcePath="/resume/en-bref"
-							  Variables=@_enBrefVariables />
-		</MySubSection>
+        <MyImageDisplay ImageUrl="/img/me2.jpg" AltText="Cyril Portet" />
+
+        <MySubSection Title=@AppRessources.Page_Resume_EnBref_Title>
+            <MyMarkdownLoader RessourcePath="/resume/en-bref"
+                              Variables=@_enBrefVariables />
+        </MySubSection>
 
         <MySubSection Title=@AppRessources.Page_Resume_MonProfil_Title>
             <MyMarkdownLoader RessourcePath="/resume/mon-profil" />
         </MySubSection>
 
-	</MySection>
+    </MySection>
 
 
-	<MySection Id="competences" Title=@AppRessources.Page_Resume_MesCompetences_Title>
-		<MyCompetences />
-	</MySection>
+    <MySection Id="competences" Title=@AppRessources.Page_Resume_MesCompetences_Title>
+        <MyCompetences />
+    </MySection>
 
-	<MySection Id="formations" Title="Formations et certifications">
-		<p>
-			Dernières formations et certifications :
-			<ul>
-				<li>Certifié <MyPill Text="Prince2 Foundation" /> et <MyPill Text="Prince2 Practioner" /> (2017)</li>
-				<li>J'ai suivi la formation <MyPill Text="Direction des projets SI de l'état" /> (2016)</li>
-				<li>Dans le cadre d'une mission d'intégration de solution, j'ai pu suivre la formation <MyPill Text="Administrateur de solutions Dynamics CRM" /> (2016)</li>
-				<li>J'ai suivi le cursus de formation Agile <MyPill Text="Scrum Master" /> (2015)</li>
-				<li>J'ai pu profiter d'une formation sur l'expérience utilisateur en <MyPill Text="UX Design" /> (2015)</li>
-			</ul>
-		</p>
-		<p>
-			J'essaye de me rendre régulièrement dans les conférences sur les nouvelles technologies et/ou les approches de développement Agile
-			et orienté sur la qualité logicielle (et notamment tout ce qui est en rapport avec le Software craftmanship).
-			J'ai ainsi pu me rendre à la première édition de l'événement <a href="https://www.lyon-craft.fr/" target="_blank">Lyon-Craft</a> en 2023.
-		</p>
+    <MySection Id="formations" Title="Formations et certifications">
+        <p>
+            Dernières formations et certifications :
+            <ul>
+                <li>Certifié <MyPill Text="Prince2 Foundation" /> et <MyPill Text="Prince2 Practioner" /> (2017)</li>
+                <li>J'ai suivi la formation <MyPill Text="Direction des projets SI de l'état" /> (2016)</li>
+                <li>Dans le cadre d'une mission d'intégration de solution, j'ai pu suivre la formation <MyPill Text="Administrateur de solutions Dynamics CRM" /> (2016)</li>
+                <li>J'ai suivi le cursus de formation Agile <MyPill Text="Scrum Master" /> (2015)</li>
+                <li>J'ai pu profiter d'une formation sur l'expérience utilisateur en <MyPill Text="UX Design" /> (2015)</li>
+            </ul>
+        </p>
+        <p>
+            J'essaye de me rendre régulièrement dans les conférences sur les nouvelles technologies et/ou les approches de développement Agile
+            et orienté sur la qualité logicielle (et notamment tout ce qui est en rapport avec le Software craftmanship).
+            J'ai ainsi pu me rendre à la première édition de l'événement <a href="https://www.lyon-craft.fr/" target="_blank">Lyon-Craft</a> en 2023.
+        </p>
 
-	</MySection>
+    </MySection>
 
-	<MySection Id="experiences" Title="Dernières expériences">
+    <MySection Id="experiences" Title="Dernières expériences">
 
-		<MySubSection Title="Simpleter"
-					  SubTitle=@($"Responsable technique (CTO) - Depuis mai 2021 (+ de {DisplayHelper.AncienneteDerniereExp} ans) - Saint-Genis-Les-Ollières (France, 69)")>
-			<p>
-				En tant que responsable technique, je participe à l'ensemble des activités de gestion informatique pour le compte de <MyExternalLink Title="Simpleter" Href="https://www.simpleter.fr" /> :
-				de la conception de la solution, des choix d'architectures (ou validation de ceux-ci), développement logiciel, management d'équipe,
-				coordination technique, relation avec la direction générale et les équipes métiers.
-			</p>
-			<p>
-				Recruté au moment de la création de l'entreprise, j'ai participé à la mise en place de l'ensemble des outils et processus de développement,
-				à la réalisation du prototype de la solution, et à la mise en place de l'équipe de développement.
-			</p>
-			<p>J'encadre une équipe informatique composée de 7 membres : 1 leader technique/architecte et 7 développeurs full-stack de tous niveaux (senior, junior, apprentis en alternance)</p>
-			<p>
-				Je continue de participer activement au développement, à la maintenance et à l'évolution de la solution,
-				et reste le référent technique sur la partie 'Front End' de Blazor.
-			</p>
-			<p>
-				<MyPill Text="Management" />
-				<MyPill Text="Gestion de projet" />
-				<MyPill Text="Développement" />
-				<MyPill Text="Architecture" />
-				<MyPill Text="Blazor WASM" />
-				<MyPill Text="C#" />
-				<MyPill Text=".NET" />
-				<MyPill Text="ASP.NET" />
-				<MyPill Text="AzureDevOps" />
-				<MyPill Text="AzureAD" />
-			</p>
-		</MySubSection>
+        <MySubSection Title="Simpleter"
+                      SubTitle=@($"Responsable technique (CTO) - Depuis mai 2021 (+ de {DisplayHelper.AncienneteDerniereExp} ans) - Saint-Genis-Les-Ollières (France, 69)")>
+            <p>
+                En tant que responsable technique, je participe à l'ensemble des activités de gestion informatique pour le compte de <MyExternalLink Title="Simpleter" Href="https://www.simpleter.fr" /> :
+                de la conception de la solution, des choix d'architectures (ou validation de ceux-ci), développement logiciel, management d'équipe,
+                coordination technique, relation avec la direction générale et les équipes métiers.
+            </p>
+            <p>
+                Recruté au moment de la création de l'entreprise, j'ai participé à la mise en place de l'ensemble des outils et processus de développement,
+                à la réalisation du prototype de la solution, et à la mise en place de l'équipe de développement.
+            </p>
+            <p>J'encadre une équipe informatique composée de 7 membres : 1 leader technique/architecte et 7 développeurs full-stack de tous niveaux (senior, junior, apprentis en alternance)</p>
+            <p>
+                Je continue de participer activement au développement, à la maintenance et à l'évolution de la solution,
+                et reste le référent technique sur la partie 'Front End' de Blazor.
+            </p>
+            <p>
+                <MyPill Text="Management" />
+                <MyPill Text="Gestion de projet" />
+                <MyPill Text="Développement" />
+                <MyPill Text="Architecture" />
+                <MyPill Text="Blazor WASM" />
+                <MyPill Text="C#" />
+                <MyPill Text=".NET" />
+                <MyPill Text="ASP.NET" />
+                <MyPill Text="AzureDevOps" />
+                <MyPill Text="AzureAD" />
+            </p>
+        </MySubSection>
 
-		<MySubSection Title="Fiducial Informatique"
-					  SubTitle="Responsable de service - juin 2020 à mai 2021 (1 an) - Lyon (France, 69)">
-			<p>
-				<MyExternalLink Title="Fiducial Informatique" Href="https://www.fiducial.fr" />, société du groupe Fiducial est un éditeur de logiciels spécialisés, présents sur plusieurs marchés :
-				Notariat, Huissiers, Auto/Moto et logiciels de caisses (Hôtel/Restauration, Coiffure, TPE).
-			</p>
-			<p>
-				Au sein de la R&amp;D, j'étais responsable du service 'Transfert', dont l'activité était liée à l'automatisation et au pilotage
-				des activités de migration de données clients (intégration de nouveaux clients), transfert entre solutions du groupe
-				(migration d'un client depuis une ancienne application vers la nouvelle solution), ou d'extraction des bases clients
-				(départ de clients à la concurrence).
-			</p>
-			<p>
-				À ce titre, j'avais la responsabilité d'encadrer une équipe de 14 personnes qui avaient pour rôles :
-				le développement ou l'adaptation de solutions, le pilotage technique des opérations, et la réalisation opérationnelle des transferts de données.
-			</p>
-			<p>
-				<MyPill Text="Management" />
-				<MyPill Text="Gestion de projet" />
-				<MyPill Text="Pilotage d'activité" />
-				<MyPill Text="Gestion des conflits" />
-				<MyPill Text="Documentation technique" />
-				<MyPill Text="C#" />
-				<MyPill Text=".NET" />
-			</p>
-		</MySubSection>
+        <MySubSection Title="Fiducial Informatique"
+                      SubTitle="Responsable de service - juin 2020 à mai 2021 (1 an) - Lyon (France, 69)">
+            <p>
+                <MyExternalLink Title="Fiducial Informatique" Href="https://www.fiducial.fr" />, société du groupe Fiducial est un éditeur de logiciels spécialisés, présents sur plusieurs marchés :
+                Notariat, Huissiers, Auto/Moto et logiciels de caisses (Hôtel/Restauration, Coiffure, TPE).
+            </p>
+            <p>
+                Au sein de la R&amp;D, j'étais responsable du service 'Transfert', dont l'activité était liée à l'automatisation et au pilotage
+                des activités de migration de données clients (intégration de nouveaux clients), transfert entre solutions du groupe
+                (migration d'un client depuis une ancienne application vers la nouvelle solution), ou d'extraction des bases clients
+                (départ de clients à la concurrence).
+            </p>
+            <p>
+                À ce titre, j'avais la responsabilité d'encadrer une équipe de 14 personnes qui avaient pour rôles :
+                le développement ou l'adaptation de solutions, le pilotage technique des opérations, et la réalisation opérationnelle des transferts de données.
+            </p>
+            <p>
+                <MyPill Text="Management" />
+                <MyPill Text="Gestion de projet" />
+                <MyPill Text="Pilotage d'activité" />
+                <MyPill Text="Gestion des conflits" />
+                <MyPill Text="Documentation technique" />
+                <MyPill Text="C#" />
+                <MyPill Text=".NET" />
+            </p>
+        </MySubSection>
 
-		<MySubSection Title="Direction générale du trésor"
-					  SubTitle="Responsable de la cellule de développement - avril 2014 à avril 2020 (6 ans) - Bruxelles (Belgique)">
-			<p>
-				La <MyExternalLink Title="Direction générale du Trésor" Href="https://www.tresor.economie.gouv.fr" /> est une direction du Ministère de l’Économie et des Finances (France).
-			</p>
-			<p>
-				Au sein du Pôle informatique de Bruxelles (centre d’ingénierie du DSI de la DG Trésor), en tant que responsable de la cellule de développement,
-				j'ai eu à diriger une équipe de 7 ingénieurs en développement et 1 testeur (fonctionnel et tests automatisés) sur 2 sites distants :
-				Bruxelles (Belgique) et Paris (Bercy, Ministère de l’Économie et des Finances).
-			</p>
-			<p>
-				Nous étions spécialisés dans les technologies Web et Microsoft (ASP.NET MVC ; .NET Core ; SQL Server)
-				et développions des applications et services destinés à l’ensemble des agents de la DG Trésor, aussi bien en administration centrale (Paris, Bercy)
-				qu’au sein du réseau international de la DG Trésor.
-			</p>
-			<p>
-				Les projets étaient réalisés en suivant une approche Agile à l’aide du framework Scrum.
-				À ce titre, j’ai pu prendre le rôle de Scrum Master et/ou de Coach Agile (intégration/accompagnement de l’équipe et du Product Owner) sur certains projets.
-			</p>
-			<p>
-				Nous avons implementé une ‘pipeline’ complète d’intégration continue et déploiement automatisé, avec l’objectif de migrer en organisation DevOps.
-				Pour ce faire, nous utilisions la suite logicielle Team Foundation Server (TFS).
-			</p>
-			<p>
-				<MyPill Text="Management" />
-				<MyPill Text="Gestion de projet" />
-				<MyPill Text="Agilité (Scrum)" />
-				<MyPill Text="Documentation technique" />
-				<MyPill Text="C#" />
-				<MyPill Text=".NET" />
-				<MyPill Text="ASP.NET" />
-				<MyPill Text="TFS" />
-				<MyPill Text="SharePoint" />
-				<MyPill Text="Dynamics CRM" />
-			</p>
-		</MySubSection>
+        <MySubSection Title="Direction générale du trésor"
+                      SubTitle="Responsable de la cellule de développement - avril 2014 à avril 2020 (6 ans) - Bruxelles (Belgique)">
+            <p>
+                La <MyExternalLink Title="Direction générale du Trésor" Href="https://www.tresor.economie.gouv.fr" /> est une direction du Ministère de l’Économie et des Finances (France).
+            </p>
+            <p>
+                Au sein du Pôle informatique de Bruxelles (centre d’ingénierie du DSI de la DG Trésor), en tant que responsable de la cellule de développement,
+                j'ai eu à diriger une équipe de 7 ingénieurs en développement et 1 testeur (fonctionnel et tests automatisés) sur 2 sites distants :
+                Bruxelles (Belgique) et Paris (Bercy, Ministère de l’Économie et des Finances).
+            </p>
+            <p>
+                Nous étions spécialisés dans les technologies Web et Microsoft (ASP.NET MVC ; .NET Core ; SQL Server)
+                et développions des applications et services destinés à l’ensemble des agents de la DG Trésor, aussi bien en administration centrale (Paris, Bercy)
+                qu’au sein du réseau international de la DG Trésor.
+            </p>
+            <p>
+                Les projets étaient réalisés en suivant une approche Agile à l’aide du framework Scrum.
+                À ce titre, j’ai pu prendre le rôle de Scrum Master et/ou de Coach Agile (intégration/accompagnement de l’équipe et du Product Owner) sur certains projets.
+            </p>
+            <p>
+                Nous avons implementé une ‘pipeline’ complète d’intégration continue et déploiement automatisé, avec l’objectif de migrer en organisation DevOps.
+                Pour ce faire, nous utilisions la suite logicielle Team Foundation Server (TFS).
+            </p>
+            <p>
+                <MyPill Text="Management" />
+                <MyPill Text="Gestion de projet" />
+                <MyPill Text="Agilité (Scrum)" />
+                <MyPill Text="Documentation technique" />
+                <MyPill Text="C#" />
+                <MyPill Text=".NET" />
+                <MyPill Text="ASP.NET" />
+                <MyPill Text="TFS" />
+                <MyPill Text="SharePoint" />
+                <MyPill Text="Dynamics CRM" />
+            </p>
+        </MySubSection>
 
-		<MySubSection Title="Everial CRM"
-					  SubTitle="Chef de projet transversal - juin 2013 à avril 2014 (1 an) - Chantilly (France, 60)">
-			<p>
-				Au sein d'<MyExternalLink Title="Everial CRM" Href="https://www.ediis.fr" />, j'étais chef de projet transversal, principalement sur le progiciel Magellan (désormais connu sous le nom de 'EDIIS CRM').
-			</p>
-			<p>
-				J'avais en charge de la coordination, la planification et l’animation de projets en relation avec les équipes métier (et maitrise d’ouvrage),
-				développement, infrastructure et production - ainsi que les clients de la société (avant-vente).
-			</p>
-			<p>
-				J'ai assuré la coordination technique et le suivi de la mise en place des prélèvements bancaires à la norme européenne (SEPA),
-				en partenariat avec la maitrise d’ouvrage. À ce titre, j’ai procédé, notamment, à la mise en place d’outils de contrôles par
-				la réalisation d’un outil de validation des fichiers de prélèvements.
-			</p>
-			<p>
-				Je participais aussi à la rédaction des spécifications techniques ou fonctionnelles.
-			</p>
-			<p>
-				La société Everial CRM a été reprise en 2016 par la société EDIIS.
-			</p>
-			<p>
-				<MyPill Text="Management" />
-				<MyPill Text="Gestion de projet" />
-				<MyPill Text="Documentation technique" />
-				<MyPill Text="Visual Basic" />
-				<MyPill Text=".NET" />
-				<MyPill Text="ASP.NET" />
-			</p>
-		</MySubSection>
+        <MySubSection Title="Everial CRM"
+                      SubTitle="Chef de projet transversal - juin 2013 à avril 2014 (1 an) - Chantilly (France, 60)">
+            <p>
+                Au sein d'<MyExternalLink Title="Everial CRM" Href="https://www.ediis.fr" />, j'étais chef de projet transversal, principalement sur le progiciel Magellan (désormais connu sous le nom de 'EDIIS CRM').
+            </p>
+            <p>
+                J'avais en charge de la coordination, la planification et l’animation de projets en relation avec les équipes métier (et maitrise d’ouvrage),
+                développement, infrastructure et production - ainsi que les clients de la société (avant-vente).
+            </p>
+            <p>
+                J'ai assuré la coordination technique et le suivi de la mise en place des prélèvements bancaires à la norme européenne (SEPA),
+                en partenariat avec la maitrise d’ouvrage. À ce titre, j’ai procédé, notamment, à la mise en place d’outils de contrôles par
+                la réalisation d’un outil de validation des fichiers de prélèvements.
+            </p>
+            <p>
+                Je participais aussi à la rédaction des spécifications techniques ou fonctionnelles.
+            </p>
+            <p>
+                La société Everial CRM a été reprise en 2016 par la société EDIIS.
+            </p>
+            <p>
+                <MyPill Text="Management" />
+                <MyPill Text="Gestion de projet" />
+                <MyPill Text="Documentation technique" />
+                <MyPill Text="Visual Basic" />
+                <MyPill Text=".NET" />
+                <MyPill Text="ASP.NET" />
+            </p>
+        </MySubSection>
 
-		<MySubSection Title="Autres expériences"
-					  SubTitle="de septembre 1998 à juin 2013">
-			<p>
-				J'ai travaillé dans diverses sociétés, principalement en tant qu'ingénieur d'étude et développement, ou chef de projet :
-				<ul>
-					<li>
-						<MyExternalLink Title="Electrolux IT" Href="https://www.electrolux.fr" /> - Senlis (France, 60) : Ingénieur en développement, puis ingénieur support (consultant)
-					</li>
-					<li>
-						<MyExternalLink Title="Datem Solutions / Presse Informatique" Href="https://www.ediis.fr" /> - Chantilly (France, 60) : Lead Développeur, chef de projet
-					</li>
-					<li>
-						<MyExternalLink Title="Phone Marketing" Href="https://www.intelcia.com" /> - Levallois-Perret (France, 92) : Développeur, administration CTI /Autocom
-					</li>
-					<li>etc.</li>
-				</ul>
-			</p>
-		</MySubSection>
-	</MySection>
+        <MySubSection Title="Autres expériences"
+                      SubTitle="de septembre 1998 à juin 2013">
+            <p>
+                J'ai travaillé dans diverses sociétés, principalement en tant qu'ingénieur d'étude et développement, ou chef de projet :
+                <ul>
+                    <li>
+                        <MyExternalLink Title="Electrolux IT" Href="https://www.electrolux.fr" /> - Senlis (France, 60) : Ingénieur en développement, puis ingénieur support (consultant)
+                    </li>
+                    <li>
+                        <MyExternalLink Title="Datem Solutions / Presse Informatique" Href="https://www.ediis.fr" /> - Chantilly (France, 60) : Lead Développeur, chef de projet
+                    </li>
+                    <li>
+                        <MyExternalLink Title="Phone Marketing" Href="https://www.intelcia.com" /> - Levallois-Perret (France, 92) : Développeur, administration CTI /Autocom
+                    </li>
+                    <li>etc.</li>
+                </ul>
+            </p>
+        </MySubSection>
+    </MySection>
 
-	<MySection Id="cursus" Title="Etudes">
-		<MySubSection Title="BTS Informatique de gestion"
-					  SubTitle="Option Développeur d'applications - Diplôme obtenu en 2000">
-			<p>
-				Formation réalisée au sein de l'établissement de l'<MyExternalLink Title="AFORP Oise" Href="https://www.aforp.fr" /> (à Senlis) en alternance (contrat d'apprentissage).
-			</p>
-			<p>
-				Mon alternance a été réalisée au sein de la société <MyExternalLink Title="Clariant" Href="https://www.lamotte-industrial-park.com/fr" />, en tant qu'apprenti développeur,
-				sur le site de Lamotte, à Trosly-Breuil (France, 60).
-			</p>
-		</MySubSection>
-	</MySection>
+    <MySection Id="cursus" Title="Etudes">
+        <MySubSection Title="BTS Informatique de gestion"
+                      SubTitle="Option Développeur d'applications - Diplôme obtenu en 2000">
+            <p>
+                Formation réalisée au sein de l'établissement de l'<MyExternalLink Title="AFORP Oise" Href="https://www.aforp.fr" /> (à Senlis) en alternance (contrat d'apprentissage).
+            </p>
+            <p>
+                Mon alternance a été réalisée au sein de la société <MyExternalLink Title="Clariant" Href="https://www.lamotte-industrial-park.com/fr" />, en tant qu'apprenti développeur,
+                sur le site de Lamotte, à Trosly-Breuil (France, 60).
+            </p>
+        </MySubSection>
+    </MySection>
 
-	<MySection Id="plus" Title="En savoir plus">
-		<p>
-			Dans le cadre de mon activité au sein de la DG Trésor, j’ai été habilité CD (Confidentiel Défense) en 2014.
-		</p>
+    <MySection Id="plus" Title="En savoir plus">
+        <p>
+            Dans le cadre de mon activité au sein de la DG Trésor, j’ai été habilité CD (Confidentiel Défense) en 2014.
+        </p>
 
-		<p>
-			Je dispose du Permis de conduire (France) et d’un véhicule personnel.
-		</p>
+        <p>
+            Je dispose du Permis de conduire (France) et d’un véhicule personnel.
+        </p>
 
-		<p>
-			En sus de mes intérêts dans le développement informatique, l’agilité et la gestion de projets, mes autres intérêts portent sur :
+        <p>
+            En sus de mes intérêts dans le développement informatique, l’agilité et la gestion de projets, mes autres intérêts portent sur :
 
-			<ul>
-				<li>Ma famille</li>
-				<li>Les jeux vidéos</li>
-				<li>La politique et l’économie</li>
-			</ul>
-		</p>
+            <ul>
+                <li>Ma famille</li>
+                <li>Les jeux vidéos</li>
+                <li>La politique et l’économie</li>
+            </ul>
+        </p>
 
-		<p>
-			Pour plus d'informations, contactez-moi, ou consultez mon CV au format PDF : <a href="/file/cv">Mon CV</a>
-		</p>
-	</MySection>
+        <p>
+            Pour plus d'informations, contactez-moi, ou consultez mon CV au format PDF : <a href="/file/cv">Mon CV</a>
+        </p>
+    </MySection>
 </MyPageContainer>

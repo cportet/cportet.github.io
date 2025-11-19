@@ -10,13 +10,19 @@
 }
 
 .my-body {
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.my-body-content {
     max-width: 1000px;
-    min-width: 300px;
+    min-width: 250px;
     border-left: 1px solid var(--neutral-layer-3);
     border-right: 1px solid var(--neutral-layer-3);
     border-radius: 20px;
-    margin: 25px 8px;
-    padding: 20px;
+    padding: 20px 10px;
+    margin: auto;
+    overflow: auto;
 }
 
 .my-page {

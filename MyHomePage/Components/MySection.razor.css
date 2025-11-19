@@ -1,5 +1,6 @@
 ﻿.my-content {
     padding-left: 11px;
+    overflow: auto;
 }
 
     .my-content:hover, .my-content:active, .my-content:focus {
