@@ -1,10 +1,15 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <title>Cyril Portet - Page de redirection</title>
-    <script>location = location.href.replace(location.origin, location.origin + '/')</script>
+    <meta name="robots" content="noindex">
+    <script type="text/javascript">
+        const newPath = location.pathname === '/index.html' ? '/' : location.pathname;
+        location.replace(newPath + location.search + location.hash);
+    </script>
     <meta http-equiv="refresh" content="0;url=/">
+    <link rel="canonical" href="https://www.portet.org/">
 </head>
 <body>
 </body>
