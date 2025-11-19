@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "Gj+h3lcN",
+  "version": "so8GH5ep",
   "assets": [
     {
       "hash": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
@@ -10,7 +10,7 @@ self.assetsManifest = {
       "url": "BingSiteAuth.xml"
     },
     {
-      "hash": "sha256-WeyyJ793uEXjVoi3OxcjvVjm1Il4KjToh6A8Kq+FEOw=",
+      "hash": "sha256-DkPGnCorpOHv8NX1cGaSUvFtE1miRfBpGKjYBI/Evww=",
       "url": "MyHomePage.styles.css"
     },
     {
@@ -254,8 +254,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.qqq8d34fmv.wasm"
     },
     {
-      "hash": "sha256-Kiq1RiOkcmJctwXYN9kGrLU1c9tY6+GDwF+sbjjdY5Y=",
-      "url": "_framework/MyHomePage.y6fxz7qx44.wasm"
+      "hash": "sha256-T/Wab6INFzng5die9OzZ5Fqof7JdaAoAph4l1KB83V4=",
+      "url": "_framework/MyHomePage.14ykx4xj2b.wasm"
     },
     {
       "hash": "sha256-QUes30N6euMBTGI1oC4tMWqaMm6hupWHPLXY1/R0qZA=",
@@ -422,7 +422,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-I07EplZL/+axEcQM6a5oKpW2er1zcEZz15spfuwyah4=",
+      "hash": "sha256-yMuWlaRb7wZG7ZsLGHBGdM//8gVnT7bW1GjBqOBxcdw=",
       "url": "_framework/dotnet.js"
     },
     {
@@ -438,15 +438,15 @@ self.assetsManifest = {
       "url": "_framework/dotnet.runtime.o0qy896u8v.js"
     },
     {
-      "hash": "sha256-emr8CZv94xtz568YOP5scJi1+fnJzC/mbNEbkxcUtNc=",
-      "url": "_framework/en/MyHomePage.resources.iiyno55rvh.wasm"
+      "hash": "sha256-0qwiQjTkDaaMbgqhp0u6Z/S/IcBiu5FXjsgG9M1F0lw=",
+      "url": "_framework/en/MyHomePage.resources.inewl3u1ii.wasm"
     },
     {
       "hash": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",
       "url": "_framework/icudt.oh1zvcfom8.dat"
     },
     {
-      "hash": "sha256-6cF7RFoxb2ZNkctTXYFD9l+2dA7lmOR91ZgJ2k77PsE=",
+      "hash": "sha256-qrklkul8pSd3xnWsjm1VEigTs8j+vTVdB0uJeDdM5fo=",
       "url": "appconfig.json"
     },
     {
@@ -498,7 +498,7 @@ self.assetsManifest = {
       "url": "content/resume/mon-profil.fr.md"
     },
     {
-      "hash": "sha256-+B1LzWzZtn1R5gVRBa6TRmWONwNJ7vLdA826nH9DvGw=",
+      "hash": "sha256-zaKOGW5T6oJisOoFzTaK85WV1G29uCtHTaXUBzUaOTw=",
       "url": "css/app.css"
     },
     {
