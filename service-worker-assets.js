@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "vjFEUZpa",
+  "version": "elkB5iiz",
   "assets": [
     {
       "hash": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
@@ -254,8 +254,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.qqq8d34fmv.wasm"
     },
     {
-      "hash": "sha256-THPwYemBYnbXVlaubY7noelzEhYX/sImxb6uizfbd9k=",
-      "url": "_framework/MyHomePage.of41g8908s.wasm"
+      "hash": "sha256-NeXraDvI1zG8u9VepBdx1vz2o/MEyKO9nqTvfdMB2jo=",
+      "url": "_framework/MyHomePage.v34kxmfg06.wasm"
     },
     {
       "hash": "sha256-QUes30N6euMBTGI1oC4tMWqaMm6hupWHPLXY1/R0qZA=",
@@ -422,7 +422,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-rVDiudHVeF9z8mOLqW46BUO9kJWe3FDRnwLQEINDCJ4=",
+      "hash": "sha256-PLILebg1UxLMykF9uv+bmwl6BdgGliZGaas7PZ4w89c=",
       "url": "_framework/dotnet.js"
     },
     {
@@ -438,16 +438,20 @@ self.assetsManifest = {
       "url": "_framework/dotnet.runtime.o0qy896u8v.js"
     },
     {
-      "hash": "sha256-DhXfSMr7IjF85CyN7NXeda8WPAEaKierPkNTGE3EFJY=",
-      "url": "_framework/en/MyHomePage.resources.uskfu8k3eq.wasm"
+      "hash": "sha256-Z4BaFP0K21LJeqPOAEmdatI8IuENB/dRC5IGb9BExZc=",
+      "url": "_framework/en/MyHomePage.resources.tvi8m6gbug.wasm"
     },
     {
       "hash": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",
       "url": "_framework/icudt.oh1zvcfom8.dat"
     },
     {
-      "hash": "sha256-8mjgqJqwI0Zd7KSnUjidIEWiBIyRDgVs40HJgxZUCFs=",
+      "hash": "sha256-F3HUzl6EoLIva0ryjuV0F8jn94Wouirnr4KdMeGhJAQ=",
       "url": "appconfig.json"
+    },
+    {
+      "hash": "sha256-3oO5Pp4cz1Bcy9i2kqumN2QuMNZRdG8BeQnqKA/5OE8=",
+      "url": "b2c1da5b67254799922ef52d84941567.txt"
     },
     {
       "hash": "sha256-TlpXN2ppfsOaw092zZWpnNGpULlFKrVXHrGo4nJ1vSI=",
@@ -604,6 +608,10 @@ self.assetsManifest = {
     {
       "hash": "sha256-xfdGqk0dg2itW3+gIdaQVKDie4c7CdA2zs/fXfO4jCs=",
       "url": "robots.txt"
+    },
+    {
+      "hash": "sha256-ZoheEKEfz6QYVYM11ve7qRy0zTa+2hfLj5rvYSZj7Co=",
+      "url": "sitemap.xml"
     }
   ]
 };
