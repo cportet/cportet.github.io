@@ -127,7 +127,7 @@
     <value>Update</value>
   </data>
   <data name="MainLayout_Updater_Text" xml:space="preserve">
-    <value>A new version of this application is available</value>
+    <value>New version available !</value>
   </data>
   <data name="NavMenu_CloseMenu_Title" xml:space="preserve">
     <value>Close menu</value>

@@ -124,10 +124,10 @@
     <value>Masquer le menu</value>
   </data>
   <data name="MainLayout_Updater_Button" xml:space="preserve">
-    <value>Mettre à jour</value>
+    <value>MàJ</value>
   </data>
   <data name="MainLayout_Updater_Text" xml:space="preserve">
-    <value>Une nouvelle version de cette application est disponible</value>
+    <value>Nouvelle version disponible !</value>
   </data>
   <data name="NavMenu_CloseMenu_Title" xml:space="preserve">
     <value>Fermer le menu</value>

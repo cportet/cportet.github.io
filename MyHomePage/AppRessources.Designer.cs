@@ -169,7 +169,7 @@ namespace MyHomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mettre à jour.
+        ///   Looks up a localized string similar to MàJ.
         /// </summary>
         public static string MainLayout_Updater_Button {
             get {
@@ -178,7 +178,7 @@ namespace MyHomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Une nouvelle version de cette application est disponible.
+        ///   Looks up a localized string similar to Nouvelle version disponible !.
         /// </summary>
         public static string MainLayout_Updater_Text {
             get {
