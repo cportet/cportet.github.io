@@ -10,8 +10,11 @@
 }
 
 .my-body {
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 70px);
 }
 
 .my-body-content {
