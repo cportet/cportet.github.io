@@ -33,6 +33,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Update="wwwroot\404.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="wwwroot\b2c1da5b67254799922ef52d84941567.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
