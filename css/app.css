@@ -212,3 +212,7 @@ body.initial-dark .app-footer {
         box-shadow: none;
     }
 }
+
+.loading-page-h1 {
+    display: none;
+}

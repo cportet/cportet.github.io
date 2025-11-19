@@ -1,7 +1,29 @@
-﻿/* DEVELOPMENT */
-	Developer: Cyril PORTET (cyril@portet.org)
+﻿/* HUMANS.TXT */
+/* Parce que derrière chaque site il y a un humain (et du café) */
 
-/* APPLICATION */
-	Language: French
-    Technology: WebAssembly (Blazor with .NET9)
-	Standards: HTML5, CSS3, javascript
+/* ÉQUIPE */
+Author: Cyril Portet
+Twitter/X: @cportetdev
+LinkedIn: https://www.linkedin.com/in/cportet
+Contact: cyril@portet.org
+Location: France
+Site: https://www.portet.org
+
+/* TECHNOS */
+Framework: Blazor WebAssembly (.NET 10)
+Languages: C#, Razor, HTML5, CSS3, un soupçon de JavaScript
+Hosting: GitHub Pages
+Design: Microsoft FluentUI + du CSS fait maison
+Features: PWA, Thème possible (mode sombre par défaut)
+
+/* REMERCIEMENTS */
+Thanks to:
+- Microsoft & the .NET / Blazor team
+- La communauté open-source
+- Toi, qui es allé jusqu’à /humans.txt → uper
+
+/* FUN */
+Ce site fonctionne hors ligne.
+
+/* TAGS */
+#humansdottxt #madewithblazor #dotnet #pwa #indiedev #portetdotorg
