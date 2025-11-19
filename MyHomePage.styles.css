@@ -167,7 +167,7 @@ h2 .subtitle[b-v16et6jew9], h3 .subtitle[b-v16et6jew9] {
     padding: 10px;
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: calc(100vh - 70px);
+    max-height: calc(100dvh - 70px);
 }
 
 .my-body-content[b-ovz5ikw0s4] {
@@ -177,6 +177,7 @@ h2 .subtitle[b-v16et6jew9], h3 .subtitle[b-v16et6jew9] {
     border-right: 1px solid var(--neutral-layer-3);
     border-radius: 20px;
     padding: 20px 10px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
     margin: auto;
     overflow: auto;
 }
