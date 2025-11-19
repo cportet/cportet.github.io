@@ -5,7 +5,8 @@ using MyHomePage.Services;
 
 namespace MyHomePage;
 
-public partial class App(NavigationManager navigationManager,
+public partial class App(
+    NavigationManager navigationManager,
     IJSRuntime jsRuntime,
     HistoryService historyService
     ) : IDisposable
@@ -21,10 +22,13 @@ public partial class App(NavigationManager navigationManager,
         }
     }
 
-    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    private async void OnLocationChanged(object? sender, LocationChangedEventArgs e)
     {
         Console.WriteLine($"Location changed to {e.Location}");
         historyService.Add(e.Location);
+
+        await Task.Delay(1);
+        await jsRuntime.InvokeVoidAsync("scrollToTop");
     }
 
     public void Dispose()

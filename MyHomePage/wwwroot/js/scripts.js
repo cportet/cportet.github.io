@@ -1,5 +1,11 @@
 ﻿let resizeHandlers = {};
 
+function scrollToTop() {
+    window.scrollTo(0, 0);
+    const scrollable = document.querySelector('.my-body');
+    if (scrollable) scrollable.scrollTop = 0;
+}
+
 function applyInitialTheme() {
     var theme = localStorage.getItem('theme');
     if (theme === 'dark') {
