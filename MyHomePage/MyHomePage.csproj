@@ -39,6 +39,12 @@
     <Content Update="wwwroot\BingSiteAuth.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Update="wwwroot\humans.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\robots.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="wwwroot\sitemap.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
