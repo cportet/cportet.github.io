@@ -1,4 +1,4 @@
-/* Manifest version: Jmgbziy/ */
+/* Manifest version: Ze/IoCzC */
 // Caution! Be sure you understand the caveats before publishing an application with
 // offline support. See https://aka.ms/blazor-offline-considerations
 
@@ -57,4 +57,4 @@ async function onFetch(event) {
 
     return cachedResponse || fetch(event.request);
 }
-/* Last updated: 2025-11-21 13:30:38 UTC */
+/* Last updated: 2025-11-21 14:29:07 UTC */

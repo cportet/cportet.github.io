@@ -1,5 +1,5 @@
-{
-  "name": "Cyril Portet Home",
+﻿{
+  "name": "Cyril Portet",
   "short_name": "Cyril Portet",
   "id": "./",
   "start_url": "./",
@@ -7,7 +7,7 @@
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "prefer_related_applications": false,
-  "description": "Bienvenue sur l'espace personnel de Cyril Portet, artisan logiciel, développeur et manager.",
+  "description": "Bienvenue sur l'espace personnel de Cyril Portet, artisan logiciel (.Net, C# et Blazor)v, développeur et manager.",
   "icons": [
     {
       "src": "icon-512.png",

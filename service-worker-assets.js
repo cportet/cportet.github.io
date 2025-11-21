@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "Jmgbziy/",
+  "version": "Ze/IoCzC",
   "assets": [
     {
       "hash": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
@@ -258,8 +258,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.qqq8d34fmv.wasm"
     },
     {
-      "hash": "sha256-LRTMhNjMqx9i2YiTdXoKx3FQXtSlm22IFZ8iC35u1fE=",
-      "url": "_framework/MyHomePage.hrtmo7k0pd.wasm"
+      "hash": "sha256-iaAx/dhJ5Wx7wfrbJsX6ZegPV3PLBEUFCWUtJ1CjAhA=",
+      "url": "_framework/MyHomePage.dj1jyg3lu3.wasm"
     },
     {
       "hash": "sha256-QUes30N6euMBTGI1oC4tMWqaMm6hupWHPLXY1/R0qZA=",
@@ -426,7 +426,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-rCSbTmgVv5dw5hmwpNnQWuHZHV5gBrx/eCwFwDyZ0MM=",
+      "hash": "sha256-Mh2cU3kWL33K/tzIrrmCyG2hZoXe6ImYeCNaKU2+sD8=",
       "url": "_framework/dotnet.js"
     },
     {
@@ -442,15 +442,15 @@ self.assetsManifest = {
       "url": "_framework/dotnet.runtime.o0qy896u8v.js"
     },
     {
-      "hash": "sha256-gJC6N24T4I8TdSdeZPb0bL4mDF7K6tpS0iopTWejDUc=",
-      "url": "_framework/en/MyHomePage.resources.8eguy0cf7z.wasm"
+      "hash": "sha256-b8wB8U5TteT/o5gTV8b8RyFFuoCDd9DGR4YF01F8Mq0=",
+      "url": "_framework/en/MyHomePage.resources.5rgvhvobov.wasm"
     },
     {
       "hash": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",
       "url": "_framework/icudt.oh1zvcfom8.dat"
     },
     {
-      "hash": "sha256-+b+Q617KefALv7l5dHg960SnDVmg/QDlMPICy8fTWz8=",
+      "hash": "sha256-1nYlA9g7lSZ8/HhxWEn5C5Re4W1lw+Fxhcd99VRby00=",
       "url": "appconfig.json"
     },
     {
@@ -582,6 +582,10 @@ self.assetsManifest = {
       "url": "img/instagram.svg"
     },
     {
+      "hash": "sha256-RFPoL08GEwjyN3uTGS+xl+uo/6yRvXfFJGlFP/aYIOE=",
+      "url": "img/install.svg"
+    },
+    {
       "hash": "sha256-Kfbq7a4J4zzh9dHPSaivE78Mf1kmyx1UTeUoK7qu/wU=",
       "url": "img/linkedin.svg"
     },
@@ -618,11 +622,11 @@ self.assetsManifest = {
       "url": "index.html"
     },
     {
-      "hash": "sha256-uQDCuQ9pvMXeZP7ReI77P7MwzqRDEmzXZ9f1HC73Qo4=",
+      "hash": "sha256-J9FlGFOhtU4U1UYeVf5iwf4yqImVwH4+YzBi2kvjp+U=",
       "url": "js/scripts.js"
     },
     {
-      "hash": "sha256-JJ4WEmoNO7YX9/TTBoIugdNEP5U2lvARPYqlarZ1RLM=",
+      "hash": "sha256-BPwMV4702WW2Ae6JSxt6tVBaftIgDD9kh1hZv/AZ8Dw=",
       "url": "manifest.webmanifest"
     },
     {
