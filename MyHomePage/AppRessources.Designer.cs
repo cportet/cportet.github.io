@@ -232,6 +232,15 @@ namespace MyHomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Applications.
+        /// </summary>
+        public static string NavMenu_Page_Applications {
+            get {
+                return ResourceManager.GetString("NavMenu_Page_Applications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A propos.
         /// </summary>
         public static string NavMenu_Page_Apropos {
@@ -354,6 +363,69 @@ namespace MyHomePage {
         public static string Page_About_Title {
             get {
                 return ResourceManager.GetString("Page_About_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contenu.
+        /// </summary>
+        public static string Page_Applications_Section_Contenu {
+            get {
+                return ResourceManager.GetString("Page_Applications_Section_Contenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mes applications et réalisations.
+        /// </summary>
+        public static string Page_Applications_SubTitle {
+            get {
+                return ResourceManager.GetString("Page_Applications_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Applications.
+        /// </summary>
+        public static string Page_Applications_Title {
+            get {
+                return ResourceManager.GetString("Page_Applications_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Détails.
+        /// </summary>
+        public static string Page_Apps_Charte_Section_Sommaire {
+            get {
+                return ResourceManager.GetString("Page_Apps_Charte_Section_Sommaire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Charte.
+        /// </summary>
+        public static string Page_Apps_Charte_Title {
+            get {
+                return ResourceManager.GetString("Page_Apps_Charte_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Résumé.
+        /// </summary>
+        public static string Page_Apps_MesApps_Section_Sommaire {
+            get {
+                return ResourceManager.GetString("Page_Apps_MesApps_Section_Sommaire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mes Applications.
+        /// </summary>
+        public static string Page_Apps_MesApps_Title {
+            get {
+                return ResourceManager.GetString("Page_Apps_MesApps_Title", resourceCulture);
             }
         }
         

@@ -7,3 +7,11 @@ Gemfile.lock
 /.vs
 /MyHomePage/obj
 /MyHomePage/bin
+/MyHomePage.Console/obj/MyHomePage.Console.csproj.nuget.dgspec.json
+/MyHomePage.Console/obj/MyHomePage.Console.csproj.nuget.g.props
+/MyHomePage.Console/obj/MyHomePage.Console.csproj.nuget.g.targets
+/MyHomePage.Console/obj/project.assets.json
+/MyResume/obj/MyResumeApp.csproj.nuget.dgspec.json
+/MyResume/obj/MyResumeApp.csproj.nuget.g.props
+/MyResume/obj/MyResumeApp.csproj.nuget.g.targets
+/MyResume/obj/project.assets.json
