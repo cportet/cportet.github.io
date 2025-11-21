@@ -22,6 +22,13 @@
     </url>
 
     <url>
+        <loc>https://www.portet.org/applications</loc>
+        <lastmod>2025-11-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
         <loc>https://www.portet.org/404</loc>
         <lastmod>2025-11-19</lastmod>
         <changefreq>yearly</changefreq>
