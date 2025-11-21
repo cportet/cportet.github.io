@@ -8,6 +8,17 @@ Cette application n'est pour l'instant plus maintenue, mais j'envisage de repren
 En attendant, vous pouvez toujours la télécharger à cet emplacement : 
 [Mes Applications - Microsoft Store](https://www.microsoft.com/store/productId/9p2v5r46n6xq)
 
+<script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
+<ms-store-badge
+	productid="9p2v5r46n6xq"
+	productname="MesApplications"
+	window-mode="direct"
+	theme="auto"
+	size="large"
+	language="fr-fr"
+	animation="on">
+</ms-store-badge>
+
 ### Charte de confidentialité
 
 Vous pouvez retrouver la charte de confidentialité commune à toutes mes applications ici :

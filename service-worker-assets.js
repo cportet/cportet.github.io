@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "iJLsT01X",
+  "version": "Jmgbziy/",
   "assets": [
     {
       "hash": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
@@ -258,8 +258,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.qqq8d34fmv.wasm"
     },
     {
-      "hash": "sha256-eczu+yiHNlkGgLWhqapq3MvNyRKgmiuNpGBBoY6kWcE=",
-      "url": "_framework/MyHomePage.1qdgj4i2il.wasm"
+      "hash": "sha256-LRTMhNjMqx9i2YiTdXoKx3FQXtSlm22IFZ8iC35u1fE=",
+      "url": "_framework/MyHomePage.hrtmo7k0pd.wasm"
     },
     {
       "hash": "sha256-QUes30N6euMBTGI1oC4tMWqaMm6hupWHPLXY1/R0qZA=",
@@ -426,7 +426,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-I25o9laBpzTOvTd91C1M+IoHkRqpNlxpEgVCcYbqbNA=",
+      "hash": "sha256-rCSbTmgVv5dw5hmwpNnQWuHZHV5gBrx/eCwFwDyZ0MM=",
       "url": "_framework/dotnet.js"
     },
     {
@@ -442,15 +442,15 @@ self.assetsManifest = {
       "url": "_framework/dotnet.runtime.o0qy896u8v.js"
     },
     {
-      "hash": "sha256-AfHn1CDDXAS6WFLgcbvugmLpJ6Zp0VNtU2RADoxnQTI=",
-      "url": "_framework/en/MyHomePage.resources.jnf7sq0mva.wasm"
+      "hash": "sha256-gJC6N24T4I8TdSdeZPb0bL4mDF7K6tpS0iopTWejDUc=",
+      "url": "_framework/en/MyHomePage.resources.8eguy0cf7z.wasm"
     },
     {
       "hash": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",
       "url": "_framework/icudt.oh1zvcfom8.dat"
     },
     {
-      "hash": "sha256-w+IZy7WsNQ1W9XFrxzsp1Vy8dyQfGjq9o3aylm4p5uU=",
+      "hash": "sha256-+b+Q617KefALv7l5dHg960SnDVmg/QDlMPICy8fTWz8=",
       "url": "appconfig.json"
     },
     {
@@ -466,11 +466,11 @@ self.assetsManifest = {
       "url": "content/applications/apps/charte.fr.md"
     },
     {
-      "hash": "sha256-+ICgECTYeSAaX8EeDUMVjE9a7jCmu67Y4yUfVs/MV50=",
+      "hash": "sha256-FGyw+fs33AvxX5RGi5l5jNs/gUqPBNcJcsCah6TcChU=",
       "url": "content/applications/apps/mesapps/contenu.en.md"
     },
     {
-      "hash": "sha256-1QTK3VO6751TY6PCYMPEtyeoyLqvYeloPJ0K31PiJRA=",
+      "hash": "sha256-2kMACjF1qxAHlxW4DQYf8udSa9H2gMa08WSszLuMP00=",
       "url": "content/applications/apps/mesapps/contenu.fr.md"
     },
     {

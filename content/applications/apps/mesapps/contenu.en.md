@@ -8,6 +8,17 @@ This application is no longer actively maintained at the moment, but I plan to r
 In the meantime, you can still download it here:
 [Mes Applications - Microsoft Store](https://www.microsoft.com/store/productId/9p2v5r46n6xq)
 
+<script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
+<ms-store-badge
+	productid="9p2v5r46n6xq"
+	productname="MesApplications"
+	window-mode="direct"
+	theme="auto"
+	size="large"
+	language="fr-fr"
+	animation="on">
+</ms-store-badge>
+
 ### Privacy Policy
 
 You can find the privacy policy common to all my applications here:  
