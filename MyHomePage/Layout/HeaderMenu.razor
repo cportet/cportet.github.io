@@ -1,4 +1,12 @@
-﻿<MyIcon IconName=@Constants.Icons.LinkedIn
+﻿@if (_canInstall)
+{
+    <MyIcon IconName=@Constants.Icons.Install
+            OnClick=@PwaInstall
+            Title=@AppRessources.HeaderMenu_Install_Title />
+    <MySpacer />
+}
+
+<MyIcon IconName=@Constants.Icons.LinkedIn
         Href="https://linkedin.portet.org/"
         Target="_blank"
         Title=@AppRessources.HeaderMenu_LinkedIn_Title />

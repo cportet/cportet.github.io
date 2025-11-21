@@ -7,6 +7,7 @@
             public const string LinkedIn = "linkedin";
             public const string Twitter = "twitter";
             public const string Document = "document";
+            public const string Install = "install";
         }
     }
 }

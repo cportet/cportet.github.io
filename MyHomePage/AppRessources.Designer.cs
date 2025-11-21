@@ -115,6 +115,15 @@ namespace MyHomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Installer ce site en tant qu&apos;application.
+        /// </summary>
+        public static string HeaderMenu_Install_Title {
+            get {
+                return ResourceManager.GetString("HeaderMenu_Install_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Consulter mon profil LinkedIn.
         /// </summary>
         public static string HeaderMenu_LinkedIn_Title {
