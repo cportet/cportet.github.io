@@ -318,4 +318,7 @@
   <data name="HeaderMenu_Install_Title" xml:space="preserve">
     <value>Installer ce site en tant qu'application</value>
   </data>
+  <data name="Page_Redirection_Title" xml:space="preserve">
+    <value>Redirection</value>
+  </data>
 </root>

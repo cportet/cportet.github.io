@@ -610,6 +610,15 @@ namespace MyHomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Redirection.
+        /// </summary>
+        public static string Page_Redirection_Title {
+            get {
+                return ResourceManager.GetString("Page_Redirection_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to En bref.
         /// </summary>
         public static string Page_Resume_EnBref_Title {
