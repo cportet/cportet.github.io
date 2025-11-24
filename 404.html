@@ -2,14 +2,18 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Cyril Portet - Page de redirection</title>
-    <meta name="robots" content="noindex">
-    <script type="text/javascript">
-        const newPath = location.pathname === '/index.html' ? '/' : location.pathname;
-        location.replace(newPath + location.search + location.hash);
-    </script>
-    <meta http-equiv="refresh" content="0;url=/">
+    <title>Cyril Portet - Redirection</title>
     <link rel="canonical" href="https://www.portet.org/">
+    <meta name="robots" content="noindex">
+    <script>
+        if (location.pathname === '/redirection' || location.pathname === '/404.html') {
+            location.replace('/');
+        } else {
+            const fullUrl = location.pathname + location.search + location.hash;
+            const encoded = encodeURIComponent(fullUrl);
+            location.replace('/redirection?path=' + encoded);
+        }
+    </script>
 </head>
 <body>
 </body>
