@@ -321,4 +321,7 @@
   <data name="Page_Redirection_Title" xml:space="preserve">
     <value>Redirection</value>
   </data>
+  <data name="ImageDialog_Title" xml:space="preserve">
+    <value>Aperçu de l'image</value>
+  </data>
 </root>

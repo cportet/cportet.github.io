@@ -5,14 +5,13 @@ namespace MyHomePage.Code;
 
 public static class References
 {
-
     // See: https://www.fluentui-blazor.net/Icon#explorer
     public static class SmallIcons
     {
         public static Icon Lien => new Size16.Link();
     }
 
-    public static class Icons
+    public static class StandardIcons
     {
         public static Icon Reset => new Size24.DismissCircle();
         public static Icon Refresh => new Size24.ArrowSyncCircle();
@@ -29,5 +28,6 @@ public static class References
         public static Icon Personnel => new Size24.InprivateAccount();
         public static Icon Applications => new Size24.Apps();
         public static Icon Install => new Size24.AppsAddIn();
+        public static Icon Picture => new Size24.PictureIn();
     }
 }

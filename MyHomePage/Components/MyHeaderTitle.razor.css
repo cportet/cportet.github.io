@@ -16,7 +16,7 @@
     padding-right: 5px;
 }
 
-@media screen and (max-width: 380px ) {
+@media screen and (max-width: 400px ) {
     .my-sep {
         display: none;
     }

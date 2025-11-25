@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.FluentUI.AspNetCore.Components;
 
 namespace MyHomePage.Components;
 
-public partial class MyImageDisplay
+public partial class MyImageDisplay(
+    IDialogService dialogService)
 {
     [Parameter]
     [EditorRequired]
@@ -20,9 +22,22 @@ public partial class MyImageDisplay
     [Parameter]
     public bool Rounded { get; set; } = true;
 
-    private static void ImageClickHandler()
+    private async Task ImageClickHandler()
     {
-        Console.WriteLine("Image clicked");
+
+        if (!string.IsNullOrWhiteSpace(ImageUrl))
+        {
+            Console.WriteLine("Image clicked");
+
+            var imageContent = new MyImageDialog.ImageDialogContent(
+                SourceUrl: ImageUrl,
+                Title: AltText,
+                AltText: AltText);
+
+            DialogParameters parameters = MyImageDialog.DefaultParameters;
+
+            await dialogService.ShowDialogAsync<MyImageDialog>(imageContent, parameters);
+        }
     }
 
     private string ImageClass => Rounded

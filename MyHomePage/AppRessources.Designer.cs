@@ -133,6 +133,15 @@ namespace MyHomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aperçu de l&apos;image.
+        /// </summary>
+        public static string ImageDialog_Title {
+            get {
+                return ResourceManager.GetString("ImageDialog_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Retour à la page précédente.
         /// </summary>
         public static string MainLayout_GoBack_Title {

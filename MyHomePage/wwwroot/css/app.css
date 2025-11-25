@@ -5,14 +5,12 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
     font-family: var(--body-font);
     font-size: var(--type-ramp-base-font-size);
     line-height: var(--type-ramp-base-line-height);
     font-weight: var(--font-weight);
     color: var(--neutral-foreground-rest);
     background: var(--neutral-fill-layer-rest);
-    overflow: hidden;
 }
 
     body.initial-dark {
@@ -24,6 +22,16 @@ body {
         --pwa-updater-bar-z-index: 1000;
         --pwa-updater-bar-height: 50px;
     }
+
+.fluent-body-content {
+    overflow: visible !important;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
 a, a:visited {
     color: var(--accent-fill-rest);
@@ -215,4 +223,16 @@ body.initial-dark .app-footer {
 
 .loading-page-h1 {
     display: none;
+}
+
+.hide-sm {
+    @media (max-width: 480px) {
+        display: none !important;
+    }
+}
+
+.hide-xs {
+    @media (max-width: 400px) {
+        display: none !important;
+    }
 }

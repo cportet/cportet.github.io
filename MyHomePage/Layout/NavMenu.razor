@@ -3,49 +3,49 @@
 
 <FluentNavMenu Width=200>
     <div class="my-closemenu">
-        <FluentIcon Value=@References.Icons.Close
+        <FluentIcon Value=@References.StandardIcons.Close
                     Title=@AppRessources.NavMenu_CloseMenu_Title
                     OnClick=@ItemClickedHandler />
     </div>
     <div class="my-items" @onclick=@ItemClickedHandler>
-        <FluentNavLink Icon=@References.Icons.Home
+        <FluentNavLink Icon=@References.StandardIcons.Home
                        Match=NavLinkMatch.All
                        Href="/">
             @AppRessources.NavMenu_Page_Home
         </FluentNavLink>
 
-        <FluentNavLink Icon=@References.Icons.CV
+        <FluentNavLink Icon=@References.StandardIcons.CV
                        Href="/resume">
             @AppRessources.NavMenu_Page_MonCV
         </FluentNavLink>
 
-        <FluentNavLink Icon=@References.Icons.Personnel
+        <FluentNavLink Icon=@References.StandardIcons.Personnel
                        Href="/perso">
             @AppRessources.NavMenu_Page_Personnel
         </FluentNavLink>
 
-        <FluentNavLink Icon=@References.Icons.Applications
+        <FluentNavLink Icon=@References.StandardIcons.Applications
                        Href="/Applications">
             @AppRessources.NavMenu_Page_Applications
         </FluentNavLink>
 
-        <FluentNavLink Icon=@References.Icons.Options
+        <FluentNavLink Icon=@References.StandardIcons.Options
                        Href="/options">
             @AppRessources.NavMenu_Page_Options
         </FluentNavLink>
 
-        <FluentNavLink Icon=@References.Icons.Info
+        <FluentNavLink Icon=@References.StandardIcons.Info
                        Href="/apropos">
             @AppRessources.NavMenu_Page_Apropos
         </FluentNavLink>
-        <FluentNavGroup Icon=@References.Icons.Famille
+        <FluentNavGroup Icon=@References.StandardIcons.Famille
                         Title=@AppRessources.NavMenu_Page_Famille>
-            <FluentNavLink Icon=@References.Icons.Lien
+            <FluentNavLink Icon=@References.StandardIcons.Lien
                            Target="_blank"
                            Href="https://remy.portet.org">
                 Rémy
             </FluentNavLink>
-            <FluentNavLink Icon=@References.Icons.Lien
+            <FluentNavLink Icon=@References.StandardIcons.Lien
                            Target="_blank"
                            Href="https://trystan.portet.org">
                 Trystan

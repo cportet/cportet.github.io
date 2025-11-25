@@ -1,1 +1,1 @@
-﻿Are you looking for my **resume**? You can find it on [this page](/cv).
+﻿Are you looking for my **resume**? You can find it on [this page](/resume).

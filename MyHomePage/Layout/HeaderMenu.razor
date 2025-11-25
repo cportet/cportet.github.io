@@ -1,19 +1,59 @@
-﻿@if (_canInstall)
+﻿@if (historyService.CanGoBack())
 {
-    <MyIcon IconName=@Constants.Icons.Install
-            OnClick=@PwaInstall
-            Title=@AppRessources.HeaderMenu_Install_Title />
-    <MySpacer />
+    <FluentIcon Value=@References.StandardIcons.Back
+                Title=@GoBackMenuTitle
+                OnClick=@GoBack
+                Color=Color.Fill />
+}
+else
+{
+    <FluentIcon Value=@References.StandardIcons.Back
+                Title=@GoBackMenuTitle
+                Color=Color.Disabled />
 }
 
-<MyIcon IconName=@Constants.Icons.LinkedIn
-        Href="https://linkedin.portet.org/"
-        Target="_blank"
-        Title=@AppRessources.HeaderMenu_LinkedIn_Title />
-<MySpacer />
+<MySpacer Space=@SpacerWidth />
+<FluentIcon Value=@References.StandardIcons.Menu
+            Title=@ToggleMenuTitle
+            OnClick=@ToggleMenu
+            Color=@Color.Fill />
 
-<MyIcon IconName=@Constants.Icons.Document
+@if (ChildContent is not null)
+{
+    <MySpacer Space=@SpacerWidth />
+    @ChildContent
+    <FluentSpacer />
+}
+
+@if (_canInstall)
+{
+    <FluentIcon Value=@References.StandardIcons.Install
+                Title=@AppRessources.HeaderMenu_Install_Title
+                OnClick=@PwaInstall
+                Color=@Color.Fill />
+}
+
+<MySpacer Space=@SpacerWidth
+          Class="hide-xs" />
+<MyIcon IconName=@Constants.MyIcons.Document
+        Title=@AppRessources.HeaderMenu_CV_Title
+        Class="hide-xs"
         Href="/doc/cv-cyril-portet.pdf"
-        Target="_blank"
-        Title=@AppRessources.HeaderMenu_CV_Title />
-<MySpacer />
+        Target="_blank" />
+
+
+<MySpacer Space=@SpacerWidth
+          Class="hide-sm" />
+<MyIcon IconName=@Constants.MyIcons.LinkedIn
+        Title=@AppRessources.HeaderMenu_LinkedIn_Title
+        Class="hide-sm"
+        Href="https://linkedin.portet.org/"
+        Target="_blank" />
+
+<MySpacer Space=@SpacerWidth
+          Class="hide-xs" />
+<FluentIcon Value=@References.StandardIcons.Theme
+            Title=@ToggleThemeTitle
+            Class="hide-xs"
+            OnClick=@ToggleTheme
+            Color=@Color.Fill />

@@ -1,36 +1,21 @@
-﻿::deep .sticky-header {
-    position: sticky;
-    top: 0;
-}
-
-.my-navmenu {
+﻿.my-navmenu-content {
     padding: 10px;
     position: sticky;
     top: 50px;
 }
 
-.my-body {
-    margin: 0 auto;
-    padding: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-height: calc(100dvh - 70px);
+.my-body-container {
+    padding: 5px;
+    margin-top: 60px;
 }
 
 .my-body-content {
     max-width: 1000px;
     min-width: 250px;
+    margin: auto;
     border-left: 1px solid var(--neutral-layer-3);
     border-right: 1px solid var(--neutral-layer-3);
     border-radius: 20px;
-    padding: 20px 10px;
+    padding: 5px 10px;
     padding-bottom: max(10px, env(safe-area-inset-bottom));
-    margin: auto;
-    overflow: auto;
-}
-
-.my-page {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1800px;
 }

@@ -1,0 +1,28 @@
+﻿.my-image-container {
+    overflow: auto;
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-display-image {
+    max-width: 100%;
+    object-fit: contain;
+    height: auto;
+}
+
+.my-image-separator {
+    margin: 0 0 5px 0;
+}
+
+.my-image-title {
+    text-align: start;
+}
+
+.my-footer-content {
+    display: block;
+    width: 100%;
+}

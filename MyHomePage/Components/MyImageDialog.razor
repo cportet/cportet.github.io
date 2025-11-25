@@ -1,0 +1,27 @@
+﻿@if (Dialog is not null)
+{
+    <FluentDialogHeader ShowDismiss="true">
+        <FluentStack VerticalAlignment="VerticalAlignment.Center">
+            <FluentIcon Value=@References.StandardIcons.Picture />
+            <FluentLabel Typo="Typography.PaneHeader">
+                @Dialog.Instance.Parameters.Title
+            </FluentLabel>
+        </FluentStack>
+    </FluentDialogHeader>
+
+    <FluentDialogFooter>
+        <div class="my-footer-content">
+            <hr class="my-image-separator" />
+            <div class="my-image-title">@Content.Title</div>
+        </div>
+    </FluentDialogFooter>
+
+    <FluentDialogBody>
+        <div class="my-image-container">
+            <img src=@Content.SourceUrl
+                 title=@Content.Title
+                 alt=@Content.AltText
+                 class="my-display-image" />
+        </div>
+    </FluentDialogBody>
+}

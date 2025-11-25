@@ -2,7 +2,7 @@
 {
     public static class Constants
     {
-        public static class Icons
+        public static class MyIcons
         {
             public const string LinkedIn = "linkedin";
             public const string Twitter = "twitter";
