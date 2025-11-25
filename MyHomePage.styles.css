@@ -24,7 +24,7 @@
     padding-right: 5px;
 }
 
-@media screen and (max-width: 380px ) {
+@media screen and (max-width: 400px ) {
     .my-sep[b-3yhbq8z951] {
         display: none;
     }
@@ -64,6 +64,35 @@
     margin: 0;
     padding: 0;
 }
+/* /Components/MyImageDialog.razor.rz.scp.css */
+.my-image-container[b-1ljs8g8zrd] {
+    overflow: auto;
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-display-image[b-1ljs8g8zrd] {
+    max-width: 100%;
+    object-fit: contain;
+    height: auto;
+}
+
+.my-image-separator[b-1ljs8g8zrd] {
+    margin: 0 0 5px 0;
+}
+
+.my-image-title[b-1ljs8g8zrd] {
+    text-align: start;
+}
+
+.my-footer-content[b-1ljs8g8zrd] {
+    display: block;
+    width: 100%;
+}
 /* /Components/MyImageDisplay.razor.rz.scp.css */
 .my-rounded[b-jmmo5va285] {
     border-radius: 50%;
@@ -100,7 +129,7 @@
 /* /Components/MySection.razor.rz.scp.css */
 .my-content[b-v16et6jew9] {
     padding-left: 11px;
-    overflow: auto;
+    overflow: visible;
 }
 
     .my-content:hover[b-v16et6jew9], .my-content:active[b-v16et6jew9], .my-content:focus[b-v16et6jew9] {
@@ -151,41 +180,26 @@ h2 .subtitle[b-v16et6jew9], h3 .subtitle[b-v16et6jew9] {
     display: block;
 }
 /* /Layout/MainLayout.razor.rz.scp.css */
-[b-ovz5ikw0s4] .sticky-header {
-    position: sticky;
-    top: 0;
-}
-
-.my-navmenu[b-ovz5ikw0s4] {
+.my-navmenu-content[b-ovz5ikw0s4] {
     padding: 10px;
     position: sticky;
     top: 50px;
 }
 
-.my-body[b-ovz5ikw0s4] {
-    margin: 0 auto;
-    padding: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-height: calc(100dvh - 70px);
+.my-body-container[b-ovz5ikw0s4] {
+    padding: 5px;
+    margin-top: 60px;
 }
 
 .my-body-content[b-ovz5ikw0s4] {
     max-width: 1000px;
     min-width: 250px;
+    margin: auto;
     border-left: 1px solid var(--neutral-layer-3);
     border-right: 1px solid var(--neutral-layer-3);
     border-radius: 20px;
-    padding: 20px 10px;
+    padding: 5px 10px;
     padding-bottom: max(10px, env(safe-area-inset-bottom));
-    margin: auto;
-    overflow: auto;
-}
-
-.my-page[b-ovz5ikw0s4] {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1800px;
 }
 /* /Layout/NavMenu.razor.rz.scp.css */
 .my-closemenu[b-q4iamuyrz1] {
