@@ -268,6 +268,15 @@ namespace MyHomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contact.
+        /// </summary>
+        public static string NavMenu_Page_Contact {
+            get {
+                return ResourceManager.GetString("NavMenu_Page_Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Famille.
         /// </summary>
         public static string NavMenu_Page_Famille {
@@ -444,6 +453,33 @@ namespace MyHomePage {
         public static string Page_Apps_MesApps_Title {
             get {
                 return ResourceManager.GetString("Page_Apps_MesApps_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Détails.
+        /// </summary>
+        public static string Page_Contact_Section_Details {
+            get {
+                return ResourceManager.GetString("Page_Contact_Section_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pour me contacter.
+        /// </summary>
+        public static string Page_Contact_SubTitle {
+            get {
+                return ResourceManager.GetString("Page_Contact_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact.
+        /// </summary>
+        public static string Page_Contact_Title {
+            get {
+                return ResourceManager.GetString("Page_Contact_Title", resourceCulture);
             }
         }
         

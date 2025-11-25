@@ -324,4 +324,16 @@
   <data name="ImageDialog_Title" xml:space="preserve">
     <value>Image preview</value>
   </data>
+  <data name="NavMenu_Page_Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Page_Contact_Title" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Page_Contact_SubTitle" xml:space="preserve">
+    <value>Ways to contact me</value>
+  </data>
+  <data name="Page_Contact_Section_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
 </root>

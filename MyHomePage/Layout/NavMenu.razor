@@ -1,7 +1,4 @@
-﻿@using Microsoft.FluentUI.AspNetCore.Components.Icons.Regular;
-@using MyHomePage.Code;
-
-<FluentNavMenu Width=200>
+﻿<FluentNavMenu Width=200>
     <div class="my-closemenu">
         <FluentIcon Value=@References.StandardIcons.Close
                     Title=@AppRessources.NavMenu_CloseMenu_Title
@@ -25,8 +22,13 @@
         </FluentNavLink>
 
         <FluentNavLink Icon=@References.StandardIcons.Applications
-                       Href="/Applications">
+                       Href="/applications">
             @AppRessources.NavMenu_Page_Applications
+        </FluentNavLink>
+
+        <FluentNavLink Icon=@References.StandardIcons.Contact
+                       Href="/contact">
+            @AppRessources.NavMenu_Page_Contact
         </FluentNavLink>
 
         <FluentNavLink Icon=@References.StandardIcons.Options

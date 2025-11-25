@@ -3,6 +3,11 @@
 It allowed users to gather and organize all the applications installed on their Windows device within a single, customizable interface.
 This application is no longer actively maintained at the moment, but I plan to resume work on the code soon, publish it on GitHub, and update the app on the Microsoft Store.
 
+### Privacy Policy
+
+You can find the privacy policy common to all my applications here:
+[Privacy Policy](/Applications/Charte)
+
 ### Download
 
 In the meantime, you can still download it here:
@@ -14,12 +19,7 @@ In the meantime, you can still download it here:
 	productname="MesApplications"
 	window-mode="direct"
 	theme="auto"
-	size="large"
-	language="fr-fr"
+	size="small"
+	language="en-us"
 	animation="on">
 </ms-store-badge>
-
-### Privacy Policy
-
-You can find the privacy policy common to all my applications here:  
-[Privacy Policy](/Applications/Charte)

@@ -1,12 +1,7 @@
-﻿.my-navmenu-content {
-    padding: 10px;
-    position: sticky;
-    top: 50px;
-}
-
-.my-body-container {
+﻿.my-body-container {
     padding: 5px;
     margin-top: 60px;
+    min-height: 80dvh;
 }
 
 .my-body-content {
@@ -18,4 +13,25 @@
     border-radius: 20px;
     padding: 5px 10px;
     padding-bottom: max(10px, env(safe-area-inset-bottom));
+}
+
+.my-page {
+}
+
+.my-navmenu-container {
+    background: var(--neutral-fill-layer-rest);
+    position: fixed;
+    top: 50px;
+    box-shadow: 3px 4px 15px 1px #8a8a8ab8;
+    height: 100%;
+    z-index: 1;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.my-navmenu-content {
+}
+
+.my-navmenu-empty {
+    height: 100%;
 }

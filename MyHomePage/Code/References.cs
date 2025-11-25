@@ -29,5 +29,6 @@ public static class References
         public static Icon Applications => new Size24.Apps();
         public static Icon Install => new Size24.AppsAddIn();
         public static Icon Picture => new Size24.PictureIn();
+        public static Icon Contact => new Size24.ContactCard();
     }
 }
