@@ -24,7 +24,8 @@ body {
     }
 
 .fluent-body-content {
-    overflow: visible !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
 }
 
 .fixed-header {
@@ -232,7 +233,7 @@ body.initial-dark .app-footer {
 }
 
 .hide-xs {
-    @media (max-width: 400px) {
+    @media (max-width: 360px) {
         display: none !important;
     }
 }

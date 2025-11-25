@@ -180,15 +180,10 @@ h2 .subtitle[b-v16et6jew9], h3 .subtitle[b-v16et6jew9] {
     display: block;
 }
 /* /Layout/MainLayout.razor.rz.scp.css */
-.my-navmenu-content[b-ovz5ikw0s4] {
-    padding: 10px;
-    position: sticky;
-    top: 50px;
-}
-
 .my-body-container[b-ovz5ikw0s4] {
     padding: 5px;
     margin-top: 60px;
+    min-height: 80dvh;
 }
 
 .my-body-content[b-ovz5ikw0s4] {
@@ -200,6 +195,27 @@ h2 .subtitle[b-v16et6jew9], h3 .subtitle[b-v16et6jew9] {
     border-radius: 20px;
     padding: 5px 10px;
     padding-bottom: max(10px, env(safe-area-inset-bottom));
+}
+
+.my-page[b-ovz5ikw0s4] {
+}
+
+.my-navmenu-container[b-ovz5ikw0s4] {
+    background: var(--neutral-fill-layer-rest);
+    position: fixed;
+    top: 50px;
+    box-shadow: 3px 4px 15px 1px #8a8a8ab8;
+    height: 100%;
+    z-index: 1;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.my-navmenu-content[b-ovz5ikw0s4] {
+}
+
+.my-navmenu-empty[b-ovz5ikw0s4] {
+    height: 100%;
 }
 /* /Layout/NavMenu.razor.rz.scp.css */
 .my-closemenu[b-q4iamuyrz1] {
