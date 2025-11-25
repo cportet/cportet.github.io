@@ -27,18 +27,14 @@ public partial class MainLayout(
         : AppRessources.MainLayout_Theme_Clair;
 
     private string GoBackMenuTitle => historyService.CanGoBack()
-    ? AppRessources.MainLayout_GoBack_Title
-    : string.Empty;
+        ? AppRessources.MainLayout_GoBack_Title
+        : string.Empty;
 
-    private void GoBack()
-    {
+    private void GoBack() =>
         historyService.GoBack();
-    }
 
-    private void ToggleMenu()
-    {
+    private void ToggleMenu() =>
         _menuVisible = !_menuVisible;
-    }
 
     private async Task ToggleTheme()
     {
@@ -46,19 +42,17 @@ public partial class MainLayout(
         ? DesignThemeModes.Dark
         : DesignThemeModes.Light;
 
-        await userOptionsService.SetUserThemeAsync(_mode.ToString().ToLower());
+        var modeString = _mode.ToString().ToLower();
+
+        await userOptionsService.SetUserThemeAsync(modeString);
         await ApplyTheme();
     }
 
-    private void NavMenuOnItemClick()
-    {
+    private void NavMenuOnItemClick() =>
         _menuVisible = false;
-    }
 
-    private void BodyClick()
-    {
+    private void BodyClick() =>
         _menuVisible = false;
-    }
 
     public void SetPageTitle(string? pageTitle)
     {
