@@ -28,5 +28,6 @@ public static class References
         public static Icon Theme => new Size24.DarkTheme();
         public static Icon Personnel => new Size24.InprivateAccount();
         public static Icon Applications => new Size24.Apps();
+        public static Icon Install => new Size24.AppsAddIn();
     }
 }

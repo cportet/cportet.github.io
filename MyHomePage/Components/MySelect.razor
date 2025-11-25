@@ -2,23 +2,18 @@
 @if (Items is not null)
 {
     <div class="my-select">
-        @if (!string.IsNullOrWhiteSpace(Label))
-        {
-            <label class="my-label" for=@Id>
-                @Label
-            </label>
-        }
-        <select name=@Id
-                id=@Id
-                class="my-select"
-                @bind=@Value
-                @bind:after=@UpdateValue>
-            @foreach (var item in Items)
-            {
-                <option value=@item.SelectKey>
-                    @FormatItem(item)
-                </option>
-            }
-        </select>
+        <FluentSelect Id=@Id
+                      Items=@Items
+                      Label=@Label
+                      TOption=TItem
+                      Width="200px"
+                      Height="200px"
+                      OptionText="@(item => FormatItem(item))"
+                      OptionValue="@(item => item.SelectKey)"
+                      @bind-Value=@Value
+                      @bind-Value:after=@UpdateValue />
     </div>
+
+
+
 }

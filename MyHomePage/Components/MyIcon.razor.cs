@@ -16,7 +16,7 @@ namespace MyHomePage.Components
         public string? Title { get; set; }
 
         [Parameter]
-        public IconSize Size { get; set; } = IconSize.Size24;
+        public IconSize Size { get; set; } = IconSize.Size20;
 
         [Parameter]
         public string? Href { get; set; }
@@ -26,6 +26,21 @@ namespace MyHomePage.Components
 
         [Parameter]
         public EventCallback OnClick { get; set; }
+
+        [Parameter]
+        public string? Class { get; set; }
+
+
+        private string ClassString
+        {
+            get
+            {
+                string baseClass = "my-icon";
+                if (!string.IsNullOrEmpty(Class))
+                    baseClass += " " + Class;
+                return baseClass.Trim();
+            }
+        }
 
         protected override async Task OnParametersSetAsync()
         {
