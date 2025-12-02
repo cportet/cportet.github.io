@@ -1,6 +1,6 @@
 ﻿Pour me contacter, préférez m'envoyer un courriel.
 
-A défaut si vous tentez de me joindre par téléphone, merci de laisser un message si je ne réponds pas, ou à doubler votre appel par un **SMS...
+A défaut si vous tentez de me joindre par téléphone, merci de laisser un message si je ne réponds pas, ou à doubler votre appel par un **SMS**...
 Je suis très solicité, et ne réponds pas forcément à tous les appels.
 
 #### Informations de contact :

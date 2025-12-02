@@ -1,7 +1,7 @@
 ﻿[
   {
     "label": "Compétences techniques",
-    "values": [ "AzureDevOps", "Azure", "Blazor (WebAssembly)", "Blazor (Server)", "ASP.NET", "ASP.NET MVC", "Entity Framework Core", "Bases de données SQL" ]
+    "values": [ "AzureDevOps", "Blazor (WebAssembly)", "Blazor (Server)", "ASP.NET", "ASP.NET MVC", "Entity Framework Core", "Bases de données SQL", "Azure" ]
   },
   {
     "label": "Langages de programmation",

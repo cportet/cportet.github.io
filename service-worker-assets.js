@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "/GBJzqCT",
+  "version": "DYHkkgSy",
   "assets": [
     {
       "hash": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
@@ -258,8 +258,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.qqq8d34fmv.wasm"
     },
     {
-      "hash": "sha256-IgCDxXra0r0WnYDgUqOOGFBkVuDJfeWgPi0ll2jsXL4=",
-      "url": "_framework/MyHomePage.y86i47dd0q.wasm"
+      "hash": "sha256-Q0o/aUXl0/ZBas6tBs7w8Y1+jYZzDs+4LL9ENXMAnZk=",
+      "url": "_framework/MyHomePage.jkabctmv2y.wasm"
     },
     {
       "hash": "sha256-QUes30N6euMBTGI1oC4tMWqaMm6hupWHPLXY1/R0qZA=",
@@ -426,7 +426,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-VOxPGiDbjGoF6gPWbBldNxfV5eKIvSk2ceJCr76C1b0=",
+      "hash": "sha256-c4RLe4Scj/+C4SqL+JsuhFmvFHWs/uQd0gxX1/eYLz8=",
       "url": "_framework/dotnet.js"
     },
     {
@@ -442,15 +442,15 @@ self.assetsManifest = {
       "url": "_framework/dotnet.runtime.o0qy896u8v.js"
     },
     {
-      "hash": "sha256-kRmeazu9vW+HTlIgjIxcKjMTtQmFYY/oe2cgz9hdCCE=",
-      "url": "_framework/en/MyHomePage.resources.n29aq08r7w.wasm"
+      "hash": "sha256-XaHR6TuHoInBj7JhS+HmReQTMSmJZhhFXkHfDw1s1gA=",
+      "url": "_framework/en/MyHomePage.resources.7bh0faz4b4.wasm"
     },
     {
       "hash": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",
       "url": "_framework/icudt.oh1zvcfom8.dat"
     },
     {
-      "hash": "sha256-ruq41fLoNO9ACb+jEndKTd1t+LbqIGmARb6lzTf2n1c=",
+      "hash": "sha256-QMxQRC+i6gPB1svnjBficfCh421cHlAc8UmzJiAaJx4=",
       "url": "appconfig.json"
     },
     {
@@ -482,11 +482,11 @@ self.assetsManifest = {
       "url": "content/applications/contenu.fr.md"
     },
     {
-      "hash": "sha256-TlpXN2ppfsOaw092zZWpnNGpULlFKrVXHrGo4nJ1vSI=",
+      "hash": "sha256-M9l4qXyfLNsoUJ68i0jOdH5M3lmSaFuErjZC+zNVnZ8=",
       "url": "content/competences.en.json"
     },
     {
-      "hash": "sha256-3r19qe4vfJLOpS2y8OcFoiNRGHQ/gOI6CKZpAJJZxzU=",
+      "hash": "sha256-Ur88hZjceZk3GCHwFm3jG9860Orv+yLSy3uOLhDs0BI=",
       "url": "content/competences.fr.json"
     },
     {
@@ -494,7 +494,7 @@ self.assetsManifest = {
       "url": "content/contact/details.en.md"
     },
     {
-      "hash": "sha256-B3D+0UYdLXIZzIHMcrGSzBfteA9njq2kx53DTWQxWv0=",
+      "hash": "sha256-JIRA2uKLT1DDpUT0eNnVDot9t8kjTEtAYnQAwsZFPko=",
       "url": "content/contact/details.fr.md"
     },
     {
@@ -506,11 +506,11 @@ self.assetsManifest = {
       "url": "content/home/introduction.fr.md"
     },
     {
-      "hash": "sha256-wMEsB0t6WzNfqGBaZQpXx3MCYYi4vn581b04LbPpDdk=",
+      "hash": "sha256-SEFIjk7URkWJJDHMir+cB87OPOiG2D9RjRH1OsFy694=",
       "url": "content/home/mon-cv.en.md"
     },
     {
-      "hash": "sha256-zHj+yrVJTelVi8jwMhjOO83bPmEy265kuQRdvwnA+jw=",
+      "hash": "sha256-6LeZAVL5SwNrMXXV0P4Uzrif4OOTl7bxQOT89Z3imoE=",
       "url": "content/home/mon-cv.fr.md"
     },
     {
