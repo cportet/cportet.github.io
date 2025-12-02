@@ -1,7 +1,7 @@
 ﻿[
   {
     "label": "Technical expertise",
-    "values": [ "AzureDevOps", "Azure", "Blazor (WebAssembly)", "Blazor (Server)", "ASP.NET", "ASP.NET MVC", "Entity Framework Core", "SQL Databases" ]
+    "values": [ "AzureDevOps", "Blazor (WebAssembly)", "Blazor (Server)", "ASP.NET", "ASP.NET MVC", "Entity Framework Core", "SQL Databases", "Azure" ]
   },
   {
     "label": "Programming languages",
