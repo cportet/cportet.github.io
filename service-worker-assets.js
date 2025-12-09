@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "DYHkkgSy",
+  "version": "AF6PtFyK",
   "assets": [
     {
       "hash": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
@@ -258,8 +258,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.qqq8d34fmv.wasm"
     },
     {
-      "hash": "sha256-Q0o/aUXl0/ZBas6tBs7w8Y1+jYZzDs+4LL9ENXMAnZk=",
-      "url": "_framework/MyHomePage.jkabctmv2y.wasm"
+      "hash": "sha256-fLcNQKrFLSzWfSl5B8KQWfKZsFVN1ks/KBTFWDCV/v0=",
+      "url": "_framework/MyHomePage.05dgmnhszn.wasm"
     },
     {
       "hash": "sha256-QUes30N6euMBTGI1oC4tMWqaMm6hupWHPLXY1/R0qZA=",
@@ -426,7 +426,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-c4RLe4Scj/+C4SqL+JsuhFmvFHWs/uQd0gxX1/eYLz8=",
+      "hash": "sha256-IX6hFQsnot0ElEirGb1QDlVa8mZJ7NlvFXKveBPAGAE=",
       "url": "_framework/dotnet.js"
     },
     {
@@ -442,15 +442,15 @@ self.assetsManifest = {
       "url": "_framework/dotnet.runtime.o0qy896u8v.js"
     },
     {
-      "hash": "sha256-XaHR6TuHoInBj7JhS+HmReQTMSmJZhhFXkHfDw1s1gA=",
-      "url": "_framework/en/MyHomePage.resources.7bh0faz4b4.wasm"
+      "hash": "sha256-Tk4OrUPOw5aSXjn9I8IPWypU22PE1YbRoJv1+YVvu7U=",
+      "url": "_framework/en/MyHomePage.resources.ysmlbcr0ai.wasm"
     },
     {
       "hash": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",
       "url": "_framework/icudt.oh1zvcfom8.dat"
     },
     {
-      "hash": "sha256-QMxQRC+i6gPB1svnjBficfCh421cHlAc8UmzJiAaJx4=",
+      "hash": "sha256-klny1Qnpo0KKiSqW5muhf8JXH3E9BzCbjT0sorUeIUQ=",
       "url": "appconfig.json"
     },
     {
@@ -542,7 +542,7 @@ self.assetsManifest = {
       "url": "css/app.css"
     },
     {
-      "hash": "sha256-BxrGP9ZEqN9dWtuuJdh8QvvkgtJ5PsG+nQ906h6wzog=",
+      "hash": "sha256-eZmqMvF/h+tzDdL5RLGK84D0EI8T9mj6q677EpGZK/k=",
       "url": "doc/cv-cyril-portet.pdf"
     },
     {
@@ -626,7 +626,7 @@ self.assetsManifest = {
       "url": "img/youtube.svg"
     },
     {
-      "hash": "sha256-hsziSTc3S6CLgKW1EKJ5UwQuY6B25+b8uMEeAAmu8ec=",
+      "hash": "sha256-8X9lVJvnvBQhb502AOL8BQ4/kVB4K+ub/xJwwty/Gjo=",
       "url": "index.html"
     },
     {
@@ -642,7 +642,7 @@ self.assetsManifest = {
       "url": "robots.txt"
     },
     {
-      "hash": "sha256-XDpohplskkNhgG8tGEQfZiCfV02suhMO5N2IhpcrSYQ=",
+      "hash": "sha256-t1MWBUEkySFrCp48w9vpV+J97OOuHueUoBEImYNhJgk=",
       "url": "sitemap.xml"
     }
   ]
