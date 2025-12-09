@@ -4,6 +4,7 @@ using MyHomePage.Code;
 namespace MyHomePage.Pages;
 
 [Route("/file/{Kind}")]
+[Route("/fichier/{Kind}")]
 public partial class File
 {
     private string? _previousKind;
