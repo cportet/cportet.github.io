@@ -23,6 +23,7 @@ public static class References
         public static Icon CV => new Size24.Document();
         public static Icon Lien => new Size24.Link();
         public static Icon Famille => new Size24.PeopleCommunity();
+        public static Icon Autres => new Size24.MoreCircle();
         public static Icon Menu => new Size24.Navigation();
         public static Icon Theme => new Size24.DarkTheme();
         public static Icon Personnel => new Size24.InprivateAccount();

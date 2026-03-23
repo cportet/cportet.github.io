@@ -268,6 +268,15 @@ namespace MyHomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Autres.
+        /// </summary>
+        public static string NavMenu_Page_Autres {
+            get {
+                return ResourceManager.GetString("NavMenu_Page_Autres", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contact.
         /// </summary>
         public static string NavMenu_Page_Contact {

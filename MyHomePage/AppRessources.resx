@@ -336,4 +336,7 @@
   <data name="Page_Contact_Section_Details" xml:space="preserve">
     <value>Détails</value>
   </data>
+  <data name="NavMenu_Page_Autres" xml:space="preserve">
+    <value>Autres</value>
+  </data>
 </root>
