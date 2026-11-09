@@ -169,12 +169,12 @@ p {
 
 .cp-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
     gap: 16px;
 }
 
 .cp-grid--wide {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
 }
 
 .cp-cards {
@@ -185,6 +185,7 @@ p {
 
     .cp-cards > * {
         flex: 1 1 320px;
+        min-width: 0;
     }
 
 .cp-skip {
@@ -440,10 +441,14 @@ p {
     display: none;
 }
 
-.cp-header__tools {
+.cp-header__tools,
+.cp-header__wide-only {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.cp-header__tools {
     margin-left: auto;
 }
 
@@ -462,16 +467,42 @@ p {
         display: flex;
     }
 
+    /* On phones: brand, theme and menu only; language and install move into the menu. */
+    .cp-header__wide-only {
+        display: none;
+    }
+
     .cp-nav {
         display: none;
         order: 10;
         flex-basis: 100%;
         flex-direction: column;
+        flex-wrap: nowrap;
         padding: 8px 0 12px;
     }
 
+        .cp-nav > * {
+            flex-shrink: 0;
+        }
+
+    /* The open menu scrolls by itself (below the 61px header), not the page under it. */
     .cp-nav--open {
         display: flex;
+        max-height: calc(100dvh - 61px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    html:has(.cp-nav--open) {
+        overflow: hidden;
+    }
+
+    .cp-nav__tools {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        padding: 4px 12px 8px;
     }
 
     .cp-nav__link {
@@ -584,9 +615,10 @@ p {
     overflow: hidden;
 }
 
+    /* 42px + the 1px border on each side: same height as the 44px icon buttons. */
     .cp-segmented > a, .cp-segmented > button {
-        min-height: 36px;
-        padding: 0 12px;
+        min-height: 42px;
+        padding: 0 14px;
         border: 0;
         background: transparent;
         color: var(--cp-fg2);
@@ -811,7 +843,7 @@ a.cp-card:hover {
     padding: 0;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
     gap: 12px;
 }
 
@@ -882,7 +914,7 @@ a.cp-card:hover {
 
 .cp-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
     gap: 16px;
 }
 
