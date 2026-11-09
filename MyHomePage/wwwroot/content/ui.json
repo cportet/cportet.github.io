@@ -8,8 +8,9 @@
   "theme.toggleToDark": { "fr": "Passer au thème sombre", "en": "Switch to dark theme" },
   "theme.toggleToLight": { "fr": "Passer au thème clair", "en": "Switch to light theme" },
   "pwa.install": { "fr": "Installer l’application", "en": "Install the app" },
-  "pwa.updateText": { "fr": "Une nouvelle version du site est disponible.", "en": "A new version of the site is available." },
-  "pwa.updateButton": { "fr": "Mettre à jour", "en": "Update" },
+  // Short on purpose: the update bar (Toolbelt PWA Updater) has little room.
+  "pwa.updateText": { "fr": "Nouvelle version disponible !", "en": "New version available!" },
+  "pwa.updateButton": { "fr": "MàJ", "en": "Update" },
   "footer.about": { "fr": "À propos du site", "en": "About this site" },
   "nav.family": { "fr": "La famille", "en": "Family" },
   "nav.featured": { "fr": "À découvrir", "en": "Worth a visit" },
