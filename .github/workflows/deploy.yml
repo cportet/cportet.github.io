@@ -42,14 +42,18 @@ jobs:
       - name: Fix prerendered English pages
         run: dotnet run --project MyHomePage.Tools -c Release --no-build -- postpublish release/wwwroot
 
-      - name: Add .nojekyll file
-        run: touch release/wwwroot/.nojekyll
+      # .nojekyll: no Jekyll processing (it would drop _framework and _content). CNAME: custom domain.
+      - name: Add GitHub Pages files
+        run: |
+          touch release/wwwroot/.nojekyll
+          cp CNAME release/wwwroot/CNAME
 
       - name: Upload site
         uses: actions/upload-artifact@v4
         with:
           name: site
           path: release/wwwroot
+          include-hidden-files: true  # keeps .nojekyll
 
   deploy:
     needs: build
@@ -62,6 +66,9 @@ jobs:
         with:
           name: site
           path: site
+
+      - name: Check GitHub Pages files
+        run: test -f site/.nojekyll && test -f site/CNAME && test -f site/index.html && test -f site/resume.html
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
