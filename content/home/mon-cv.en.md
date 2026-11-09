@@ -1,2 +1,0 @@
-﻿Are you looking for my **resume**? 
-You can find it on [this page](/resume).

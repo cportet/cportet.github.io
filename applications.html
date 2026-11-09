@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="fr"><head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="Cyril Portet"/>
+    <meta name="theme-color" content="#0f6cbd"/>
+
+    <!-- Title, description, Open Graph and JSON-LD are written per page (Components/Seo.razor) and prerendered at publish time. -->
+    <base href="/"/>
+
+    <script>
+        // Before anything renders: language from the URL, light/dark from the saved Fluent theme (or the system).
+        (function () {
+            var root = document.documentElement;
+            if (/^\/en(\/|$)/i.test(location.pathname)) root.lang = 'en';
+            try {
+                var settings = JSON.parse(localStorage.getItem('fluentui-blazor:theme-settings') || 'null');
+                var mode = settings && String(settings.mode || settings.Mode || '').toLowerCase();
+                var dark = mode === 'dark' || (mode !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) root.classList.add('cp-dark-boot');
+            } catch (e) { }
+        })();
+    </script>
+
+
+    <meta name="msvalidate.01" content="F8FA9AB42FE9BD5F8345EAAC01A087E7"/>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png"/>
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png"/>
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png"/>
+    <link rel="manifest" href="/manifest.webmanifest"/>
+
+    <link rel="stylesheet" href="_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.bundle.scp.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="MyHomePage.styles.css"/>
+
+<!-- %%-PRERENDERING-HEADOUTLET-BEGIN-%% -->
+<title>Projets &#xB7; Cyril Portet</title><meta name="description" content="Les applications publi&#xE9;es par Cyril Portet et ses projets open source." />
+    <link rel="canonical" href="https://www.portet.org/projects" />
+    <link rel="alternate" hreflang="fr" href="https://www.portet.org/projects" />
+    <link rel="alternate" hreflang="en" href="https://www.portet.org/en/projects" />
+    <link rel="alternate" hreflang="x-default" href="https://www.portet.org/projects" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cyril Portet" />
+    <meta property="og:title" content="Projets &#xB7; Cyril Portet" />
+    <meta property="og:description" content="Les applications publi&#xE9;es par Cyril Portet et ses projets open source." />
+    <meta property="og:url" content="https://www.portet.org/projects" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:image" content="https://www.portet.org/img/preview.jpg" />
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Projets &#xB7; Cyril Portet" /><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cportetdev" />
+    <meta name="twitter:title" content="Projets &#xB7; Cyril Portet" />
+    <meta name="twitter:description" content="Les applications publi&#xE9;es par Cyril Portet et ses projets open source." />
+    <meta name="twitter:image" content="https://www.portet.org/img/preview.jpg" />
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.portet.org/#website","url":"https://www.portet.org/","name":"Cyril Portet","inLanguage":["fr-FR","en-US"],"publisher":{"@id":"https://www.portet.org/#person"}},{"@type":"Person","@id":"https://www.portet.org/#person","name":"Cyril Portet","givenName":"Cyril","familyName":"Portet","description":"28 ans d\u2019exp\u00E9rience entre d\u00E9veloppement, architecture et management. Je con\u00E7ois des solutions web sur .NET et Blazor, avec la satisfaction utilisateur et la qualit\u00E9 logicielle comme boussoles.","url":"https://www.portet.org/","image":"https://www.portet.org/img/me2.jpg","email":"mailto:cyril@portet.org","address":{"@type":"PostalAddress","addressRegion":"Rh\u00F4ne","addressCountry":"FR"},"knowsAbout":["Blazor WASM","Blazor Server","ASP.NET","ASP.NET MVC","EF Core","SQL","Azure","Azure DevOps","C#","T-SQL","TypeScript","JavaScript","PowerShell","Visual Basic","HTML","CSS","Visual Studio","VS Code","SSMS","Git","TFS","Postman","ReSharper","GitHub Copilot","Codex","Claude Team","Claude Opus 5.5","Agile","Scrum","Kanban","Gestion de projet","Qualit\u00E9","Architecture","Communication","Administration publique","\u00C9dition de logiciels","Gestion d\u2019entreprise","Service"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Prince2 Foundation \u0026 Practitioner","dateCreated":"2017"},{"@type":"EducationalOccupationalCredential","name":"Direction des projets SI de l\u2019\u00C9tat","dateCreated":"2016"},{"@type":"EducationalOccupationalCredential","name":"Administrateur Dynamics CRM","dateCreated":"2016"},{"@type":"EducationalOccupationalCredential","name":"Scrum Master","dateCreated":"2015"},{"@type":"EducationalOccupationalCredential","name":"UX Design","dateCreated":"2015"}],"alumniOf":[{"@type":"EducationalOrganization","name":"AFORP Oise","url":"https://www.aforp.fr"}],"subjectOf":{"@type":"DigitalDocument","name":"CV en PDF","url":"https://www.portet.org/doc/cv-cyril-portet.pdf","encodingFormat":"application/pdf"},"sameAs":["https://www.linkedin.com/in/cportet","https://github.com/cportet","https://x.com/cportetdev","https://youtube.com/cportet"],"jobTitle":"Responsable technique (CTO)","worksFor":{"@type":"Organization","name":"Simpleter","url":"https://www.simpleter.fr"}},{"@type":"WebPage","@id":"https://www.portet.org/projects","url":"https://www.portet.org/projects","name":"Projets","description":"Les applications publi\u00E9es par Cyril Portet et ses projets open source.","inLanguage":"fr-FR","isPartOf":{"@id":"https://www.portet.org/#website"},"dateModified":"2026-11-09","about":{"@id":"https://www.portet.org/#person"}}]}</script>
+<!-- %%-PRERENDERING-HEADOUTLET-END-%% -->
+</head>
+
+<body no-fuib-style="">
+    <div id="app">
+<!-- %%-PRERENDERING-LOADER-BEGIN-%% -->
+    <div b-prerendering-loader style="position: fixed; inset: 0; z-index: 1; background: var(--bp-loader-background, Canvas);">
+<!-- %%-PRERENDERING-LOADER-END-%% -->
+
+        <div class="cp-boot">
+            <div class="cp-boot__name">Cyril Portet</div>
+            <div class="cp-boot__progress" role="progressbar" aria-label="Chargement / Loading"></div>
+            <p class="cp-boot__fallback">
+                Si l'application ne démarre pas, écrivez-moi à <a href="mailto:cyril@portet.org">cyril@portet.org</a>
+                ou retrouvez-moi sur <a href="https://linkedin.portet.org">LinkedIn</a>.
+            </p>
+        </div>
+    
+<!-- %%-PRERENDERING-LOADER-BEGIN-%% -->
+</div>
+<div b-prerendering-container inert style="position: fixed; inset: 0; overflow: auto;">
+<!-- %%-PRERENDERING-LOADER-END-%% -->
+<!-- %%-PRERENDERING-BEGIN-%% -->
+
+
+<div class="cp-app"><a class="cp-skip" href="applications#main">Aller au contenu</a>
+    <header class="cp-header"><div class="cp-container cp-header__inner"><a class="cp-brand" href="/"><span class="cp-brand__badge" aria-hidden="true">CP</span>
+            Cyril Portet</a>
+
+        <nav id="cp-nav" class="cp-nav " aria-label="Navigation principale"><a href="/" class="cp-nav__link">Accueil</a><a href="/resume" class="cp-nav__link">CV</a><a href="/projects" class="cp-nav__link">Projets</a><a href="/perso" class="cp-nav__link">Perso</a><a href="/contact" class="cp-nav__link">Contact</a><div class="cp-nav__extra"><p class="cp-overline">&#xC0; d&#xE9;couvrir</p><a class="cp-nav__link" href="https://niceboys.pages.dev" target="_blank" rel="noopener">Nice Boys <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a><p class="cp-overline">La famille</p><a class="cp-nav__link" href="https://remy.portet.org" target="_blank" rel="noopener">R&#xE9;my <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a><a class="cp-nav__link" href="https://trystan.portet.org" target="_blank" rel="noopener">Trystan <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a><a class="cp-nav__link" href="https://eloy.portet.org" target="_blank" rel="noopener">Eloy <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a></div></nav>
+
+        <div class="cp-header__tools"><div class="cp-segmented" role="group" aria-label="Langue"><a href="/projects" hreflang="fr" lang="fr" aria-current="true">FR</a>
+                <a href="/en/projects" hreflang="en" lang="en">EN</a></div><button type="button" class="cp-iconbtn" title="Passer au th&#xE8;me sombre" aria-label="Passer au th&#xE8;me sombre"><svg class="cp-icon " width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 13.5A6.98 6.98 0 0 1 4 14.39c2.83-1.09 4.56-2.42 5.6-4.4 1.04-2 1.33-4.16.75-6.9q1.36.17 2.58.87a7 7 0 0 1 2.55 9.54M5.45 16.92A7.98 7.98 0 1 0 9.88 2.04a.6.6 0 0 0-.61.73c.69 2.82.43 4.88-.55 6.76-.94 1.78-2.55 3.03-5.55 4.1a.6.6 0 0 0-.3.9 8 8 0 0 0 2.59 2.39"/></svg></button>
+
+            <button type="button" class="cp-iconbtn cp-header__menu" aria-controls="cp-nav" aria-expanded="false" aria-label="Ouvrir le menu"><svg class="cp-icon " width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2.75 18h18.5a.75.75 0 0 1 .1 1.5H2.75a.75.75 0 0 1-.1-1.5zh18.5zm0-6.5h18.5a.75.75 0 0 1 .1 1.5H2.75a.75.75 0 0 1-.1-1.5zh18.5zm0-6.5h18.5a.75.75 0 0 1 .1 1.5H2.75a.75.75 0 0 1-.1-1.49zh18.5z"/></svg></button></div></div></header>
+    <main id="main" class="cp-main">
+
+
+<div class="cp-container"><section class="cp-page-header"><p class="cp-eyebrow">Projets</p><h1 class="cp-display">Applications &amp; r&#xE9;alisations</h1><p class="cp-lead">Les applications que je publie &#xE0; titre personnel, et quelques projets open source. L&#x2019;espace s&#x2019;&#xE9;toffera au fil du temps.</p></section>
+
+    <section class="cp-stack"><article class="cp-card cp-card--padded cp-app-card"><div class="cp-app-card__icon" aria-hidden="true"><svg class="cp-icon " width="48" height="48" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true" focusable="false"><path d="m32.01 7.01-6.5 6.5c-.68.69-.68 1.8 0 2.48l6.5 6.5q.53.5 1.21.51h.06c.44 0 .87-.18 1.2-.51l6.5-6.5c.7-.69.7-1.8 0-2.48l-6.5-6.5a1.75 1.75 0 0 0-2.47 0M29 23 25 19.01V23zM25 10.49l5.24-5.24a4.25 4.25 0 0 1 6.02 0l6.5 6.5a4.25 4.25 0 0 1 0 6L37.5 23h.24C40.1 23 42 24.9 42 27.25v10.5C42 40.1 40.1 42 37.75 42h-27.5A4.25 4.25 0 0 1 6 37.75v-27.5C6 7.9 7.9 6 10.25 6h10.5C23.1 6 25 7.9 25 10.25zm8.2 15.01H25v14h12.75c.97 0 1.75-.78 1.75-1.75v-10.5c0-.97-.78-1.75-1.75-1.75h-4.54M8.5 10.25V23h14V10.25c0-.97-.78-1.75-1.75-1.75h-10.5c-.97 0-1.75.78-1.75 1.75m0 15.25v12.25c0 .97.78 1.75 1.75 1.75H22.5v-14z"/></svg></div>
+                <div class="cp-app-card__body"><div class="cp-inline"><h2 class="cp-h2 cp-h2--card">Mes Applications</h2><span class="cp-badge cp-badge--warning">En pause</span></div><p class="cp-muted">Prototype WinUI de lanceur d&#x2019;applications universel : regroupez et organisez toutes les applications install&#xE9;es sur votre PC Windows dans une interface unique et personnalisable.</p><p class="cp-muted">Plus maintenue pour l&#x2019;instant. Je pr&#xE9;vois de reprendre le code, de le publier sur GitHub et de mettre &#xE0; jour l&#x2019;application.</p><div class="cp-tags"><span class="cp-tag ">WinUI 3</span><span class="cp-tag ">C#</span><span class="cp-tag ">Windows</span></div>
+                    <div class="cp-actions"><a class="cp-btn cp-btn--primary" href="https://www.microsoft.com/store/productId/9p2v5r46n6xq" target="_blank" rel="noopener">Voir sur le Microsoft Store
+                                <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a><a class="cp-btn" href="/projects/privacy">Confidentialit&#xE9;</a></div></div></article><div class="cp-cards"><article class="cp-card cp-card--padded"><h2 class="cp-h3">portet.org</h2>
+                    <p class="cp-muted">Ce site : une PWA Blazor WebAssembly en .NET 10, open source sous GPL v3, d&#xE9;ploy&#xE9;e sur GitHub Pages.</p>
+                    <a class="cp-link" href="https://github.com/cportet/cportet.github.io" target="_blank" rel="noopener">Code source sur GitHub</a></article><article class="cp-card cp-card--padded"><h2 class="cp-h3">Toutes mes apps</h2>
+                    <p class="cp-muted">L&#x2019;ensemble de mes publications sous l&#x2019;&#xE9;diteur &#xAB; Cyril Portet Dev &#xBB;.</p>
+                    <a class="cp-link" href="https://apps.microsoft.com/search/publisher?name=Cyril&#x2B;Portet&#x2B;Dev" target="_blank" rel="noopener">Page &#xE9;diteur sur le Store</a></article></div></section>
+
+    <section class="cp-band cp-band--split cp-section"><div class="cp-band__intro"><h2 class="cp-h3">Charte de confidentialit&#xE9;</h2>
+            <p>Commune &#xE0; toutes mes applications. Mise &#xE0; jour le 21 novembre 2025.</p>
+            <a class="cp-link cp-link--strong" href="/projects/privacy">Lire la charte compl&#xE8;te</a></div>
+        <ul class="cp-checks"><li><svg class="cp-icon cp-accent-text" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3.37 10.17a.5.5 0 0 0-.74.66l4 4.5c.19.22.52.23.72.02l10.5-10.5a.5.5 0 0 0-.7-.7L7.02 14.27z"/></svg>
+                    <span>Aucune donn&#xE9;e personnelle collect&#xE9;e</span></li><li><svg class="cp-icon cp-accent-text" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3.37 10.17a.5.5 0 0 0-.74.66l4 4.5c.19.22.52.23.72.02l10.5-10.5a.5.5 0 0 0-.7-.7L7.02 14.27z"/></svg>
+                    <span>Aucune t&#xE9;l&#xE9;m&#xE9;trie ni tracker</span></li><li><svg class="cp-icon cp-accent-text" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3.37 10.17a.5.5 0 0 0-.74.66l4 4.5c.19.22.52.23.72.02l10.5-10.5a.5.5 0 0 0-.7-.7L7.02 14.27z"/></svg>
+                    <span>Pr&#xE9;f&#xE9;rences stock&#xE9;es en local uniquement</span></li><li><svg class="cp-icon cp-accent-text" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3.37 10.17a.5.5 0 0 0-.74.66l4 4.5c.19.22.52.23.72.02l10.5-10.5a.5.5 0 0 0-.7-.7L7.02 14.27z"/></svg>
+                    <span>Aucune connexion Internet requise</span></li></ul></section></div></main>
+    <footer class="cp-footer"><div class="cp-container cp-footer__inner"><span>© 2026 Cyril Portet · <a href="mailto:cyril@portet.org">cyril@portet.org</a></span>
+        <a href="/about">&#xC0; propos du site</a></div></footer></div>
+
+<div class="fluent-providers" style="display: contents;"><div id="f679334f" class="fluent-dialog-provider" style="z-index: 999;"><fluent-overlay id="global-overlay" background="color-mix(in srgb, var(--colorBackgroundOverlay) 40%, transparent)" fullscreen close-mode="manual"><div class="fluent-overlay-global"><fluent-spinner></fluent-spinner></div></fluent-overlay></div>
+    <div id="f30b7428" class="fluent-toast-provider" style="z-index: 999;"></div>
+    <div id="f76d1f9b" class="fluent-tooltip-provider" style="z-index: 9999;"></div>
+    </div>
+            <blazor-focus-on-navigate selector="h1"></blazor-focus-on-navigate>
+
+<!-- %%-PRERENDERING-END-%% -->
+<!-- %%-PRERENDERING-LOADER-BEGIN-%% -->
+</div>
+<!-- %%-PRERENDERING-LOADER-END-%% -->
+</div>
+
+    <div id="blazor-error-ui">
+        Une erreur est survenue / An error occurred.
+        <a href="." class="reload">Recharger / Reload</a>
+        <span class="dismiss" title="Fermer / Close">🗙</span>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js"></script>
+    <script data-goatcounter="https://cportet.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+
+
+
+</body></html>

@@ -1,0 +1,203 @@
+# Cyril Portet — CV
+
+Responsable technique (CTO) · Artisan logiciel · 28 ans d’expérience
+
+- Web: https://www.portet.org/resume
+- PDF: https://www.portet.org/doc/cv-cyril-portet.pdf
+- E-mail: cyril@portet.org
+- LinkedIn: https://linkedin.portet.org
+
+## En bref
+
+- Âge : 47 ans
+- Région : Rhône (69)
+- Mobilité : Permis B, véhiculé
+- Habilitation : Confidentiel Défense (2014)
+- Statut : Ouvert aux opportunités
+
+## Profil
+
+Artisan logiciel avec plus de 28 ans d'expérience, j'ai occupé de nombreux rôles : responsable technique, chef de projet, développeur. Aussi à l'aise en environnement **Agile** qu'en approche Waterfall, j'ai la satisfaction utilisateur et la qualité logicielle comme seules boussoles.
+
+Mon expertise porte sur la gestion de projet Agile (Kanban, Scrum), le management et le développement d'applications web avec **ASP.NET** (MVC ou **Blazor WebAssembly**). J'ai exercé dans l'industrie, le service, l'administration publique et l'édition de logiciels, en Picardie, en Île-de-France, en Belgique et désormais en région lyonnaise.
+
+## Expériences
+
+### Responsable technique (CTO) — Simpleter
+
+mai 2021 — aujourd’hui (5 ans) · Saint-Genis-les-Ollières (69)
+
+Recruté à la création de l’entreprise, j’ai mis en place les outils et processus de développement, réalisé le prototype de la solution et constitué l’équipe de développement.
+
+Conception, choix d’architecture, développement, management, coordination technique et relation avec la direction et les métiers. Je reste référent technique sur le front-end Blazor.
+
+Je développe désormais aussi avec des agents IA : GitHub Copilot (avec Codex) et Claude Team (Claude Opus 5.5).
+
+Management, Gestion de projet, Architecture, Blazor WASM, C#, .NET, ASP.NET, Azure DevOps, Azure AD, Agents IA
+
+### Responsable du service Transfert — Fiducial Informatique
+
+juin 2020 — mai 2021 (1 an) · Lyon (69)
+
+Au sein de la R&D de cet éditeur (notariat, huissiers, auto, logiciels de caisse) : automatisation et pilotage des migrations de données clients, transferts entre solutions du groupe et extractions.
+
+Encadrement d’une équipe de 14 personnes : développement, pilotage technique et réalisation des transferts.
+
+Management, Pilotage d’activité, Gestion des conflits, Documentation, C#, .NET
+
+### Responsable de la cellule de développement — Direction générale du Trésor
+
+avril 2014 — avril 2020 (6 ans) · Bruxelles (Belgique)
+
+Direction d’une équipe de 7 ingénieurs et 1 testeur sur deux sites (Bruxelles et Bercy), pour des applications destinées à toute la DG Trésor et son réseau international.
+
+Projets en Scrum (Scrum Master, coach Agile), pipeline complète d’intégration et de déploiement continus sous TFS.
+
+Management, Scrum, ASP.NET MVC, .NET Core, SQL Server, TFS, SharePoint, Dynamics CRM
+
+### Chef de projet transversal — Everial CRM
+
+juin 2013 — avril 2014 (11 mois) · Chantilly (60)
+
+Coordination et animation de projets entre métiers, développement, infrastructure, production et clients (avant-vente), principalement sur le progiciel Magellan.
+
+Mise en place des prélèvements SEPA et d’un outil de validation des fichiers de prélèvement.
+
+Gestion de projet, Documentation, Visual Basic, .NET, ASP.NET
+
+### Autres expériences (1998 — 2013)
+
+Ingénieur d’études et développement, puis chef de projet :
+- Electrolux IT (Senlis) : ingénieur développement, puis support
+- Datem Solutions / Presse Informatique (Chantilly) : lead développeur, chef de projet
+- Phone Marketing (Levallois-Perret) : développeur, administration CTI / Autocom
+
+## Compétences
+
+- Technique : Blazor WASM, Blazor Server, ASP.NET, ASP.NET MVC, EF Core, SQL, Azure, Azure DevOps
+- Langages : C#, T-SQL, TypeScript, JavaScript, PowerShell, Visual Basic, HTML, CSS
+- Outils : Visual Studio, VS Code, SSMS, Git, TFS, Postman, ReSharper
+- IA & agents : GitHub Copilot, Codex, Claude Team, Claude Opus 5.5
+- Fonctionnel : Agile, Scrum, Kanban, Gestion de projet, Qualité, Architecture, Communication
+- Métier : Administration publique, Édition de logiciels, Gestion d’entreprise, Service
+
+## Formations & certifications
+
+- 2017 : Prince2 Foundation & Practitioner
+- 2016 : Direction des projets SI de l’État
+- 2016 : Administrateur Dynamics CRM
+- 2015 : Scrum Master
+- 2015 : UX Design
+
+Conférences craft et agiles, dont Lyon-Craft (1re édition, 2023).
+
+## Études
+
+- 2000 : BTS Informatique de gestion. Option développeur d’applications, à l’AFORP Oise (Senlis), en alternance chez Clariant (site de Lamotte, Trosly-Breuil).
+
+## Centres d’intérêt
+
+Ma famille, les jeux vidéo, la politique et l’économie.
+
+---
+
+# Cyril Portet — Resume
+
+Chief Technology Officer · Software craftsman · 28 years of experience
+
+- Web: https://www.portet.org/en/resume
+- PDF: https://www.portet.org/doc/cv-cyril-portet.pdf
+- E-mail: cyril@portet.org
+- LinkedIn: https://linkedin.portet.org
+
+## At a glance
+
+- Age: 47
+- Area: Rhône, France
+- Mobility: Driving licence, own car
+- Clearance: French Confidential Defence (2014)
+- Status: Open to opportunities
+
+## Profile
+
+A software craftsman with over 28 years of experience, I have held many roles: technical lead, project manager, developer. Equally comfortable in **Agile** environments and Waterfall approaches, I let user satisfaction and software quality be my only compass.
+
+My expertise lies in Agile project management (Kanban, Scrum), team management and web application development with **ASP.NET** (MVC or **Blazor WebAssembly**). I have worked in industry, services, public administration and software publishing, in Picardy, the Paris region, Belgium and now the Lyon area.
+
+## Experience
+
+### Chief Technology Officer (CTO) — Simpleter
+
+May 2021 — present (5 years) · Saint-Genis-les-Ollières, France
+
+Hired when the company was founded, I set up the development tools and processes, built the prototype of the solution and assembled the development team.
+
+Design, architecture decisions, development, management, technical coordination and close work with leadership and business teams. I remain the technical lead for the Blazor front end.
+
+I now also develop with AI agents: GitHub Copilot (with Codex) and Claude Team (Claude Opus 5.5).
+
+Management, Project management, Architecture, Blazor WASM, C#, .NET, ASP.NET, Azure DevOps, Azure AD, AI agents
+
+### Head of the Transfer department — Fiducial Informatique
+
+June 2020 — May 2021 (1 year) · Lyon, France
+
+Within the R&D of this software publisher (notaries, bailiffs, automotive, point of sale): automating and steering customer data migrations, transfers between the group’s products and extractions.
+
+Managed a team of 14 people: development, technical steering and execution of the transfers.
+
+Management, Operations steering, Conflict management, Documentation, C#, .NET
+
+### Head of the development unit — Direction générale du Trésor
+
+April 2014 — April 2020 (6 years) · Brussels, Belgium
+
+Led a team of 7 engineers and 1 tester across two sites (Brussels and Bercy, Paris), building applications for the whole French Treasury and its international network.
+
+Scrum projects (Scrum Master, Agile coach), full continuous integration and deployment pipeline on TFS.
+
+Management, Scrum, ASP.NET MVC, .NET Core, SQL Server, TFS, SharePoint, Dynamics CRM
+
+### Cross-functional project manager — Everial CRM
+
+June 2013 — April 2014 (11 months) · Chantilly, France
+
+Coordinated and ran projects between business, development, infrastructure, operations and customers (pre-sales), mainly on the Magellan software package.
+
+Rolled out SEPA direct debits and a validation tool for direct debit files.
+
+Project management, Documentation, Visual Basic, .NET, ASP.NET
+
+### Earlier experience (1998 — 2013)
+
+Software engineer, then project manager:
+- Electrolux IT (Senlis): software engineer, then support engineer
+- Datem Solutions / Presse Informatique (Chantilly): lead developer, project manager
+- Phone Marketing (Levallois-Perret): developer, CTI / PBX administration
+
+## Skills
+
+- Technical: Blazor WASM, Blazor Server, ASP.NET, ASP.NET MVC, EF Core, SQL, Azure, Azure DevOps
+- Languages: C#, T-SQL, TypeScript, JavaScript, PowerShell, Visual Basic, HTML, CSS
+- Tools: Visual Studio, VS Code, SSMS, Git, TFS, Postman, ReSharper
+- AI & agents: GitHub Copilot, Codex, Claude Team, Claude Opus 5.5
+- Functional: Agile, Scrum, Kanban, Project management, Quality, Architecture, Communication
+- Business: Public administration, Software publishing, Business management, Service
+
+## Training & certifications
+
+- 2017: Prince2 Foundation & Practitioner
+- 2016: Managing French government IT projects
+- 2016: Dynamics CRM administrator
+- 2015: Scrum Master
+- 2015: UX Design
+
+Craft and Agile conferences, including Lyon-Craft (first edition, 2023).
+
+## Education
+
+- 2000: BTS in Business Computing (two-year degree). Application developer track, at AFORP Oise (Senlis), as a work-study apprentice at Clariant (Lamotte site, Trosly-Breuil).
+
+## Interests
+
+My family, video games, politics and economics.

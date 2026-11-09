@@ -1,0 +1,56 @@
+{
+  "apps": [
+    {
+      "name": "Mes Applications",
+      "status": { "fr": "En pause", "en": "On hold" },
+      "description": [
+        {
+          "fr": "Prototype WinUI de lanceur d’applications universel : regroupez et organisez toutes les applications installées sur votre PC Windows dans une interface unique et personnalisable.",
+          "en": "A WinUI prototype of a universal app launcher: gather and organize every application installed on your Windows PC in a single, customizable interface."
+        },
+        {
+          "fr": "Plus maintenue pour l’instant. Je prévois de reprendre le code, de le publier sur GitHub et de mettre à jour l’application.",
+          "en": "Not maintained at the moment. I plan to pick the code back up, publish it on GitHub and update the app."
+        }
+      ],
+      "tags": [ "WinUI 3", "C#", "Windows" ],
+      "storeUrl": "https://www.microsoft.com/store/productId/9p2v5r46n6xq"
+    }
+  ],
+
+  "cards": [
+    {
+      "title": "portet.org",
+      "text": {
+        "fr": "Ce site : une PWA Blazor WebAssembly en .NET 10, open source sous GPL v3, déployée sur GitHub Pages.",
+        "en": "This website: a Blazor WebAssembly PWA on .NET 10, open source under GPL v3, deployed on GitHub Pages."
+      },
+      "link": {
+        "label": { "fr": "Code source sur GitHub", "en": "Source code on GitHub" },
+        "url": "https://github.com/cportet/cportet.github.io"
+      }
+    },
+    {
+      "title": { "fr": "Toutes mes apps", "en": "All my apps" },
+      "text": {
+        "fr": "L’ensemble de mes publications sous l’éditeur « Cyril Portet Dev ».",
+        "en": "Everything I publish as “Cyril Portet Dev”."
+      },
+      "link": {
+        "label": { "fr": "Page éditeur sur le Store", "en": "Publisher page on the Store" },
+        "url": "https://apps.microsoft.com/search/publisher?name=Cyril+Portet+Dev"
+      }
+    }
+  ],
+
+  // Summary of md/projects/charter.*.md
+  "privacy": {
+    "updated": "2025-11-21",
+    "points": [
+      { "fr": "Aucune donnée personnelle collectée", "en": "No personal data collected" },
+      { "fr": "Aucune télémétrie ni tracker", "en": "No telemetry, no trackers" },
+      { "fr": "Préférences stockées en local uniquement", "en": "Preferences stored locally only" },
+      { "fr": "Aucune connexion Internet requise", "en": "No Internet connection required" }
+    ]
+  }
+}

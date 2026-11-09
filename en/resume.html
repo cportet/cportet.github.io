@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="Cyril Portet"/>
+    <meta name="theme-color" content="#0f6cbd"/>
+
+    <!-- Title, description, Open Graph and JSON-LD are written per page (Components/Seo.razor) and prerendered at publish time. -->
+    <base href="/"/>
+
+    <script>
+        // Before anything renders: language from the URL, light/dark from the saved Fluent theme (or the system).
+        (function () {
+            var root = document.documentElement;
+            if (/^\/en(\/|$)/i.test(location.pathname)) root.lang = 'en';
+            try {
+                var settings = JSON.parse(localStorage.getItem('fluentui-blazor:theme-settings') || 'null');
+                var mode = settings && String(settings.mode || settings.Mode || '').toLowerCase();
+                var dark = mode === 'dark' || (mode !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) root.classList.add('cp-dark-boot');
+            } catch (e) { }
+        })();
+    </script>
+
+
+    <meta name="msvalidate.01" content="F8FA9AB42FE9BD5F8345EAAC01A087E7"/>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png"/>
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png"/>
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png"/>
+    <link rel="manifest" href="/manifest.webmanifest"/>
+
+    <link rel="stylesheet" href="_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.bundle.scp.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="MyHomePage.styles.css"/>
+
+<!-- %%-PRERENDERING-HEADOUTLET-BEGIN-%% -->
+<title>Resume &#xB7; Cyril Portet</title><meta name="description" content="Resume of Cyril Portet: CTO, 28 years of experience in development, architecture and tech team management." />
+    <link rel="canonical" href="https://www.portet.org/en/resume" />
+    <link rel="alternate" hreflang="fr" href="https://www.portet.org/resume" />
+    <link rel="alternate" hreflang="en" href="https://www.portet.org/en/resume" />
+    <link rel="alternate" hreflang="x-default" href="https://www.portet.org/resume" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Cyril Portet" />
+    <meta property="og:title" content="Resume &#xB7; Cyril Portet" />
+    <meta property="og:description" content="Resume of Cyril Portet: CTO, 28 years of experience in development, architecture and tech team management." />
+    <meta property="og:url" content="https://www.portet.org/en/resume" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:image" content="https://www.portet.org/img/preview.jpg" />
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Resume &#xB7; Cyril Portet" /><meta property="profile:first_name" content="Cyril" />
+        <meta property="profile:last_name" content="Portet" /><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cportetdev" />
+    <meta name="twitter:title" content="Resume &#xB7; Cyril Portet" />
+    <meta name="twitter:description" content="Resume of Cyril Portet: CTO, 28 years of experience in development, architecture and tech team management." />
+    <meta name="twitter:image" content="https://www.portet.org/img/preview.jpg" />
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.portet.org/#website","url":"https://www.portet.org/","name":"Cyril Portet","inLanguage":["fr-FR","en-US"],"publisher":{"@id":"https://www.portet.org/#person"}},{"@type":"Person","@id":"https://www.portet.org/#person","name":"Cyril Portet","givenName":"Cyril","familyName":"Portet","description":"28 years of experience across development, architecture and management. I build web solutions with .NET and Blazor, guided by user satisfaction and software quality.","url":"https://www.portet.org/en","image":"https://www.portet.org/img/me2.jpg","email":"mailto:cyril@portet.org","address":{"@type":"PostalAddress","addressRegion":"Rh\u00F4ne","addressCountry":"FR"},"knowsAbout":["Blazor WASM","Blazor Server","ASP.NET","ASP.NET MVC","EF Core","SQL","Azure","Azure DevOps","C#","T-SQL","TypeScript","JavaScript","PowerShell","Visual Basic","HTML","CSS","Visual Studio","VS Code","SSMS","Git","TFS","Postman","ReSharper","GitHub Copilot","Codex","Claude Team","Claude Opus 5.5","Agile","Scrum","Kanban","Project management","Quality","Architecture","Communication","Public administration","Software publishing","Business management","Service"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Prince2 Foundation \u0026 Practitioner","dateCreated":"2017"},{"@type":"EducationalOccupationalCredential","name":"Managing French government IT projects","dateCreated":"2016"},{"@type":"EducationalOccupationalCredential","name":"Dynamics CRM administrator","dateCreated":"2016"},{"@type":"EducationalOccupationalCredential","name":"Scrum Master","dateCreated":"2015"},{"@type":"EducationalOccupationalCredential","name":"UX Design","dateCreated":"2015"}],"alumniOf":[{"@type":"EducationalOrganization","name":"AFORP Oise","url":"https://www.aforp.fr"}],"subjectOf":{"@type":"DigitalDocument","name":"PDF resume","url":"https://www.portet.org/doc/cv-cyril-portet.pdf","encodingFormat":"application/pdf"},"sameAs":["https://www.linkedin.com/in/cportet","https://github.com/cportet","https://x.com/cportetdev","https://youtube.com/cportet"],"jobTitle":"Chief Technology Officer (CTO)","worksFor":{"@type":"Organization","name":"Simpleter","url":"https://www.simpleter.fr"}},{"@type":"ProfilePage","@id":"https://www.portet.org/en/resume","url":"https://www.portet.org/en/resume","name":"Resume","description":"Resume of Cyril Portet: CTO, 28 years of experience in development, architecture and tech team management.","inLanguage":"en-US","isPartOf":{"@id":"https://www.portet.org/#website"},"dateModified":"2026-11-09","mainEntity":{"@id":"https://www.portet.org/#person"}}]}</script>
+<!-- %%-PRERENDERING-HEADOUTLET-END-%% -->
+</head>
+
+<body no-fuib-style="">
+    <div id="app">
+<!-- %%-PRERENDERING-LOADER-BEGIN-%% -->
+    <div b-prerendering-loader style="position: fixed; inset: 0; z-index: 1; background: var(--bp-loader-background, Canvas);">
+<!-- %%-PRERENDERING-LOADER-END-%% -->
+
+        <div class="cp-boot">
+            <div class="cp-boot__name">Cyril Portet</div>
+            <div class="cp-boot__progress" role="progressbar" aria-label="Chargement / Loading"></div>
+            <p class="cp-boot__fallback">
+                Si l'application ne démarre pas, écrivez-moi à <a href="mailto:cyril@portet.org">cyril@portet.org</a>
+                ou retrouvez-moi sur <a href="https://linkedin.portet.org">LinkedIn</a>.
+            </p>
+        </div>
+    
+<!-- %%-PRERENDERING-LOADER-BEGIN-%% -->
+</div>
+<div b-prerendering-container inert style="position: fixed; inset: 0; overflow: auto;">
+<!-- %%-PRERENDERING-LOADER-END-%% -->
+<!-- %%-PRERENDERING-BEGIN-%% -->
+
+
+<div class="cp-app"><a class="cp-skip" href="en/resume#main">Skip to content</a>
+    <header class="cp-header"><div class="cp-container cp-header__inner"><a class="cp-brand" href="/en"><span class="cp-brand__badge" aria-hidden="true">CP</span>
+            Cyril Portet</a>
+
+        <nav id="cp-nav" class="cp-nav " aria-label="Main navigation"><a href="/en" class="cp-nav__link">Home</a><a href="/en/resume" class="cp-nav__link active" aria-current="page">Resume</a><a href="/en/projects" class="cp-nav__link">Projects</a><a href="/en/perso" class="cp-nav__link">Personal</a><a href="/en/contact" class="cp-nav__link">Contact</a><div class="cp-nav__extra"><p class="cp-overline">Worth a visit</p><a class="cp-nav__link" href="https://niceboys.pages.dev" target="_blank" rel="noopener">Nice Boys <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a><p class="cp-overline">Family</p><a class="cp-nav__link" href="https://remy.portet.org" target="_blank" rel="noopener">R&#xE9;my <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a><a class="cp-nav__link" href="https://trystan.portet.org" target="_blank" rel="noopener">Trystan <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a><a class="cp-nav__link" href="https://eloy.portet.org" target="_blank" rel="noopener">Eloy <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a></div></nav>
+
+        <div class="cp-header__tools"><div class="cp-segmented" role="group" aria-label="Language"><a href="/resume" hreflang="fr" lang="fr">FR</a>
+                <a href="/en/resume" hreflang="en" lang="en" aria-current="true">EN</a></div><button type="button" class="cp-iconbtn" title="Switch to dark theme" aria-label="Switch to dark theme"><svg class="cp-icon " width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 13.5A6.98 6.98 0 0 1 4 14.39c2.83-1.09 4.56-2.42 5.6-4.4 1.04-2 1.33-4.16.75-6.9q1.36.17 2.58.87a7 7 0 0 1 2.55 9.54M5.45 16.92A7.98 7.98 0 1 0 9.88 2.04a.6.6 0 0 0-.61.73c.69 2.82.43 4.88-.55 6.76-.94 1.78-2.55 3.03-5.55 4.1a.6.6 0 0 0-.3.9 8 8 0 0 0 2.59 2.39"/></svg></button>
+
+            <button type="button" class="cp-iconbtn cp-header__menu" aria-controls="cp-nav" aria-expanded="false" aria-label="Open the menu"><svg class="cp-icon " width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2.75 18h18.5a.75.75 0 0 1 .1 1.5H2.75a.75.75 0 0 1-.1-1.5zh18.5zm0-6.5h18.5a.75.75 0 0 1 .1 1.5H2.75a.75.75 0 0 1-.1-1.5zh18.5zm0-6.5h18.5a.75.75 0 0 1 .1 1.5H2.75a.75.75 0 0 1-.1-1.49zh18.5z"/></svg></button></div></div></header>
+    <main id="main" class="cp-main">
+
+
+
+<div class="cp-container"><section class="cp-resume-header"><button type="button" class="cp-zoom cp-portrait cp-portrait--small" aria-label="Enlarge the photo: Portrait of Cyril Portet"><img src="/img/me2.jpg" alt="Portrait of Cyril Portet" width="128" height="128" /></button>
+        <div class="cp-resume-header__text"><p class="cp-eyebrow">Resume</p>
+            <h1 class="cp-display">Cyril Portet</h1>
+            <p class="cp-lead">Chief Technology Officer &#xB7; Software craftsman &#xB7; 28 years of experience</p></div>
+        <div class="cp-actions"><a class="cp-btn cp-btn--primary" href="/doc/cv-cyril-portet.pdf" target="_blank" rel="noopener"><svg class="cp-icon " width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 17a.5.5 0 0 1 .09 1H4.5a.5.5 0 0 1-.09-1H15.5M10 2a.5.5 0 0 1 .5.41V14.3l3.64-3.65a.5.5 0 0 1 .64-.06l.07.06c.17.17.2.44.06.63l-.06.07-4.5 4.5a.5.5 0 0 1-.25.14L10 16a.5.5 0 0 1-.4-.2l-4.46-4.45a.5.5 0 0 1 .64-.76l.07.06 3.65 3.64V2.5c0-.27.22-.5.5-.5"/></svg>
+                Download the PDF</a>
+            <a class="cp-btn cp-btn--subtle" href="https://linkedin.portet.org" target="_blank" rel="noopener">LinkedIn
+                <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a></div></section>
+
+    <nav class="cp-anchors" aria-label="Resume sections"><a href="/en/resume#profile">Profile</a>
+        <a href="/en/resume#experience">Experience</a>
+        <a href="/en/resume#skills">Skills</a>
+        <a href="/en/resume#trainings">Training</a>
+        <a href="/en/resume#education">Education</a></nav>
+
+    <div class="cp-split"><div class="cp-split__main"><section id="profile" class="cp-block"><h2 class="cp-h2">Profile</h2>
+                <div class="cp-prose cp-prose--lead"><p>A software craftsman with over 28 years of experience, I have held many roles: technical lead, project manager, developer. Equally comfortable in <strong>Agile</strong> environments and Waterfall approaches, I let user satisfaction and software quality be my only compass.</p>
+<p>My expertise lies in Agile project management (Kanban, Scrum), team management and web application development with <strong>ASP.NET</strong> (MVC or <strong>Blazor WebAssembly</strong>). I have worked in industry, services, public administration and software publishing, in Picardy, the Paris region, Belgium and now the Lyon area.</p>
+</div></section>
+
+            <section id="experience" class="cp-block"><h2 class="cp-h2">Experience</h2><article class="cp-experience"><div class="cp-experience__head"><h3 class="cp-h3">Chief Technology Officer (CTO)</h3>
+                            <span class="cp-muted cp-nums">May 2021 &#x2014; present</span></div>
+                        <div class="cp-muted"><a class="cp-link" href="https://www.simpleter.fr" target="_blank" rel="noopener">Simpleter</a>                            · Saint-Genis-les-Olli&#xE8;res, France · 5 years</div><p class="cp-muted">Hired when the company was founded, I set up the development tools and processes, built the prototype of the solution and assembled the development team.</p><p class="cp-muted">Design, architecture decisions, development, management, technical coordination and close work with leadership and business teams. I remain the technical lead for the Blazor front end.</p><p class="cp-muted">I now also develop with AI agents: GitHub Copilot (with Codex) and Claude Team (Claude Opus 5.5).</p><div class="cp-tags"><span class="cp-tag ">Management</span><span class="cp-tag ">Project management</span><span class="cp-tag ">Architecture</span><span class="cp-tag ">Blazor WASM</span><span class="cp-tag ">C#</span><span class="cp-tag ">.NET</span><span class="cp-tag ">ASP.NET</span><span class="cp-tag ">Azure DevOps</span><span class="cp-tag ">Azure AD</span><span class="cp-tag ">AI agents</span></div></article><article class="cp-experience"><div class="cp-experience__head"><h3 class="cp-h3">Head of the Transfer department</h3>
+                            <span class="cp-muted cp-nums">June 2020 &#x2014; May 2021</span></div>
+                        <div class="cp-muted"><a class="cp-link" href="https://www.fiducial.fr" target="_blank" rel="noopener">Fiducial Informatique</a>                            · Lyon, France · 1 year</div><p class="cp-muted">Within the R&amp;D of this software publisher (notaries, bailiffs, automotive, point of sale): automating and steering customer data migrations, transfers between the group&#x2019;s products and extractions.</p><p class="cp-muted">Managed a team of 14 people: development, technical steering and execution of the transfers.</p><div class="cp-tags"><span class="cp-tag ">Management</span><span class="cp-tag ">Operations steering</span><span class="cp-tag ">Conflict management</span><span class="cp-tag ">Documentation</span><span class="cp-tag ">C#</span><span class="cp-tag ">.NET</span></div></article><article class="cp-experience"><div class="cp-experience__head"><h3 class="cp-h3">Head of the development unit</h3>
+                            <span class="cp-muted cp-nums">April 2014 &#x2014; April 2020</span></div>
+                        <div class="cp-muted"><a class="cp-link" href="https://www.tresor.economie.gouv.fr" target="_blank" rel="noopener">Direction g&#xE9;n&#xE9;rale du Tr&#xE9;sor</a>                            · Brussels, Belgium · 6 years</div><p class="cp-muted">Led a team of 7 engineers and 1 tester across two sites (Brussels and Bercy, Paris), building applications for the whole French Treasury and its international network.</p><p class="cp-muted">Scrum projects (Scrum Master, Agile coach), full continuous integration and deployment pipeline on TFS.</p><div class="cp-tags"><span class="cp-tag ">Management</span><span class="cp-tag ">Scrum</span><span class="cp-tag ">ASP.NET MVC</span><span class="cp-tag ">.NET Core</span><span class="cp-tag ">SQL Server</span><span class="cp-tag ">TFS</span><span class="cp-tag ">SharePoint</span><span class="cp-tag ">Dynamics CRM</span></div></article><article class="cp-experience"><div class="cp-experience__head"><h3 class="cp-h3">Cross-functional project manager</h3>
+                            <span class="cp-muted cp-nums">June 2013 &#x2014; April 2014</span></div>
+                        <div class="cp-muted"><a class="cp-link" href="https://www.ediis.fr" target="_blank" rel="noopener">Everial CRM</a>                            · Chantilly, France · 11 months</div><p class="cp-muted">Coordinated and ran projects between business, development, infrastructure, operations and customers (pre-sales), mainly on the Magellan software package.</p><p class="cp-muted">Rolled out SEPA direct debits and a validation tool for direct debit files.</p><div class="cp-tags"><span class="cp-tag ">Project management</span><span class="cp-tag ">Documentation</span><span class="cp-tag ">Visual Basic</span><span class="cp-tag ">.NET</span><span class="cp-tag ">ASP.NET</span></div></article><article class="cp-experience"><div class="cp-experience__head"><h3 class="cp-h3">Earlier experience</h3>
+                        <span class="cp-muted cp-nums">1998 &#x2014; 2013</span></div>
+                    <p class="cp-muted">Software engineer, then project manager:</p>
+                    <ul class="cp-list"><li><a class="cp-link cp-strong" href="https://www.electrolux.fr" target="_blank" rel="noopener">Electrolux IT</a>
+                                · Senlis — software engineer, then support engineer</li><li><a class="cp-link cp-strong" href="https://www.ediis.fr" target="_blank" rel="noopener">Datem Solutions / Presse Informatique</a>
+                                · Chantilly — lead developer, project manager</li><li><a class="cp-link cp-strong" href="https://www.intelcia.com" target="_blank" rel="noopener">Phone Marketing</a>
+                                · Levallois-Perret — developer, CTI / PBX administration</li></ul></article></section>
+
+            <section id="education" class="cp-block"><h2 class="cp-h2">Education</h2><div class="cp-experience__head"><h3 class="cp-h3">BTS in Business Computing (two-year degree)</h3>
+                        <span class="cp-muted cp-nums">2000</span></div>
+                    <p class="cp-muted">Application developer track, at AFORP Oise (Senlis), as a work-study apprentice at Clariant (Lamotte site, Trosly-Breuil).</p></section></div>
+
+        <aside class="cp-split__aside"><div class="cp-card cp-card--padded"><h2 class="cp-h4">At a glance</h2>
+                <dl class="cp-dl"><dt>Age</dt>
+                        <dd>47</dd><dt>Area</dt>
+                        <dd>Rh&#xF4;ne, France</dd><dt>Mobility</dt>
+                        <dd>Driving licence, own car</dd><dt>Clearance</dt>
+                        <dd>French Confidential Defence (2014)</dd><dt>Status</dt>
+                        <dd class="cp-accent-text">Open to opportunities</dd></dl></div>
+
+            <div id="skills" class="cp-card cp-card--padded"><h2 class="cp-h4">Skills</h2><div class="cp-skill-group"><h3 class="cp-overline">Technical</h3>
+                        <div class="cp-tags"><span class="cp-tag cp-tag--outline">Blazor WASM</span><span class="cp-tag cp-tag--outline">Blazor Server</span><span class="cp-tag cp-tag--outline">ASP.NET</span><span class="cp-tag cp-tag--outline">ASP.NET MVC</span><span class="cp-tag cp-tag--outline">EF Core</span><span class="cp-tag cp-tag--outline">SQL</span><span class="cp-tag cp-tag--outline">Azure</span><span class="cp-tag cp-tag--outline">Azure DevOps</span></div></div><div class="cp-skill-group"><h3 class="cp-overline">Languages</h3>
+                        <div class="cp-tags"><span class="cp-tag cp-tag--outline">C#</span><span class="cp-tag cp-tag--outline">T-SQL</span><span class="cp-tag cp-tag--outline">TypeScript</span><span class="cp-tag cp-tag--outline">JavaScript</span><span class="cp-tag cp-tag--outline">PowerShell</span><span class="cp-tag cp-tag--outline">Visual Basic</span><span class="cp-tag cp-tag--outline">HTML</span><span class="cp-tag cp-tag--outline">CSS</span></div></div><div class="cp-skill-group"><h3 class="cp-overline">Tools</h3>
+                        <div class="cp-tags"><span class="cp-tag cp-tag--outline">Visual Studio</span><span class="cp-tag cp-tag--outline">VS Code</span><span class="cp-tag cp-tag--outline">SSMS</span><span class="cp-tag cp-tag--outline">Git</span><span class="cp-tag cp-tag--outline">TFS</span><span class="cp-tag cp-tag--outline">Postman</span><span class="cp-tag cp-tag--outline">ReSharper</span></div></div><div class="cp-skill-group"><h3 class="cp-overline">AI &amp; agents</h3>
+                        <div class="cp-tags"><span class="cp-tag cp-tag--outline">GitHub Copilot</span><span class="cp-tag cp-tag--outline">Codex</span><span class="cp-tag cp-tag--outline">Claude Team</span><span class="cp-tag cp-tag--outline">Claude Opus 5.5</span></div></div><div class="cp-skill-group"><h3 class="cp-overline">Functional</h3>
+                        <div class="cp-tags"><span class="cp-tag cp-tag--outline">Agile</span><span class="cp-tag cp-tag--outline">Scrum</span><span class="cp-tag cp-tag--outline">Kanban</span><span class="cp-tag cp-tag--outline">Project management</span><span class="cp-tag cp-tag--outline">Quality</span><span class="cp-tag cp-tag--outline">Architecture</span><span class="cp-tag cp-tag--outline">Communication</span></div></div><div class="cp-skill-group"><h3 class="cp-overline">Business</h3>
+                        <div class="cp-tags"><span class="cp-tag cp-tag--outline">Public administration</span><span class="cp-tag cp-tag--outline">Software publishing</span><span class="cp-tag cp-tag--outline">Business management</span><span class="cp-tag cp-tag--outline">Service</span></div></div></div>
+
+            <div id="trainings" class="cp-card cp-card--padded"><h2 class="cp-h4">Training &amp; certifications</h2>
+                <ul class="cp-years"><li><span class="cp-years__year">2017</span><span>Prince2 Foundation &amp; Practitioner</span></li><li><span class="cp-years__year">2016</span><span>Managing French government IT projects</span></li><li><span class="cp-years__year">2016</span><span>Dynamics CRM administrator</span></li><li><span class="cp-years__year">2015</span><span>Scrum Master</span></li><li><span class="cp-years__year">2015</span><span>UX Design</span></li></ul><p class="cp-muted cp-small">Craft and Agile conferences, including Lyon-Craft (first edition, 2023).</p></div>
+
+            <div class="cp-card cp-card--padded"><h2 class="cp-h4">Interests</h2>
+                <p class="cp-muted">My family, video games, politics and economics.</p></div></aside></div></div></main>
+    <footer class="cp-footer"><div class="cp-container cp-footer__inner"><span>© 2026 Cyril Portet · <a href="mailto:cyril@portet.org">cyril@portet.org</a></span>
+        <a href="/en/about">About this site</a></div></footer></div>
+
+<div class="fluent-providers" style="display: contents;"><div id="f29e37d1" class="fluent-dialog-provider" style="z-index: 999;"><fluent-overlay id="global-overlay" background="color-mix(in srgb, var(--colorBackgroundOverlay) 40%, transparent)" fullscreen close-mode="manual"><div class="fluent-overlay-global"><fluent-spinner></fluent-spinner></div></fluent-overlay></div>
+    <div id="f7226483" class="fluent-toast-provider" style="z-index: 999;"></div>
+    <div id="f4e9e25c" class="fluent-tooltip-provider" style="z-index: 9999;"></div>
+    </div>
+            <blazor-focus-on-navigate selector="h1"></blazor-focus-on-navigate>
+
+<!-- %%-PRERENDERING-END-%% -->
+<!-- %%-PRERENDERING-LOADER-BEGIN-%% -->
+</div>
+<!-- %%-PRERENDERING-LOADER-END-%% -->
+</div>
+
+    <div id="blazor-error-ui">
+        Une erreur est survenue / An error occurred.
+        <a href="." class="reload">Recharger / Reload</a>
+        <span class="dismiss" title="Fermer / Close">🗙</span>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js"></script>
+    <script data-goatcounter="https://cportet.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+
+
+
+</body></html>

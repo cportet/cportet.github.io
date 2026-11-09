@@ -1,0 +1,46 @@
+{
+  // Live values available in every text: {{age}}, {{experienceYears}}, {{managementYears}}, {{currentRoleDuration}}, {{year}}.
+  "birthDate": "1979-11-07",
+  "careerStart": "1998-09-01",
+  "managementStart": "2014-04-01",
+
+  "role": {
+    "fr": "Responsable technique (CTO) · Artisan logiciel · {{experienceYears}} ans d’expérience",
+    "en": "Chief Technology Officer · Software craftsman · {{experienceYears}} years of experience"
+  },
+  "eyebrow": {
+    "fr": "CTO chez Simpleter · Région lyonnaise",
+    "en": "CTO at Simpleter · Lyon area, France"
+  },
+  "headline": {
+    "fr": "Artisan logiciel,\nmanager d’équipes tech.",
+    "en": "Software craftsman,\ntech team manager."
+  },
+  "intro": {
+    "fr": "{{experienceYears}} ans d’expérience entre développement, architecture et management. Je conçois des solutions web sur .NET et Blazor, avec la satisfaction utilisateur et la qualité logicielle comme boussoles.",
+    "en": "{{experienceYears}} years of experience across development, architecture and management. I build web solutions with .NET and Blazor, guided by user satisfaction and software quality."
+  },
+  "portrait": {
+    "url": "/img/me.jpg",
+    "alt": { "fr": "Portrait de Cyril Portet", "en": "Portrait of Cyril Portet" }
+  },
+
+  "stats": [
+    {
+      "value": { "fr": "{{experienceYears}} ans", "en": "{{experienceYears}} years" },
+      "label": { "fr": "d’expérience professionnelle", "en": "of professional experience" }
+    },
+    {
+      "value": "{{currentRoleDuration}}",
+      "label": { "fr": "comme CTO, depuis la création de Simpleter", "en": "as CTO, since Simpleter was founded" }
+    },
+    {
+      "value": "14",
+      "label": { "fr": "personnes encadrées au plus large", "en": "people managed, at most" }
+    },
+    {
+      "value": { "fr": "{{managementYears}} ans", "en": "{{managementYears}} years" },
+      "label": { "fr": "à la tête d’équipes de développement", "en": "leading development teams" }
+    }
+  ]
+}

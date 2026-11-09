@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="Cyril Portet"/>
+    <meta name="theme-color" content="#0f6cbd"/>
+
+    <!-- Title, description, Open Graph and JSON-LD are written per page (Components/Seo.razor) and prerendered at publish time. -->
+    <base href="/"/>
+
+    <script>
+        // Before anything renders: language from the URL, light/dark from the saved Fluent theme (or the system).
+        (function () {
+            var root = document.documentElement;
+            if (/^\/en(\/|$)/i.test(location.pathname)) root.lang = 'en';
+            try {
+                var settings = JSON.parse(localStorage.getItem('fluentui-blazor:theme-settings') || 'null');
+                var mode = settings && String(settings.mode || settings.Mode || '').toLowerCase();
+                var dark = mode === 'dark' || (mode !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) root.classList.add('cp-dark-boot');
+            } catch (e) { }
+        })();
+    </script>
+
+
+    <meta name="msvalidate.01" content="F8FA9AB42FE9BD5F8345EAAC01A087E7"/>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png"/>
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png"/>
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png"/>
+    <link rel="manifest" href="/manifest.webmanifest"/>
+
+    <link rel="stylesheet" href="_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.bundle.scp.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="MyHomePage.styles.css"/>
+
+<!-- %%-PRERENDERING-HEADOUTLET-BEGIN-%% -->
+<title>Cyril Portet &#x2014; CTO &amp; software craftsman</title><meta name="description" content="Personal website of Cyril Portet, CTO and software craftsman with 28 years of experience (C#, .NET, Blazor, architecture, management). Resume, projects and contact." />
+    <link rel="canonical" href="https://www.portet.org/en" />
+    <link rel="alternate" hreflang="fr" href="https://www.portet.org/" />
+    <link rel="alternate" hreflang="en" href="https://www.portet.org/en" />
+    <link rel="alternate" hreflang="x-default" href="https://www.portet.org/" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Cyril Portet" />
+    <meta property="og:title" content="Cyril Portet &#x2014; CTO &amp; software craftsman" />
+    <meta property="og:description" content="Personal website of Cyril Portet, CTO and software craftsman with 28 years of experience (C#, .NET, Blazor, architecture, management). Resume, projects and contact." />
+    <meta property="og:url" content="https://www.portet.org/en" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:image" content="https://www.portet.org/img/preview.jpg" />
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Cyril Portet &#x2014; CTO &amp; software craftsman" /><meta property="profile:first_name" content="Cyril" />
+        <meta property="profile:last_name" content="Portet" /><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cportetdev" />
+    <meta name="twitter:title" content="Cyril Portet &#x2014; CTO &amp; software craftsman" />
+    <meta name="twitter:description" content="Personal website of Cyril Portet, CTO and software craftsman with 28 years of experience (C#, .NET, Blazor, architecture, management). Resume, projects and contact." />
+    <meta name="twitter:image" content="https://www.portet.org/img/preview.jpg" />
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.portet.org/#website","url":"https://www.portet.org/","name":"Cyril Portet","inLanguage":["fr-FR","en-US"],"publisher":{"@id":"https://www.portet.org/#person"}},{"@type":"Person","@id":"https://www.portet.org/#person","name":"Cyril Portet","givenName":"Cyril","familyName":"Portet","description":"28 years of experience across development, architecture and management. I build web solutions with .NET and Blazor, guided by user satisfaction and software quality.","url":"https://www.portet.org/en","image":"https://www.portet.org/img/me2.jpg","email":"mailto:cyril@portet.org","address":{"@type":"PostalAddress","addressRegion":"Rh\u00F4ne","addressCountry":"FR"},"knowsAbout":["Blazor WASM","Blazor Server","ASP.NET","ASP.NET MVC","EF Core","SQL","Azure","Azure DevOps","C#","T-SQL","TypeScript","JavaScript","PowerShell","Visual Basic","HTML","CSS","Visual Studio","VS Code","SSMS","Git","TFS","Postman","ReSharper","GitHub Copilot","Codex","Claude Team","Claude Opus 5.5","Agile","Scrum","Kanban","Project management","Quality","Architecture","Communication","Public administration","Software publishing","Business management","Service"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Prince2 Foundation \u0026 Practitioner","dateCreated":"2017"},{"@type":"EducationalOccupationalCredential","name":"Managing French government IT projects","dateCreated":"2016"},{"@type":"EducationalOccupationalCredential","name":"Dynamics CRM administrator","dateCreated":"2016"},{"@type":"EducationalOccupationalCredential","name":"Scrum Master","dateCreated":"2015"},{"@type":"EducationalOccupationalCredential","name":"UX Design","dateCreated":"2015"}],"alumniOf":[{"@type":"EducationalOrganization","name":"AFORP Oise","url":"https://www.aforp.fr"}],"subjectOf":{"@type":"DigitalDocument","name":"PDF resume","url":"https://www.portet.org/doc/cv-cyril-portet.pdf","encodingFormat":"application/pdf"},"sameAs":["https://www.linkedin.com/in/cportet","https://github.com/cportet","https://x.com/cportetdev","https://youtube.com/cportet"],"jobTitle":"Chief Technology Officer (CTO)","worksFor":{"@type":"Organization","name":"Simpleter","url":"https://www.simpleter.fr"}},{"@type":"ProfilePage","@id":"https://www.portet.org/en","url":"https://www.portet.org/en","name":"Cyril Portet \u2014 CTO \u0026 software craftsman","description":"Personal website of Cyril Portet, CTO and software craftsman with 28 years of experience (C#, .NET, Blazor, architecture, management). Resume, projects and contact.","inLanguage":"en-US","isPartOf":{"@id":"https://www.portet.org/#website"},"dateModified":"2026-11-09","mainEntity":{"@id":"https://www.portet.org/#person"}}]}</script>
+<!-- %%-PRERENDERING-HEADOUTLET-END-%% -->
+</head>
+
+<body no-fuib-style="">
+    <div id="app">
+<!-- %%-PRERENDERING-LOADER-BEGIN-%% -->
+    <div b-prerendering-loader style="position: fixed; inset: 0; z-index: 1; background: var(--bp-loader-background, Canvas);">
+<!-- %%-PRERENDERING-LOADER-END-%% -->
+
+        <div class="cp-boot">
+            <div class="cp-boot__name">Cyril Portet</div>
+            <div class="cp-boot__progress" role="progressbar" aria-label="Chargement / Loading"></div>
+            <p class="cp-boot__fallback">
+                Si l'application ne démarre pas, écrivez-moi à <a href="mailto:cyril@portet.org">cyril@portet.org</a>
+                ou retrouvez-moi sur <a href="https://linkedin.portet.org">LinkedIn</a>.
+            </p>
+        </div>
+    
+<!-- %%-PRERENDERING-LOADER-BEGIN-%% -->
+</div>
+<div b-prerendering-container inert style="position: fixed; inset: 0; overflow: auto;">
+<!-- %%-PRERENDERING-LOADER-END-%% -->
+<!-- %%-PRERENDERING-BEGIN-%% -->
+
+
+<div class="cp-app"><a class="cp-skip" href="en#main">Skip to content</a>
+    <header class="cp-header"><div class="cp-container cp-header__inner"><a class="cp-brand" href="/en"><span class="cp-brand__badge" aria-hidden="true">CP</span>
+            Cyril Portet</a>
+
+        <nav id="cp-nav" class="cp-nav " aria-label="Main navigation"><a href="/en" class="cp-nav__link active" aria-current="page">Home</a><a href="/en/resume" class="cp-nav__link">Resume</a><a href="/en/projects" class="cp-nav__link">Projects</a><a href="/en/perso" class="cp-nav__link">Personal</a><a href="/en/contact" class="cp-nav__link">Contact</a><div class="cp-nav__extra"><p class="cp-overline">Worth a visit</p><a class="cp-nav__link" href="https://niceboys.pages.dev" target="_blank" rel="noopener">Nice Boys <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a><p class="cp-overline">Family</p><a class="cp-nav__link" href="https://remy.portet.org" target="_blank" rel="noopener">R&#xE9;my <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a><a class="cp-nav__link" href="https://trystan.portet.org" target="_blank" rel="noopener">Trystan <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a><a class="cp-nav__link" href="https://eloy.portet.org" target="_blank" rel="noopener">Eloy <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a></div></nav>
+
+        <div class="cp-header__tools"><div class="cp-segmented" role="group" aria-label="Language"><a href="/" hreflang="fr" lang="fr">FR</a>
+                <a href="/en" hreflang="en" lang="en" aria-current="true">EN</a></div><button type="button" class="cp-iconbtn" title="Switch to dark theme" aria-label="Switch to dark theme"><svg class="cp-icon " width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 13.5A6.98 6.98 0 0 1 4 14.39c2.83-1.09 4.56-2.42 5.6-4.4 1.04-2 1.33-4.16.75-6.9q1.36.17 2.58.87a7 7 0 0 1 2.55 9.54M5.45 16.92A7.98 7.98 0 1 0 9.88 2.04a.6.6 0 0 0-.61.73c.69 2.82.43 4.88-.55 6.76-.94 1.78-2.55 3.03-5.55 4.1a.6.6 0 0 0-.3.9 8 8 0 0 0 2.59 2.39"/></svg></button>
+
+            <button type="button" class="cp-iconbtn cp-header__menu" aria-controls="cp-nav" aria-expanded="false" aria-label="Open the menu"><svg class="cp-icon " width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M2.75 18h18.5a.75.75 0 0 1 .1 1.5H2.75a.75.75 0 0 1-.1-1.5zh18.5zm0-6.5h18.5a.75.75 0 0 1 .1 1.5H2.75a.75.75 0 0 1-.1-1.5zh18.5zm0-6.5h18.5a.75.75 0 0 1 .1 1.5H2.75a.75.75 0 0 1-.1-1.49zh18.5z"/></svg></button></div></div></header>
+    <main id="main" class="cp-main">
+
+
+<div class="cp-container"><section class="cp-hero"><div class="cp-hero__text"><p class="cp-eyebrow">CTO at Simpleter &#xB7; Lyon area, France</p>
+            <h1 class="cp-display cp-display--xl">Software craftsman,&#xA;tech team manager.</h1>
+            <p class="cp-lead">28 years of experience across development, architecture and management. I build web solutions with .NET and Blazor, guided by user satisfaction and software quality.</p>
+            <div class="cp-actions"><a class="cp-btn cp-btn--primary" href="/en/resume">See my resume
+                    <svg class="cp-icon " width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10.84 3.13a.5.5 0 0 0-.68.74l6.17 5.63H2.5a.5.5 0 0 0 0 1h13.83l-6.17 5.63a.5.5 0 0 0 .68.74l6.91-6.32a.75.75 0 0 0 0-1.1z"/></svg></a>
+                <a class="cp-btn" href="/doc/cv-cyril-portet.pdf" target="_blank" rel="noopener"><svg class="cp-icon " width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 17a.5.5 0 0 1 .09 1H4.5a.5.5 0 0 1-.09-1H15.5M10 2a.5.5 0 0 1 .5.41V14.3l3.64-3.65a.5.5 0 0 1 .64-.06l.07.06c.17.17.2.44.06.63l-.06.07-4.5 4.5a.5.5 0 0 1-.25.14L10 16a.5.5 0 0 1-.4-.2l-4.46-4.45a.5.5 0 0 1 .64-.76l.07.06 3.65 3.64V2.5c0-.27.22-.5.5-.5"/></svg>
+                    PDF resume</a>
+                <a class="cp-btn cp-btn--subtle" href="https://linkedin.portet.org" target="_blank" rel="noopener">LinkedIn
+                    <svg class="cp-icon " width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 3C3.67 3 3 3.67 3 4.5v7c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5V9.27a.5.5 0 0 1 1 0v2.23a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2h2.23a.5.5 0 0 1 0 1zm4.27-.5c0-.28.22-.5.5-.5h4.23c.28 0 .5.22.5.5v4.23a.5.5 0 0 1-1 0V3.71L9.62 7.08a.5.5 0 1 1-.7-.7L12.29 3H9.27a.5.5 0 0 1-.5-.5"/></svg></a></div></div>
+        <div class="cp-hero__media"><button type="button" class="cp-zoom cp-portrait" aria-label="Enlarge the photo: Portrait of Cyril Portet"><img src="/img/me.jpg" alt="Portrait of Cyril Portet" width="320" height="400" /></button></div></section>
+
+    <section class="cp-stats" aria-label="Key figures"><div class="cp-card cp-stat"><div class="cp-stat__value">28 years</div>
+                <div class="cp-stat__label">of professional experience</div></div><div class="cp-card cp-stat"><div class="cp-stat__value">5 years</div>
+                <div class="cp-stat__label">as CTO, since Simpleter was founded</div></div><div class="cp-card cp-stat"><div class="cp-stat__value">14</div>
+                <div class="cp-stat__label">people managed, at most</div></div><div class="cp-card cp-stat"><div class="cp-stat__value">12 years</div>
+                <div class="cp-stat__label">leading development teams</div></div></section>
+
+    <section class="cp-band cp-band--split cp-section"><div class="cp-band__intro"><h2 class="cp-h3">Contact me</h2>
+            <p>Email is the easiest way to reach me.</p>
+            <div class="cp-actions"><a class="cp-btn cp-btn--primary" href="mailto:cyril@portet.org?subject=Contact%20from%20your%20website"><svg class="cp-icon " width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 4A2.5 2.5 0 0 1 18 6.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 2 14.5v-8A2.5 2.5 0 0 1 4.5 4zM17 7.96l-6.75 3.97a.5.5 0 0 1-.42.04l-.08-.04L3 7.96v6.54c0 .83.67 1.5 1.5 1.5h11c.83 0 1.5-.67 1.5-1.5zM15.5 5h-11C3.67 5 3 5.67 3 6.5v.3l7 4.12 7-4.12v-.3c0-.83-.67-1.5-1.5-1.5"/></svg>
+                    cyril@portet.org</a>
+                <a class="cp-btn" href="/en/contact">Other ways</a></div></div>
+        <div class="cp-band__intro"><h2 class="cp-h3">Other sites</h2>
+            <p>Favourites and family websites.</p>
+            <div class="cp-pills"><a class="cp-pill" href="https://niceboys.pages.dev" target="_blank" rel="noopener">Nice Boys</a><a class="cp-pill" href="https://remy.portet.org" target="_blank" rel="noopener">R&#xE9;my</a><a class="cp-pill" href="https://trystan.portet.org" target="_blank" rel="noopener">Trystan</a><a class="cp-pill" href="https://eloy.portet.org" target="_blank" rel="noopener">Eloy</a><a class="cp-pill cp-pill--accent" href="/en/perso">Personal side</a></div></div></section>
+
+    <section class="cp-section"><div class="cp-section__head"><h2 class="cp-h2">Recent experience</h2>
+            <a class="cp-link" href="/en/resume">Full resume</a></div><article class="cp-timeline-item"><div class="cp-timeline-item__period">2021 &#x2014; present</div>
+                <div class="cp-timeline-item__body"><h3 class="cp-h3">Chief Technology Officer (CTO)</h3>
+                    <div class="cp-muted"><strong class="cp-strong">Simpleter</strong> · Saint-Genis-les-Olli&#xE8;res, France</div>
+                    <p class="cp-muted">Hired when the company was founded: dev tooling and processes, prototype, building the team. Architecture, management and front-end Blazor lead.</p>
+                    <div class="cp-tags"><span class="cp-tag ">Management</span><span class="cp-tag ">Project management</span><span class="cp-tag ">Architecture</span><span class="cp-tag ">Blazor WASM</span><span class="cp-tag ">C#</span></div></div></article><article class="cp-timeline-item"><div class="cp-timeline-item__period">2020 &#x2014; 2021</div>
+                <div class="cp-timeline-item__body"><h3 class="cp-h3">Head of the Transfer department</h3>
+                    <div class="cp-muted"><strong class="cp-strong">Fiducial Informatique</strong> · Lyon, France</div>
+                    <p class="cp-muted">Automating and steering customer data migrations, managing a team of 14 people.</p>
+                    <div class="cp-tags"><span class="cp-tag ">Management</span><span class="cp-tag ">Operations steering</span><span class="cp-tag ">Conflict management</span><span class="cp-tag ">Documentation</span><span class="cp-tag ">C#</span></div></div></article><article class="cp-timeline-item"><div class="cp-timeline-item__period">2014 &#x2014; 2020</div>
+                <div class="cp-timeline-item__body"><h3 class="cp-h3">Head of the development unit</h3>
+                    <div class="cp-muted"><strong class="cp-strong">Direction g&#xE9;n&#xE9;rale du Tr&#xE9;sor</strong> · Brussels, Belgium</div>
+                    <p class="cp-muted">Team of 8 people across two sites, Scrum, full continuous integration and deployment pipeline.</p>
+                    <div class="cp-tags"><span class="cp-tag ">Management</span><span class="cp-tag ">Scrum</span><span class="cp-tag ">ASP.NET MVC</span><span class="cp-tag ">.NET Core</span><span class="cp-tag ">SQL Server</span></div></div></article></section>
+
+    <section class="cp-cards cp-section"><div class="cp-card cp-card--padded"><h2 class="cp-h3">Apps</h2>
+            <p class="cp-muted">My apps published on the Microsoft Store, and their shared privacy policy.</p>
+            <a class="cp-link" href="/en/projects">Discover my apps</a></div>
+        <div class="cp-card cp-card--padded"><h2 class="cp-h3">This site</h2>
+            <p class="cp-muted">A Blazor WebAssembly PWA on .NET 10, open source under GPL v3, hosted on GitHub Pages.</p>
+            <a class="cp-link" href="https://github.com/cportet/cportet.github.io" target="_blank" rel="noopener">View the source code</a></div></section></div></main>
+    <footer class="cp-footer"><div class="cp-container cp-footer__inner"><span>© 2026 Cyril Portet · <a href="mailto:cyril@portet.org">cyril@portet.org</a></span>
+        <a href="/en/about">About this site</a></div></footer></div>
+
+<div class="fluent-providers" style="display: contents;"><div id="f63f4fbc" class="fluent-dialog-provider" style="z-index: 999;"><fluent-overlay id="global-overlay" background="color-mix(in srgb, var(--colorBackgroundOverlay) 40%, transparent)" fullscreen close-mode="manual"><div class="fluent-overlay-global"><fluent-spinner></fluent-spinner></div></fluent-overlay></div>
+    <div id="f403473e" class="fluent-toast-provider" style="z-index: 999;"></div>
+    <div id="f19eb139" class="fluent-tooltip-provider" style="z-index: 9999;"></div>
+    </div>
+            <blazor-focus-on-navigate selector="h1"></blazor-focus-on-navigate>
+
+<!-- %%-PRERENDERING-END-%% -->
+<!-- %%-PRERENDERING-LOADER-BEGIN-%% -->
+</div>
+<!-- %%-PRERENDERING-LOADER-END-%% -->
+</div>
+
+    <div id="blazor-error-ui">
+        Une erreur est survenue / An error occurred.
+        <a href="." class="reload">Recharger / Reload</a>
+        <span class="dismiss" title="Fermer / Close">🗙</span>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js"></script>
+    <script data-goatcounter="https://cportet.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+
+
+
+</body></html>

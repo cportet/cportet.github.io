@@ -1,4 +1,4 @@
-/* Manifest version: dmg6Lf/e */
+/* Manifest version: 6vaIlQeg */
 // Caution! Be sure you understand the caveats before publishing an application with
 // offline support. See https://aka.ms/blazor-offline-considerations
 
@@ -44,17 +44,24 @@ async function onActivate(event) {
 async function onFetch(event) {
     let cachedResponse = null;
     if (event.request.method === 'GET') {
-        // For all navigation requests, try to serve index.html from cache,
-        // unless that request is for an offline resource.
+        // Navigation requests: serve the prerendered page of that URL ("/resume" => "resume.html"),
+        // or index.html for the other URLs (the app routes them itself).
         // If you need some URLs to be server-rendered, edit the following check to exclude those URLs
-        const shouldServeIndexHtml = event.request.mode === 'navigate'
+        const shouldServeHtml = event.request.mode === 'navigate'
             && !manifestUrlList.some(url => url === event.request.url);
 
-        const request = shouldServeIndexHtml ? 'index.html' : event.request;
+        const request = shouldServeHtml ? prerenderedPageFor(event.request.url) : event.request;
         const cache = await caches.open(cacheName);
         cachedResponse = await cache.match(request);
     }
 
     return cachedResponse || fetch(event.request);
 }
-/* Last updated: 2026-09-05 14:59:55 UTC */
+
+// "/en/resume" => "en/resume.html" when that page was prerendered at publish time, else "index.html".
+function prerenderedPageFor(url) {
+    const path = new URL(url).pathname.slice(base.length).replace(/\/$/, '');
+    const page = path === '' ? 'index.html' : `${path}.html`;
+    return manifestUrlList.includes(new URL(page, baseUrl).href) ? page : 'index.html';
+}
+/* Last updated: 2026-11-09T14:04:51Z */

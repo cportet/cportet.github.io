@@ -1,0 +1,43 @@
+# Cyril Portet
+
+> Responsable technique (CTO) · Artisan logiciel · 28 ans d’expérience
+> Chief Technology Officer · Software craftsman · 28 years of experience
+
+28 ans d’expérience entre développement, architecture et management. Je conçois des solutions web sur .NET et Blazor, avec la satisfaction utilisateur et la qualité logicielle comme boussoles.
+
+28 years of experience across development, architecture and management. I build web solutions with .NET and Blazor, guided by user satisfaction and software quality.
+
+Site personnel bilingue : le français est à la racine, l'anglais sous /en. / Bilingual personal website: French at the root, English under /en.
+
+## Pages (français)
+
+- [Cyril Portet — CTO & artisan logiciel](https://www.portet.org/): Espace personnel de Cyril Portet, CTO et artisan logiciel avec 28 ans d’expérience (C#, .NET, Blazor, architecture, management). CV, projets et contact.
+- [CV](https://www.portet.org/resume): CV de Cyril Portet : CTO, 28 ans d’expérience en développement, architecture et management d’équipes tech.
+- [Projets](https://www.portet.org/projects): Les applications publiées par Cyril Portet et ses projets open source.
+- [Charte de confidentialité](https://www.portet.org/projects/privacy): Charte de confidentialité commune aux applications publiées par Cyril Portet Dev.
+- [Perso](https://www.portet.org/perso): Côté perso : la famille, les sites à découvrir et où retrouver Cyril Portet.
+- [Contact](https://www.portet.org/contact): Contacter Cyril Portet par courriel, téléphone ou LinkedIn.
+- [À propos du site](https://www.portet.org/about): Confidentialité, technologies et coulisses du site de Cyril Portet.
+
+## Pages (English)
+
+- [Cyril Portet — CTO & software craftsman](https://www.portet.org/en): Personal website of Cyril Portet, CTO and software craftsman with 28 years of experience (C#, .NET, Blazor, architecture, management). Resume, projects and contact.
+- [Resume](https://www.portet.org/en/resume): Resume of Cyril Portet: CTO, 28 years of experience in development, architecture and tech team management.
+- [Projects](https://www.portet.org/en/projects): Applications published by Cyril Portet and his open source projects.
+- [Privacy policy](https://www.portet.org/en/projects/privacy): Privacy policy shared by every application published by Cyril Portet Dev.
+- [Personal](https://www.portet.org/en/perso): The personal side: family, sites worth a visit and where to find Cyril Portet.
+- [Contact](https://www.portet.org/en/contact): Get in touch with Cyril Portet by email, phone or LinkedIn.
+- [About this site](https://www.portet.org/en/about): Privacy, technologies and behind the scenes of Cyril Portet’s website.
+
+## Documents
+
+- [CV (PDF)](https://www.portet.org/doc/cv-cyril-portet.pdf): CV complet / full resume
+- [CV complet en texte / Full resume as text](https://www.portet.org/llms-full.txt): profil, expériences, compétences, formations, en français et en anglais
+
+## Contact & profils
+
+- E-mail: cyril@portet.org
+- https://www.linkedin.com/in/cportet
+- https://github.com/cportet
+- https://x.com/cportetdev
+- https://youtube.com/cportet
