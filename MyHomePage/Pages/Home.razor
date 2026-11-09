@@ -59,14 +59,18 @@
         <div class="cp-band__intro">
             <h2 class="cp-h3">@Ui(Constants.Ui.Home.Links.Title)</h2>
             <p>@Ui(Constants.Ui.Home.Links.Text)</p>
+            <p class="cp-overline cp-pills__label">@Ui(Constants.Ui.Nav.Featured)</p>
             <div class="cp-pills">
                 @foreach (var site in Content.Perso.Featured)
                 {
                     <a class="cp-pill" href="@site.Url" target="_blank" rel="noopener">@site.Title</a>
                 }
+            </div>
+            <p class="cp-overline cp-pills__label">@Ui(Constants.Ui.Nav.Family)</p>
+            <div class="cp-pills">
                 @foreach (var site in Content.Perso.Family)
                 {
-                    <a class="cp-pill" href="@site.Url" target="_blank" rel="noopener">@site.Name</a>
+                    <a class="cp-pill cp-pill--soft" href="@site.Url" target="_blank" rel="noopener">@site.Name</a>
                 }
                 <a class="cp-pill cp-pill--accent" href="@Href(Constants.Pages.Perso.Path)">@Ui(Constants.Ui.Home.Links.More)</a>
             </div>
@@ -95,6 +99,12 @@
                 </div>
             </article>
         }
+        <div class="cp-section__foot">
+            <a class="cp-btn" href="@Href(Constants.Pages.Resume.Path)">
+                @Ui(Constants.Ui.Cta.FullResume)
+                <CpIcon Value="@(Constants.Icons.Regular.ArrowRight)" />
+            </a>
+        </div>
     </section>
 
     <section class="cp-cards cp-section">

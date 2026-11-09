@@ -58,7 +58,7 @@
 
         <section class="cp-card cp-card--padded">
             <h2 class="cp-h3">@Ui(Constants.Ui.About.App.Title)</h2>
-            <p class="cp-muted">@string.Format(Ui(Constants.Ui.About.App.Text), Content.Config.Version)</p>
+            <p class="cp-muted">@Ui(Constants.Ui.About.App.Text)</p>
             @if (_installMessage is not null)
             {
                 <p class="cp-muted cp-small">@_installMessage</p>
@@ -74,6 +74,7 @@
     </div>
 
     <p class="cp-section cp-muted">@((MarkupString)Ui(Constants.Ui.About.Support))</p>
+    <p class="cp-version">@string.Format(Ui(Constants.Ui.App.Version), Content.Config.Version)</p>
 </div>
 
 @code {

@@ -18,6 +18,11 @@ public sealed class ThemePreferences(IThemeService theme)
         new(Constants.Theme.Accents.Teal, Constants.Ui.Preferences.Accent.Teal),
         new(Constants.Theme.Accents.Purple, Constants.Ui.Preferences.Accent.Purple),
         new(Constants.Theme.Accents.Red, Constants.Ui.Preferences.Accent.Red),
+        new(Constants.Theme.Accents.Green, Constants.Ui.Preferences.Accent.Green),
+        new(Constants.Theme.Accents.Orange, Constants.Ui.Preferences.Accent.Orange),
+        new(Constants.Theme.Accents.Indigo, Constants.Ui.Preferences.Accent.Indigo),
+        new(Constants.Theme.Accents.Magenta, Constants.Ui.Preferences.Accent.Magenta),
+        new(Constants.Theme.Accents.Graphite, Constants.Ui.Preferences.Accent.Graphite),
     ];
 
     public event Action? Changed;

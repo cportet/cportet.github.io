@@ -258,6 +258,12 @@ public static class Constants
             public const string Family = "nav.family";
             public const string Featured = "nav.featured";
             public const string LanguageGroup = "lang.group";
+            public const string Preferences = "nav.preferences";
+        }
+
+        public static class App
+        {
+            public const string Version = "app.version";
         }
 
         public static class Theme
@@ -435,6 +441,11 @@ public static class Constants
                 public const string Teal = "prefs.accent.teal";
                 public const string Purple = "prefs.accent.purple";
                 public const string Red = "prefs.accent.red";
+                public const string Green = "prefs.accent.green";
+                public const string Orange = "prefs.accent.orange";
+                public const string Indigo = "prefs.accent.indigo";
+                public const string Magenta = "prefs.accent.magenta";
+                public const string Graphite = "prefs.accent.graphite";
             }
         }
 
@@ -485,6 +496,11 @@ public static class Constants
             public const string Teal = "#0B7A75";
             public const string Purple = "#6B4FBB";
             public const string Red = "#C4314B";
+            public const string Green = "#107C10";
+            public const string Orange = "#C14E0A";
+            public const string Indigo = "#4F52B2";
+            public const string Magenta = "#B1006C";
+            public const string Graphite = "#4D5B68";
 
             public const string Default = Blue;
         }
@@ -508,6 +524,7 @@ public static class Constants
             public static Icon Reset => new FluentIcons.Regular.Size20.ArrowReset();
             public static Icon Moon => new FluentIcons.Regular.Size20.WeatherMoon();
             public static Icon Sun => new FluentIcons.Regular.Size20.WeatherSunny();
+            public static Icon Settings => new FluentIcons.Regular.Size20.Settings();
         }
 
         public static class Large

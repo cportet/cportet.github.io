@@ -47,6 +47,11 @@
                         </button>
                     }
                 </div>
+                <a class="cp-nav__link" href="@Href(Constants.Pages.Preferences.Path)" @onclick="CloseMenu">
+                    <CpIcon Value="@(Constants.Icons.Regular.Settings)" />
+                    @Ui(Constants.Ui.Nav.Preferences)
+                </a>
+                <p class="cp-version cp-nav__version">@string.Format(Ui(Constants.Ui.App.Version), Content.Config.Version)</p>
             </div>
         </nav>
 
