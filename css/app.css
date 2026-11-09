@@ -1253,6 +1253,54 @@ a.cp-card:hover {
         transform: scale(1.02);
     }
 
+/* Linked photo: the photo opens the site, the magnifier enlarges it. */
+.cp-zoom--link {
+    position: relative;
+    cursor: auto;
+}
+
+    .cp-zoom--link > a {
+        display: block;
+        height: 100%;
+    }
+
+        .cp-zoom--link > a > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .2s ease;
+        }
+
+        .cp-zoom--link > a:hover > img {
+            transform: scale(1.02);
+        }
+
+.cp-zoom__button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 999px;
+    background: rgb(0 0 0 / .6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-in;
+}
+
+    .cp-zoom__button:hover {
+        background: rgb(0 0 0 / .8);
+    }
+
+    .cp-zoom__button:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+    }
+
 .cp-figure > .cp-zoom {
     width: 100%;
     aspect-ratio: 4 / 3;
