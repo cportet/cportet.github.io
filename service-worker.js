@@ -1,4 +1,4 @@
-/* Manifest version: JDJTL24f */
+/* Manifest version: 5qE02jHs */
 // Caution! Be sure you understand the caveats before publishing an application with
 // offline support. See https://aka.ms/blazor-offline-considerations
 
@@ -12,7 +12,7 @@ self.addEventListener('message', event => {
 
 const cacheNamePrefix = 'offline-cache-';
 const cacheName = `${cacheNamePrefix}${self.assetsManifest.version}`;
-const offlineAssetsInclude = [/\.dll$/, /\.pdb$/, /\.wasm/, /\.html/, /\.js$/, /\.json$/, /\.css$/, /\.woff$/, /\.png$/, /\.jpe?g$/, /\.gif$/, /\.ico$/, /\.blat$/, /\.dat$/];
+const offlineAssetsInclude = [/\.dll$/, /\.pdb$/, /\.wasm/, /\.html/, /\.js$/, /\.json$/, /\.css$/, /\.woff$/, /\.png$/, /\.jpe?g$/, /\.gif$/, /\.ico$/, /\.blat$/, /\.dat$/, /\.md$/, /\.pdf$/, /\.webmanifest$/];
 const offlineAssetsExclude = [/^service-worker\.js$/];
 
 // Replace with your base path if you are hosting on a subfolder. Ensure there is a trailing '/'.
@@ -64,4 +64,4 @@ function prerenderedPageFor(url) {
     const page = path === '' ? 'index.html' : `${path}.html`;
     return manifestUrlList.includes(new URL(page, baseUrl).href) ? page : 'index.html';
 }
-/* Last updated: 2026-11-09T16:12:19Z */
+/* Last updated: 2026-11-09T16:53:17Z */
