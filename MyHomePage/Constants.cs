@@ -525,6 +525,7 @@ public static class Constants
             public static Icon Moon => new FluentIcons.Regular.Size20.WeatherMoon();
             public static Icon Sun => new FluentIcons.Regular.Size20.WeatherSunny();
             public static Icon Settings => new FluentIcons.Regular.Size20.Settings();
+            public static Icon ZoomIn => new FluentIcons.Regular.Size20.ZoomIn();
         }
 
         public static class Large
