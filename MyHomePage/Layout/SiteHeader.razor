@@ -34,23 +34,32 @@
                         @site.Name <CpIcon Value="@(Constants.Icons.Small.Open)" />
                     </a>
                 }
+
+                @* On phones, the language and install buttons live in the menu. *@
+                <p class="cp-overline">@Ui(Constants.Ui.Nav.LanguageGroup)</p>
+                <div class="cp-nav__tools">
+                    @LanguageSwitch
+                    @if (_canInstall)
+                    {
+                        <button type="button" class="cp-btn" @onclick="InstallAsync">
+                            <CpIcon Value="@(Constants.Icons.Regular.Download)" />
+                            @Ui(Constants.Ui.Pwa.Install)
+                        </button>
+                    }
+                </div>
             </div>
         </nav>
 
         <div class="cp-header__tools">
-            <div class="cp-segmented" role="group" aria-label="@Ui(Constants.Ui.Nav.LanguageGroup)">
-                <a href="@Lang.Switch(Languages.French)" hreflang="fr" lang="fr"
-                   aria-current="@(Lang.IsEnglish ? null : "true")">FR</a>
-                <a href="@Lang.Switch(Languages.English)" hreflang="en" lang="en"
-                   aria-current="@(Lang.IsEnglish ? "true" : null)">EN</a>
+            <div class="cp-header__wide-only">
+                @LanguageSwitch
+                @if (_canInstall)
+                {
+                    <button type="button" class="cp-iconbtn" title="@Ui(Constants.Ui.Pwa.Install)" aria-label="@Ui(Constants.Ui.Pwa.Install)" @onclick="InstallAsync">
+                        <CpIcon Value="@(Constants.Icons.Regular.Download)" />
+                    </button>
+                }
             </div>
-
-            @if (_canInstall)
-            {
-                <button type="button" class="cp-iconbtn" title="@Ui(Constants.Ui.Pwa.Install)" aria-label="@Ui(Constants.Ui.Pwa.Install)" @onclick="InstallAsync">
-                    <CpIcon Value="@(Constants.Icons.Regular.Download)" />
-                </button>
-            }
 
             <button type="button" class="cp-iconbtn" @onclick="ToggleThemeAsync"
                     title="@ThemeLabel" aria-label="@ThemeLabel">
@@ -84,6 +93,13 @@
     private bool _menuOpen;
     private bool _dark;
     private bool _canInstall;
+
+    private RenderFragment LanguageSwitch => @<div class="cp-segmented" role="group" aria-label="@Ui(Constants.Ui.Nav.LanguageGroup)">
+        <a href="@Lang.Switch(Languages.French)" hreflang="fr" lang="fr"
+           aria-current="@(Lang.IsEnglish ? null : "true")" @onclick="CloseMenu">FR</a>
+        <a href="@Lang.Switch(Languages.English)" hreflang="en" lang="en"
+           aria-current="@(Lang.IsEnglish ? "true" : null)" @onclick="CloseMenu">EN</a>
+    </div>;
 
     private string ThemeLabel => Ui(_dark ? Constants.Ui.Theme.ToLight : Constants.Ui.Theme.ToDark);
 
