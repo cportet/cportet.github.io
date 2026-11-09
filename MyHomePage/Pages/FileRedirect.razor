@@ -1,0 +1,16 @@
+@page "/file/{Kind}"
+@page "/fichier/{Kind}"
+@inject NavigationManager Navigation
+
+@* Former document viewer: old links now open the document directly. *@
+
+@code {
+    [Parameter]
+    public string? Kind { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        var target = Kind?.Trim().ToLowerInvariant() == "cv" ? Content.Site.CvPdf : Href("404");
+        Navigation.NavigateTo(target, forceLoad: target == Content.Site.CvPdf, replace: true);
+    }
+}

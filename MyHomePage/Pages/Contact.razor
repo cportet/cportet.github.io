@@ -1,6 +1,52 @@
-﻿<MyPageContainer Title=@AppRessources.Page_Contact_Title
-                 SubTitle=@AppRessources.Page_Contact_SubTitle>
-    <MySection id="details" Title=@AppRessources.Page_Contact_Section_Details>
-        <MyMarkdownLoader RessourcePath="contact/details" />
-    </MySection>
-</MyPageContainer>
+@page "/contact"
+@page "/en/contact"
+
+<Seo Page="contact" Path="contact" />
+
+<div class="cp-container">
+    <PageHeader Page="contact" />
+
+    <section class="cp-grid cp-grid--wide" aria-label="@Ui("contact.methods")">
+        <a class="cp-card cp-card--padded cp-contact cp-contact--primary" href="@MailTo">
+            <CpIcon Value="@(new Icons.Regular.Size28.Mail())" Size="28" />
+            <span class="cp-overline">@Ui("contact.email.badge")</span>
+            <span class="cp-contact__value">@Content.Site.Email</span>
+            <span>@Ui("contact.email.action")</span>
+        </a>
+
+        @if (Content.Site.Phone is { } phone)
+        {
+            <a class="cp-card cp-card--padded cp-contact" href="tel:@phone.Replace(" ", "")">
+                <CpIcon Value="@(new Icons.Regular.Size28.Call())" Size="28" Class="cp-accent-text" />
+                <span class="cp-overline">@Ui("contact.phone.badge")</span>
+                <span class="cp-contact__value">@phone</span>
+                <span class="cp-muted">@Ui("contact.phone.action")</span>
+            </a>
+        }
+
+        <a class="cp-card cp-card--padded cp-contact" href="@Content.Site.LinkedIn" target="_blank" rel="noopener">
+            <CpIcon Value="@(new Icons.Regular.Size28.PeopleTeam())" Size="28" Class="cp-accent-text" />
+            <span class="cp-overline">@Ui("contact.linkedin.badge")</span>
+            <span class="cp-contact__value">LinkedIn</span>
+            <span class="cp-muted">@(new Uri(Content.Site.LinkedIn).Host)</span>
+        </a>
+    </section>
+
+    <section class="cp-card cp-callout cp-section">
+        <div>
+            <h2 class="cp-h4">@Ui("contact.resume.title")</h2>
+            <p class="cp-muted">@Ui("contact.resume.text")</p>
+        </div>
+        <div class="cp-actions">
+            <a class="cp-btn" href="@Href("resume")">@Ui("contact.resume.web")</a>
+            <a class="cp-btn cp-btn--primary" href="@Content.Site.CvPdf" target="_blank" rel="noopener">
+                <CpIcon Value="@(new Icons.Regular.Size20.ArrowDownload())" />
+                PDF
+            </a>
+        </div>
+    </section>
+</div>
+
+@code {
+    private string MailTo => $"mailto:{Content.Site.Email}?subject={Uri.EscapeDataString(Ui("contact.email.subject"))}";
+}

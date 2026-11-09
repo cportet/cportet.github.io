@@ -1,0 +1,9 @@
+<span class="cp-tag @(Outline ? "cp-tag--outline" : null)">@Text</span>
+
+@code {
+    [Parameter, EditorRequired]
+    public string Text { get; set; } = null!;
+
+    [Parameter]
+    public bool Outline { get; set; }
+}

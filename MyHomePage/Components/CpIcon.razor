@@ -1,0 +1,14 @@
+@* Fluent UI System icon, drawn with the current text color. *@
+<svg class="cp-icon @Class" width="@Size" height="@Size" viewBox="0 0 @((int)Value.Size) @((int)Value.Size)"
+     fill="currentColor" aria-hidden="true" focusable="false">@((MarkupString)Value.Content)</svg>
+
+@code {
+    [Parameter, EditorRequired]
+    public Icon Value { get; set; } = null!;
+
+    [Parameter]
+    public int Size { get; set; } = 20;
+
+    [Parameter]
+    public string? Class { get; set; }
+}

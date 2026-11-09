@@ -1,0 +1,27 @@
+@* Title, description, canonical URL and language alternates of a page. *@
+<PageTitle>@Title</PageTitle>
+<HeadContent>
+    <meta name="description" content="@T(Meta.Description)" />
+    <link rel="canonical" href="@Absolute(Href(Path))" />
+    <link rel="alternate" hreflang="fr" href="@Absolute(Lang.Href(Path, Languages.French))" />
+    <link rel="alternate" hreflang="en" href="@Absolute(Lang.Href(Path, Languages.English))" />
+    <link rel="alternate" hreflang="x-default" href="@Absolute(Lang.Href(Path, Languages.French))" />
+</HeadContent>
+
+@code {
+    /// <summary>Key of the page in pages.json.</summary>
+    [Parameter, EditorRequired]
+    public string Page { get; set; } = null!;
+
+    /// <summary>Canonical, language-neutral path of the page (e.g. "resume").</summary>
+    [Parameter, EditorRequired]
+    public string Path { get; set; } = null!;
+
+    private PageMeta Meta => Content.Page(Page);
+
+    private string Title => Page == "home"
+        ? T(Meta.Title)
+        : $"{T(Meta.Title)} · {Content.Site.Name}";
+
+    private string Absolute(string path) => Content.Site.BaseUrl.TrimEnd('/') + path;
+}

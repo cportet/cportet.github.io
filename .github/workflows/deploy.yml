@@ -1,38 +1,59 @@
-﻿name: Deploy Blazor WASM to GitHub Pages
+﻿name: Build, test and deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]  # Écoute les pushes sur la branche master
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  deploy-to-github-pages:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup .NET 10
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 10.0.x
 
-      - name: Update buildtimestamp in appconfig.json
+      # Content validation (JSON, FR/EN completeness, keys) and unit tests.
+      - name: Test
+        run: dotnet test --project MyHomePage.Tests -c Release
+
+      - name: Stamp build timestamp
         run: |
           timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          jq --arg ts "$timestamp" '.buildtimestamp = $ts' MyHomePage/wwwroot/appconfig.json > temp.json && mv temp.json MyHomePage/wwwroot/appconfig.json
+          jq --arg ts "$timestamp" '.buildTimestamp = $ts' MyHomePage/wwwroot/appconfig.json > temp.json && mv temp.json MyHomePage/wwwroot/appconfig.json
+          echo "/* Last updated: $timestamp */" >> MyHomePage/wwwroot/service-worker.published.js
 
-      - name: Update service-worker.published.js with current timestamp
-        run: |
-          echo "/* Last updated: $(date -u '+%Y-%m-%d %H:%M:%S UTC') */" >> MyHomePage/wwwroot/service-worker.published.js
-
-      - name: Publish Blazor Project
+      - name: Publish
         run: dotnet publish MyHomePage/MyHomePage.csproj -c Release -o release --nologo
 
       - name: Add .nojekyll file
         run: touch release/wwwroot/.nojekyll
 
+      - name: Upload site
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: release/wwwroot
+
+  deploy:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages  # Déploie sur la branche gh-pages
-          folder: release/wwwroot
+          branch: gh-pages
+          folder: site

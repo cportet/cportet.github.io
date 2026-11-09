@@ -1,76 +1,135 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://www.portet.org/</loc>
-        <lastmod>2025-11-19</lastmod>
+        <lastmod>2026-11-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/index" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/home" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/" />
     </url>
-
     <url>
-        <loc>https://www.portet.org/about</loc>
-        <lastmod>2025-11-19</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/about" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/apropos" />
-    </url>
-
-    <url>
-        <loc>https://www.portet.org/applications</loc>
-        <lastmod>2025-11-21</lastmod>
+        <loc>https://www.portet.org/en</loc>
+        <lastmod>2026-11-09</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/" />
     </url>
-
-    <url>
-        <loc>https://www.portet.org/404</loc>
-        <lastmod>2025-11-19</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.4</priority>
-    </url>
-
-    <url>
-        <loc>https://www.portet.org/options</loc>
-        <lastmod>2025-11-19</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>https://www.portet.org/perso</loc>
-        <lastmod>2025-11-19</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
     <url>
         <loc>https://www.portet.org/resume</loc>
-        <lastmod>2025-11-21</lastmod>
-        <changefreq>weekly</changefreq>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/resume" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/cv" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/curriculumvitae" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/resume" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/resume" />
     </url>
-
     <url>
-        <loc>https://www.portet.org/file/cv</loc>
-        <lastmod>2025-12-09</lastmod>
+        <loc>https://www.portet.org/en/resume</loc>
+        <lastmod>2026-11-09</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/resume" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/resume" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/resume" />
     </url>
-
+    <url>
+        <loc>https://www.portet.org/projects</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/projects" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/projects" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/projects" />
+    </url>
+    <url>
+        <loc>https://www.portet.org/en/projects</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/projects" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/projects" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/projects" />
+    </url>
+    <url>
+        <loc>https://www.portet.org/projects/privacy</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/projects/privacy" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/projects/privacy" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/projects/privacy" />
+    </url>
+    <url>
+        <loc>https://www.portet.org/en/projects/privacy</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/projects/privacy" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/projects/privacy" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/projects/privacy" />
+    </url>
+    <url>
+        <loc>https://www.portet.org/perso</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/perso" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/perso" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/perso" />
+    </url>
+    <url>
+        <loc>https://www.portet.org/en/perso</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/perso" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/perso" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/perso" />
+    </url>
+    <url>
+        <loc>https://www.portet.org/contact</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/contact" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/contact" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/contact" />
+    </url>
+    <url>
+        <loc>https://www.portet.org/en/contact</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/contact" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/contact" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/contact" />
+    </url>
+    <url>
+        <loc>https://www.portet.org/about</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/about" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/about" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/about" />
+    </url>
+    <url>
+        <loc>https://www.portet.org/en/about</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.portet.org/about" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.portet.org/en/about" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.portet.org/about" />
+    </url>
     <url>
         <loc>https://www.portet.org/doc/cv-cyril-portet.pdf</loc>
         <lastmod>2025-12-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
 </urlset>

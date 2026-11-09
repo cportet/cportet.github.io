@@ -1,0 +1,26 @@
+@* Renders content/md/{Path}.{language}.md *@
+@if (_html is not null)
+{
+    <div class="cp-prose @Class">@((MarkupString)_html)</div>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public string Path { get; set; } = null!;
+
+    [Parameter]
+    public string? Class { get; set; }
+
+    private string? _html;
+    private string? _loaded;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        var key = $"{Path}.{Lang.Current}";
+        if (key == _loaded)
+            return;
+
+        _loaded = key;
+        _html = await Content.MarkdownAsync(Path);
+    }
+}

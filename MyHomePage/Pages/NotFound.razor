@@ -1,18 +1,18 @@
-﻿@layout MainLayout
+@page "/404"
+@page "/en/404"
+@layout MainLayout
 
-<MyPageContainer Title=@AppRessources.NotFound_PageTitle
-                 SubTitle=@AppRessources.NotFound_PageSubTitle>
-    <MySection Id="introduction" Title=@AppRessources.NotFound_Title
-               SubTitle=@AppRessources.NotFound_Text>
-        <div class="my-spaced">
-            <MyImageDisplay ImageUrl="/img/404.png" AltText="404"
-                            Height="300px" Width="300px" Rounded=false />
-        </div>
-        <div class="my-spaced">
-            <a href="javascript:window.history.back()">@AppRessources.NotFound_Retour_Link</a>
-            <span> - </span>
-            <a href="/">@AppRessources.NotFound_Home_Link</a>
-        </div>
-    </MySection>
+<Seo Page="notFound" Path="404" />
+<HeadContent>
+    <meta name="robots" content="noindex" />
+</HeadContent>
 
-</MyPageContainer>
+<div class="cp-container cp-not-found">
+    <img src="/img/404.png" alt="" width="280" height="280" />
+    <PageHeader Page="notFound">
+        <div class="cp-actions">
+            <a class="cp-btn cp-btn--primary" href="@Href("/")">@Ui("notFound.home")</a>
+            <a class="cp-btn" href="javascript:history.back()">@Ui("notFound.back")</a>
+        </div>
+    </PageHeader>
+</div>

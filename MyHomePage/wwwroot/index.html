@@ -2,104 +2,88 @@
 <html lang="fr">
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Cyril Portet" />
+    <meta name="theme-color" content="#0f6cbd" />
+
+    <title>Cyril Portet — CTO &amp; artisan logiciel</title>
+    <base href="/" />
+
+    <script>
+        // Before anything renders: language from the URL, light/dark from the saved Fluent theme (or the system).
+        (function () {
+            var root = document.documentElement;
+            if (/^\/en(\/|$)/i.test(location.pathname)) root.lang = 'en';
+            try {
+                var settings = JSON.parse(localStorage.getItem('fluentui-blazor:theme-settings') || 'null');
+                var mode = settings && String(settings.mode || settings.Mode || '').toLowerCase();
+                var dark = mode === 'dark' || (mode !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) root.classList.add('cp-dark-boot');
+            } catch (e) { }
+        })();
+    </script>
+
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "Cyril Portet",
-          "jobTitle": "Développeur, artisan logiciel & manager technique",
+          "jobTitle": "CTO, artisan logiciel & manager technique",
           "url": "https://www.portet.org",
           "image": "https://www.portet.org/img/me2.jpg",
-          "sameAs": ["https://www.linkedin.com/in/cportet", "https://x.com/cportetdev"]
+          "sameAs": ["https://www.linkedin.com/in/cportet", "https://github.com/cportet", "https://x.com/cportetdev"]
         }
     </script>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="index, follow">
-
-    <meta name="description" content="Cyril Portet – Espace personnel de Cyril Portet, développeur, artisan logiciel & manager tech avec 20+ ans d’expérience (C#, Blazor, web, architecture). CV, projets et contact.">
-    <meta name="keywords" content="homepage, personnel, cv, resume, curriculum vitae, cyril portet, application, blazor, dotnet, c#" />
-    <meta name="author" content="Cyril Portet" />
-
-    <meta property="og:title" content="Cyril Portet - Développeur & Manager IT">
-    <meta property="og:description" content="Espace personnel de Cyril Portet, 20+ ans d’expérience en développement et management tech. CV, projets et contact.">
-    <meta property="og:image" content="https://www.portet.org/img/preview.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Cyril Portet - Développeur & Manager IT">
-    <meta property="og:url" content="https://www.portet.org">
-    <meta property="og:type" content="profile">
-    <meta property="og:locale" content="fr_FR">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cyril Portet - Développeur & Manager IT">
-    <meta name="twitter:description" content="Espace personnel de Cyril Portet, 20+ ans d’expérience en développement et management tech. CV, projets et contact.">
-    <meta name="twitter:image" content="https://www.portet.org/img/preview.jpg">
-    <meta name="twitter:site" content="@cportetdev">
-
+    <meta property="og:title" content="Cyril Portet — CTO & artisan logiciel" />
+    <meta property="og:description" content="Espace personnel de Cyril Portet, CTO et artisan logiciel : CV, projets et contact." />
+    <meta property="og:image" content="https://www.portet.org/img/preview.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Cyril Portet — CTO & artisan logiciel" />
+    <meta property="og:url" content="https://www.portet.org" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@cportetdev" />
     <meta name="msvalidate.01" content="F8FA9AB42FE9BD5F8345EAAC01A087E7" />
 
-    <title>Cyril Portet</title>
-
-    <base href="/" />
-
-    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
-    <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
 
+    <link rel="stylesheet" href="_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.bundle.scp.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="MyHomePage.styles.css" />
-
-    <script src="https://kit.fontawesome.com/ba234ba768.js" crossorigin="anonymous"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            applyInitialTheme();
-        });
-    </script>
 </head>
 
-<body>
+<body no-fuib-style>
     <div id="app">
-        <h1 class="loading-page-h1">Accueil du site personnel de Cyril Portet : CV, Blazor, DotNet et Fun</h1>
-        <div class="app-content">
-            <div class="app-title">
-                Cyril PORTET
-            </div>
-            <div class="app-loading">
-                <svg class="loading-progress">
-                    <circle r="40%" cx="50%" cy="50%" />
-                    <circle r="40%" cx="50%" cy="50%" />
-                </svg>
-                <div class="loading-progress-text"></div>
-            </div>
-            <div class="app-subtitle">
-                &copy; 2025 - cyril@portet.org
-            </div>
-        </div>
-
-        <div class="app-footer">
-            <p>
-                Si votre navigateur n'est pas en mesure de démarrer
-                <span class="app-tooltip" data-tooltip="Votre navigateur doit supporter l'exécution d'application WebAssembly (Blazor/WASM)">l'application</span>,
-                vous pouvez me joindre à l'adresse <a href="mailto:cyril@portet.org">cyril@portet.org</a>,
-                ou retrouver mon profil sur <a href="https://linkedin.portet.org">LinkedIn</a>
+        <div class="cp-boot">
+            <h1 class="cp-seo-only">Cyril Portet — CTO, artisan logiciel : CV, projets et contact</h1>
+            <div class="cp-boot__name">Cyril Portet</div>
+            <div class="cp-boot__progress" role="progressbar" aria-label="Chargement / Loading"></div>
+            <p class="cp-boot__fallback">
+                Si l'application ne démarre pas, écrivez-moi à <a href="mailto:cyril@portet.org">cyril@portet.org</a>
+                ou retrouvez-moi sur <a href="https://linkedin.portet.org">LinkedIn</a>.
             </p>
         </div>
     </div>
 
     <div id="blazor-error-ui">
-        Une erreur non gérée est survenue. Vous pouvez tenter de recharger l'application :
-        <a href="." class="reload" title="Cliquez sur ce lien pour recharger l'application">Recharger</a>
-        <span class="dismiss" title="Fermer cette alerte">🗙</span>
+        Une erreur est survenue / An error occurred.
+        <a href="." class="reload">Recharger / Reload</a>
+        <span class="dismiss" title="Fermer / Close">🗙</span>
     </div>
-    <script src="_framework/blazor.webassembly.js"></script>
+
     <script src="js/scripts.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
     <script src="_content/Toolbelt.Blazor.PWA.Updater.Service/script.min.js"></script>
     <script data-goatcounter="https://cportet.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

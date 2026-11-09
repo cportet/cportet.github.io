@@ -1,0 +1,124 @@
+@implements IDisposable
+@inject NavigationManager Navigation
+@inject ThemePreferences Theme
+@inject IJSRuntime JS
+
+<header class="cp-header">
+    <div class="cp-container cp-header__inner">
+        <a class="cp-brand" href="@Href("/")">
+            <span class="cp-brand__badge" aria-hidden="true">@Content.Site.Initials</span>
+            @Content.Site.Name
+        </a>
+
+        <nav id="cp-nav" class="cp-nav @(_menuOpen ? "cp-nav--open" : null)" aria-label="@Ui("nav.main")">
+            @foreach (var item in Content.Site.Nav)
+            {
+                <NavLink class="cp-nav__link" href="@Href(item.Path)"
+                         Match="@(item.Path == "/" ? NavLinkMatch.All : NavLinkMatch.Prefix)"
+                         @onclick="CloseMenu">@T(item.Label)</NavLink>
+            }
+        </nav>
+
+        <div class="cp-header__tools">
+            <div class="cp-segmented" role="group" aria-label="@Ui("lang.group")">
+                <a href="@Lang.Switch(Languages.French)" hreflang="fr" lang="fr"
+                   aria-current="@(Lang.IsEnglish ? null : "true")">FR</a>
+                <a href="@Lang.Switch(Languages.English)" hreflang="en" lang="en"
+                   aria-current="@(Lang.IsEnglish ? "true" : null)">EN</a>
+            </div>
+
+            @if (_canInstall)
+            {
+                <button type="button" class="cp-iconbtn" title="@Ui("pwa.install")" aria-label="@Ui("pwa.install")" @onclick="InstallAsync">
+                    <CpIcon Value="@(new Icons.Regular.Size20.ArrowDownload())" />
+                </button>
+            }
+
+            <button type="button" class="cp-iconbtn" @onclick="ToggleThemeAsync"
+                    title="@ThemeLabel" aria-label="@ThemeLabel">
+                @if (_dark)
+                {
+                    <CpIcon Value="@(new Icons.Regular.Size20.WeatherSunny())" />
+                }
+                else
+                {
+                    <CpIcon Value="@(new Icons.Regular.Size20.WeatherMoon())" />
+                }
+            </button>
+
+            <button type="button" class="cp-iconbtn cp-header__menu" @onclick="ToggleMenu"
+                    aria-controls="cp-nav" aria-expanded="@(_menuOpen ? "true" : "false")"
+                    aria-label="@Ui(_menuOpen ? "nav.close" : "nav.open")">
+                @if (_menuOpen)
+                {
+                    <CpIcon Value="@(new Icons.Regular.Size24.Dismiss())" Size="22" />
+                }
+                else
+                {
+                    <CpIcon Value="@(new Icons.Regular.Size24.Navigation())" Size="22" />
+                }
+            </button>
+        </div>
+    </div>
+</header>
+
+@code {
+    private bool _menuOpen;
+    private bool _dark;
+    private bool _canInstall;
+
+    private string ThemeLabel => Ui(_dark ? "theme.toggleToLight" : "theme.toggleToDark");
+
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += OnLocationChanged;
+        Theme.Changed += OnThemeChanged;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender)
+            return;
+
+        _dark = await Theme.IsDarkAsync();
+        _canInstall = await JS.InvokeAsync<bool>("cp.pwa.canInstall");
+        StateHasChanged();
+    }
+
+    private void ToggleMenu() => _menuOpen = !_menuOpen;
+
+    private void CloseMenu() => _menuOpen = false;
+
+    private async Task ToggleThemeAsync() => await Theme.ToggleDarkAsync();
+
+    private async Task InstallAsync()
+    {
+        await JS.InvokeAsync<bool>("cp.pwa.install");
+        _canInstall = await JS.InvokeAsync<bool>("cp.pwa.canInstall");
+    }
+
+    private async void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        _menuOpen = false;
+        try
+        {
+            _canInstall = await JS.InvokeAsync<bool>("cp.pwa.canInstall");
+        }
+        catch (JSDisconnectedException)
+        {
+        }
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async void OnThemeChanged()
+    {
+        _dark = await Theme.IsDarkAsync();
+        await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        Navigation.LocationChanged -= OnLocationChanged;
+        Theme.Changed -= OnThemeChanged;
+    }
+}

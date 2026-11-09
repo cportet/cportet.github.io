@@ -3,11 +3,13 @@
   "short_name": "Cyril Portet",
   "id": "./",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "lang": "fr",
+  "background_color": "#fafafa",
+  "theme_color": "#0f6cbd",
   "prefer_related_applications": false,
-  "description": "Bienvenue sur l'espace personnel de Cyril Portet, artisan logiciel (.Net, C# et Blazor)v, développeur et manager.",
+  "description": "Espace personnel de Cyril Portet, CTO et artisan logiciel (.NET, C#, Blazor) : CV, projets et contact.",
   "icons": [
     {
       "src": "icon-512.png",
@@ -19,5 +21,10 @@
       "type": "image/png",
       "sizes": "192x192"
     }
+  ],
+  "shortcuts": [
+    { "name": "CV", "url": "/resume" },
+    { "name": "Resume (English)", "url": "/en/resume" },
+    { "name": "Contact", "url": "/contact" }
   ]
 }
