@@ -28,13 +28,21 @@
       "kind": { "fr": "Musique", "en": "Music" },
       "title": "Stoneheart",
       "summary": { "fr": "Groupe de métal des monts du Lyonnais (avec Trystan à la guitare et Eloy à la batterie).", "en": "Metal band from the Monts du Lyonnais (with Trystan on guitar and Eloy on drums)." },
-      "url": "https://taplink.cc/stoneheart"
+      "url": "https://taplink.cc/stoneheart",
+      "image": {
+        "url": "/img/featured/stoneheart.jpg",
+        "alt": { "fr": "Les cinq membres du groupe Stoneheart devant leur logo", "en": "The five members of Stoneheart in front of their logo" }
+      }
     },
     {
       "kind": { "fr": "Musique", "en": "Music" },
       "title": "Distorted Memory",
       "summary": { "fr": "Groupe de rock folk des monts du Lyonnais (avec Trystan à la guitare et Eloy aux percussions).", "en": "Rock and folk band from the Monts du Lyonnais (with Trystan on guitar and Eloy on percussion)." },
-      "url": "https://www.facebook.com/DistortedbMemory/"
+      "url": "https://www.facebook.com/DistortedbMemory/",
+      "image": {
+        "url": "/img/featured/distorted-memory.jpg",
+        "alt": { "fr": "Fred, chant, et Trystan, guitare, sous le logo de Distorted Memory", "en": "Fred, vocals, and Trystan, guitar, under the Distorted Memory logo" }
+      }
     }
   ]
 }
