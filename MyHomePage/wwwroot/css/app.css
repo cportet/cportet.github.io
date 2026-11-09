@@ -801,13 +801,14 @@ a.cp-card:hover {
 
 /* Family sites: tinted, to tell them apart from the favourites. */
 .cp-pill--soft {
-    border-color: transparent;
+    border-color: color-mix(in srgb, var(--cp-accent) 45%, transparent);
     background: var(--cp-accent-soft);
     color: var(--cp-accent-soft-fg);
 }
 
     .cp-pill--soft:hover {
         border-color: var(--cp-accent);
+        background: color-mix(in srgb, var(--cp-accent) 26%, var(--cp-surface));
     }
 
 .cp-pills__label {
