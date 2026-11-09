@@ -7,6 +7,16 @@
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
     <SatelliteResourceLanguages>fr;en</SatelliteResourceLanguages>
   </PropertyGroup>
+  <!-- Static prerendering at publish time (BlazorWasmPreRendering.Build): one HTML file per page,
+       so that search engines and AI crawlers get the real content and an HTTP 200. -->
+  <PropertyGroup>
+    <!-- "/resume" => "resume.html", served as "/resume" by GitHub Pages without a redirect. -->
+    <BlazorWasmPrerenderingOutputStyle>AppendHtmlExtension</BlazorWasmPrerenderingOutputStyle>
+    <!-- Former URLs, not linked anymore but possibly bookmarked or indexed (their canonical URL points to the new one). -->
+    <BlazorWasmPrerenderingUrlPathToExplicitFetch>/cv;/curriculumvitae;/apropos;/applications;/applications/charte;/options</BlazorWasmPrerenderingUrlPathToExplicitFetch>
+    <!-- wwwroot/404.html is the GitHub Pages fallback: it must not be overwritten. -->
+    <BlazorWasmPrerenderingUrlPathRegexToIgnore>^/(en/)?404$</BlazorWasmPrerenderingUrlPathRegexToIgnore>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Markdig" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" />
@@ -14,6 +24,7 @@
     <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" />
     <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" />
     <PackageReference Include="Toolbelt.Blazor.PWA.Updater" />
+    <PackageReference Include="BlazorWasmPreRendering.Build" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />

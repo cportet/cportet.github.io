@@ -62,6 +62,7 @@
     {
       "title": { "fr": "BTS Informatique de gestion", "en": "BTS in Business Computing (two-year degree)" },
       "year": 2000,
+      "school": { "name": "AFORP Oise", "url": "https://www.aforp.fr" },
       "text": {
         "fr": "Option développeur d’applications, à l’AFORP Oise (Senlis), en alternance chez Clariant (site de Lamotte, Trosly-Breuil).",
         "en": "Application developer track, at AFORP Oise (Senlis), as a work-study apprentice at Clariant (Lamotte site, Trosly-Breuil)."

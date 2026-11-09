@@ -30,6 +30,19 @@ Ages and durations are never written by hand: use `{{age}}`, `{{experienceYears}
 
 The URL sets the language: `/resume` is French, `/en/resume` is English.
 
+## Search engines and AI assistants
+
+- **Prerendering**: `dotnet publish` renders every page to static HTML ([BlazorWasmPreRendering.Build](https://github.com/jsakamoto/BlazorWasmPreRendering.Build)): `/resume` is served from `resume.html` with its real content and an HTTP 200, then Blazor takes over.
+- **Per page** (`Components/Seo.razor`): title, description, canonical URL, `hreflang` alternates, Open Graph / X cards and schema.org JSON-LD (`Content/StructuredData.cs`), all built from the content.
+- **Generated files** (`MyHomePage.Tools`, run by the CI before publishing):
+
+```bash
+dotnet run --project MyHomePage.Tools -- generate MyHomePage/wwwroot
+```
+
+  writes `sitemap.xml`, `llms.txt` (summary for AI assistants) and `llms-full.txt` (the whole resume as text, FR and EN). After publishing, `postpublish <wwwroot>` sets `lang="en"` on the English pages.
+- `robots.txt` allows every crawler, AI crawlers included.
+
 ## Develop
 
 ```bash

@@ -15,6 +15,38 @@ public static class Constants
         /// <summary>Prefix of the English routes.</summary>
         public const string EnglishPrefix = "/en";
 
+        /// <summary>Public pages listed for search engines (sitemap.xml, llms.txt): pages.json key and path.</summary>
+        public static readonly (string Key, string Path)[] Indexed =
+        [
+            (Home.Key, Home.Path),
+            (Resume.Key, Resume.Path),
+            (Projects.Key, Projects.Path),
+            (Privacy.Key, Privacy.Path),
+            (Perso.Key, Perso.Path),
+            (Contact.Key, Contact.Path),
+            (About.Key, About.Path),
+        ];
+
+        /// <summary>Former URLs (without leading "/") and the path of the page they now show.</summary>
+        public static readonly IReadOnlyDictionary<string, string> CanonicalPaths =
+            new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+            {
+                [Home.Aliases.Index[1..]] = Home.Path,
+                [Home.Aliases.IndexHtml[1..]] = Home.Path,
+                [Home.Aliases.Home[1..]] = Home.Path,
+                [Home.Aliases.Default[1..]] = Home.Path,
+                [Home.Aliases.DefaultHtml[1..]] = Home.Path,
+                [Resume.Aliases.Cv[1..]] = Resume.Path,
+                [Resume.Aliases.CurriculumVitae[1..]] = Resume.Path,
+                [Resume.Aliases.Experience[1..]] = Resume.Path,
+                [Projects.Aliases.Projets[1..]] = Projects.Path,
+                [Projects.Aliases.Applications[1..]] = Projects.Path,
+                [Projects.Aliases.MesApps[1..]] = Projects.Path,
+                [Privacy.Aliases.Charte[1..]] = Privacy.Path,
+                [About.Aliases.APropos[1..]] = About.Path,
+                [Preferences.Aliases.Options[1..]] = Preferences.Path,
+            };
+
         public static class Home
         {
             public const string Key = "home";
@@ -169,6 +201,14 @@ public static class Constants
     {
         public const string AppConfig = "appconfig.json";
         public const string ResumePortrait = "/img/me2.jpg";
+
+        /// <summary>Generated from the content by MyHomePage.Tools.</summary>
+        public const string Sitemap = "sitemap.xml";
+        public const string Llms = "llms.txt";
+        public const string LlmsFull = "llms-full.txt";
+
+        /// <summary>Link preview image (Open Graph, X), 1200×630.</summary>
+        public const string SocialPreview = "/img/preview.jpg";
         public const string NotFoundImage = "/img/404.png";
 
         public static class Content

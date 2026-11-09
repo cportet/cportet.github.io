@@ -1,4 +1,4 @@
-using Xunit;
+﻿using Xunit;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -209,6 +209,6 @@ public partial class ContentTests
     }
 
     /// <summary>A string literal given to Ui(...), Href(...), Page="…", Path="…" or @page.</summary>
-    [GeneratedRegex("""(?:Ui|Href|Content\.Page)\("|(?:Page|Path)="[^@"]|@page\s""")]
+    [GeneratedRegex("""(?:Ui|Href|Content\.Page)\("|\b(?:Page|Path)="[^@"]|@page\s""")]
     private static partial Regex HardCodedRegex();
 }

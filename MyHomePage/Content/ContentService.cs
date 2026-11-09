@@ -32,7 +32,12 @@ public sealed class ContentService(HttpClient http, LanguageService language)
 
     public string Language => language.Current;
 
-    public async Task LoadAsync()
+    private Task? _loading;
+
+    /// <summary>Loads the content once; later calls return the same task.</summary>
+    public Task EnsureLoadedAsync() => _loading ??= LoadAsync();
+
+    private async Task LoadAsync()
     {
         var site = Load(Constants.Files.Content.Site, ContentJsonContext.Default.SiteData);
         var profile = Load(Constants.Files.Content.Profile, ContentJsonContext.Default.Profile);
@@ -69,6 +74,9 @@ public sealed class ContentService(HttpClient http, LanguageService language)
     public string Ui(string key) =>
         _ui.TryGetValue(key, out var text) ? T(text) : $"[{key}]";
 
+    /// <summary>Link to a page in the current language.</summary>
+    public string Href(string path) => language.Href(path);
+
     /// <summary>Email link with a subject in the current language.</summary>
     public string MailTo => $"mailto:{Site.Email}?subject={Uri.EscapeDataString(Ui(Constants.Ui.Contact.Email.Subject))}";
 
@@ -83,12 +91,6 @@ public sealed class ContentService(HttpClient http, LanguageService language)
 
     public Experience? CurrentPosition => Experiences.FirstOrDefault(e => e.IsCurrent);
 
-    public int Age => LiveDates.YearsBetween(Profile.BirthDate, Today);
-
-    public int ExperienceYears => LiveDates.YearsBetween(Profile.CareerStart, Today);
-
-    public int ManagementYears => LiveDates.YearsBetween(Profile.ManagementStart, Today);
-
     public string Duration(Experience experience) =>
         LiveDates.Duration(experience.Start, experience.End, Today, Language);
 
@@ -98,18 +100,8 @@ public sealed class ContentService(HttpClient http, LanguageService language)
     public string PeriodYears(Experience experience) =>
         LiveDates.PeriodYears(experience.Start, experience.End, Ui(Constants.Ui.Date.Present));
 
-    public string Expand(string text)
-    {
-        if (!text.Contains("{{", StringComparison.Ordinal)) // Every token starts with "{{".
-            return text;
-
-        return text
-            .Replace(Constants.Tokens.Age, Age.ToString(), StringComparison.Ordinal)
-            .Replace(Constants.Tokens.ExperienceYears, ExperienceYears.ToString(), StringComparison.Ordinal)
-            .Replace(Constants.Tokens.ManagementYears, ManagementYears.ToString(), StringComparison.Ordinal)
-            .Replace(Constants.Tokens.CurrentRoleDuration, CurrentPosition is { } current ? Duration(current) : string.Empty, StringComparison.Ordinal)
-            .Replace(Constants.Tokens.Year, Today.Year.ToString(), StringComparison.Ordinal);
-    }
+    public string Expand(string text) =>
+        LiveDates.Expand(text, Profile, Experiences, Language, Today);
 
     // --- Markdown --------------------------------------------------------------------
 

@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history: the sitemap's lastmod is the date of the last content change
 
       - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
@@ -27,8 +29,18 @@ jobs:
           jq --arg ts "$timestamp" '.buildTimestamp = $ts' MyHomePage/wwwroot/appconfig.json > temp.json && mv temp.json MyHomePage/wwwroot/appconfig.json
           echo "/* Last updated: $timestamp */" >> MyHomePage/wwwroot/service-worker.published.js
 
+      # sitemap.xml, llms.txt and llms-full.txt, from the content (ages and durations as of today).
+      - name: Generate SEO files
+        run: |
+          lastmod=$(git log -1 --format=%cs -- MyHomePage/wwwroot/content MyHomePage/wwwroot/doc)
+          dotnet run --project MyHomePage.Tools -c Release -- generate MyHomePage/wwwroot --lastmod "$lastmod"
+
+      # Also prerenders every page to static HTML (BlazorWasmPreRendering.Build).
       - name: Publish
         run: dotnet publish MyHomePage/MyHomePage.csproj -c Release -o release --nologo
+
+      - name: Fix prerendered English pages
+        run: dotnet run --project MyHomePage.Tools -c Release --no-build -- postpublish release/wwwroot
 
       - name: Add .nojekyll file
         run: touch release/wwwroot/.nojekyll

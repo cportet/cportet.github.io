@@ -5,6 +5,8 @@ namespace MyHomePage.Content;
 public sealed record SiteData
 {
     public required string Name { get; init; }
+    public required string GivenName { get; init; }
+    public required string FamilyName { get; init; }
     public required string Initials { get; init; }
     public required string BaseUrl { get; init; }
     public required string Email { get; init; }
@@ -12,9 +14,18 @@ public sealed record SiteData
     public required string LinkedIn { get; init; }
     public required string SourceCode { get; init; }
     public required string CvPdf { get; init; }
+    public required string TwitterHandle { get; init; }
+    public required Place Location { get; init; }
     public IReadOnlyList<NavItem> Nav { get; init => field = value ?? []; } = [];
     public IReadOnlyList<SocialLink> Socials { get; init => field = value ?? []; } = [];
+
+    /// <summary>Canonical URLs of the public profiles, for search engines (schema.org "sameAs").</summary>
+    public IReadOnlyList<string> Profiles { get; init => field = value ?? []; } = [];
 }
+
+public sealed record Place(LocalizedText Region, string Country);
+
+public sealed record Organization(string Name, string? Url = null);
 
 public sealed record NavItem(string Path, LocalizedText Label);
 
@@ -86,7 +97,7 @@ public sealed record SkillGroup(LocalizedText Label, IReadOnlyList<LocalizedText
 
 public sealed record Training(int Year, LocalizedText Label);
 
-public sealed record Education(LocalizedText Title, int Year, LocalizedText Text);
+public sealed record Education(LocalizedText Title, int Year, LocalizedText Text, Organization? School = null);
 
 public sealed record OtherExperiences(LocalizedText Period, LocalizedText Intro, IReadOnlyList<OtherExperience> Items);
 

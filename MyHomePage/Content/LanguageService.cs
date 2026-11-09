@@ -28,8 +28,15 @@ public sealed class LanguageService : IDisposable
 
     public event Action? Changed;
 
-    /// <summary>Relative path of the current page, without the language prefix (e.g. "resume").</summary>
-    public string CurrentPath => StripLanguage(_navigation.ToBaseRelativePath(_navigation.Uri));
+    /// <summary>Canonical path of the current page, without the language prefix (e.g. "resume", also for "/cv").</summary>
+    public string CurrentPath
+    {
+        get
+        {
+            var path = StripLanguage(_navigation.ToBaseRelativePath(_navigation.Uri));
+            return Constants.Pages.CanonicalPaths.TryGetValue(path, out var canonical) ? canonical : path;
+        }
+    }
 
     /// <summary>Builds a link to <paramref name="path"/> in the current (or given) language.</summary>
     public string Href(string path, string? language = null)

@@ -1,6 +1,7 @@
 using System.Reflection;
 using System.Text.Json;
 using System.Xml.Linq;
+using MyHomePage.Content;
 using Xunit;
 
 namespace MyHomePage.Tests;
@@ -12,18 +13,6 @@ public class SiteFilesTests
 
     private static readonly string WwwRoot = Path.Combine(FindAppRoot(), "wwwroot");
 
-    /// <summary>Public pages that search engines should know, in both languages.</summary>
-    private static readonly Type[] IndexedPages =
-    [
-        typeof(Constants.Pages.Home),
-        typeof(Constants.Pages.Resume),
-        typeof(Constants.Pages.Projects),
-        typeof(Constants.Pages.Privacy),
-        typeof(Constants.Pages.Perso),
-        typeof(Constants.Pages.Contact),
-        typeof(Constants.Pages.About),
-    ];
-
     [Fact]
     public void Sitemap_lists_every_public_page_in_both_languages()
     {
@@ -33,11 +22,7 @@ public class SiteFilesTests
             .Select(e => e.Value)
             .ToHashSet();
 
-        var missing = IndexedPages
-            .SelectMany(page => new[] { Route(page, "Route"), Route(page, "RouteEn") })
-            .Select(route => BaseUrl + route)
-            .Where(url => !locations.Contains(url))
-            .ToList();
+        var missing = IndexedUrls().Where(url => !locations.Contains(url)).ToList();
 
         Assert.Empty(missing);
     }
@@ -60,8 +45,33 @@ public class SiteFilesTests
         Assert.Empty(unknown);
     }
 
-    private static string Route(Type page, string name) =>
-        (string)page.GetField(name)!.GetRawConstantValue()!;
+    [Fact]
+    public void Llms_txt_lists_every_public_page_in_both_languages()
+    {
+        var llms = File.ReadAllText(Path.Combine(WwwRoot, Constants.Files.Llms));
+        var missing = IndexedUrls().Where(url => !llms.Contains($"]({url})", StringComparison.Ordinal)).ToList();
+
+        Assert.Empty(missing);
+    }
+
+    [Fact]
+    public void Llms_full_txt_contains_every_position_in_both_languages()
+    {
+        var full = File.ReadAllText(Path.Combine(WwwRoot, Constants.Files.LlmsFull));
+        var content = new MyHomePage.Tools.SiteContent(WwwRoot, DateOnly.FromDateTime(DateTime.Today));
+        var missing = content.Experiences
+            .SelectMany(e => Languages.Supported.Select(language => $"### {content.T(e.Role, language)} — {e.Company}"))
+            .Where(title => !full.Contains(title, StringComparison.Ordinal))
+            .ToList();
+
+        Assert.Empty(missing);
+    }
+
+    private static IEnumerable<string> IndexedUrls() =>
+        Constants.Pages.Indexed.SelectMany(page => Languages.Supported.Select(language =>
+            language == Languages.English
+                ? BaseUrl + Constants.Pages.EnglishPrefix + (page.Path.Length == 0 ? "" : "/" + page.Path)
+                : BaseUrl + "/" + page.Path));
 
     private static string FindAppRoot()
     {

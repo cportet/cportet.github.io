@@ -46,6 +46,22 @@ public static class LiveDates
         return $"{from} — {to}";
     }
 
+    /// <summary>Replaces the live tokens ({{age}}, {{experienceYears}}…) of a text.</summary>
+    public static string Expand(string text, Profile profile, IReadOnlyList<Experience> experiences, string language, DateOnly today)
+    {
+        if (!text.Contains("{{", StringComparison.Ordinal)) // Every token starts with "{{".
+            return text;
+
+        var current = experiences.FirstOrDefault(e => e.IsCurrent);
+
+        return text
+            .Replace(Constants.Tokens.Age, YearsBetween(profile.BirthDate, today).ToString(), StringComparison.Ordinal)
+            .Replace(Constants.Tokens.ExperienceYears, YearsBetween(profile.CareerStart, today).ToString(), StringComparison.Ordinal)
+            .Replace(Constants.Tokens.ManagementYears, YearsBetween(profile.ManagementStart, today).ToString(), StringComparison.Ordinal)
+            .Replace(Constants.Tokens.CurrentRoleDuration, current is null ? string.Empty : Duration(current.Start, current.End, today, language), StringComparison.Ordinal)
+            .Replace(Constants.Tokens.Year, today.Year.ToString(), StringComparison.Ordinal);
+    }
+
     public static string PeriodYears(DateOnly start, DateOnly? end, string presentLabel) =>
         end is null || end.Value.Year != start.Year
             ? $"{start.Year} — {end?.Year.ToString() ?? presentLabel}"

@@ -1,7 +1,23 @@
-﻿<Router AppAssembly="@typeof(App).Assembly"
-        NotFoundPage="typeof(Pages.NotFound)">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
-    </Found>
-</Router>
+﻿@inject ContentService Content
+
+@* Content is already loaded in the browser (Program.cs); this also covers the prerendering at publish time. *@
+@if (_loaded)
+{
+    <Router AppAssembly="@typeof(App).Assembly"
+            NotFoundPage="typeof(Pages.NotFound)">
+        <Found Context="routeData">
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+            <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        </Found>
+    </Router>
+}
+
+@code {
+    private bool _loaded;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Content.EnsureLoadedAsync();
+        _loaded = true;
+    }
+}

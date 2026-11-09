@@ -11,6 +11,7 @@
     <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components" Version="5.0.1" />
     <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="5.0.1" />
     <PackageVersion Include="Toolbelt.Blazor.PWA.Updater" Version="3.2.0" />
+    <PackageVersion Include="BlazorWasmPreRendering.Build" Version="10.0.2" />
     <!-- Tests -->
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
     <PackageVersion Include="xunit.v3" Version="4.0.3" />
