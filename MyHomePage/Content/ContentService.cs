@@ -121,10 +121,17 @@ public sealed class ContentService(HttpClient http, LanguageService language)
         string[] candidates = lang == Languages.Default ? [lang] : [lang, Languages.Default];
         foreach (var candidate in candidates)
         {
-            using var request = NoCacheRequest(string.Format(Constants.Files.Content.MarkdownFormat, path, candidate));
-            using var response = await http.SendAsync(request);
-            if (response.IsSuccessStatusCode)
-                return await response.Content.ReadAsStringAsync();
+            try
+            {
+                using var request = NoCacheRequest(string.Format(Constants.Files.Content.MarkdownFormat, path, candidate));
+                using var response = await http.SendAsync(request);
+                if (response.IsSuccessStatusCode)
+                    return await response.Content.ReadAsStringAsync();
+            }
+            catch (HttpRequestException)
+            {
+                // Offline and not in the cache: the block stays empty rather than breaking the page.
+            }
         }
         return null;
     }
