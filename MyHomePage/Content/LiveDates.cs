@@ -41,8 +41,8 @@ public static class LiveDates
     public static string Period(DateOnly start, DateOnly? end, string language, string presentLabel)
     {
         var culture = Languages.Culture(language);
-        var from = start.ToString("MMMM yyyy", culture);
-        var to = end?.ToString("MMMM yyyy", culture) ?? presentLabel;
+        var from = start.ToString(Constants.Formats.MonthYear, culture);
+        var to = end?.ToString(Constants.Formats.MonthYear, culture) ?? presentLabel;
         return $"{from} — {to}";
     }
 

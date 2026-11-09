@@ -1,13 +1,13 @@
-@page "/projects/privacy"
-@page "/en/projects/privacy"
-@page "/applications/charte"
+@attribute [Route(Constants.Pages.Privacy.Route)]
+@attribute [Route(Constants.Pages.Privacy.RouteEn)]
+@attribute [Route(Constants.Pages.Privacy.Aliases.Charte)]
 
-<Seo Page="charter" Path="projects/privacy" />
+<Seo Page="@Constants.Pages.Privacy.Key" Path="@Constants.Pages.Privacy.Path" />
 
 <div class="cp-container cp-container--narrow">
-    <PageHeader Page="charter" />
-    <Markdown Path="projects/charter" />
+    <PageHeader Page="@Constants.Pages.Privacy.Key" />
+    <Markdown Path="@Constants.Files.Markdown.PrivacyPolicy" />
     <p class="cp-section">
-        <a class="cp-link" href="@Href("projects")">← @Ui("projects.back")</a>
+        <a class="cp-link" href="@Href(Constants.Pages.Projects.Path)">← @Ui(Constants.Ui.Projects.Back)</a>
     </p>
 </div>

@@ -17,8 +17,12 @@
     {
       "kind": { "fr": "Musique", "en": "Music" },
       "title": "Nice Boys",
-      "summary": { "fr": "Le groupe de mon fils : un tribute à Guns N’ Roses.", "en": "My son’s band: a Guns N’ Roses tribute." },
-      "url": "https://niceboys.pages.dev"
+      "summary": { "fr": "Le groupe de Trystan : un tribute à Guns N’ Roses.", "en": "Trystan’s band: a Guns N’ Roses tribute." },
+      "url": "https://niceboys.pages.dev",
+      "image": {
+        "url": "/img/featured/niceboys.jpg",
+        "alt": { "fr": "Le groupe Nice Boys en concert", "en": "Nice Boys playing live" }
+      }
     }
   ]
 }

@@ -3,6 +3,7 @@
   "nav.main": { "fr": "Navigation principale", "en": "Main navigation" },
   "nav.open": { "fr": "Ouvrir le menu", "en": "Open the menu" },
   "nav.close": { "fr": "Fermer le menu", "en": "Close the menu" },
+  "nav.skip": { "fr": "Aller au contenu", "en": "Skip to content" },
   "lang.group": { "fr": "Langue", "en": "Language" },
   "theme.toggleToDark": { "fr": "Passer au thème sombre", "en": "Switch to dark theme" },
   "theme.toggleToLight": { "fr": "Passer au thème clair", "en": "Switch to light theme" },
@@ -10,6 +11,11 @@
   "pwa.updateText": { "fr": "Une nouvelle version du site est disponible.", "en": "A new version of the site is available." },
   "pwa.updateButton": { "fr": "Mettre à jour", "en": "Update" },
   "footer.about": { "fr": "À propos du site", "en": "About this site" },
+  "nav.family": { "fr": "La famille", "en": "Family" },
+  "nav.featured": { "fr": "À découvrir", "en": "Worth a visit" },
+
+  "image.zoom": { "fr": "Agrandir la photo : {0}", "en": "Enlarge the photo: {0}" },
+  "image.close": { "fr": "Fermer", "en": "Close" },
 
   "date.present": { "fr": "aujourd’hui", "en": "present" },
 
@@ -18,7 +24,6 @@
   "cta.downloadPdf": { "fr": "Télécharger le PDF", "en": "Download the PDF" },
   "cta.linkedin": "LinkedIn",
   "cta.fullResume": { "fr": "Tout le CV", "en": "Full resume" },
-  "cta.open": { "fr": "Ouvrir", "en": "Open" },
 
   "home.stats": { "fr": "Chiffres clés", "en": "Key figures" },
   "home.recent": { "fr": "Parcours récent", "en": "Recent experience" },
@@ -28,6 +33,12 @@
   "home.site.title": { "fr": "Ce site", "en": "This site" },
   "home.site.text": { "fr": "Une PWA Blazor WebAssembly en .NET 10, open source sous GPL v3, hébergée sur GitHub Pages.", "en": "A Blazor WebAssembly PWA on .NET 10, open source under GPL v3, hosted on GitHub Pages." },
   "home.site.link": { "fr": "Voir le code source", "en": "View the source code" },
+  "home.contact.title": { "fr": "Me contacter", "en": "Contact me" },
+  "home.contact.text": { "fr": "Le plus simple reste un courriel.", "en": "Email is the easiest way to reach me." },
+  "home.contact.more": { "fr": "Autres moyens", "en": "Other ways" },
+  "home.links.title": { "fr": "Autres sites", "en": "Other sites" },
+  "home.links.text": { "fr": "Coups de cœur et sites de la famille.", "en": "Favourites and family websites." },
+  "home.links.more": { "fr": "Côté perso", "en": "Personal side" },
 
   "resume.sections": { "fr": "Sections du CV", "en": "Resume sections" },
   "resume.profile": { "fr": "Profil", "en": "Profile" },
@@ -51,7 +62,7 @@
   "perso.featured": { "fr": "À découvrir", "en": "Worth a visit" },
   "perso.featuredLead": { "fr": "Des sites et des projets qui me tiennent à cœur.", "en": "Sites and projects close to my heart." },
   "perso.findMe": { "fr": "Me retrouver", "en": "Find me" },
-  "perso.byEmail": { "fr": "ou par courriel", "en": "or by email" },
+  "perso.byEmail": { "fr": "M’écrire", "en": "Email me" },
 
   "contact.methods": { "fr": "Moyens de contact", "en": "Ways to reach me" },
   "contact.email.badge": { "fr": "Recommandé", "en": "Recommended" },

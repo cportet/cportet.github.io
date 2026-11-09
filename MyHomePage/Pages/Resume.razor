@@ -1,51 +1,51 @@
-@page "/resume"
-@page "/en/resume"
-@page "/cv"
-@page "/curriculumvitae"
-@page "/experience"
+@attribute [Route(Constants.Pages.Resume.Route)]
+@attribute [Route(Constants.Pages.Resume.RouteEn)]
+@attribute [Route(Constants.Pages.Resume.Aliases.Cv)]
+@attribute [Route(Constants.Pages.Resume.Aliases.CurriculumVitae)]
+@attribute [Route(Constants.Pages.Resume.Aliases.Experience)]
 
-<Seo Page="resume" Path="resume" />
+<Seo Page="@Constants.Pages.Resume.Key" Path="@Constants.Pages.Resume.Path" />
 <HeadContent>
     <link rel="alternate" type="application/pdf" href="@(Content.Site.BaseUrl + Content.Site.CvPdf)" />
 </HeadContent>
 
 <div class="cp-container">
     <section class="cp-resume-header">
-        <img class="cp-portrait cp-portrait--small" src="/img/me2.jpg" alt="@T(Content.Profile.Portrait.Alt)" width="128" height="128" />
+        <ZoomImage Class="cp-portrait cp-portrait--small" Src="@Constants.Files.ResumePortrait" Alt="@T(Content.Profile.Portrait.Alt)" Width="128" Height="128" />
         <div class="cp-resume-header__text">
-            <p class="cp-eyebrow">@T(Content.Page("resume").Eyebrow)</p>
+            <p class="cp-eyebrow">@T(Content.Page(Constants.Pages.Resume.Key).Eyebrow)</p>
             <h1 class="cp-display">@Content.Site.Name</h1>
             <p class="cp-lead">@T(Content.Profile.Role)</p>
         </div>
         <div class="cp-actions">
             <a class="cp-btn cp-btn--primary" href="@Content.Site.CvPdf" target="_blank" rel="noopener">
-                <CpIcon Value="@(new Icons.Regular.Size20.ArrowDownload())" />
-                @Ui("cta.downloadPdf")
+                <CpIcon Value="@(Constants.Icons.Regular.Download)" />
+                @Ui(Constants.Ui.Cta.DownloadPdf)
             </a>
             <a class="cp-btn cp-btn--subtle" href="@Content.Site.LinkedIn" target="_blank" rel="noopener">
-                @Ui("cta.linkedin")
-                <CpIcon Value="@(new Icons.Regular.Size16.Open())" Size="16" />
+                @Ui(Constants.Ui.Cta.LinkedIn)
+                <CpIcon Value="@(Constants.Icons.Small.Open)" />
             </a>
         </div>
     </section>
 
-    <nav class="cp-anchors" aria-label="@Ui("resume.sections")">
-        <a href="@Anchor("profile")">@Ui("resume.profile")</a>
-        <a href="@Anchor("experience")">@Ui("resume.experience")</a>
-        <a href="@Anchor("skills")">@Ui("resume.skills")</a>
-        <a href="@Anchor("trainings")">@Ui("resume.trainingsShort")</a>
-        <a href="@Anchor("education")">@Ui("resume.education")</a>
+    <nav class="cp-anchors" aria-label="@Ui(Constants.Ui.Resume.Sections)">
+        <a href="@Anchor(Constants.Sections.Resume.Profile)">@Ui(Constants.Ui.Resume.Profile)</a>
+        <a href="@Anchor(Constants.Sections.Resume.Experience)">@Ui(Constants.Ui.Resume.Experience)</a>
+        <a href="@Anchor(Constants.Sections.Resume.Skills)">@Ui(Constants.Ui.Resume.Skills)</a>
+        <a href="@Anchor(Constants.Sections.Resume.Trainings)">@Ui(Constants.Ui.Resume.TrainingsShort)</a>
+        <a href="@Anchor(Constants.Sections.Resume.Education)">@Ui(Constants.Ui.Resume.Education)</a>
     </nav>
 
     <div class="cp-split">
         <div class="cp-split__main">
-            <section id="profile" class="cp-block">
-                <h2 class="cp-h2">@Ui("resume.profile")</h2>
-                <Markdown Path="resume/profile" Class="cp-prose--lead" />
+            <section id="@Constants.Sections.Resume.Profile" class="cp-block">
+                <h2 class="cp-h2">@Ui(Constants.Ui.Resume.Profile)</h2>
+                <Markdown Path="@Constants.Files.Markdown.ResumeProfile" Class="cp-prose--lead" />
             </section>
 
-            <section id="experience" class="cp-block">
-                <h2 class="cp-h2">@Ui("resume.experience")</h2>
+            <section id="@Constants.Sections.Resume.Experience" class="cp-block">
+                <h2 class="cp-h2">@Ui(Constants.Ui.Resume.Experience)</h2>
                 @foreach (var experience in Content.Experiences)
                 {
                     <article class="cp-experience">
@@ -79,7 +79,7 @@
 
                 <article class="cp-experience">
                     <div class="cp-experience__head">
-                        <h3 class="cp-h3">@Ui("resume.others")</h3>
+                        <h3 class="cp-h3">@Ui(Constants.Ui.Resume.Others)</h3>
                         <span class="cp-muted cp-nums">@T(Data.Others.Period)</span>
                     </div>
                     <p class="cp-muted">@T(Data.Others.Intro)</p>
@@ -95,8 +95,8 @@
                 </article>
             </section>
 
-            <section id="education" class="cp-block">
-                <h2 class="cp-h2">@Ui("resume.education")</h2>
+            <section id="@Constants.Sections.Resume.Education" class="cp-block">
+                <h2 class="cp-h2">@Ui(Constants.Ui.Resume.Education)</h2>
                 @foreach (var education in Data.Education)
                 {
                     <div class="cp-experience__head">
@@ -110,7 +110,7 @@
 
         <aside class="cp-split__aside">
             <div class="cp-card cp-card--padded">
-                <h2 class="cp-h4">@Ui("resume.facts")</h2>
+                <h2 class="cp-h4">@Ui(Constants.Ui.Resume.Facts)</h2>
                 <dl class="cp-dl">
                     @foreach (var fact in Data.Facts)
                     {
@@ -120,8 +120,8 @@
                 </dl>
             </div>
 
-            <div id="skills" class="cp-card cp-card--padded">
-                <h2 class="cp-h4">@Ui("resume.skills")</h2>
+            <div id="@Constants.Sections.Resume.Skills" class="cp-card cp-card--padded">
+                <h2 class="cp-h4">@Ui(Constants.Ui.Resume.Skills)</h2>
                 @foreach (var group in Data.Skills)
                 {
                     <div class="cp-skill-group">
@@ -136,8 +136,8 @@
                 }
             </div>
 
-            <div id="trainings" class="cp-card cp-card--padded">
-                <h2 class="cp-h4">@Ui("resume.trainings")</h2>
+            <div id="@Constants.Sections.Resume.Trainings" class="cp-card cp-card--padded">
+                <h2 class="cp-h4">@Ui(Constants.Ui.Resume.Trainings)</h2>
                 <ul class="cp-years">
                     @foreach (var training in Data.Trainings)
                     {
@@ -151,7 +151,7 @@
             </div>
 
             <div class="cp-card cp-card--padded">
-                <h2 class="cp-h4">@Ui("resume.interests")</h2>
+                <h2 class="cp-h4">@Ui(Constants.Ui.Resume.Interests)</h2>
                 <p class="cp-muted">@T(Data.Interests)</p>
             </div>
         </aside>
@@ -161,5 +161,5 @@
 @code {
     private ResumeData Data => Content.Resume;
 
-    private string Anchor(string id) => $"{Href("resume")}#{id}";
+    private string Anchor(string id) => $"{Href(Constants.Pages.Resume.Path)}#{id}";
 }

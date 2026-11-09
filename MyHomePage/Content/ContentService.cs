@@ -34,16 +34,16 @@ public sealed class ContentService(HttpClient http, LanguageService language)
 
     public async Task LoadAsync()
     {
-        var site = Load("content/site.json", ContentJsonContext.Default.SiteData);
-        var profile = Load("content/profile.json", ContentJsonContext.Default.Profile);
-        var experiences = Load("content/resume/experiences.json", ContentJsonContext.Default.IReadOnlyListExperience);
-        var resume = Load("content/resume/resume.json", ContentJsonContext.Default.ResumeData);
-        var perso = Load("content/perso.json", ContentJsonContext.Default.PersoData);
-        var projects = Load("content/projects.json", ContentJsonContext.Default.ProjectsData);
-        var about = Load("content/about.json", ContentJsonContext.Default.AboutData);
-        var pages = Load("content/pages.json", ContentJsonContext.Default.DictionaryStringPageMeta);
-        var ui = Load("content/ui.json", ContentJsonContext.Default.DictionaryStringLocalizedText);
-        var config = Load("appconfig.json", ContentJsonContext.Default.AppConfig);
+        var site = Load(Constants.Files.Content.Site, ContentJsonContext.Default.SiteData);
+        var profile = Load(Constants.Files.Content.Profile, ContentJsonContext.Default.Profile);
+        var experiences = Load(Constants.Files.Content.Experiences, ContentJsonContext.Default.IReadOnlyListExperience);
+        var resume = Load(Constants.Files.Content.Resume, ContentJsonContext.Default.ResumeData);
+        var perso = Load(Constants.Files.Content.Perso, ContentJsonContext.Default.PersoData);
+        var projects = Load(Constants.Files.Content.Projects, ContentJsonContext.Default.ProjectsData);
+        var about = Load(Constants.Files.Content.About, ContentJsonContext.Default.AboutData);
+        var pages = Load(Constants.Files.Content.Pages, ContentJsonContext.Default.DictionaryStringPageMeta);
+        var ui = Load(Constants.Files.Content.Ui, ContentJsonContext.Default.DictionaryStringLocalizedText);
+        var config = Load(Constants.Files.AppConfig, ContentJsonContext.Default.AppConfig);
 
         await Task.WhenAll(site, profile, experiences, resume, perso, projects, about, pages, ui, config);
 
@@ -69,6 +69,9 @@ public sealed class ContentService(HttpClient http, LanguageService language)
     public string Ui(string key) =>
         _ui.TryGetValue(key, out var text) ? T(text) : $"[{key}]";
 
+    /// <summary>Email link with a subject in the current language.</summary>
+    public string MailTo => $"mailto:{Site.Email}?subject={Uri.EscapeDataString(Ui(Constants.Ui.Contact.Email.Subject))}";
+
     public PageMeta Page(string key) =>
         _pages.TryGetValue(key, out var meta)
             ? meta
@@ -84,25 +87,28 @@ public sealed class ContentService(HttpClient http, LanguageService language)
 
     public int ExperienceYears => LiveDates.YearsBetween(Profile.CareerStart, Today);
 
+    public int ManagementYears => LiveDates.YearsBetween(Profile.ManagementStart, Today);
+
     public string Duration(Experience experience) =>
         LiveDates.Duration(experience.Start, experience.End, Today, Language);
 
     public string Period(Experience experience) =>
-        LiveDates.Period(experience.Start, experience.End, Language, Ui("date.present"));
+        LiveDates.Period(experience.Start, experience.End, Language, Ui(Constants.Ui.Date.Present));
 
     public string PeriodYears(Experience experience) =>
-        LiveDates.PeriodYears(experience.Start, experience.End, Ui("date.present"));
+        LiveDates.PeriodYears(experience.Start, experience.End, Ui(Constants.Ui.Date.Present));
 
     public string Expand(string text)
     {
-        if (!text.Contains("{{", StringComparison.Ordinal))
+        if (!text.Contains("{{", StringComparison.Ordinal)) // Every token starts with "{{".
             return text;
 
         return text
-            .Replace("{{age}}", Age.ToString(), StringComparison.Ordinal)
-            .Replace("{{experienceYears}}", ExperienceYears.ToString(), StringComparison.Ordinal)
-            .Replace("{{currentRoleDuration}}", CurrentPosition is { } current ? Duration(current) : string.Empty, StringComparison.Ordinal)
-            .Replace("{{year}}", Today.Year.ToString(), StringComparison.Ordinal);
+            .Replace(Constants.Tokens.Age, Age.ToString(), StringComparison.Ordinal)
+            .Replace(Constants.Tokens.ExperienceYears, ExperienceYears.ToString(), StringComparison.Ordinal)
+            .Replace(Constants.Tokens.ManagementYears, ManagementYears.ToString(), StringComparison.Ordinal)
+            .Replace(Constants.Tokens.CurrentRoleDuration, CurrentPosition is { } current ? Duration(current) : string.Empty, StringComparison.Ordinal)
+            .Replace(Constants.Tokens.Year, Today.Year.ToString(), StringComparison.Ordinal);
     }
 
     // --- Markdown --------------------------------------------------------------------
@@ -123,7 +129,7 @@ public sealed class ContentService(HttpClient http, LanguageService language)
         string[] candidates = lang == Languages.Default ? [lang] : [lang, Languages.Default];
         foreach (var candidate in candidates)
         {
-            using var request = NoCacheRequest($"content/md/{path}.{candidate}.md");
+            using var request = NoCacheRequest(string.Format(Constants.Files.Content.MarkdownFormat, path, candidate));
             using var response = await http.SendAsync(request);
             if (response.IsSuccessStatusCode)
                 return await response.Content.ReadAsStringAsync();

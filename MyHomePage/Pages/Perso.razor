@@ -1,17 +1,17 @@
-@page "/perso"
-@page "/en/perso"
+@attribute [Route(Constants.Pages.Perso.Route)]
+@attribute [Route(Constants.Pages.Perso.RouteEn)]
 
-<Seo Page="perso" Path="perso" />
+<Seo Page="@Constants.Pages.Perso.Key" Path="@Constants.Pages.Perso.Path" />
 
 <div class="cp-container">
     <section class="cp-hero cp-hero--compact">
         <div class="cp-hero__text">
             <p class="cp-eyebrow">@T(Meta.Eyebrow)</p>
             <h1 class="cp-display">@T(Meta.Heading)</h1>
-            <Markdown Path="perso/intro" Class="cp-prose--lead" />
+            <Markdown Path="@Constants.Files.Markdown.PersoIntro" Class="cp-prose--lead" />
         </div>
         <figure class="cp-figure">
-            <img src="@Data.Photo.Url" alt="@T(Data.Photo.Alt)" width="480" height="360" />
+            <ZoomImage Src="@Data.Photo.Url" Alt="@T(Data.Photo.Alt)" Width="480" Height="360" />
             @if (Data.Photo.Caption is not null)
             {
                 <figcaption>@T(Data.Photo.Caption)</figcaption>
@@ -19,8 +19,22 @@
         </figure>
     </section>
 
+    <section class="cp-findme">
+        <h2 class="cp-h2">@Ui(Constants.Ui.Perso.FindMe)</h2>
+        <div class="cp-pills cp-pills--large">
+            <a class="cp-pill cp-pill--accent" href="@Content.MailTo">
+                <CpIcon Value="@(Constants.Icons.Regular.Mail)" />
+                @Ui(Constants.Ui.Perso.ByEmail)
+            </a>
+            @foreach (var social in Content.Site.Socials)
+            {
+                <a class="cp-pill" href="@social.Url" target="_blank" rel="noopener">@social.Name</a>
+            }
+        </div>
+    </section>
+
     <section class="cp-section">
-        <h2 class="cp-h2">@Ui("perso.family")</h2>
+        <h2 class="cp-h2">@Ui(Constants.Ui.Perso.Family)</h2>
         <div class="cp-grid">
             @foreach (var site in Data.Family)
             {
@@ -30,7 +44,7 @@
                         <span class="cp-person__name">@site.Name</span>
                         <span class="cp-muted cp-small">@(new Uri(site.Url).Host)</span>
                     </span>
-                    <CpIcon Value="@(new Icons.Regular.Size20.Open())" Class="cp-accent-text" />
+                    <CpIcon Value="@(Constants.Icons.Regular.Open)" Class="cp-accent-text" />
                 </a>
             }
         </div>
@@ -40,43 +54,38 @@
     {
         <section class="cp-band cp-section">
             <div class="cp-band__intro">
-                <h2 class="cp-h2">@Ui("perso.featured")</h2>
-                <p>@Ui("perso.featuredLead")</p>
+                <h2 class="cp-h2">@Ui(Constants.Ui.Perso.Featured)</h2>
+                <p>@Ui(Constants.Ui.Perso.FeaturedLead)</p>
             </div>
             <div class="cp-grid cp-grid--wide">
                 @foreach (var site in Data.Featured)
                 {
-                    <article class="cp-card cp-card--padded cp-card--raised">
-                        <p class="cp-overline">@T(site.Kind)</p>
-                        <h3 class="cp-h3">@site.Title</h3>
-                        <p class="cp-muted cp-grow">@T(site.Summary)</p>
-                        @if (site.Url is not null)
+                    <article class="cp-card cp-card--raised cp-feature">
+                        @if (site.Image is not null)
                         {
-                            <a class="cp-link cp-inline" href="@site.Url" target="_blank" rel="noopener">
-                                @(new Uri(site.Url).Host)
-                                <CpIcon Value="@(new Icons.Regular.Size16.Open())" Size="16" />
-                            </a>
+                            <ZoomImage Class="cp-feature__image" Src="@site.Image.Url" Alt="@T(site.Image.Alt)" Lazy="true" />
                         }
+                        <div class="cp-feature__body">
+                            <p class="cp-overline">@T(site.Kind)</p>
+                            <h3 class="cp-h3">@site.Title</h3>
+                            <p class="cp-muted cp-grow">@T(site.Summary)</p>
+                            @if (site.Url is not null)
+                            {
+                                <a class="cp-link cp-inline" href="@site.Url" target="_blank" rel="noopener">
+                                    @(new Uri(site.Url).Host)
+                                    <CpIcon Value="@(Constants.Icons.Small.Open)" />
+                                </a>
+                            }
+                        </div>
                     </article>
                 }
             </div>
         </section>
     }
-
-    <section class="cp-findme">
-        <h2 class="cp-h4">@Ui("perso.findMe")</h2>
-        <div class="cp-pills">
-            @foreach (var social in Content.Site.Socials)
-            {
-                <a class="cp-pill" href="@social.Url" target="_blank" rel="noopener">@social.Name</a>
-            }
-        </div>
-        <a class="cp-link" href="@Href("contact")">@Ui("perso.byEmail")</a>
-    </section>
 </div>
 
 @code {
     private PersoData Data => Content.Perso;
 
-    private PageMeta Meta => Content.Page("perso");
+    private PageMeta Meta => Content.Page(Constants.Pages.Perso.Key);
 }

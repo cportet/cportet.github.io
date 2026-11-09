@@ -1,12 +1,12 @@
-@page "/about"
-@page "/en/about"
-@page "/apropos"
+@attribute [Route(Constants.Pages.About.Route)]
+@attribute [Route(Constants.Pages.About.RouteEn)]
+@attribute [Route(Constants.Pages.About.Aliases.APropos)]
 @inject IJSRuntime JS
 
-<Seo Page="about" Path="about" />
+<Seo Page="@Constants.Pages.About.Key" Path="@Constants.Pages.About.Path" />
 
 <div class="cp-container">
-    <PageHeader Page="about" />
+    <PageHeader Page="@Constants.Pages.About.Key" />
 
     <div class="cp-grid cp-grid--wide">
         @foreach (var section in Content.About.Sections)
@@ -57,23 +57,23 @@
         }
 
         <section class="cp-card cp-card--padded">
-            <h2 class="cp-h3">@Ui("about.app.title")</h2>
-            <p class="cp-muted">@string.Format(Ui("about.app.text"), Content.Config.Version)</p>
+            <h2 class="cp-h3">@Ui(Constants.Ui.About.App.Title)</h2>
+            <p class="cp-muted">@string.Format(Ui(Constants.Ui.About.App.Text), Content.Config.Version)</p>
             @if (_installMessage is not null)
             {
                 <p class="cp-muted cp-small">@_installMessage</p>
             }
             <div class="cp-actions">
                 <button type="button" class="cp-btn cp-btn--primary" @onclick="InstallAsync">
-                    <CpIcon Value="@(new Icons.Regular.Size20.ArrowDownload())" />
-                    @Ui("about.app.install")
+                    <CpIcon Value="@(Constants.Icons.Regular.Download)" />
+                    @Ui(Constants.Ui.About.App.Install)
                 </button>
-                <a class="cp-btn" href="@Href("preferences")">@Ui("about.app.preferences")</a>
+                <a class="cp-btn" href="@Href(Constants.Pages.Preferences.Path)">@Ui(Constants.Ui.About.App.Preferences)</a>
             </div>
         </section>
     </div>
 
-    <p class="cp-section cp-muted">@((MarkupString)Ui("about.support"))</p>
+    <p class="cp-section cp-muted">@((MarkupString)Ui(Constants.Ui.About.Support))</p>
 </div>
 
 @code {
@@ -81,7 +81,7 @@
 
     private async Task InstallAsync()
     {
-        var installed = await JS.InvokeAsync<bool>("cp.pwa.install");
-        _installMessage = installed ? null : Ui("about.app.installed");
+        var installed = await JS.InvokeAsync<bool>(Constants.Js.Pwa.Install);
+        _installMessage = installed ? null : Ui(Constants.Ui.About.App.Installed);
     }
 }

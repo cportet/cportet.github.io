@@ -19,7 +19,7 @@
 
     private PageMeta Meta => Content.Page(Page);
 
-    private string Title => Page == "home"
+    private string Title => Page == Constants.Pages.Home.Key
         ? T(Meta.Title)
         : $"{T(Meta.Title)} · {Content.Site.Name}";
 

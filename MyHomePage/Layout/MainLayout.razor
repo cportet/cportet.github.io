@@ -5,13 +5,13 @@
 @inject NavigationManager Navigation
 @inject IJSRuntime JS
 
-<PWAUpdater Text="@Content.Ui("pwa.updateText")"
-            ButtonCaption="@Content.Ui("pwa.updateButton")" />
+<PWAUpdater Text="@Content.Ui(Constants.Ui.Pwa.UpdateText)"
+            ButtonCaption="@Content.Ui(Constants.Ui.Pwa.UpdateButton)" />
 
 <div class="cp-app">
-    <a class="cp-skip" href="@($"{Navigation.ToBaseRelativePath(Navigation.Uri).Split('#')[0]}#main")">@(Lang.IsEnglish ? "Skip to content" : "Aller au contenu")</a>
+    <a class="cp-skip" href="@($"{Navigation.ToBaseRelativePath(Navigation.Uri).Split('#')[0]}#{Constants.Sections.Main}")">@Content.Ui(Constants.Ui.Nav.Skip)</a>
     <SiteHeader />
-    <main id="main" class="cp-main" @key="Lang.Current">
+    <main id="@Constants.Sections.Main" class="cp-main" @key="Lang.Current">
         @Body
     </main>
     <SiteFooter />
@@ -31,12 +31,12 @@
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
-            await JS.InvokeVoidAsync("cp.started");
+            await JS.InvokeVoidAsync(Constants.Js.Started);
 
         if (_documentLanguage != Lang.Current)
         {
             _documentLanguage = Lang.Current;
-            await JS.InvokeVoidAsync("cp.setDocumentLanguage", Lang.Current);
+            await JS.InvokeVoidAsync(Constants.Js.SetDocumentLanguage, Lang.Current);
         }
     }
 
@@ -50,7 +50,7 @@
 
         try
         {
-            await JS.InvokeVoidAsync("cp.scrollToTop");
+            await JS.InvokeVoidAsync(Constants.Js.ScrollToTop);
         }
         catch (JSDisconnectedException)
         {

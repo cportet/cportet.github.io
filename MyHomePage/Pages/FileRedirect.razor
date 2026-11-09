@@ -1,5 +1,5 @@
-@page "/file/{Kind}"
-@page "/fichier/{Kind}"
+@attribute [Route(Constants.Pages.File.Route)]
+@attribute [Route(Constants.Pages.File.Aliases.Fichier)]
 @inject NavigationManager Navigation
 
 @* Former document viewer: old links now open the document directly. *@
@@ -10,7 +10,7 @@
 
     protected override void OnParametersSet()
     {
-        var target = Kind?.Trim().ToLowerInvariant() == "cv" ? Content.Site.CvPdf : Href("404");
+        var target = Kind?.Trim().ToLowerInvariant() == Constants.Pages.File.CvKind ? Content.Site.CvPdf : Href(Constants.Pages.NotFound.Path);
         Navigation.NavigateTo(target, forceLoad: target == Content.Site.CvPdf, replace: true);
     }
 }

@@ -1,4 +1,5 @@
 using Xunit;
+using System.Reflection;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using MyHomePage.Content;
@@ -60,34 +61,83 @@ public partial class ContentTests
     }
 
     [Fact]
-    public void Every_ui_key_used_in_the_code_exists()
+    public void Every_ui_key_constant_exists_in_ui_json()
     {
         var ui = Read("ui.json", ContentJsonContext.Default.DictionaryStringLocalizedText)!;
-        var missing = SourceFiles()
-            .SelectMany(source => UiKeyRegex().Matches(source).Select(m => m.Groups["key"].Value))
-            .Distinct()
-            .Where(key => !ui.ContainsKey(key))
-            .ToList();
-
-        // Keys built at runtime (e.g. "prefs.accent.{key}").
-        missing.AddRange(MyHomePage.Theming.ThemePreferences.Accents
-            .Select(a => $"prefs.accent.{a.Key}")
-            .Where(key => !ui.ContainsKey(key)));
+        var missing = ConstantValues(typeof(Constants.Ui)).Where(key => !ui.ContainsKey(key)).ToList();
 
         Assert.Empty(missing);
     }
 
     [Fact]
-    public void Every_page_key_used_in_the_code_exists()
+    public void Every_ui_json_key_has_a_constant()
+    {
+        var ui = Read("ui.json", ContentJsonContext.Default.DictionaryStringLocalizedText)!;
+        var keys = ConstantValues(typeof(Constants.Ui)).ToHashSet();
+        var orphans = ui.Keys.Where(key => !keys.Contains(key)).ToList();
+
+        Assert.Empty(orphans);
+    }
+
+    [Fact]
+    public void Every_page_key_constant_exists_in_pages_json()
     {
         var pages = Read("pages.json", ContentJsonContext.Default.DictionaryStringPageMeta)!;
-        var missing = SourceFiles()
-            .SelectMany(source => PageKeyRegex().Matches(source).Select(m => m.Groups["key"].Value))
-            .Distinct()
+        var missing = ConstantFields(typeof(Constants.Pages))
+            .Where(f => f.Name == nameof(Constants.Pages.Home.Key))
+            .Select(f => (string)f.GetRawConstantValue()!)
             .Where(key => !pages.ContainsKey(key))
             .ToList();
 
         Assert.Empty(missing);
+    }
+
+    [Fact]
+    public void Every_content_file_constant_exists()
+    {
+        var wwwroot = Path.Combine(AppRoot, "wwwroot");
+        var missing = ConstantFields(typeof(Constants.Files))
+            .Where(f => f.Name != nameof(Constants.Files.Content.MarkdownFormat) && f.DeclaringType != typeof(Constants.Files.Markdown))
+            .Select(f => ((string)f.GetRawConstantValue()!).TrimStart('/'))
+            .Where(f => !File.Exists(Path.Combine(wwwroot, f)))
+            .ToList();
+
+        Assert.Empty(missing);
+    }
+
+    [Fact]
+    public void Every_markdown_constant_exists_in_every_language()
+    {
+        var missing = ConstantValues(typeof(Constants.Files.Markdown))
+            .SelectMany(path => Languages.Supported.Select(language => $"{path}.{language}.md"))
+            .Where(file => !File.Exists(Path.Combine(ContentRoot, "md", file)))
+            .ToList();
+
+        Assert.Empty(missing);
+    }
+
+    [Fact]
+    public void Every_markdown_file_is_used()
+    {
+        var markdown = Path.Combine(ContentRoot, "md");
+        var used = ConstantValues(typeof(Constants.Files.Markdown)).ToHashSet();
+        var orphans = Directory.GetFiles(markdown, "*.md", SearchOption.AllDirectories)
+            .Select(f => Path.GetRelativePath(markdown, f).Replace(Path.DirectorySeparatorChar, '/'))
+            .Where(f => !used.Contains(f[..f.LastIndexOf('.', f.Length - 4)]))
+            .ToList();
+
+        Assert.Empty(orphans);
+    }
+
+    [Fact]
+    public void No_hard_coded_key_or_path_in_the_pages()
+    {
+        var offenders = RazorFiles()
+            .SelectMany(file => HardCodedRegex().Matches(File.ReadAllText(file))
+                .Select(m => $"{Path.GetFileName(file)}: {m.Value}"))
+            .ToList();
+
+        Assert.Empty(offenders);
     }
 
     [Fact]
@@ -101,18 +151,6 @@ public partial class ContentTests
             .SelectMany(path => Languages.Supported
                 .Select(language => $"{path}.{language}.md")
                 .Where(f => !File.Exists(Path.Combine(markdown, f))))
-            .ToList();
-
-        Assert.Empty(missing);
-    }
-
-    [Fact]
-    public void Every_markdown_path_used_in_the_code_exists()
-    {
-        var missing = SourceFiles()
-            .SelectMany(source => MarkdownPathRegex().Matches(source).Select(m => m.Groups["path"].Value))
-            .Distinct()
-            .Where(path => !File.Exists(Path.Combine(ContentRoot, "md", $"{path}.{Languages.Default}.md")))
             .ToList();
 
         Assert.Empty(missing);
@@ -146,12 +184,18 @@ public partial class ContentTests
     private static T? Read<T>(string file, System.Text.Json.Serialization.Metadata.JsonTypeInfo<T> typeInfo) =>
         JsonSerializer.Deserialize(File.ReadAllText(Path.Combine(ContentRoot, file)), typeInfo);
 
-    private static IEnumerable<string> SourceFiles() =>
+    private static IEnumerable<string> RazorFiles() =>
         Directory.GetFiles(AppRoot, "*.razor", SearchOption.AllDirectories)
-            .Concat(Directory.GetFiles(AppRoot, "*.cs", SearchOption.AllDirectories))
             .Where(f => !f.Contains($"{Path.DirectorySeparatorChar}obj{Path.DirectorySeparatorChar}")
-                     && !f.Contains($"{Path.DirectorySeparatorChar}bin{Path.DirectorySeparatorChar}"))
-            .Select(File.ReadAllText);
+                     && !f.Contains($"{Path.DirectorySeparatorChar}bin{Path.DirectorySeparatorChar}"));
+
+    private static IEnumerable<FieldInfo> ConstantFields(Type type) =>
+        type.GetFields(BindingFlags.Public | BindingFlags.Static)
+            .Where(f => f.IsLiteral && f.FieldType == typeof(string))
+            .Concat(type.GetNestedTypes().SelectMany(ConstantFields));
+
+    private static IEnumerable<string> ConstantValues(Type type) =>
+        ConstantFields(type).Select(f => (string)f.GetRawConstantValue()!).Distinct();
 
     private static string FindAppRoot()
     {
@@ -164,12 +208,7 @@ public partial class ContentTests
             : Path.Combine(directory.FullName, "MyHomePage");
     }
 
-    [GeneratedRegex("""Ui\("(?<key>[a-zA-Z.]+)"\)""")]
-    private static partial Regex UiKeyRegex();
-
-    [GeneratedRegex("""(?:Seo|PageHeader) Page="(?<key>\w+)"|Content\.Page\("(?<key>\w+)"\)""")]
-    private static partial Regex PageKeyRegex();
-
-    [GeneratedRegex(""""<Markdown Path="(?<path>[\w/]+)"""")]
-    private static partial Regex MarkdownPathRegex();
+    /// <summary>A string literal given to Ui(...), Href(...), Page="…", Path="…" or @page.</summary>
+    [GeneratedRegex("""(?:Ui|Href|Content\.Page)\("|(?:Page|Path)="[^@"]|@page\s""")]
+    private static partial Regex HardCodedRegex();
 }

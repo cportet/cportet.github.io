@@ -1,10 +1,10 @@
-@page "/redirection"
-@page "/redir"
+@attribute [Route(Constants.Pages.Redirection.Route)]
+@attribute [Route(Constants.Pages.Redirection.Aliases.Redir)]
 @inject NavigationManager Navigation
 
 @* Target of wwwroot/404.html: GitHub Pages serves it for deep links, and it sends them back here. *@
 <div class="cp-container cp-section">
-    <p class="cp-muted">@Ui("redirect.text")</p>
+    <p class="cp-muted">@Ui(Constants.Ui.Redirect.Text)</p>
 </div>
 
 @code {
@@ -13,11 +13,11 @@
 
     protected override void OnParametersSet()
     {
-        var target = string.IsNullOrWhiteSpace(Path) ? "/" : Uri.UnescapeDataString(Path);
+        var target = string.IsNullOrWhiteSpace(Path) ? Constants.Pages.Home.Route : Uri.UnescapeDataString(Path);
 
         // Only local paths: never redirect to another site.
         if (!target.StartsWith('/') || target.StartsWith("//"))
-            target = "/";
+            target = Constants.Pages.Home.Route;
 
         Navigation.NavigateTo(target, replace: true);
     }

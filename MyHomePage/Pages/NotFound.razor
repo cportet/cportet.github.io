@@ -1,18 +1,18 @@
-@page "/404"
-@page "/en/404"
+@attribute [Route(Constants.Pages.NotFound.Route)]
+@attribute [Route(Constants.Pages.NotFound.RouteEn)]
 @layout MainLayout
 
-<Seo Page="notFound" Path="404" />
+<Seo Page="@Constants.Pages.NotFound.Key" Path="@Constants.Pages.NotFound.Path" />
 <HeadContent>
     <meta name="robots" content="noindex" />
 </HeadContent>
 
 <div class="cp-container cp-not-found">
-    <img src="/img/404.png" alt="" width="280" height="280" />
-    <PageHeader Page="notFound">
+    <img src="@Constants.Files.NotFoundImage" alt="" width="280" height="280" />
+    <PageHeader Page="@Constants.Pages.NotFound.Key">
         <div class="cp-actions">
-            <a class="cp-btn cp-btn--primary" href="@Href("/")">@Ui("notFound.home")</a>
-            <a class="cp-btn" href="javascript:history.back()">@Ui("notFound.back")</a>
+            <a class="cp-btn cp-btn--primary" href="@Href(Constants.Pages.Home.Path)">@Ui(Constants.Ui.NotFound.Home)</a>
+            <a class="cp-btn" href="javascript:history.back()">@Ui(Constants.Ui.NotFound.Back)</a>
         </div>
     </PageHeader>
 </div>

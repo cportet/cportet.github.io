@@ -35,6 +35,9 @@ public sealed record Profile
 {
     public required DateOnly BirthDate { get; init; }
     public required DateOnly CareerStart { get; init; }
+    /// <summary>Since when I have been leading development teams.</summary>
+    public required DateOnly ManagementStart { get; init; }
+
     public required LocalizedText Role { get; init; }
     public required LocalizedText Eyebrow { get; init; }
     public required LocalizedText Headline { get; init; }
@@ -62,7 +65,6 @@ public sealed record Experience
     public required LocalizedText Summary { get; init; }
     public IReadOnlyList<LocalizedText> Details { get; init => field = value ?? []; } = [];
     public IReadOnlyList<LocalizedText> Tags { get; init => field = value ?? []; } = [];
-    public bool Featured { get; init; }
 
     public bool IsCurrent => End is null;
 }
@@ -99,7 +101,7 @@ public sealed record PersoData
 
 public sealed record FamilySite(string Name, string Url);
 
-public sealed record FeaturedSite(LocalizedText Kind, string Title, LocalizedText Summary, string? Url);
+public sealed record FeaturedSite(LocalizedText Kind, string Title, LocalizedText Summary, string? Url, ImageRef? Image = null);
 
 public sealed record ProjectsData
 {

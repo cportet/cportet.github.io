@@ -1,20 +1,20 @@
-@page "/projects"
-@page "/en/projects"
-@page "/projets"
-@page "/applications"
-@page "/applications/mesapps"
+@attribute [Route(Constants.Pages.Projects.Route)]
+@attribute [Route(Constants.Pages.Projects.RouteEn)]
+@attribute [Route(Constants.Pages.Projects.Aliases.Projets)]
+@attribute [Route(Constants.Pages.Projects.Aliases.Applications)]
+@attribute [Route(Constants.Pages.Projects.Aliases.MesApps)]
 
-<Seo Page="projects" Path="projects" />
+<Seo Page="@Constants.Pages.Projects.Key" Path="@Constants.Pages.Projects.Path" />
 
 <div class="cp-container">
-    <PageHeader Page="projects" />
+    <PageHeader Page="@Constants.Pages.Projects.Key" />
 
     <section class="cp-stack">
         @foreach (var app in Data.Apps)
         {
             <article class="cp-card cp-card--padded cp-app-card">
                 <div class="cp-app-card__icon" aria-hidden="true">
-                    <CpIcon Value="@(new Icons.Regular.Size48.Apps())" Size="44" />
+                    <CpIcon Value="@(Constants.Icons.Huge.App)" />
                 </div>
                 <div class="cp-app-card__body">
                     <div class="cp-inline">
@@ -38,11 +38,11 @@
                         @if (app.StoreUrl is not null)
                         {
                             <a class="cp-btn cp-btn--primary" href="@app.StoreUrl" target="_blank" rel="noopener">
-                                @Ui("projects.store")
-                                <CpIcon Value="@(new Icons.Regular.Size16.Open())" Size="16" />
+                                @Ui(Constants.Ui.Projects.Store)
+                                <CpIcon Value="@(Constants.Icons.Small.Open)" />
                             </a>
                         }
-                        <a class="cp-btn" href="@Href("projects/privacy")">@Ui("projects.privacy")</a>
+                        <a class="cp-btn" href="@Href(Constants.Pages.Privacy.Path)">@Ui(Constants.Ui.Projects.Privacy)</a>
                     </div>
                 </div>
             </article>
@@ -62,15 +62,15 @@
 
     <section class="cp-band cp-band--split cp-section">
         <div class="cp-band__intro">
-            <h2 class="cp-h3">@Ui("projects.privacyTitle")</h2>
-            <p>@string.Format(Ui("projects.privacyUpdated"), Data.Privacy.Updated.ToString("d MMMM yyyy", Lang.Culture))</p>
-            <a class="cp-link cp-link--strong" href="@Href("projects/privacy")">@Ui("projects.privacyRead")</a>
+            <h2 class="cp-h3">@Ui(Constants.Ui.Projects.PrivacyTitle)</h2>
+            <p>@string.Format(Ui(Constants.Ui.Projects.PrivacyUpdated), Data.Privacy.Updated.ToString(Constants.Formats.LongDate, Lang.Culture))</p>
+            <a class="cp-link cp-link--strong" href="@Href(Constants.Pages.Privacy.Path)">@Ui(Constants.Ui.Projects.PrivacyRead)</a>
         </div>
         <ul class="cp-checks">
             @foreach (var point in Data.Privacy.Points)
             {
                 <li>
-                    <CpIcon Value="@(new Icons.Regular.Size20.Checkmark())" Class="cp-accent-text" />
+                    <CpIcon Value="@(Constants.Icons.Regular.Checkmark)" Class="cp-accent-text" />
                     <span>@T(point)</span>
                 </li>
             }

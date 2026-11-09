@@ -5,22 +5,40 @@
 
 <header class="cp-header">
     <div class="cp-container cp-header__inner">
-        <a class="cp-brand" href="@Href("/")">
+        <a class="cp-brand" href="@Href(Constants.Pages.Home.Path)">
             <span class="cp-brand__badge" aria-hidden="true">@Content.Site.Initials</span>
             @Content.Site.Name
         </a>
 
-        <nav id="cp-nav" class="cp-nav @(_menuOpen ? "cp-nav--open" : null)" aria-label="@Ui("nav.main")">
+        <nav id="cp-nav" class="cp-nav @(_menuOpen ? "cp-nav--open" : null)" aria-label="@Ui(Constants.Ui.Nav.Main)">
             @foreach (var item in Content.Site.Nav)
             {
                 <NavLink class="cp-nav__link" href="@Href(item.Path)"
-                         Match="@(item.Path == "/" ? NavLinkMatch.All : NavLinkMatch.Prefix)"
+                         Match="@(item.Path == Constants.Pages.Home.Route ? NavLinkMatch.All : NavLinkMatch.Prefix)"
                          @onclick="CloseMenu">@T(item.Label)</NavLink>
             }
+
+            @* Mobile menu only: direct access to the family and favourite sites. *@
+            <div class="cp-nav__extra">
+                <p class="cp-overline">@Ui(Constants.Ui.Nav.Featured)</p>
+                @foreach (var site in Content.Perso.Featured.Where(s => s.Url is not null))
+                {
+                    <a class="cp-nav__link" href="@site.Url" target="_blank" rel="noopener">
+                        @site.Title <CpIcon Value="@(Constants.Icons.Small.Open)" />
+                    </a>
+                }
+                <p class="cp-overline">@Ui(Constants.Ui.Nav.Family)</p>
+                @foreach (var site in Content.Perso.Family)
+                {
+                    <a class="cp-nav__link" href="@site.Url" target="_blank" rel="noopener">
+                        @site.Name <CpIcon Value="@(Constants.Icons.Small.Open)" />
+                    </a>
+                }
+            </div>
         </nav>
 
         <div class="cp-header__tools">
-            <div class="cp-segmented" role="group" aria-label="@Ui("lang.group")">
+            <div class="cp-segmented" role="group" aria-label="@Ui(Constants.Ui.Nav.LanguageGroup)">
                 <a href="@Lang.Switch(Languages.French)" hreflang="fr" lang="fr"
                    aria-current="@(Lang.IsEnglish ? null : "true")">FR</a>
                 <a href="@Lang.Switch(Languages.English)" hreflang="en" lang="en"
@@ -29,8 +47,8 @@
 
             @if (_canInstall)
             {
-                <button type="button" class="cp-iconbtn" title="@Ui("pwa.install")" aria-label="@Ui("pwa.install")" @onclick="InstallAsync">
-                    <CpIcon Value="@(new Icons.Regular.Size20.ArrowDownload())" />
+                <button type="button" class="cp-iconbtn" title="@Ui(Constants.Ui.Pwa.Install)" aria-label="@Ui(Constants.Ui.Pwa.Install)" @onclick="InstallAsync">
+                    <CpIcon Value="@(Constants.Icons.Regular.Download)" />
                 </button>
             }
 
@@ -38,24 +56,24 @@
                     title="@ThemeLabel" aria-label="@ThemeLabel">
                 @if (_dark)
                 {
-                    <CpIcon Value="@(new Icons.Regular.Size20.WeatherSunny())" />
+                    <CpIcon Value="@(Constants.Icons.Regular.Sun)" />
                 }
                 else
                 {
-                    <CpIcon Value="@(new Icons.Regular.Size20.WeatherMoon())" />
+                    <CpIcon Value="@(Constants.Icons.Regular.Moon)" />
                 }
             </button>
 
             <button type="button" class="cp-iconbtn cp-header__menu" @onclick="ToggleMenu"
                     aria-controls="cp-nav" aria-expanded="@(_menuOpen ? "true" : "false")"
-                    aria-label="@Ui(_menuOpen ? "nav.close" : "nav.open")">
+                    aria-label="@Ui(_menuOpen ? Constants.Ui.Nav.Close : Constants.Ui.Nav.Open)">
                 @if (_menuOpen)
                 {
-                    <CpIcon Value="@(new Icons.Regular.Size24.Dismiss())" Size="22" />
+                    <CpIcon Value="@(Constants.Icons.Large.Close)" />
                 }
                 else
                 {
-                    <CpIcon Value="@(new Icons.Regular.Size24.Navigation())" Size="22" />
+                    <CpIcon Value="@(Constants.Icons.Large.Menu)" />
                 }
             </button>
         </div>
@@ -67,7 +85,7 @@
     private bool _dark;
     private bool _canInstall;
 
-    private string ThemeLabel => Ui(_dark ? "theme.toggleToLight" : "theme.toggleToDark");
+    private string ThemeLabel => Ui(_dark ? Constants.Ui.Theme.ToLight : Constants.Ui.Theme.ToDark);
 
     protected override void OnInitialized()
     {
@@ -81,7 +99,7 @@
             return;
 
         _dark = await Theme.IsDarkAsync();
-        _canInstall = await JS.InvokeAsync<bool>("cp.pwa.canInstall");
+        _canInstall = await JS.InvokeAsync<bool>(Constants.Js.Pwa.CanInstall);
         StateHasChanged();
     }
 
@@ -93,8 +111,8 @@
 
     private async Task InstallAsync()
     {
-        await JS.InvokeAsync<bool>("cp.pwa.install");
-        _canInstall = await JS.InvokeAsync<bool>("cp.pwa.canInstall");
+        await JS.InvokeAsync<bool>(Constants.Js.Pwa.Install);
+        _canInstall = await JS.InvokeAsync<bool>(Constants.Js.Pwa.CanInstall);
     }
 
     private async void OnLocationChanged(object? sender, LocationChangedEventArgs e)
@@ -102,7 +120,7 @@
         _menuOpen = false;
         try
         {
-            _canInstall = await JS.InvokeAsync<bool>("cp.pwa.canInstall");
+            _canInstall = await JS.InvokeAsync<bool>(Constants.Js.Pwa.CanInstall);
         }
         catch (JSDisconnectedException)
         {

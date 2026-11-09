@@ -2,7 +2,9 @@ using Microsoft.FluentUI.AspNetCore.Components;
 
 namespace MyHomePage.Theming;
 
-public sealed record AccentOption(string Key, string Color);
+/// <param name="Color">Hex color.</param>
+/// <param name="UiKey">Key of its name in ui.json.</param>
+public sealed record AccentOption(string Color, string UiKey);
 
 /// <summary>
 /// Light/dark mode and accent color, on top of the Fluent UI theme service
@@ -12,26 +14,24 @@ public sealed class ThemePreferences(IThemeService theme)
 {
     public static readonly AccentOption[] Accents =
     [
-        new("blue", "#0F6CBD"),
-        new("teal", "#0B7A75"),
-        new("purple", "#6B4FBB"),
-        new("red", "#C4314B"),
+        new(Constants.Theme.Accents.Blue, Constants.Ui.Preferences.Accent.Blue),
+        new(Constants.Theme.Accents.Teal, Constants.Ui.Preferences.Accent.Teal),
+        new(Constants.Theme.Accents.Purple, Constants.Ui.Preferences.Accent.Purple),
+        new(Constants.Theme.Accents.Red, Constants.Ui.Preferences.Accent.Red),
     ];
-
-    public static string DefaultAccent => Accents[0].Color;
 
     public event Action? Changed;
 
     public async Task<ThemeSettings> GetAsync() =>
         await theme.GetThemeSettingsAsync()
-        ?? new ThemeSettings(DefaultAccent, 0, 0, ThemeMode.System, false);
+        ?? new ThemeSettings(Constants.Theme.Accents.Default, 0, 0, ThemeMode.System, false);
 
     public Task<bool> IsDarkAsync() => theme.IsDarkModeAsync();
 
     public async Task SetModeAsync(ThemeMode mode)
     {
         var current = await GetAsync();
-        await ApplyAsync(new ThemeSettings(current.Color ?? DefaultAccent, current.HueTorsion, current.Vibrancy, mode, false));
+        await ApplyAsync(new ThemeSettings(current.Color ?? Constants.Theme.Accents.Default, current.HueTorsion, current.Vibrancy, mode, false));
     }
 
     public async Task SetAccentAsync(string color)
@@ -46,7 +46,7 @@ public sealed class ThemePreferences(IThemeService theme)
     public async Task ResetAsync()
     {
         await theme.ClearStoredThemeSettingsAsync();
-        await theme.SetThemeAsync(new ThemeSettings(DefaultAccent, 0, 0, ThemeMode.System, false));
+        await theme.SetThemeAsync(new ThemeSettings(Constants.Theme.Accents.Default, 0, 0, ThemeMode.System, false));
         Changed?.Invoke();
     }
 

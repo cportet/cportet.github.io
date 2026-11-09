@@ -1,7 +1,8 @@
 {
-  // Live values available in every text: {{age}}, {{experienceYears}}, {{currentRoleDuration}}, {{year}}.
+  // Live values available in every text: {{age}}, {{experienceYears}}, {{managementYears}}, {{currentRoleDuration}}, {{year}}.
   "birthDate": "1979-11-07",
   "careerStart": "1998-09-01",
+  "managementStart": "2014-04-01",
 
   "role": {
     "fr": "Responsable technique (CTO) · Artisan logiciel · {{experienceYears}} ans d’expérience",
@@ -38,8 +39,8 @@
       "label": { "fr": "personnes encadrées au plus large", "en": "people managed, at most" }
     },
     {
-      "value": "Prince2",
-      "label": { "fr": "Practitioner, Scrum Master", "en": "Practitioner, Scrum Master" }
+      "value": { "fr": "{{managementYears}} ans", "en": "{{managementYears}} years" },
+      "label": { "fr": "à la tête d’équipes de développement", "en": "leading development teams" }
     }
   ]
 }

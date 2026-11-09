@@ -6,6 +6,7 @@
   "scope": "./",
   "display": "standalone",
   "lang": "fr",
+  "dir": "ltr",
   "background_color": "#fafafa",
   "theme_color": "#0f6cbd",
   "prefer_related_applications": false,
@@ -23,8 +24,36 @@
     }
   ],
   "shortcuts": [
-    { "name": "CV", "url": "/resume" },
-    { "name": "Resume (English)", "url": "/en/resume" },
-    { "name": "Contact", "url": "/contact" }
+    {
+      "name": "CV",
+      "description": "CV de Cyril Portet",
+      "url": "/resume",
+      "icons": [ { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" } ]
+    },
+    {
+      "name": "Resume (English)",
+      "short_name": "Resume",
+      "description": "Cyril Portet's resume in English",
+      "url": "/en/resume",
+      "icons": [ { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" } ]
+    },
+    {
+      "name": "Projets",
+      "description": "Applications et réalisations",
+      "url": "/projects",
+      "icons": [ { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" } ]
+    },
+    {
+      "name": "Perso",
+      "description": "La famille et les sites à découvrir",
+      "url": "/perso",
+      "icons": [ { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" } ]
+    },
+    {
+      "name": "Contact",
+      "description": "Me contacter",
+      "url": "/contact",
+      "icons": [ { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" } ]
+    }
   ]
 }

@@ -11,8 +11,11 @@ public static class Languages
     /// <summary>Key used internally for texts that are identical in every language.</summary>
     public const string Invariant = "*";
 
+    public const string FrenchCulture = "fr-FR";
+    public const string EnglishCulture = "en-US";
+
     public static readonly string[] Supported = [French, English];
 
     public static CultureInfo Culture(string language) =>
-        CultureInfo.GetCultureInfo(language == English ? "en-US" : "fr-FR");
+        CultureInfo.GetCultureInfo(language == English ? EnglishCulture : FrenchCulture);
 }

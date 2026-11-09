@@ -9,7 +9,7 @@ namespace MyHomePage.Content;
 /// </summary>
 public sealed class LanguageService : IDisposable
 {
-    private const string EnglishPrefix = "en";
+    private const string EnglishPrefix = Languages.English;
     private readonly NavigationManager _navigation;
 
     public LanguageService(NavigationManager navigation)
@@ -39,7 +39,7 @@ public sealed class LanguageService : IDisposable
 
         return (target, clean) switch
         {
-            (null, "") => "/",
+            (null, "") => Constants.Pages.Home.Route,
             (null, _) => $"/{clean}",
             (_, "") => $"/{target}",
             _ => $"/{target}/{clean}"

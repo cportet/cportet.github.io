@@ -16,9 +16,9 @@ All texts live in `MyHomePage/wwwroot/content`, as JSON plus Markdown for longer
 | --- | --- |
 | `site.json` | Name, links, menu, social networks |
 | `profile.json` | Birth date, career start, home page hero and key figures |
-| `resume/experiences.json` | Positions (one entry each; no `end` for the current one) |
+| `resume/experiences.json` | Positions, most recent first (no `end` for the current one; the home page shows the first three) |
 | `resume/resume.json` | Facts, skills, training, education, earlier experience |
-| `perso.json` | Family sites and the "À découvrir" section |
+| `perso.json` | Family photo and sites, "À découvrir" section (also listed in the mobile menu and on the home page) |
 | `projects.json` | Apps, project cards, privacy summary |
 | `about.json` | "About this site" page |
 | `pages.json` | Title, SEO description and header of each page |
@@ -26,7 +26,7 @@ All texts live in `MyHomePage/wwwroot/content`, as JSON plus Markdown for longer
 | `md/**/*.{fr,en}.md` | Longer texts (resume profile, personal intro, privacy policy) |
 
 Translatable texts are either a plain string (same in every language) or `{ "fr": "…", "en": "…" }`.
-Ages and durations are never written by hand: use `{{age}}`, `{{experienceYears}}` or `{{currentRoleDuration}}`, computed from the dates.
+Ages and durations are never written by hand: use `{{age}}`, `{{experienceYears}}`, `{{managementYears}}` or `{{currentRoleDuration}}`, computed from the dates.
 
 The URL sets the language: `/resume` is French, `/en/resume` is English.
 
