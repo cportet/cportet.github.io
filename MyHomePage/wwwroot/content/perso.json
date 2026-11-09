@@ -17,12 +17,24 @@
     {
       "kind": { "fr": "Musique", "en": "Music" },
       "title": "Nice Boys",
-      "summary": { "fr": "Le groupe de Trystan : un tribute à Guns N’ Roses.", "en": "Trystan’s band: a Guns N’ Roses tribute." },
+      "summary": { "fr": "Tribute band hard rock de Guns N’ Roses (avec Trystan à la guitare).", "en": "Hard rock tribute band to Guns N’ Roses (with Trystan on guitar)." },
       "url": "https://niceboys.pages.dev",
       "image": {
         "url": "/img/featured/niceboys.jpg",
         "alt": { "fr": "Le groupe Nice Boys en concert", "en": "Nice Boys playing live" }
       }
+    },
+    {
+      "kind": { "fr": "Musique", "en": "Music" },
+      "title": "Stoneheart",
+      "summary": { "fr": "Groupe de métal des monts du Lyonnais (avec Trystan à la guitare et Eloy à la batterie).", "en": "Metal band from the Monts du Lyonnais (with Trystan on guitar and Eloy on drums)." },
+      "url": "https://taplink.cc/stoneheart"
+    },
+    {
+      "kind": { "fr": "Musique", "en": "Music" },
+      "title": "Distorted Memory",
+      "summary": { "fr": "Groupe de rock folk des monts du Lyonnais (avec Trystan à la guitare et Eloy aux percussions).", "en": "Rock and folk band from the Monts du Lyonnais (with Trystan on guitar and Eloy on percussion)." },
+      "url": "https://www.facebook.com/DistortedbMemory/"
     }
   ]
 }

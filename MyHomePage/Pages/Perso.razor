@@ -63,7 +63,7 @@
                     <article class="cp-card cp-card--raised cp-feature">
                         @if (site.Image is not null)
                         {
-                            <ZoomImage Class="cp-feature__image" Src="@site.Image.Url" Alt="@T(site.Image.Alt)" Lazy="true" />
+                            <ZoomImage Class="cp-feature__image" Src="@site.Image.Url" Alt="@T(site.Image.Alt)" Href="@site.Url" Lazy="true" />
                         }
                         <div class="cp-feature__body">
                             <p class="cp-overline">@T(site.Kind)</p>

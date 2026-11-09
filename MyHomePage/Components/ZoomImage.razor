@@ -1,8 +1,25 @@
-@* A photo that opens full screen when clicked. *@
-<button type="button" class="cp-zoom @Class" @ref="_trigger" @onclick="Open"
-        aria-label="@string.Format(Ui(Constants.Ui.Image.Zoom), Alt)">
-    <img src="@Src" alt="@Alt" width="@Width" height="@Height" loading="@(Lazy ? "lazy" : null)" />
-</button>
+@* A photo that opens full screen when clicked.
+   With Href, the photo is a link and a magnifier button opens it full screen. *@
+@if (Href is null)
+{
+    <button type="button" class="cp-zoom @Class" @ref="_trigger" @onclick="Open"
+            aria-label="@string.Format(Ui(Constants.Ui.Image.Zoom), Alt)">
+        <img src="@Src" alt="@Alt" width="@Width" height="@Height" loading="@(Lazy ? "lazy" : null)" />
+    </button>
+}
+else
+{
+    <div class="cp-zoom cp-zoom--link @Class">
+        @* The text link of the card is the accessible one: this one is for the pointer only. *@
+        <a href="@Href" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="@Src" alt="" width="@Width" height="@Height" loading="@(Lazy ? "lazy" : null)" />
+        </a>
+        <button type="button" class="cp-zoom__button" @ref="_trigger" @onclick="Open"
+                aria-label="@string.Format(Ui(Constants.Ui.Image.Zoom), Alt)" title="@string.Format(Ui(Constants.Ui.Image.Zoom), Alt)">
+            <CpIcon Value="@(Constants.Icons.Regular.ZoomIn)" />
+        </button>
+    </div>
+}
 
 @if (_open)
 {
@@ -33,6 +50,10 @@
 
     [Parameter]
     public bool Lazy { get; set; }
+
+    /// <summary>When set, clicking the photo opens this address; the magnifier enlarges it.</summary>
+    [Parameter]
+    public string? Href { get; set; }
 
     private bool _open;
     private bool _focusOverlay;
