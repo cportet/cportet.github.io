@@ -1,4 +1,4 @@
-/* Manifest version: lLZOfGpt */
+/* Manifest version: t8fL49u3 */
 // Caution! Be sure you understand the caveats before publishing an application with
 // offline support. See https://aka.ms/blazor-offline-considerations
 
@@ -64,4 +64,4 @@ function prerenderedPageFor(url) {
     const page = path === '' ? 'index.html' : `${path}.html`;
     return manifestUrlList.includes(new URL(page, baseUrl).href) ? page : 'index.html';
 }
-/* Last updated: 2026-11-09T14:20:55Z */
+/* Last updated: 2026-11-09T14:32:22Z */

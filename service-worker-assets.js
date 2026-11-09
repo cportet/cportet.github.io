@@ -149,8 +149,8 @@ self.assetsManifest = {
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.5ql0ra5mpq.wasm"
     },
     {
-      "hash": "sha256-tRtCNEN4oBBb2T7FeC6WVRUFrDpUrqFa7rcC57TZaZs=",
-      "url": "_framework\/MyHomePage.9zkuill1h5.wasm"
+      "hash": "sha256-gmpDxN3SW9QYi9sclddwZvry4GXy59g7pb5Hed3+5vo=",
+      "url": "_framework\/MyHomePage.i42fmvouum.wasm"
     },
     {
       "hash": "sha256-2BtuluuUHhNUBgthjRux2T+7ehhurkb7JtemcQvzRDY=",
@@ -253,7 +253,7 @@ self.assetsManifest = {
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-Jsjt0RqDXv8PXfNJTPjR\/ShSSgEUhy2C3Sfy7o\/bxCo=",
+      "hash": "sha256-FKX6bQMyZMoE6VTp7Vx+A\/LDAqcg3fqDgNXV+PLFTXo=",
       "url": "_framework\/dotnet.js"
     },
     {
@@ -273,7 +273,7 @@ self.assetsManifest = {
       "url": "_framework\/icudt.oh1zvcfom8.dat"
     },
     {
-      "hash": "sha256-6nKyKcN10rITOMDXJsAAPzOzMrrV7iFGqjxmLoXmeSA=",
+      "hash": "sha256-Y52oOVb3XSOyBE1tFxcH9UXIIr\/aZRE+aAl5e9NmPcY=",
       "url": "appconfig.json"
     },
     {
@@ -337,7 +337,7 @@ self.assetsManifest = {
       "url": "content\/site.json"
     },
     {
-      "hash": "sha256-kL9eJixVk9E6OyZLAC4HtN5\/uB7a6Ji9BXzlcFCR39k=",
+      "hash": "sha256-xxdEdMc5z68oq3ZnK\/k1OrVqUHI1jzb\/bu9PyXNJtRE=",
       "url": "content\/ui.json"
     },
     {
@@ -393,7 +393,7 @@ self.assetsManifest = {
       "url": "img\/preview.jpg"
     },
     {
-      "hash": "sha256-xtS3H1\/tJ83NfDTGtg1xsU56ZKH22iaUHhVMkuR0+FQ=",
+      "hash": "sha256-Z96iYQg4U2WPpChDEbNToSAmYh18u+BE5xeJxyN8Mqc=",
       "url": "index.html"
     },
     {
@@ -421,89 +421,89 @@ self.assetsManifest = {
       "url": "sitemap.xml"
     },
     {
-      "hash": "sha256-ZYVxAE0wG3LnrvUfCI81YHdgwiTuP3LKHhxihVRl6vw=",
+      "hash": "sha256-NOClhFxZhkFnsmhgiqrvgqlCrbf9hagrjhX1A5y8g+A=",
       "url": "resume.html"
     },
     {
-      "hash": "sha256-qLKcH8QQvTQbkowff7jQV9FdEJ\/\/4LjrrYyb6Sn0KzI=",
+      "hash": "sha256-SfKsJBY1KaJgI9g9od\/JL2NhGQGFdvnPx3Phe2ndTHQ=",
       "url": "projects.html"
     },
     {
-      "hash": "sha256-fbXyKjPHUq90oReH0xTjNeiSizV0nRBC2GegqTU9bJ0=",
+      "hash": "sha256-5wUzlGpgH\/DGAQXJl85rwoSWdIDOFfxNExP7IDZInpQ=",
       "url": "perso.html"
     },
     {
-      "hash": "sha256-aVlu4RaQW+V+M+UbNohC6hQ2y+1Y\/R0rhkxPM+0Ut9U=",
+      "hash": "sha256-1by\/8dgwtREtk1k5ZuerYqjr7xU+9EjIbgGH\/V5GOuw=",
       "url": "contact.html"
     },
     {
-      "hash": "sha256-Zhk1sVnmC7n136HgQZObW3r\/IiqN6fyNT\/R4Eb5wkPA=",
+      "hash": "sha256-HSXX5KO1caVLma\/FrWUlCqQUX0bJBQhOyjf0WuG9Bh4=",
       "url": "en\/contact.html"
     },
     {
-      "hash": "sha256-xAaVyD+o4EgmEhymf84cmwbcfBgGSuTX34rccFt4mDg=",
+      "hash": "sha256-aMGNAc7+deuZzcrKm4PCIt0R\/ZOXJfBA3jhAR6tRXsQ=",
       "url": "en.html"
     },
     {
-      "hash": "sha256-Oz8BdEsMYp6UGfCWOEsj75MPeNrf4DrdlmJ9wmZ5i6A=",
+      "hash": "sha256-2SJ1lxXJhRaEGdO+xU68NSpJl9f4\/PS9oGC0UrTNDOY=",
       "url": "en\/resume.html"
     },
     {
-      "hash": "sha256-qSLkWq1jH0iBg+UKIQn0UANT\/xhdPctNn5pIsMel1q4=",
+      "hash": "sha256-ppsDjBBWNtc8simANYkxk+yeeWklTfq7IG+X848gMQk=",
       "url": "en\/projects.html"
     },
     {
-      "hash": "sha256-FH1s7xLieVVd+bdDAEzPixW79OdR6GnnmPqrA8cYuDs=",
+      "hash": "sha256-zlsJTfidiK0vGnafH4\/VG4E0EPsQAbMmx+uekwuNjtU=",
       "url": "en\/perso.html"
     },
     {
-      "hash": "sha256-o2LHWogqb3mqcuD6tVhtby1GjKmtKmF+TfHuMURYUmY=",
+      "hash": "sha256-DNLxmBvz8SrLfJ6NHrP8Ok46r+ZNDPC9PS4JkP12AO0=",
       "url": "en\/about.html"
     },
     {
-      "hash": "sha256-XZzJJDGy06yn6qG00MrlaahWfG9Wk90rbZGEkHsgSaw=",
+      "hash": "sha256-J63MO730K4EvLdVRIE0TUA2PweMfdmYrqr2\/1\/qQ4Ng=",
       "url": "about.html"
     },
     {
-      "hash": "sha256-e2dYqGDJn69H3AY1aQxOvox5iB7zgWe61WENTXSRwg0=",
+      "hash": "sha256-8OyqvDzhkLIbbeB5UhWa8bFMy0v5k5jDyrXprKDoIHM=",
       "url": "preferences.html"
     },
     {
-      "hash": "sha256-1iJUao0goaostbv7LefZ5zm\/vk6eFt4zdSUU9gV4Qmc=",
+      "hash": "sha256-OBNZx4PLRvL8QF512FZVxM1Kzm0q7A8qwnxgHSdmCUc=",
       "url": "en\/preferences.html"
     },
     {
-      "hash": "sha256-JRfWaNKykUJy99m+0NKYdkPMM83+RCFw5xhry7fZDCA=",
+      "hash": "sha256-edmu99qfvdF8twq+yMkosK2cjIheX+WReTXbjg7c9qk=",
       "url": "en\/projects\/privacy.html"
     },
     {
-      "hash": "sha256-LddVbEVa6rMyjtjbvlmApVXsiwTSEbMMzgof2+ZrmDA=",
+      "hash": "sha256-+NgC0AXhWsyX7vfJoHcEtnCL\/ISK9FzBPWuF1Poxq8g=",
       "url": "projects\/privacy.html"
     },
     {
-      "hash": "sha256-S9KApu98mzK4x9TyeVfEZqtcPKGOQa2AwOCnxvTXzuw=",
+      "hash": "sha256-fOSjWpWSiUosS+O4btf\/\/EhfsPbPC074e23O16Wx9ts=",
       "url": "cv.html"
     },
     {
-      "hash": "sha256-xX\/JpBbdT8e4gaIRWgixE8JnJ4t9PT3aamRH3rJEjdE=",
+      "hash": "sha256-NMrqTbLnpFbS2ruQ\/AlZW\/s8CnwWipwC5Y1+hMzLsyY=",
       "url": "curriculumvitae.html"
     },
     {
-      "hash": "sha256-iQMulgEn\/F\/eCyTMcmCyrfIDb4cY3VChMSEvVjIgFq8=",
+      "hash": "sha256-bDNwqxAdcwVUcpFMhzf+DcPQP\/eqtBjMrOivoJtsYCQ=",
       "url": "apropos.html"
     },
     {
-      "hash": "sha256-S305YD\/1gwaq6hUzil+Q3Zk7zs+9ITsWapoLoa2vISM=",
+      "hash": "sha256-vOyhiJcvUxAzWWZl1FB6kKCdi\/8jv0kcmVZ4NvOFsCI=",
       "url": "applications.html"
     },
     {
-      "hash": "sha256-am9bs+HSmLdvI+RDY1N7IVdE+KCGEur\/OT\/W924cL5g=",
+      "hash": "sha256-LP1thnpeINCgRUQin6\/LeSIAQBjNnI5O4dd8u1yM4a4=",
       "url": "applications\/charte.html"
     },
     {
-      "hash": "sha256-FIorcoaJwPHAHy+w0IiW+fCqNoArf0S12tAL2WFezhY=",
+      "hash": "sha256-96v4Lpe\/sEcKVhLN3\/jF7Q66vBruph58rMN5riqxT64=",
       "url": "options.html"
     }
   ],
-  "version": "lLZOfGpt"
+  "version": "t8fL49u3"
 };
