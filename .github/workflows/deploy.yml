@@ -62,6 +62,9 @@ jobs:
     permissions:
       contents: write
     steps:
+      # The deploy action works from a git repository: it needs a checkout, even though the site comes from the artifact.
+      - uses: actions/checkout@v4
+
       - uses: actions/download-artifact@v4
         with:
           name: site
