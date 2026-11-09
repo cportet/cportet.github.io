@@ -1,96 +1,46 @@
-﻿window.pwaInstall = {
-    deferredPrompt: null,
-    isInstalled: false,
+﻿window.cp = {
+    pwa: {
+        deferredPrompt: null,
+        installed: window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true,
 
-    init: function () {
-        const isStandalone = window.matchMedia('(display-mode: standalone)').matches ||
-            window.navigator.standalone === true;
+        canInstall: function () {
+            return !!window.cp.pwa.deferredPrompt && !window.cp.pwa.installed;
+        },
 
-        if (isStandalone) {
-            window.pwaInstall.isInstalled = true;
-            return;
+        install: async function () {
+            const prompt = window.cp.pwa.deferredPrompt;
+            if (!prompt)
+                return false;
+
+            prompt.prompt();
+            const { outcome } = await prompt.userChoice;
+            window.cp.pwa.deferredPrompt = null;
+            if (outcome === 'accepted')
+                window.cp.pwa.installed = true;
+            return outcome === 'accepted';
         }
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            window.pwaInstall.deferredPrompt = e;
-        });
-
-        window.addEventListener('appinstalled', () => {
-            window.pwaInstall.isInstalled = true;
-            window.pwaInstall.deferredPrompt = null;
-        });
     },
-    canInstall: function () {
-        return !!window.pwaInstall.deferredPrompt && !window.pwaInstall.isInstalled;
+
+    setDocumentLanguage: function (language) {
+        document.documentElement.lang = language;
     },
-    showInstallPrompt: async function () {
-        if (!window.pwaInstall.deferredPrompt) return false;
 
-        const prompt = window.pwaInstall.deferredPrompt;
-        prompt.prompt();
+    // Once the app runs, the Fluent theme takes over the boot-time dark colors.
+    started: function () {
+        document.documentElement.classList.remove('cp-dark-boot');
+    },
 
-        const { outcome } = await prompt.userChoice;
-        window.pwaInstall.deferredPrompt = null;
-
-        if (outcome === 'accepted') {
-            window.pwaInstall.isInstalled = true;
-        }
-
-        return outcome === 'accepted';
+    scrollToTop: function () {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
 };
 
+window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    window.cp.pwa.deferredPrompt = e;
+});
 
-window.pwaInstall.init();
-
-let resizeHandlers = {};
-
-function scrollToTop() {
-    window.scrollTo(0, 0);
-    const scrollable = document.querySelector('.my-body');
-    if (scrollable) scrollable.scrollTop = 0;
-}
-
-function applyInitialTheme() {
-    var theme = localStorage.getItem('theme');
-    if (theme === 'dark') {
-        document.body.classList.add('initial-dark');
-    }
-}
-
-function removeInitialDarkClass() {
-    document.body.classList.remove('initial-dark');
-}
-
-
-function adjustPdfHeight(id) {
-    var pdfContainer = document.getElementById(id);
-    if (pdfContainer) {
-        var marginBottom = 20;
-        var topOffset = pdfContainer.getBoundingClientRect().top;
-        var availableHeight = window.innerHeight - topOffset - marginBottom;
-        pdfContainer.style.height = availableHeight + 'px';
-    }
-}
-
-function addResizeListener(id) {
-    function resizeHandler() {
-        adjustPdfHeight(id);
-    }
-    window.addEventListener('resize', resizeHandler);
-    document.addEventListener('DOMContentLoaded', resizeHandler);
-
-    resizeHandlers[id] = resizeHandler;
-
-    adjustPdfHeight(id);
-}
-
-function removeResizeListener(id) {
-    const resizeHandler = resizeHandlers[id];
-    if (resizeHandler) {
-        window.removeEventListener('resize', resizeHandler);
-        document.removeEventListener('DOMContentLoaded', resizeHandler);
-        delete resizeHandlers[id];
-    }
-}
+window.addEventListener('appinstalled', () => {
+    window.cp.pwa.installed = true;
+    window.cp.pwa.deferredPrompt = null;
+});

@@ -1,0 +1,28 @@
+{
+  // The introduction text is in md/perso/intro.*.md.
+  "photo": {
+    "url": "/img/famille.jpg",
+    "alt": { "fr": "La famille Portet en décembre 2024", "en": "The Portet family in December 2024" },
+    "caption": { "fr": "La famille, décembre 2024", "en": "The family, December 2024" }
+  },
+
+  "family": [
+    { "name": "Rémy", "url": "https://remy.portet.org" },
+    { "name": "Trystan", "url": "https://trystan.portet.org" },
+    { "name": "Eloy", "url": "https://eloy.portet.org" }
+  ],
+
+  // Sites highlighted in the "À découvrir" section: add as many as needed.
+  "featured": [
+    {
+      "kind": { "fr": "Musique", "en": "Music" },
+      "title": "Nice Boys",
+      "summary": { "fr": "Le groupe de Trystan : un tribute à Guns N’ Roses.", "en": "Trystan’s band: a Guns N’ Roses tribute." },
+      "url": "https://niceboys.pages.dev",
+      "image": {
+        "url": "/img/featured/niceboys.jpg",
+        "alt": { "fr": "Le groupe Nice Boys en concert", "en": "Nice Boys playing live" }
+      }
+    }
+  ]
+}

@@ -1,10 +1,117 @@
-﻿<MyPageContainer Title=@AppRessources.Page_Home_Title
-                 SubTitle=@AppRessources.Page_Home_SubTitle>
-    <MySection id="introduction" Title=@AppRessources.Page_Home_Section_Bienvenue>
-        <MyMarkdownLoader RessourcePath="home/introduction" />
-    </MySection>
+@attribute [Route(Constants.Pages.Home.Route)]
+@attribute [Route(Constants.Pages.Home.RouteEn)]
+@attribute [Route(Constants.Pages.Home.Aliases.Index)]
+@attribute [Route(Constants.Pages.Home.Aliases.IndexHtml)]
+@attribute [Route(Constants.Pages.Home.Aliases.Home)]
+@attribute [Route(Constants.Pages.Home.Aliases.Default)]
+@attribute [Route(Constants.Pages.Home.Aliases.DefaultHtml)]
 
-    <MySection id="mon-cv" Title=@AppRessources.Page_Home_Section_CV>
-        <MyMarkdownLoader RessourcePath="home/mon-cv" />
-    </MySection>
-</MyPageContainer>
+<Seo Page="@Constants.Pages.Home.Key" Path="@Constants.Pages.Home.Path" />
+
+<div class="cp-container">
+    <section class="cp-hero">
+        <div class="cp-hero__text">
+            <p class="cp-eyebrow">@T(Profile.Eyebrow)</p>
+            <h1 class="cp-display cp-display--xl">@T(Profile.Headline)</h1>
+            <p class="cp-lead">@T(Profile.Intro)</p>
+            <div class="cp-actions">
+                <a class="cp-btn cp-btn--primary" href="@Href(Constants.Pages.Resume.Path)">
+                    @Ui(Constants.Ui.Cta.Resume)
+                    <CpIcon Value="@(Constants.Icons.Regular.ArrowRight)" />
+                </a>
+                <a class="cp-btn" href="@Content.Site.CvPdf" target="_blank" rel="noopener">
+                    <CpIcon Value="@(Constants.Icons.Regular.Download)" />
+                    @Ui(Constants.Ui.Cta.Pdf)
+                </a>
+                <a class="cp-btn cp-btn--subtle" href="@Content.Site.LinkedIn" target="_blank" rel="noopener">
+                    @Ui(Constants.Ui.Cta.LinkedIn)
+                    <CpIcon Value="@(Constants.Icons.Small.Open)" />
+                </a>
+            </div>
+        </div>
+        <div class="cp-hero__media">
+            <ZoomImage Class="cp-portrait" Src="@Profile.Portrait.Url" Alt="@T(Profile.Portrait.Alt)" Width="320" Height="400" />
+        </div>
+    </section>
+
+    <section class="cp-stats" aria-label="@Ui(Constants.Ui.Home.Stats)">
+        @foreach (var stat in Profile.Stats)
+        {
+            <div class="cp-card cp-stat">
+                <div class="cp-stat__value">@T(stat.Value)</div>
+                <div class="cp-stat__label">@T(stat.Label)</div>
+            </div>
+        }
+    </section>
+
+    <section class="cp-band cp-band--split cp-section">
+        <div class="cp-band__intro">
+            <h2 class="cp-h3">@Ui(Constants.Ui.Home.Contact.Title)</h2>
+            <p>@Ui(Constants.Ui.Home.Contact.Text)</p>
+            <div class="cp-actions">
+                <a class="cp-btn cp-btn--primary" href="@Content.MailTo">
+                    <CpIcon Value="@(Constants.Icons.Regular.Mail)" />
+                    @Content.Site.Email
+                </a>
+                <a class="cp-btn" href="@Href(Constants.Pages.Contact.Path)">@Ui(Constants.Ui.Home.Contact.More)</a>
+            </div>
+        </div>
+        <div class="cp-band__intro">
+            <h2 class="cp-h3">@Ui(Constants.Ui.Home.Links.Title)</h2>
+            <p>@Ui(Constants.Ui.Home.Links.Text)</p>
+            <div class="cp-pills">
+                @foreach (var site in Content.Perso.Featured)
+                {
+                    <a class="cp-pill" href="@site.Url" target="_blank" rel="noopener">@site.Title</a>
+                }
+                @foreach (var site in Content.Perso.Family)
+                {
+                    <a class="cp-pill" href="@site.Url" target="_blank" rel="noopener">@site.Name</a>
+                }
+                <a class="cp-pill cp-pill--accent" href="@Href(Constants.Pages.Perso.Path)">@Ui(Constants.Ui.Home.Links.More)</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <div class="cp-section__head">
+            <h2 class="cp-h2">@Ui(Constants.Ui.Home.Recent)</h2>
+            <a class="cp-link" href="@Href(Constants.Pages.Resume.Path)">@Ui(Constants.Ui.Cta.FullResume)</a>
+        </div>
+        @foreach (var experience in Content.Experiences.Take(3))
+        {
+            <article class="cp-timeline-item">
+                <div class="cp-timeline-item__period">@Content.PeriodYears(experience)</div>
+                <div class="cp-timeline-item__body">
+                    <h3 class="cp-h3">@T(experience.Role)</h3>
+                    <div class="cp-muted"><strong class="cp-strong">@experience.Company</strong> · @T(experience.Location)</div>
+                    <p class="cp-muted">@T(experience.Summary)</p>
+                    <div class="cp-tags">
+                        @foreach (var tag in experience.Tags.Take(5))
+                        {
+                            <Tag Text="@T(tag)" />
+                        }
+                    </div>
+                </div>
+            </article>
+        }
+    </section>
+
+    <section class="cp-cards cp-section">
+        <div class="cp-card cp-card--padded">
+            <h2 class="cp-h3">@Ui(Constants.Ui.Home.Apps.Title)</h2>
+            <p class="cp-muted">@Ui(Constants.Ui.Home.Apps.Text)</p>
+            <a class="cp-link" href="@Href(Constants.Pages.Projects.Path)">@Ui(Constants.Ui.Home.Apps.Link)</a>
+        </div>
+        <div class="cp-card cp-card--padded">
+            <h2 class="cp-h3">@Ui(Constants.Ui.Home.Site.Title)</h2>
+            <p class="cp-muted">@Ui(Constants.Ui.Home.Site.Text)</p>
+            <a class="cp-link" href="@Content.Site.SourceCode" target="_blank" rel="noopener">@Ui(Constants.Ui.Home.Site.Link)</a>
+        </div>
+    </section>
+
+</div>
+
+@code {
+    private Profile Profile => Content.Profile;
+}

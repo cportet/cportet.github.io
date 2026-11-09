@@ -1,0 +1,3 @@
+Artisan logiciel avec plus de {{experienceYears}} ans d'expérience, j'ai occupé de nombreux rôles : responsable technique, chef de projet, développeur. Aussi à l'aise en environnement **Agile** qu'en approche Waterfall, j'ai la satisfaction utilisateur et la qualité logicielle comme seules boussoles.
+
+Mon expertise porte sur la gestion de projet Agile (Kanban, Scrum), le management et le développement d'applications web avec **ASP.NET** (MVC ou **Blazor WebAssembly**). J'ai exercé dans l'industrie, le service, l'administration publique et l'édition de logiciels, en Picardie, en Île-de-France, en Belgique et désormais en région lyonnaise.

@@ -1,0 +1,24 @@
+@* Header of a simple page: eyebrow, title, lead paragraph and optional actions. *@
+<section class="cp-page-header">
+    @if (Meta.Eyebrow is not null)
+    {
+        <p class="cp-eyebrow">@T(Meta.Eyebrow)</p>
+    }
+    <h1 class="cp-display">@T(Meta.Heading ?? Meta.Title)</h1>
+    @if (Meta.Lead is not null)
+    {
+        <p class="cp-lead">@T(Meta.Lead)</p>
+    }
+    @ChildContent
+</section>
+
+@code {
+    /// <summary>Key of the page in pages.json.</summary>
+    [Parameter, EditorRequired]
+    public string Page { get; set; } = null!;
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private PageMeta Meta => Content.Page(Page);
+}

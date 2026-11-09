@@ -1,74 +1,91 @@
-﻿<MyPageContainer Title=@AppRessources.Page_Perso_Title
-                 SubTitle=@AppRessources.Page_Perso_SubTile>
+@attribute [Route(Constants.Pages.Perso.Route)]
+@attribute [Route(Constants.Pages.Perso.RouteEn)]
 
-    <MySection Id="whoami" Title=@AppRessources.Page_Perso_Section_QuiSuisJe>
-        <p>
-            Bonjour !
+<Seo Page="@Constants.Pages.Perso.Key" Path="@Constants.Pages.Perso.Path" />
 
-            Je me présente, <strong>Cyril</strong>, @(DisplayHelper.AgeCyril) ans.<br />
-            Je suis originaire de Picardie (Noyon, Oise), désormais installé dans le Rhône (<MyExternalLink Title="Montrottier" Href="https://maps.app.goo.gl/DHPLyQ9bWSX1sNf39" />).<br />
-            Je suis marié, et père de 3 enfants (
-            <MyExternalLink Title="Rémy" Href="https://remy.portet.org" />,
-            <MyExternalLink Title="Trystan" Href="https://trystan.portet.org" /> et <strong>Eloy</strong>).
-        </p>
-        <p>
-            Si vous vous intéressez à ma vie professionnelle, vous trouverez toutes les informations utiles sur <a href="/resume" alt="CV de Cyril Portet">la page de mon CV</a>.
-        </p>
-        <p>
-            ... Et si vous souhaitez en apprendre plus sur moi, vous ne trouverez pas forcément plus d'informations utiles ici, pour l'instant 😆
-        </p>
+<div class="cp-container">
+    <section class="cp-hero cp-hero--compact">
+        <div class="cp-hero__text">
+            <p class="cp-eyebrow">@T(Meta.Eyebrow)</p>
+            <h1 class="cp-display">@T(Meta.Heading)</h1>
+            <Markdown Path="@Constants.Files.Markdown.PersoIntro" Class="cp-prose--lead" />
+        </div>
+        <figure class="cp-figure">
+            <ZoomImage Src="@Data.Photo.Url" Alt="@T(Data.Photo.Alt)" Width="480" Height="360" />
+            @if (Data.Photo.Caption is not null)
+            {
+                <figcaption>@T(Data.Photo.Caption)</figcaption>
+            }
+        </figure>
+    </section>
 
-        <MyImageDisplay ImageUrl="/img/famille.jpg" Height="250px" Width="250px" AltText="Famille Portet (Décembre 2024)" />
-    </MySection>
+    <section class="cp-findme">
+        <h2 class="cp-h2">@Ui(Constants.Ui.Perso.FindMe)</h2>
+        <div class="cp-pills cp-pills--large">
+            <a class="cp-pill cp-pill--accent" href="@Content.MailTo">
+                <CpIcon Value="@(Constants.Icons.Regular.Mail)" />
+                @Ui(Constants.Ui.Perso.ByEmail)
+            </a>
+            @foreach (var social in Content.Site.Socials)
+            {
+                <a class="cp-pill" href="@social.Url" target="_blank" rel="noopener">@social.Name</a>
+            }
+        </div>
+    </section>
 
-    <MySection id="findme" Title=@AppRessources.Page_Perso_Section_MeRetrouver>
-        <p>Vous pouvez me retrouver sur les <strong>réseaux sociaux</strong> :</p>
-        <ul class="links">
-            <li>
-                <span class="link">
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <a href="https://x.com/cportetdev"
-                       alt="Lien vers le profil X (Twitter) de Cyril Portet"
-                       target="_blank" rel="noopener">Twitter/X</a>
-                </span>
-            </li>
-            <li>
-                <span class="link">
-                    <i class="fa-brands fa-github"></i>
-                    <a href="https://github.com/cportet"
-                       alt="Lien vers le profil GitHub de Cyril Portet"
-                       target="_blank" rel="noopener">Github</a>
-                </span>
-            </li>
-            <li>
-                <span class="link">
-                    <i class="fa-brands fa-youtube"></i>
-                    <a href="https://youtube.com/cportet"
-                       alt="Lien vers le profil Youtube de Cyril Portet"
-                       target="_blank" rel="noopener">Youtube</a>
-                </span>
-            </li>
-            <li>
-                <span class="link">
-                    <i class="fa-brands fa-instagram"></i>
-                    <a href="https://instagram.portet.org"
-                       alt="Lien vers le profil Instagram de Cyril Portet"
-                       target="_blank" rel="noopener">Instagram</a>
-                </span>
-            </li>
-            <li>
-                <span class="link">
-                    <i class="fa-brands fa-facebook"></i>
-                    <a href="https://facebook.portet.org"
-                       alt="Lien vers le profil Facebook de Cyril Portet"
-                       target="_blank" rel="noopener">Facebook</a>
-                </span>
-            </li>
-        </ul>
-    </MySection>
+    <section class="cp-section">
+        <h2 class="cp-h2">@Ui(Constants.Ui.Perso.Family)</h2>
+        <div class="cp-grid">
+            @foreach (var site in Data.Family)
+            {
+                <a class="cp-card cp-person" href="@site.Url" target="_blank" rel="noopener">
+                    <span class="cp-person__initial" aria-hidden="true">@site.Name[..1]</span>
+                    <span class="cp-person__text">
+                        <span class="cp-person__name">@site.Name</span>
+                        <span class="cp-muted cp-small">@(new Uri(site.Url).Host)</span>
+                    </span>
+                    <CpIcon Value="@(Constants.Icons.Regular.Open)" Class="cp-accent-text" />
+                </a>
+            }
+        </div>
+    </section>
 
-    <MySection id="me-contacter" Title=@AppRessources.Page_Perso_Section_MeContacter>
-        <MyMarkdownLoader RessourcePath="perso/contact" />
-    </MySection>
+    @if (Data.Featured.Count > 0)
+    {
+        <section class="cp-band cp-section">
+            <div class="cp-band__intro">
+                <h2 class="cp-h2">@Ui(Constants.Ui.Perso.Featured)</h2>
+                <p>@Ui(Constants.Ui.Perso.FeaturedLead)</p>
+            </div>
+            <div class="cp-grid cp-grid--wide">
+                @foreach (var site in Data.Featured)
+                {
+                    <article class="cp-card cp-card--raised cp-feature">
+                        @if (site.Image is not null)
+                        {
+                            <ZoomImage Class="cp-feature__image" Src="@site.Image.Url" Alt="@T(site.Image.Alt)" Lazy="true" />
+                        }
+                        <div class="cp-feature__body">
+                            <p class="cp-overline">@T(site.Kind)</p>
+                            <h3 class="cp-h3">@site.Title</h3>
+                            <p class="cp-muted cp-grow">@T(site.Summary)</p>
+                            @if (site.Url is not null)
+                            {
+                                <a class="cp-link cp-inline" href="@site.Url" target="_blank" rel="noopener">
+                                    @(new Uri(site.Url).Host)
+                                    <CpIcon Value="@(Constants.Icons.Small.Open)" />
+                                </a>
+                            }
+                        </div>
+                    </article>
+                }
+            </div>
+        </section>
+    }
+</div>
 
-</MyPageContainer>
+@code {
+    private PersoData Data => Content.Perso;
+
+    private PageMeta Meta => Content.Page(Constants.Pages.Perso.Key);
+}

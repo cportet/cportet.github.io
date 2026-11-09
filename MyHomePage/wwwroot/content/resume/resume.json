@@ -1,0 +1,105 @@
+{
+  // The positions themselves are in experiences.json; the profile text is in md/resume/profile.*.md.
+  "facts": [
+    { "label": { "fr": "Âge", "en": "Age" }, "value": { "fr": "{{age}} ans", "en": "{{age}}" } },
+    { "label": { "fr": "Région", "en": "Area" }, "value": { "fr": "Rhône (69)", "en": "Rhône, France" } },
+    { "label": { "fr": "Mobilité", "en": "Mobility" }, "value": { "fr": "Permis B, véhiculé", "en": "Driving licence, own car" } },
+    { "label": { "fr": "Habilitation", "en": "Clearance" }, "value": { "fr": "Confidentiel Défense (2014)", "en": "French Confidential Defence (2014)" } },
+    { "label": { "fr": "Statut", "en": "Status" }, "value": { "fr": "Ouvert aux opportunités", "en": "Open to opportunities" }, "highlight": true }
+  ],
+
+  "skills": [
+    {
+      "label": { "fr": "Technique", "en": "Technical" },
+      "items": [ "Blazor WASM", "Blazor Server", "ASP.NET", "ASP.NET MVC", "EF Core", "SQL", "Azure", "Azure DevOps" ]
+    },
+    {
+      "label": { "fr": "Langages", "en": "Languages" },
+      "items": [ "C#", "T-SQL", "TypeScript", "JavaScript", "PowerShell", "Visual Basic", "HTML", "CSS" ]
+    },
+    {
+      "label": { "fr": "Outils", "en": "Tools" },
+      "items": [ "Visual Studio", "VS Code", "SSMS", "Git", "TFS", "Postman", "ReSharper" ]
+    },
+    {
+      "label": { "fr": "IA & agents", "en": "AI & agents" },
+      "items": [ "GitHub Copilot", "Codex", "Claude Team", "Claude Opus 5.5" ]
+    },
+    {
+      "label": { "fr": "Fonctionnel", "en": "Functional" },
+      "items": [
+        "Agile", "Scrum", "Kanban",
+        { "fr": "Gestion de projet", "en": "Project management" },
+        { "fr": "Qualité", "en": "Quality" },
+        "Architecture",
+        "Communication"
+      ]
+    },
+    {
+      "label": { "fr": "Métier", "en": "Business" },
+      "items": [
+        { "fr": "Administration publique", "en": "Public administration" },
+        { "fr": "Édition de logiciels", "en": "Software publishing" },
+        { "fr": "Gestion d’entreprise", "en": "Business management" },
+        "Service"
+      ]
+    }
+  ],
+
+  "trainings": [
+    { "year": 2017, "label": "Prince2 Foundation & Practitioner" },
+    { "year": 2016, "label": { "fr": "Direction des projets SI de l’État", "en": "Managing French government IT projects" } },
+    { "year": 2016, "label": { "fr": "Administrateur Dynamics CRM", "en": "Dynamics CRM administrator" } },
+    { "year": 2015, "label": "Scrum Master" },
+    { "year": 2015, "label": "UX Design" }
+  ],
+  "trainingsNote": {
+    "fr": "Conférences craft et agiles, dont Lyon-Craft (1re édition, 2023).",
+    "en": "Craft and Agile conferences, including Lyon-Craft (first edition, 2023)."
+  },
+
+  "education": [
+    {
+      "title": { "fr": "BTS Informatique de gestion", "en": "BTS in Business Computing (two-year degree)" },
+      "year": 2000,
+      "school": { "name": "AFORP Oise", "url": "https://www.aforp.fr" },
+      "text": {
+        "fr": "Option développeur d’applications, à l’AFORP Oise (Senlis), en alternance chez Clariant (site de Lamotte, Trosly-Breuil).",
+        "en": "Application developer track, at AFORP Oise (Senlis), as a work-study apprentice at Clariant (Lamotte site, Trosly-Breuil)."
+      }
+    }
+  ],
+
+  "others": {
+    "period": "1998 — 2013",
+    "intro": {
+      "fr": "Ingénieur d’études et développement, puis chef de projet :",
+      "en": "Software engineer, then project manager:"
+    },
+    "items": [
+      {
+        "company": "Electrolux IT",
+        "url": "https://www.electrolux.fr",
+        "location": "Senlis",
+        "role": { "fr": "ingénieur développement, puis support", "en": "software engineer, then support engineer" }
+      },
+      {
+        "company": "Datem Solutions / Presse Informatique",
+        "url": "https://www.ediis.fr",
+        "location": "Chantilly",
+        "role": { "fr": "lead développeur, chef de projet", "en": "lead developer, project manager" }
+      },
+      {
+        "company": "Phone Marketing",
+        "url": "https://www.intelcia.com",
+        "location": "Levallois-Perret",
+        "role": { "fr": "développeur, administration CTI / Autocom", "en": "developer, CTI / PBX administration" }
+      }
+    ]
+  },
+
+  "interests": {
+    "fr": "Ma famille, les jeux vidéo, la politique et l’économie.",
+    "en": "My family, video games, politics and economics."
+  }
+}

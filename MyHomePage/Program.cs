@@ -2,38 +2,32 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.FluentUI.AspNetCore.Components;
 using MyHomePage;
-using MyHomePage.Code;
-using MyHomePage.Helpers;
-using MyHomePage.Services;
+using MyHomePage.Content;
+using MyHomePage.Theming;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(sp => new HttpClient
-{
-    BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
-});
-
-builder.Services.AddScoped<LocalStorageService>();
-builder.Services.AddScoped<UserOptionsService>();
-builder.Services.AddScoped<CompetencesService>();
-
-builder.Services.AddSingleton<HistoryService>();
-
-builder.Services.AddFluentUIComponents();
-builder.Services.AddPWAUpdater();
-builder.Services.AddLocalization();
-
-var appConfig = await builder.LoadConfig();
-
-builder.Services.AddSingleton(appConfig);
+ConfigureServices(builder.Services, builder.HostEnvironment.BaseAddress);
 
 var host = builder.Build();
 
-var userOptionsService = host.Services.GetRequiredService<UserOptionsService>();
-var options = await userOptionsService.GetUserOptionsAsync();
-Cultures.ApplyCulture(options.Language);
+// The whole content is small: load it once, before the first render.
+await host.Services.GetRequiredService<ContentService>().EnsureLoadedAsync();
 
 await host.RunAsync();
+
+// Also called by BlazorWasmPreRendering.Build, which renders every page to static HTML at publish time.
+static void ConfigureServices(IServiceCollection services, string baseAddress)
+{
+    services.AddScoped(_ => new HttpClient { BaseAddress = new Uri(baseAddress) });
+
+    services.AddFluentUIComponents();
+    services.AddPWAUpdater();
+
+    services.AddScoped<LanguageService>();
+    services.AddScoped<ContentService>();
+    services.AddScoped<ThemePreferences>();
+}

@@ -5,63 +5,31 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
-    <NeutralLanguage>fr</NeutralLanguage>
+    <SatelliteResourceLanguages>fr;en</SatelliteResourceLanguages>
+  </PropertyGroup>
+  <!-- Static prerendering at publish time (BlazorWasmPreRendering.Build): one HTML file per page,
+       so that search engines and AI crawlers get the real content and an HTTP 200. -->
+  <PropertyGroup>
+    <!-- "/resume" => "resume.html", served as "/resume" by GitHub Pages without a redirect. -->
+    <BlazorWasmPrerenderingOutputStyle>AppendHtmlExtension</BlazorWasmPrerenderingOutputStyle>
+    <!-- Former URLs, not linked anymore but possibly bookmarked or indexed (their canonical URL points to the new one). -->
+    <BlazorWasmPrerenderingUrlPathToExplicitFetch>/cv;/curriculumvitae;/apropos;/applications;/applications/charte;/options</BlazorWasmPrerenderingUrlPathToExplicitFetch>
+    <!-- wwwroot/404.html is the GitHub Pages fallback: it must not be overwritten. -->
+    <BlazorWasmPrerenderingUrlPathRegexToIgnore>^/(en/)?404$</BlazorWasmPrerenderingUrlPathRegexToIgnore>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Markdig" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.Extensions.Localization" />
     <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" />
-    <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Emoji" />
     <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" />
     <PackageReference Include="Toolbelt.Blazor.PWA.Updater" />
+    <PackageReference Include="BlazorWasmPreRendering.Build" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AppRessources.en.Designer.cs">
-      <DependentUpon>AppRessources.en.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Update="AppRessources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>AppRessources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Update="wwwroot\404.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\b2c1da5b67254799922ef52d84941567.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\BingSiteAuth.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\humans.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\robots.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\sitemap.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="AppRessources.en.resx">
-      <LastGenOutput>AppRessources.en.Designer.cs</LastGenOutput>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Update="AppRessources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppRessources.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <InternalsVisibleTo Include="MyHomePage.Tests" />
   </ItemGroup>
 </Project>

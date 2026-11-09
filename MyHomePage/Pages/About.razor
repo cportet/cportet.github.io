@@ -1,53 +1,87 @@
-﻿<MyPageContainer Title=@AppRessources.Page_About_Title
-                 SubTitle=@AppRessources.Page_About_SubTitle>
+@attribute [Route(Constants.Pages.About.Route)]
+@attribute [Route(Constants.Pages.About.RouteEn)]
+@attribute [Route(Constants.Pages.About.Aliases.APropos)]
+@inject IJSRuntime JS
 
-    <MySection Title="A propos">
-        <p>
-            Cette application a été intégralement réalisée avec <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0" target="_blank">Blazor WebAssembly (.NET 10)</a>.
-        </p>
-        <p>
-            L'application est hébergée sur <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> et compilée/déployée
-            avec une chaîne de déploiement de type <a href="https://docs.github.com/en/actions" target="_blank">GitHub Actions</a> personnalisée.
-        </p>
-    </MySection>
+<Seo Page="@Constants.Pages.About.Key" Path="@Constants.Pages.About.Path" />
 
-    <MySection Title="Technologies utilisées">
-        <ul>
-            <li>Technologie : <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0" target="_blank">Blazor WebAssembly</a></li>
-            <li>Langage de programmation principal : <a href="https://learn.microsoft.com/fr-fr/dotnet/csharp/" target="_blank">C#</a></li>
-            <li>Autres langages : HTML, CSS, Javascript</li>
-            <li>Hébergement (code et application) : <a href="https://github.com/" target="_blank">GitHub</a></li>
-        </ul>
-    </MySection>
+<div class="cp-container">
+    <PageHeader Page="@Constants.Pages.About.Key" />
 
-    <MySection Title="Composants tiers">
-        <ul>
-            <li>Bibliothèque graphique : <a href="https://www.fluentui-blazor.net/" target="_blank">Microsoft FluentUI pour Blazor</a></li>
-            <li>Mise à jour automatique : <a href="https://github.com/jsakamoto/Toolbelt.Blazor.PWA.Updater" target="_blank">Toolbet Blazor PWA Updater</a></li>
-            <li>Conversion de contenu Markdown : <a href="https://github.com/xoofx/markdig" target="_blank">Xoofx Markdig</a></li>
-            <li>Illustrations : <a href="https://fr.vecteezy.com/png-gratuit/404">404 PNGs par Vecteezy</a> </li>
-        </ul>
-    </MySection>
+    <div class="cp-grid cp-grid--wide">
+        @foreach (var section in Content.About.Sections)
+        {
+            <section class="cp-card cp-card--padded">
+                <h2 class="cp-h3">@T(section.Title)</h2>
+                @if (section.Text is not null)
+                {
+                    <p class="cp-muted">@T(section.Text)</p>
+                }
+                @if (section.Items.Count > 0)
+                {
+                    @if (section.Items.All(i => i.Label is not null && i.Url is null))
+                    {
+                        <dl class="cp-dl">
+                            @foreach (var item in section.Items)
+                            {
+                                <dt>@T(item.Label)</dt>
+                                <dd>@T(item.Text)</dd>
+                            }
+                        </dl>
+                    }
+                    else
+                    {
+                        <ul class="cp-list">
+                            @foreach (var item in section.Items)
+                            {
+                                <li>
+                                    @if (item.Url is not null)
+                                    {
+                                        <a class="cp-link" href="@item.Url" target="_blank" rel="noopener">@T(item.Label)</a>
+                                        <span> — @T(item.Text)</span>
+                                    }
+                                    else
+                                    {
+                                        @T(item.Text)
+                                    }
+                                </li>
+                            }
+                        </ul>
+                    }
+                }
+                @if (section.Link is not null)
+                {
+                    <a class="cp-link" href="@section.Link.Url" target="_blank" rel="noopener">@T(section.Link.Label)</a>
+                }
+            </section>
+        }
 
-    <MySection Title="Code source">
-        <p>
-            Le code source de cette application est hébergé sur un dépôt GitHub : <a href="https://github.com/cportet/cportet.github.io" target="_blank">cportet.github.io</a>.
-        </p>
-        <p>
-            Ce code est réutilisable, sous licence <a href="https://github.com/cportet/cportet.github.io/blob/master/LICENSE" target="_blank">GNU/GPL 3.0</a>. Vous pouvez le cloner et le modifier à votre guise.
-        </p>
-    </MySection>
+        <section class="cp-card cp-card--padded">
+            <h2 class="cp-h3">@Ui(Constants.Ui.About.App.Title)</h2>
+            <p class="cp-muted">@string.Format(Ui(Constants.Ui.About.App.Text), Content.Config.Version)</p>
+            @if (_installMessage is not null)
+            {
+                <p class="cp-muted cp-small">@_installMessage</p>
+            }
+            <div class="cp-actions">
+                <button type="button" class="cp-btn cp-btn--primary" @onclick="InstallAsync">
+                    <CpIcon Value="@(Constants.Icons.Regular.Download)" />
+                    @Ui(Constants.Ui.About.App.Install)
+                </button>
+                <a class="cp-btn" href="@Href(Constants.Pages.Preferences.Path)">@Ui(Constants.Ui.About.App.Preferences)</a>
+            </div>
+        </section>
+    </div>
 
-    <MySection Title="Suivi">
-        <p>
-            Ce site utilise <a href="https://www.goatcounter.com/" target="_blank">Goat Counter</a> pour suivre les visites.<br />
-            GoatCounter respecte votre <a href="https://www.goatcounter.com/help/privacy" target="_blank">vie privée</a>.
-        </p>
-    </MySection>
+    <p class="cp-section cp-muted">@((MarkupString)Ui(Constants.Ui.About.Support))</p>
+</div>
 
-    <MySection Title="Support">
-        <p>
-            Si vous avez aimé cette application Blazor, vous pouvez <a href="https://www.paypal.com/paypalme/cyril01" target="_blank">me payer un café</a> !
-        </p>
-    </MySection>
-</MyPageContainer>
+@code {
+    private string? _installMessage;
+
+    private async Task InstallAsync()
+    {
+        var installed = await JS.InvokeAsync<bool>(Constants.Js.Pwa.Install);
+        _installMessage = installed ? null : Ui(Constants.Ui.About.App.Installed);
+    }
+}

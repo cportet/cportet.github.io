@@ -1,0 +1,91 @@
+{
+  // Per page: browser title, SEO description and page header texts.
+  "home": {
+    "title": { "fr": "Cyril Portet — CTO & artisan logiciel", "en": "Cyril Portet — CTO & software craftsman" },
+    "description": {
+      "fr": "Espace personnel de Cyril Portet, CTO et artisan logiciel avec {{experienceYears}} ans d’expérience (C#, .NET, Blazor, architecture, management). CV, projets et contact.",
+      "en": "Personal website of Cyril Portet, CTO and software craftsman with {{experienceYears}} years of experience (C#, .NET, Blazor, architecture, management). Resume, projects and contact."
+    }
+  },
+  "resume": {
+    "title": { "fr": "CV", "en": "Resume" },
+    "description": {
+      "fr": "CV de Cyril Portet : CTO, {{experienceYears}} ans d’expérience en développement, architecture et management d’équipes tech.",
+      "en": "Resume of Cyril Portet: CTO, {{experienceYears}} years of experience in development, architecture and tech team management."
+    },
+    "eyebrow": { "fr": "Curriculum vitae", "en": "Resume" }
+  },
+  "projects": {
+    "title": { "fr": "Projets", "en": "Projects" },
+    "description": {
+      "fr": "Les applications publiées par Cyril Portet et ses projets open source.",
+      "en": "Applications published by Cyril Portet and his open source projects."
+    },
+    "eyebrow": { "fr": "Projets", "en": "Projects" },
+    "heading": { "fr": "Applications & réalisations", "en": "Apps & projects" },
+    "lead": {
+      "fr": "Les applications que je publie à titre personnel, et quelques projets open source. L’espace s’étoffera au fil du temps.",
+      "en": "The apps I publish on my own time, and a few open source projects. More to come over time."
+    }
+  },
+  "charter": {
+    "title": { "fr": "Charte de confidentialité", "en": "Privacy policy" },
+    "description": {
+      "fr": "Charte de confidentialité commune aux applications publiées par Cyril Portet Dev.",
+      "en": "Privacy policy shared by every application published by Cyril Portet Dev."
+    },
+    "eyebrow": { "fr": "Projets", "en": "Projects" },
+    "heading": { "fr": "Charte de confidentialité", "en": "Privacy policy" }
+  },
+  "perso": {
+    "title": { "fr": "Perso", "en": "Personal" },
+    "description": {
+      "fr": "Côté perso : la famille, les sites à découvrir et où retrouver Cyril Portet.",
+      "en": "The personal side: family, sites worth a visit and where to find Cyril Portet."
+    },
+    "eyebrow": { "fr": "Côté perso", "en": "Personal side" },
+    "heading": { "fr": "Bonjour, moi c’est Cyril.", "en": "Hi, I’m Cyril." }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": {
+      "fr": "Contacter Cyril Portet par courriel, téléphone ou LinkedIn.",
+      "en": "Get in touch with Cyril Portet by email, phone or LinkedIn."
+    },
+    "heading": { "fr": "Me contacter", "en": "Contact me" },
+    "lead": {
+      "fr": "Le courriel reste le moyen le plus sûr de me joindre. Par téléphone, laissez un message ou doublez votre appel d’un SMS : je suis très sollicité et ne peux pas répondre à tous les appels.",
+      "en": "Email is the most reliable way to reach me. By phone, please leave a message or follow up with a text: I’m very busy and can’t pick up every call."
+    }
+  },
+  "about": {
+    "title": { "fr": "À propos du site", "en": "About this site" },
+    "description": {
+      "fr": "Confidentialité, technologies et coulisses du site de Cyril Portet.",
+      "en": "Privacy, technologies and behind the scenes of Cyril Portet’s website."
+    },
+    "heading": { "fr": "À propos du site", "en": "About this site" },
+    "lead": {
+      "fr": "Confidentialité, outils et coulisses de ce site personnel.",
+      "en": "Privacy, tools and behind the scenes of this personal website."
+    }
+  },
+  "preferences": {
+    "title": { "fr": "Préférences", "en": "Preferences" },
+    "description": { "fr": "Thème, couleur et langue du site.", "en": "Theme, color and language of the site." },
+    "heading": { "fr": "Préférences", "en": "Preferences" },
+    "lead": {
+      "fr": "Vos choix sont enregistrés dans votre navigateur uniquement.",
+      "en": "Your choices are stored in your browser only."
+    }
+  },
+  "notFound": {
+    "title": { "fr": "Page introuvable", "en": "Page not found" },
+    "description": { "fr": "Cette page n’existe pas.", "en": "This page does not exist." },
+    "heading": { "fr": "Page introuvable", "en": "Page not found" },
+    "lead": {
+      "fr": "La page demandée n’existe pas, ou plus. Le lien est peut-être ancien.",
+      "en": "The page you asked for doesn’t exist, or no longer does. The link may be outdated."
+    }
+  }
+}

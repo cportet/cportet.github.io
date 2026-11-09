@@ -1,0 +1,41 @@
+{
+  // Identity and links shared by every page.
+  "name": "Cyril Portet",
+  "givenName": "Cyril",
+  "familyName": "Portet",
+  "initials": "CP",
+  "baseUrl": "https://www.portet.org",
+  "email": "cyril@portet.org",
+  "phone": "+33 6 63 13 18 54",
+  "linkedIn": "https://linkedin.portet.org",
+  "sourceCode": "https://github.com/cportet/cportet.github.io",
+  "cvPdf": "/doc/cv-cyril-portet.pdf",
+  "twitterHandle": "@cportetdev",
+  "location": { "region": "Rhône", "country": "FR" },
+
+  // Main menu. Paths are language-neutral: "/en" is added automatically in English.
+  "nav": [
+    { "path": "/", "label": { "fr": "Accueil", "en": "Home" } },
+    { "path": "/resume", "label": { "fr": "CV", "en": "Resume" } },
+    { "path": "/projects", "label": { "fr": "Projets", "en": "Projects" } },
+    { "path": "/perso", "label": { "fr": "Perso", "en": "Personal" } },
+    { "path": "/contact", "label": "Contact" }
+  ],
+
+  "socials": [
+    { "name": "GitHub", "url": "https://github.com/cportet" },
+    { "name": "LinkedIn", "url": "https://linkedin.portet.org" },
+    { "name": "X (Twitter)", "url": "https://x.com/cportetdev" },
+    { "name": "YouTube", "url": "https://youtube.com/cportet" },
+    { "name": "Instagram", "url": "https://instagram.portet.org" },
+    { "name": "Facebook", "url": "https://facebook.portet.org" }
+  ],
+
+  // Canonical profile URLs, given to search engines and AI as "the same person" (schema.org sameAs).
+  "profiles": [
+    "https://www.linkedin.com/in/cportet",
+    "https://github.com/cportet",
+    "https://x.com/cportetdev",
+    "https://youtube.com/cportet"
+  ]
+}

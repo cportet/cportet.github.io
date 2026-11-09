@@ -1,0 +1,61 @@
+@* Everything search engines, AI assistants and link previews read in <head>:
+   title, description, canonical URL, language alternates, Open Graph / X cards and JSON-LD. *@
+<PageTitle>@Title</PageTitle>
+<HeadContent>
+    <meta name="description" content="@Description" />
+    <link rel="canonical" href="@Url" />
+    <link rel="alternate" hreflang="fr" href="@Absolute(Lang.Href(Path, Languages.French))" />
+    <link rel="alternate" hreflang="en" href="@Absolute(Lang.Href(Path, Languages.English))" />
+    <link rel="alternate" hreflang="x-default" href="@Absolute(Lang.Href(Path, Languages.French))" />
+
+    <meta property="og:type" content="@(IsProfile ? "profile" : "website")" />
+    <meta property="og:site_name" content="@Content.Site.Name" />
+    <meta property="og:title" content="@Title" />
+    <meta property="og:description" content="@Description" />
+    <meta property="og:url" content="@Url" />
+    <meta property="og:locale" content="@OpenGraphLocale(Lang.Current)" />
+    <meta property="og:locale:alternate" content="@OpenGraphLocale(Lang.IsEnglish ? Languages.French : Languages.English)" />
+    <meta property="og:image" content="@Absolute(Constants.Files.SocialPreview)" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="@Title" />
+    @if (IsProfile)
+    {
+        <meta property="profile:first_name" content="@Content.Site.GivenName" />
+        <meta property="profile:last_name" content="@Content.Site.FamilyName" />
+    }
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Content.Site.TwitterHandle" />
+    <meta name="twitter:title" content="@Title" />
+    <meta name="twitter:description" content="@Description" />
+    <meta name="twitter:image" content="@Absolute(Constants.Files.SocialPreview)" />
+
+    @((MarkupString)$"<script type=\"application/ld+json\">{StructuredData.Build(Content, Page, Url)}</script>")
+</HeadContent>
+
+@code {
+    /// <summary>Key of the page in pages.json.</summary>
+    [Parameter, EditorRequired]
+    public string Page { get; set; } = null!;
+
+    /// <summary>Canonical, language-neutral path of the page (e.g. "resume").</summary>
+    [Parameter, EditorRequired]
+    public string Path { get; set; } = null!;
+
+    private PageMeta Meta => Content.Page(Page);
+
+    private string Title => Page == Constants.Pages.Home.Key
+        ? T(Meta.Title)
+        : $"{T(Meta.Title)} · {Content.Site.Name}";
+
+    private string Description => T(Meta.Description);
+
+    private string Url => Absolute(Href(Path));
+
+    private bool IsProfile => Page is Constants.Pages.Home.Key or Constants.Pages.Resume.Key;
+
+    private string Absolute(string path) => Content.Site.BaseUrl.TrimEnd('/') + path;
+
+    private static string OpenGraphLocale(string language) =>
+        Languages.Culture(language).Name.Replace('-', '_');
+}

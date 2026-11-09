@@ -1,0 +1,136 @@
+[
+  // One entry per position, most recent first. "end" is the last month (inclusive); omit it for the current position.
+  // The three most recent positions are listed on the home page.
+  {
+    "id": "simpleter",
+    "company": "Simpleter",
+    "url": "https://www.simpleter.fr",
+    "role": { "fr": "Responsable technique (CTO)", "en": "Chief Technology Officer (CTO)" },
+    "location": { "fr": "Saint-Genis-les-Ollières (69)", "en": "Saint-Genis-les-Ollières, France" },
+    "start": "2021-05-01",
+    "summary": {
+      "fr": "Recruté à la création : outils et process de dev, prototype, constitution de l’équipe. Architecture, management et référent technique front-end Blazor.",
+      "en": "Hired when the company was founded: dev tooling and processes, prototype, building the team. Architecture, management and front-end Blazor lead."
+    },
+    "details": [
+      {
+        "fr": "Recruté à la création de l’entreprise, j’ai mis en place les outils et processus de développement, réalisé le prototype de la solution et constitué l’équipe de développement.",
+        "en": "Hired when the company was founded, I set up the development tools and processes, built the prototype of the solution and assembled the development team."
+      },
+      {
+        "fr": "Conception, choix d’architecture, développement, management, coordination technique et relation avec la direction et les métiers. Je reste référent technique sur le front-end Blazor.",
+        "en": "Design, architecture decisions, development, management, technical coordination and close work with leadership and business teams. I remain the technical lead for the Blazor front end."
+      },
+      {
+        "fr": "Je développe désormais aussi avec des agents IA : GitHub Copilot (avec Codex) et Claude Team (Claude Opus 5.5).",
+        "en": "I now also develop with AI agents: GitHub Copilot (with Codex) and Claude Team (Claude Opus 5.5)."
+      }
+    ],
+    "tags": [
+      "Management",
+      { "fr": "Gestion de projet", "en": "Project management" },
+      "Architecture",
+      "Blazor WASM",
+      "C#",
+      ".NET",
+      "ASP.NET",
+      "Azure DevOps",
+      "Azure AD",
+      { "fr": "Agents IA", "en": "AI agents" }
+    ]
+  },
+  {
+    "id": "fiducial",
+    "company": "Fiducial Informatique",
+    "url": "https://www.fiducial.fr",
+    "role": { "fr": "Responsable du service Transfert", "en": "Head of the Transfer department" },
+    "location": { "fr": "Lyon (69)", "en": "Lyon, France" },
+    "start": "2020-06-01",
+    "end": "2021-05-01",
+    "summary": {
+      "fr": "Automatisation et pilotage des migrations de données clients, encadrement d’une équipe de 14 personnes.",
+      "en": "Automating and steering customer data migrations, managing a team of 14 people."
+    },
+    "details": [
+      {
+        "fr": "Au sein de la R&D de cet éditeur (notariat, huissiers, auto, logiciels de caisse) : automatisation et pilotage des migrations de données clients, transferts entre solutions du groupe et extractions.",
+        "en": "Within the R&D of this software publisher (notaries, bailiffs, automotive, point of sale): automating and steering customer data migrations, transfers between the group’s products and extractions."
+      },
+      {
+        "fr": "Encadrement d’une équipe de 14 personnes : développement, pilotage technique et réalisation des transferts.",
+        "en": "Managed a team of 14 people: development, technical steering and execution of the transfers."
+      }
+    ],
+    "tags": [
+      "Management",
+      { "fr": "Pilotage d’activité", "en": "Operations steering" },
+      { "fr": "Gestion des conflits", "en": "Conflict management" },
+      "Documentation",
+      "C#",
+      ".NET"
+    ]
+  },
+  {
+    "id": "dgtresor",
+    "company": "Direction générale du Trésor",
+    "url": "https://www.tresor.economie.gouv.fr",
+    "role": { "fr": "Responsable de la cellule de développement", "en": "Head of the development unit" },
+    "location": { "fr": "Bruxelles (Belgique)", "en": "Brussels, Belgium" },
+    "start": "2014-04-01",
+    "end": "2020-04-01",
+    "summary": {
+      "fr": "Équipe de 8 personnes sur deux sites, Scrum, pipeline complète d’intégration et de déploiement continus.",
+      "en": "Team of 8 people across two sites, Scrum, full continuous integration and deployment pipeline."
+    },
+    "details": [
+      {
+        "fr": "Direction d’une équipe de 7 ingénieurs et 1 testeur sur deux sites (Bruxelles et Bercy), pour des applications destinées à toute la DG Trésor et son réseau international.",
+        "en": "Led a team of 7 engineers and 1 tester across two sites (Brussels and Bercy, Paris), building applications for the whole French Treasury and its international network."
+      },
+      {
+        "fr": "Projets en Scrum (Scrum Master, coach Agile), pipeline complète d’intégration et de déploiement continus sous TFS.",
+        "en": "Scrum projects (Scrum Master, Agile coach), full continuous integration and deployment pipeline on TFS."
+      }
+    ],
+    "tags": [
+      "Management",
+      "Scrum",
+      "ASP.NET MVC",
+      ".NET Core",
+      "SQL Server",
+      "TFS",
+      "SharePoint",
+      "Dynamics CRM"
+    ]
+  },
+  {
+    "id": "everial",
+    "company": "Everial CRM",
+    "url": "https://www.ediis.fr",
+    "role": { "fr": "Chef de projet transversal", "en": "Cross-functional project manager" },
+    "location": { "fr": "Chantilly (60)", "en": "Chantilly, France" },
+    "start": "2013-06-01",
+    "end": "2014-04-01",
+    "summary": {
+      "fr": "Coordination métier, développement et production ; mise en place des prélèvements SEPA.",
+      "en": "Coordinating business, development and operations; rollout of SEPA direct debits."
+    },
+    "details": [
+      {
+        "fr": "Coordination et animation de projets entre métiers, développement, infrastructure, production et clients (avant-vente), principalement sur le progiciel Magellan.",
+        "en": "Coordinated and ran projects between business, development, infrastructure, operations and customers (pre-sales), mainly on the Magellan software package."
+      },
+      {
+        "fr": "Mise en place des prélèvements SEPA et d’un outil de validation des fichiers de prélèvement.",
+        "en": "Rolled out SEPA direct debits and a validation tool for direct debit files."
+      }
+    ],
+    "tags": [
+      { "fr": "Gestion de projet", "en": "Project management" },
+      "Documentation",
+      "Visual Basic",
+      ".NET",
+      "ASP.NET"
+    ]
+  }
+]

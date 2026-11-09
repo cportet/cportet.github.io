@@ -1,0 +1,16 @@
+@* Fluent UI System icon, drawn with the current text color, at its own size unless Size is set. *@
+<svg class="cp-icon @Class" width="@(Size ?? NativeSize)" height="@(Size ?? NativeSize)" viewBox="0 0 @NativeSize @NativeSize"
+     fill="currentColor" aria-hidden="true" focusable="false">@((MarkupString)Value.Content)</svg>
+
+@code {
+    [Parameter, EditorRequired]
+    public Icon Value { get; set; } = null!;
+
+    [Parameter]
+    public int? Size { get; set; }
+
+    [Parameter]
+    public string? Class { get; set; }
+
+    private int NativeSize => (int)Value.Size;
+}

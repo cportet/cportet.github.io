@@ -1,0 +1,68 @@
+@* A photo that opens full screen when clicked. *@
+<button type="button" class="cp-zoom @Class" @ref="_trigger" @onclick="Open"
+        aria-label="@string.Format(Ui(Constants.Ui.Image.Zoom), Alt)">
+    <img src="@Src" alt="@Alt" width="@Width" height="@Height" loading="@(Lazy ? "lazy" : null)" />
+</button>
+
+@if (_open)
+{
+    <div class="cp-lightbox" role="dialog" aria-modal="true" aria-label="@Alt" tabindex="-1"
+         @ref="_overlay" @onclick="CloseAsync" @onkeydown="OnKeyDownAsync">
+        <img class="cp-lightbox__image" src="@Src" alt="@Alt" @onclick:stopPropagation="true" />
+        <button type="button" class="cp-lightbox__close" aria-label="@Ui(Constants.Ui.Image.Close)" @onclick="CloseAsync">
+            <CpIcon Value="@(Constants.Icons.Large.Close)" />
+        </button>
+    </div>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public string Src { get; set; } = null!;
+
+    [Parameter, EditorRequired]
+    public string Alt { get; set; } = null!;
+
+    [Parameter]
+    public int? Width { get; set; }
+
+    [Parameter]
+    public int? Height { get; set; }
+
+    [Parameter]
+    public string? Class { get; set; }
+
+    [Parameter]
+    public bool Lazy { get; set; }
+
+    private bool _open;
+    private bool _focusOverlay;
+    private ElementReference _trigger;
+    private ElementReference _overlay;
+
+    private void Open()
+    {
+        _open = true;
+        _focusOverlay = true;
+    }
+
+    private async Task CloseAsync()
+    {
+        _open = false;
+        await _trigger.FocusAsync();
+    }
+
+    private async Task OnKeyDownAsync(KeyboardEventArgs e)
+    {
+        if (e.Key == Constants.Keys.Escape)
+            await CloseAsync();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (_focusOverlay && _open)
+        {
+            _focusOverlay = false;
+            await _overlay.FocusAsync();
+        }
+    }
+}

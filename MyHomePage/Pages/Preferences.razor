@@ -1,0 +1,92 @@
+@attribute [Route(Constants.Pages.Preferences.Route)]
+@attribute [Route(Constants.Pages.Preferences.RouteEn)]
+@attribute [Route(Constants.Pages.Preferences.Aliases.Options)]
+@implements IDisposable
+@inject ThemePreferences Theme
+
+<Seo Page="@Constants.Pages.Preferences.Key" Path="@Constants.Pages.Preferences.Path" />
+
+<div class="cp-container cp-container--narrow">
+    <PageHeader Page="@Constants.Pages.Preferences.Key" />
+
+    <div class="cp-stack">
+        <section class="cp-card cp-card--padded">
+            <h2 class="cp-h4" id="pref-mode">@Ui(Constants.Ui.Preferences.Mode.Title)</h2>
+            <div class="cp-segmented cp-segmented--large" role="group" aria-labelledby="pref-mode">
+                @foreach (var (mode, key) in Modes)
+                {
+                    <button type="button" aria-pressed="@(_mode == mode ? "true" : "false")"
+                            @onclick="() => SetModeAsync(mode)">@Ui(key)</button>
+                }
+            </div>
+        </section>
+
+        <section class="cp-card cp-card--padded">
+            <h2 class="cp-h4" id="pref-accent">@Ui(Constants.Ui.Preferences.Accent.Title)</h2>
+            <div class="cp-swatches" role="group" aria-labelledby="pref-accent">
+                @foreach (var accent in ThemePreferences.Accents)
+                {
+                    var selected = string.Equals(_accent, accent.Color, StringComparison.OrdinalIgnoreCase);
+                    <button type="button" class="cp-swatch" aria-pressed="@(selected ? "true" : "false")"
+                            @onclick="() => SetAccentAsync(accent.Color)">
+                        <span class="cp-swatch__dot" style="background: @accent.Color"></span>
+                        @Ui(accent.UiKey)
+                    </button>
+                }
+            </div>
+        </section>
+
+        <section class="cp-card cp-card--padded">
+            <h2 class="cp-h4" id="pref-lang">@Ui(Constants.Ui.Preferences.Language)</h2>
+            <div class="cp-segmented cp-segmented--large" role="group" aria-labelledby="pref-lang">
+                <a href="@Lang.Switch(Languages.French)" lang="fr" aria-current="@(Lang.IsEnglish ? null : "true")">Français</a>
+                <a href="@Lang.Switch(Languages.English)" lang="en" aria-current="@(Lang.IsEnglish ? "true" : null)">English</a>
+            </div>
+        </section>
+
+        <div>
+            <button type="button" class="cp-btn" @onclick="ResetAsync">
+                <CpIcon Value="@(Constants.Icons.Regular.Reset)" />
+                @Ui(Constants.Ui.Preferences.Reset)
+            </button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private static readonly (ThemeMode Mode, string Key)[] Modes =
+    [
+        (ThemeMode.System, Constants.Ui.Preferences.Mode.System),
+        (ThemeMode.Light, Constants.Ui.Preferences.Mode.Light),
+        (ThemeMode.Dark, Constants.Ui.Preferences.Mode.Dark),
+    ];
+
+    private ThemeMode? _mode;
+    private string? _accent;
+
+    protected override void OnInitialized() => Theme.Changed += OnThemeChanged;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            await RefreshAsync();
+    }
+
+    private async Task RefreshAsync()
+    {
+        var settings = await Theme.GetAsync();
+        _mode = settings.Mode;
+        _accent = settings.Color;
+        StateHasChanged();
+    }
+
+    private Task SetModeAsync(ThemeMode mode) => Theme.SetModeAsync(mode);
+
+    private Task SetAccentAsync(string color) => Theme.SetAccentAsync(color);
+
+    private Task ResetAsync() => Theme.ResetAsync();
+
+    private async void OnThemeChanged() => await InvokeAsync(RefreshAsync);
+
+    public void Dispose() => Theme.Changed -= OnThemeChanged;
+}

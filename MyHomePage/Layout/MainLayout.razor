@@ -1,49 +1,65 @@
-﻿@inherits LayoutComponentBase
+@inherits LayoutComponentBase
+@implements IDisposable
+@inject ContentService Content
+@inject LanguageService Lang
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
 
-<PWAUpdater Text=@AppRessources.MainLayout_Updater_Text
-            ButtonCaption=@AppRessources.MainLayout_Updater_Button>
-</PWAUpdater>
+<PWAUpdater Text="@Content.Ui(Constants.Ui.Pwa.UpdateText)"
+            ButtonCaption="@Content.Ui(Constants.Ui.Pwa.UpdateButton)" />
 
-@if (_userOptionsInitialized)
-{
-    <FluentDesignTheme Mode=@_mode
-                       OfficeColor=@_selectedOfficeColor />
+<div class="cp-app">
+    <a class="cp-skip" href="@($"{Navigation.ToBaseRelativePath(Navigation.Uri).Split('#')[0]}#{Constants.Sections.Main}")">@Content.Ui(Constants.Ui.Nav.Skip)</a>
+    <SiteHeader />
+    <main id="@Constants.Sections.Main" class="cp-main" @key="Lang.Current">
+        @Body
+    </main>
+    <SiteFooter />
+</div>
 
-    <CascadingValue IsFixed="true" Value=@this>
-        <FluentLayout>
-            <FluentHeader Class="fixed-header">
-                <HeaderMenu Mode=@_mode
-                            MenuVisible=@_menuVisible
-                            ToggleThemeRequested=@ToggleTheme
-                            ToggleMenuRequested=@ToggleMenu>
-                    <MyHeaderTitle Title=@appConfig.Title
-                                   PageTitle=@_pageTitle />
-                </HeaderMenu>
-            </FluentHeader>
+<FluentProviders />
 
-            @if (_menuVisible)
-            {
-                <div class="my-navmenu-container">
-                    <div class="my-navmenu-content">
-                        <NavMenu OnItemClick=@NavMenuOnItemClick />
-                    </div>
-                    <div class="my-navmenu-empty"></div>
-                </div>
-            }
-            <FluentBodyContent Class="fluent-body-content">
-                <div class="my-body-container" @onclick=@BodyClick>
-                    <div class="my-body-content">
-                        @Body
-                    </div>
-                </div>
-            </FluentBodyContent>
+@code {
+    private string? _documentLanguage;
 
-        </FluentLayout>
-    </CascadingValue>
+    protected override void OnInitialized()
+    {
+        Lang.Changed += OnLanguageChanged;
+        Navigation.LocationChanged += OnLocationChanged;
+    }
 
-    <FluentToastProvider />
-    <FluentDialogProvider />
-    <FluentTooltipProvider />
-    <FluentMessageBarProvider />
-    <FluentMenuProvider />
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            await JS.InvokeVoidAsync(Constants.Js.Started);
+
+        if (_documentLanguage != Lang.Current)
+        {
+            _documentLanguage = Lang.Current;
+            await JS.InvokeVoidAsync(Constants.Js.SetDocumentLanguage, Lang.Current);
+        }
+    }
+
+    private void OnLanguageChanged() => InvokeAsync(StateHasChanged);
+
+    private async void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        // Same-page anchors (#section) scroll by themselves.
+        if (e.Location.Contains('#'))
+            return;
+
+        try
+        {
+            await JS.InvokeVoidAsync(Constants.Js.ScrollToTop);
+        }
+        catch (JSDisconnectedException)
+        {
+        }
+    }
+
+    public void Dispose()
+    {
+        Lang.Changed -= OnLanguageChanged;
+        Navigation.LocationChanged -= OnLocationChanged;
+    }
 }

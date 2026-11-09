@@ -3,27 +3,34 @@
 
 /* ÉQUIPE */
 Author: Cyril Portet
-Twitter/X: @cportetdev
-LinkedIn: https://www.linkedin.com/in/cportet
+Role: CTO, artisan logiciel
 Contact: cyril@portet.org
-Location: France
+LinkedIn: https://linkedin.portet.org
+GitHub: https://github.com/cportet
+Twitter/X: @cportetdev
+Location: Rhône, France
 Site: https://www.portet.org
 
-/* TECHNOS */
+/* SITE */
+Last update: 2026/11/09
+Language: Français, English
 Framework: Blazor WebAssembly (.NET 10)
-Languages: C#, Razor, HTML5, CSS3, un soupçon de JavaScript
-Hosting: GitHub Pages
-Design: Microsoft FluentUI + du CSS fait maison
-Features: PWA, Thème possible (mode sombre par défaut)
+Languages: C#, Razor, HTML, CSS, un soupçon de JavaScript
+Design: Fluent 2 (Fluent UI Blazor v5) + une couche « Fluent éditorial » faite maison
+Content: JSON + Markdown, en français et en anglais
+Features: PWA installable, mise à jour automatique, thème clair / sombre / système, couleur d'accent au choix
+Hosting: GitHub Pages, déployé par GitHub Actions
+Source: https://github.com/cportet/cportet.github.io (GPL v3)
+Tools: Visual Studio, VS Code, GitHub Copilot, Claude
 
 /* REMERCIEMENTS */
 Thanks to:
-- Microsoft & the .NET / Blazor team
-- La communauté open-source
-- Toi, qui es allé jusqu’à /humans.txt → uper
+- Microsoft, l'équipe .NET / Blazor et l'équipe Fluent UI Blazor
+- La communauté open source
+- Toi, qui es allé jusqu'à /humans.txt
 
 /* FUN */
 Ce site fonctionne hors ligne.
 
 /* TAGS */
-#humansdottxt #madewithblazor #dotnet #pwa #indiedev #portetdotorg
+#humansdottxt #madewithblazor #dotnet #fluentui #pwa #portetdotorg
