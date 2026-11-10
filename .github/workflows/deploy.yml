@@ -79,3 +79,22 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: site
+
+      # Tells Bing and the other IndexNow engines (DuckDuckGo, Ecosia, Yahoo…) that the pages of the sitemap changed.
+      # The key file (wwwroot/<32 hex characters>.txt) must stay at the root of the site. Never fails the deployment.
+      - name: Notify IndexNow
+        continue-on-error: true
+        run: |
+          body=$(python3 - site <<'PY'
+          import json, os, re, sys
+          site = sys.argv[1]
+          host = open(os.path.join(site, 'CNAME')).read().strip()
+          key = next(f[:-4] for f in sorted(os.listdir(site)) if re.fullmatch(r'[0-9a-f]{32}\.txt', f))
+          urls = re.findall(r'<loc>([^<]+)</loc>', open(os.path.join(site, 'sitemap.xml'), encoding='utf-8').read())
+          print(f'{len(urls)} URLs of {host}', file=sys.stderr)
+          print(json.dumps({'host': host, 'key': key, 'keyLocation': f'https://{host}/{key}.txt', 'urlList': urls}))
+          PY
+          )
+          for endpoint in https://api.indexnow.org/indexnow https://www.bing.com/indexnow; do
+            curl -s -o /dev/null -w "$endpoint: HTTP %{http_code}\n" -H "Content-Type: application/json; charset=utf-8" -d "$body" "$endpoint"
+          done
